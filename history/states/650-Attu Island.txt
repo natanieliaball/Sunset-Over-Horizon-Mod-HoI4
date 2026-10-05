@@ -1,0 +1,18 @@
+state=
+{
+	id=650
+	name="STATE_650"
+	manpower=20
+	state_category = tiny_island
+	
+	history = {
+		victory_points = {
+			13067 1 
+		}
+	}
+	provinces=
+	{
+13067 	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,26 @@
+state={
+	id=1059
+	name="Luzyce"
+	provinces={
+		3572 13383 13384
+	}
+	history = {
+		owner = SOR
+		add_core_of = NGC
+		add_core_of = SOR
+		add_core_of = SIL
+		add_core_of = BMS
+		add_core_of = LES
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			3572 1 # Żary
+		}
+	}
+	manpower=34830
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = town
+}

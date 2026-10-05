@@ -1,0 +1,28 @@
+characters = {
+    SIL_DyndrasD = {
+        name="Dyndras Sileski"
+        portraits={
+            civilian={
+                large="GFX_DyndrasSIL"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    SIL_KuzniaC = {
+        name="Alojzy Kuźnia"
+        portraits={
+            civilian={
+                large="GFX_KuzniaC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+}

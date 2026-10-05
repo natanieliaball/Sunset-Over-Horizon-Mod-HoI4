@@ -1,0 +1,6 @@
+SLA_form_Illyria = {
+	icon = GFX_decision_cat_generic_austria_hungary_icon
+	allowed = {
+        tag = SLA
+	}
+}

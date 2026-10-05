@@ -1,0 +1,30 @@
+state={
+	id=87
+	name="Lodz"
+	resources={
+		steel=2
+		coal=4
+	}
+
+	history = {
+		owner = NAT
+		add_core_of = NAT
+
+		victory_points = {
+			9508 10
+		}
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			
+		}
+	}
+	provinces={
+		493 548 584 6401 9439 9508 9546 11428 11515 
+	}
+	manpower=2632000
+	buildings_max_level_factor=1
+	state_category=town
+	local_supplies=0
+}

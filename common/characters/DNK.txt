@@ -1,0 +1,15 @@
+characters = {
+    DNK_LeonidN = {
+        name="Leonid Smirnov"
+        portraits={
+            civilian={
+                large="GFX_LeonidNDNK"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

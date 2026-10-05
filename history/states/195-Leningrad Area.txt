@@ -1,0 +1,31 @@
+
+state={
+	id=195
+	name="STATE_195"
+	manpower = 3750158
+	
+	state_category = metropolis
+
+	history = {
+		owner = PTG
+		add_core_of = PTG
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 1
+			3151 = {
+				naval_base = 6
+			}
+		}
+		victory_points = {
+			3151 30.0
+		}
+	}
+
+	provinces={
+		79 149 3151 6174 11068 
+	}
+
+	local_supplies=11.0 
+}

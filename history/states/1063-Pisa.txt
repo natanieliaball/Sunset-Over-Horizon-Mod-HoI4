@@ -1,0 +1,34 @@
+state={
+	id=1063
+	name="Pisa"
+	provinces={
+		910 6875 6946 9750 11833 
+	}
+	history = {
+		owner = PIS
+		add_core_of = PIS
+		add_claim_by = NIT
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 2
+			11833 = {
+				naval_base = 3
+			}
+			6946 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			11833 1 
+		}
+		victory_points = {
+			6946 10
+		}
+	}
+	manpower=2343730
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category=town
+}

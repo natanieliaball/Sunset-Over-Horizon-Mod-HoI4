@@ -1,0 +1,37 @@
+SPT_Anti_Dautharik_Movement = {
+    SPT_Anti_Dautharik_Movement_Coup = {
+        priority = 50
+		allowed = { tag = SPT }
+
+		icon = POL_organize_strike_two
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 130
+		is_good = no
+		fire_only_once = yes
+
+		activation = {
+            has_idea = Anti_Dautharik_Movement_ideas
+		}
+
+		visible = {
+			has_idea = Anti_Dautharik_Movement_ideas
+		}
+		
+		cancel_trigger = {
+			SPT = {
+				NOT = { has_idea = Anti_Dautharik_Movement_ideas}
+			}
+		}
+        timeout_effect = { 
+			start_civil_war = {
+    			ideology = fascism
+    			size = 0.5 
+				army_ratio = 0.5
+        	} 
+		}
+    } 
+}

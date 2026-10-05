@@ -1,0 +1,15 @@
+characters = {
+    GIB_AguadoPOM = {
+        name="Pelayo Aguado"
+        portraits={
+            civilian={
+                large="GFX_AguadoPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

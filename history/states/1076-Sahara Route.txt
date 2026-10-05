@@ -1,0 +1,11 @@
+state={
+	id=1076
+	name="Sahara Route"
+	provinces={
+		13394 13397 13399 
+	}
+	manpower=930
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = wasteland
+}

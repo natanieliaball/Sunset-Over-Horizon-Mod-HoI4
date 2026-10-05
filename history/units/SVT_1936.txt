@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "Infantry Division"			#Infantry Division - In 1936, Albania only had one triangular division.	They did have some tankettes and infantry support tanks, so 1 recon
+	division_names_group = SVT_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+		artillery_brigade = { x = 2 y = 0 }
+	}
+	support = {
+	}
+}
+
+
+units = {
+	#Infantry Division
+	division = { # "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3159
+		division_template = "Infantry Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+	division = { # "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3159
+		division_template = "Infantry Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+	division = { # "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3159
+		division_template = "Infantry Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+}
+### Starting Production ###

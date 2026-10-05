@@ -1,0 +1,132 @@
+ideas = {
+	country = {
+        CEC_disorganise_army = {
+			picture = tur_disorganised_armed_forces
+			allowed = {
+				original_tag = CEC
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				offence = -0.15
+				defence = -0.15
+				offence = -0.3
+				army_org_factor =  -0.15
+				training_time_factor = 0.4
+			}                               
+        }
+
+        CEC_war_propaganda_ideas = {
+			picture = SOV_war_heroes
+			allowed = {
+				original_tag = CEC
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+				war_support_weekly = 0.05
+			}                               
+        }
+
+        CEC_Reconstruction_priority_ideas = {
+			picture = eng_spirit_of_the_industrial_revolution
+			allowed = {
+				original_tag = CEC
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.1
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.25
+			}                               
+        }
+
+		
+        SPT_Total_Mobilisation_ideas = {
+			picture = tot_economic_mobilisation
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+
+			}                               
+        }
+        SPT_indoctrinated_youth_Idea = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				training_time_factor = -0.1
+                
+			}                               
+        }
+        Women_in_the_army_idea= {
+			picture = generic_women_in_the_army
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+                
+			}                               
+        }
+        SPT_National_recontruction_idea = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.2
+			}                               
+        }
+	}
+}
+

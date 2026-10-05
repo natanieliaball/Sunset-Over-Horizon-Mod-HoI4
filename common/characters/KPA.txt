@@ -1,0 +1,54 @@
+characters = {
+    KPA_KonstantinF = {
+        name="Konstantin Limonov"
+        portraits={
+            civilian={
+                large="GFX_KonstantinFKPA"
+            }
+        }
+        country_leader={
+            ideology=emperor_fascism
+            expire=""
+			id = -1
+        }
+    }
+    KPA_OtchestvoC = {
+        name="Revmir Otchestvo"
+        portraits={
+            civilian={
+                large="GFX_OtchestvoC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    KPA_ZhenkaN = {
+        name="Mishnev Zhenka I"
+        portraits={
+            civilian={
+                large="GFX_ZhenkaN"
+            }
+        }
+        country_leader={
+            ideology=Monarchism
+            expire=""
+			id = -1
+        }
+    }
+    KPA_JaroslavD = {
+        name="Kalyagin Jaroslav"
+        portraits={
+            civilian={
+                large="GFX_JaroslavD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+}

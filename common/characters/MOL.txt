@@ -1,0 +1,67 @@
+characters = {
+    MOL_VasileD = {
+        name="Cojocaru Vasile"
+        portraits={
+            civilian={
+                large="GFX_RVasileD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    MOL_MOLAlexandruN = {
+        name="Alexandru XVI"
+        portraits={
+            civilian={
+                large="GFX_MOLAlexandruN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    MOL_OteleanuC = {
+        name="Viorel Oțeleanu"
+        portraits={
+            civilian={
+                large="GFX_OteleanuC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    MOL_OteleanuSSR = {
+        name="Viorel Oțeleanu"
+        portraits={
+            civilian={
+                large="GFX_OteleanuSSR"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    MOL_GrosuF = {
+        name="Bogdan Grosu"
+        portraits={
+            civilian={
+                large="GFX_GrosuF"
+            }
+        }
+        country_leader={
+            ideology=rexism
+            expire=""
+			id = -1
+        }
+    }
+}

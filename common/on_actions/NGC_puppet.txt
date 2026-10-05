@@ -1,0 +1,12 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    NAT = { is_puppet_of = NGC }
+                }   
+                NAT = { set_cosmetic_tag = NAT_NGC }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+state={
+	id=1069
+	name="Acatalioran Route"
+	history = {
+		owner = AFR
+		add_core_of = AFR
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces={
+		13402 13405 13406 13409 13410 13411 13413 
+	}
+	manpower=3270
+	buildings_max_level_factor=1
+	state_category = wasteland
+	local_supplies=0
+}

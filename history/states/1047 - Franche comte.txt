@@ -1,0 +1,35 @@
+
+state={
+	id=1047
+	name="Franche comte"
+	manpower = 837935
+	
+	state_category = city
+	
+	resources={
+		steel=10 #
+	}
+
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = LOR
+		add_claim_by = DET
+		
+		victory_points = {
+			9642 5 
+		}
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1	
+		}
+	}
+
+	provinces={
+		698 3646 3666 6698 9642 9658 
+	}
+
+
+	local_supplies=0.0 
+}

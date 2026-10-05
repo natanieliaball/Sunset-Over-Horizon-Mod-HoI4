@@ -1,0 +1,34 @@
+state = {
+	id = 851
+	name = "STATE_851" # Var (Split-off from former Provence now Bouches-du-Rhône)
+	manpower = 485000 # 400k (Var) + 85k (~1/2 Alpes-de-Haute-Provence and Hautes-Alpes pop) # was 2060400 before Var split off from Provence (no Bouches-du-Rhône)
+
+	state_category = large_town
+
+	history = {
+	owner = PRO
+	add_core_of = PRO
+	add_core_of = ALP
+	add_claim_by = DET
+	DET = {
+		set_province_controller = 3961		
+	}
+	buildings = {
+		infrastructure = 2
+		arms_factory = 1
+		industrial_complex = 3
+			911 = {
+				naval_base = 2
+			}		
+	}
+		victory_points = {
+			911 1 # Toulon
+		}
+	}
+
+	provinces = {
+		911 956 3928 3961 6975
+	}
+
+	local_supplies = 0.0 
+}

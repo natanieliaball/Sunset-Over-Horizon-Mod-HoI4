@@ -1,0 +1,170 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "NGC"
+		default = yes
+		
+		ABT = {
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = democratic
+
+			ideas = {
+				ABT_1928_humaliation
+				ABT_divided_nation
+			}
+			focuses = {
+				ABT_honored_the_1933_revolution
+				ABT_revive_nationalism_sentiment 
+				ABT_Reoganise_the_democratie
+			}
+		}
+
+		NAT = {
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = democratic
+
+			ideas = {
+				NAT_communist_Veto
+			}
+			focuses = {
+				NAT_natanielia_first
+				NAT_Concesion_to_the_worker
+				NAT_Revive_The_treaty_of_Warsaw 
+			}
+		}
+		ATL={
+			
+			history = "ATL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+ 				ATL_tensions_militaires
+ 				ATL_instabilite_politique
+ 				ATL_crise_legitimite
+			}
+			focuses = {
+				ATL_worker_concession 
+				ATL_consolider_le_gouvernement
+				ATL_mouvement_national
+			}
+		}
+		DET = {
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = neutrality
+
+			ideas = {
+				DET_Legacy_of_Frankism
+				DET_Light_of_Technocracy
+				DET_Provence_war 
+			}
+			focuses = {
+				DET_The_Kingdom_Persists
+				DET_Leftward_Turn
+				DET_reunite_Gaul
+			}
+		}
+
+		NGC = {
+			history = "NGC_GATHERING_STORM_DESC"
+			ideology = neutrality
+
+			ideas = {
+				NGC_Communist_resistance
+			}
+			focuses = {
+				NGC_Oppose_Wilhelm
+				NGC_path_militarism
+				NGC_path_pangermanism
+			}
+		}
+
+		SPT = {
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = fascism
+
+			ideas = {
+
+			}
+			focuses = {
+				SPT_our_leader_even_after_death
+				SPT_Maintain_the_order
+				SPT_what_about_the_future
+			}
+		}
+		KPA = {
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = fascism
+
+			ideas = {
+
+			}
+			focuses = {
+			}
+		}
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		# minors from DLC ####
+
+		POM = {
+			minor = yes
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = communism
+
+			ideas = {
+				POM_contested_election
+			}
+			focuses = {
+				POM_Secure_the_state
+				POM_go_D
+				POM_go_N
+			}
+		}
+
+		NIT = {
+			minor = yes
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = democratic
+
+			ideas = {
+				NIT_Fragmented_Economy
+			}
+			focuses = {
+				NIT_Restore_the_Monarchy
+				NIT_Rebuild_the_National_Bloc
+				NIT_Social_Democracy
+
+			}
+		}
+		JAK = {
+			minor = yes
+			history = "PRE_GATHERING_STORM_DESC"
+			ideology = democratic
+
+			ideas = {
+				JAK_Jakubian_Nationalism
+				Jak_fear_of_the_genocide
+				JAK_agrarian_society
+			}
+			focuses = {
+				JAK_Rally_the_Right_Opposition
+				JAK_Oppose_the_Nationalist_Movement
+				JAK_Work_with_the_Devil
+			}
+		}
+		BRI = {
+			minor = yes
+			history = "BRI_GATHERING_STORM_DESC"
+			ideology = democratic
+
+			ideas = {
+				BRI_Foreign_Currency
+			}
+			focuses = {
+				BRI_Our_Celtic_Culture 
+			}
+		}
+	}
+}

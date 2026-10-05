@@ -1,0 +1,162 @@
+ideas = {
+	country = {
+
+		BRI_Foreign_Currency= {
+			picture = NOR_printing_money
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				training_time_factor = 0.3
+				industrial_capacity_factory = -0.2
+				stability_factor = -0.2
+			}                           
+        }
+
+		BRI_Foreign_Currency_2= {
+			picture = NOR_printing_money
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				training_time_factor = 0.1
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+			}                           
+        }
+
+        BRI_Moger_Plan = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				conscription = 0.01
+				production_speed_bunker_factor = 0.2
+                state_bunker_max_level_terrain_limit = 6
+				
+                
+			}                               
+        }
+
+		BRI_Moger_Plan_2 = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				conscription = 0.03
+				production_speed_bunker_factor = 0.2
+                state_bunker_max_level_terrain_limit = 6
+				land_bunker_effectiveness_factor = 0.1
+                
+			}                               
+        }
+
+		BRI_Moger_Plan_3 = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				conscription = 0.03
+				production_speed_bunker_factor = 0.2
+                state_bunker_max_level_terrain_limit = 6
+				land_bunker_effectiveness_factor = 0.1
+				defence = 0.1
+                
+			}                               
+        }
+		BRI_Organized_State = {
+			picture = SOV_organize_wreckers
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.2	
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = -0.1
+			}                           
+        }
+		BRI_Perfect_State = {
+			picture = generic_fascism_drift_bonus
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+			}                           
+        }
+		BRI_One_Nationality = {
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = {
+				original_tag = BRI
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.1
+			}                           
+        }
+	}
+}
+

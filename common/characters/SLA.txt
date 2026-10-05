@@ -1,0 +1,28 @@
+characters = {
+    SLA_SokcevicD = {
+        name="Tomislav Šokčević"
+        portraits={
+            civilian={
+                large="GFX_SokcevicD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    SLA_FilipovicC = {
+        name="Mato Filipović"
+        portraits={
+            civilian={
+                large="GFX_FilipovicC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+}

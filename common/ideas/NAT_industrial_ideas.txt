@@ -1,0 +1,53 @@
+ideas = {
+    country = {
+        NAT_industrial_focus_idea = {
+            picture = generic_production_bonus
+            modifier = {
+                industrial_capacity_factory = 0.03
+                production_speed_buildings_factor = 0.02
+            }
+        }
+
+        NAT_modern_factories_idea = {
+            picture = generic_production_bonus
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+
+        NAT_civilian_production_idea = {
+            picture = generic_consumer_goods_bonus
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_speed_industrial_complex_factor = 0.10
+            }
+        }
+
+        NAT_military_production_idea = {
+            picture = generic_military_bonus
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                production_speed_military_factory_factor = 0.08
+            }
+        }
+
+        NAT_infrastructure_idea = {
+            picture = generic_construction_bonus
+            modifier = {
+                production_speed_infrastructure_factor = 0.15
+                supply_consumption = -0.10
+            }
+        }
+
+        NAT_industrial_supremacy_idea = {
+            picture = generic_production_bonus
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_arms_factory_factor = 0.12
+                production_speed_industrial_complex_factor = 0.12
+                research_speed_factor = 0.05
+            }
+        }
+    }
+}

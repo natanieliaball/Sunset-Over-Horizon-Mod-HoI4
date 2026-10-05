@@ -1,0 +1,28 @@
+characters = {
+    VNC_TrevisanD = {
+        name="Zuane Trevisan"
+        portraits={
+            civilian={
+                large="GFX_TrevisanD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    VNC_FoscariN = {
+        name="Alvise Foscari"
+        portraits={
+            civilian={
+                large="GFX_FoscariN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

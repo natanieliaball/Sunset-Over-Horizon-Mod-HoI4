@@ -1,0 +1,54 @@
+characters = {
+    IBA_StampazD = {
+        name="HaleimN"
+        portraits={
+            civilian={
+                large="GFX_HaleimN"
+            }
+        }
+        country_leader={
+            ideology=despotism
+            expire=""
+			id = -1
+        }
+    }
+    IBA_AratanF = {
+        name="Hibaj Aratan"
+        portraits={
+            civilian={
+                large="GFX_AratanF"
+            }
+        }
+        country_leader={
+            ideology=falangism
+            expire=""
+			id = -1
+        }
+    }
+    IBA_IlajarC = {
+        name="Dasar Ilajar"
+        portraits={
+            civilian={
+                large="GFX_IlajarC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    IBA_SaramiD = {
+        name="Alman Sarami"
+        portraits={
+            civilian={
+                large="GFX_SaramiD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+}

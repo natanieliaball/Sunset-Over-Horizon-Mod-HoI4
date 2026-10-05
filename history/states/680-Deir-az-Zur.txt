@@ -1,0 +1,25 @@
+state={
+	id=680
+	name="STATE_680"
+	manpower = 324110
+	
+	state_category = wasteland
+
+	history = {
+		owner = PRL
+		add_core_of = PRL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			3942 1
+		}
+	}
+
+
+	provinces={
+		2013 3942 7513 10383 12316 12442 
+	}
+
+	local_supplies=4.0 
+}

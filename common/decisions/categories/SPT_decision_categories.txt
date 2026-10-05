@@ -1,0 +1,11 @@
+SPT_Anti_Dautharik_Movement = {
+	priority = 50
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+        tag = SPT
+	}
+    visible = {
+        tag = SPT
+        has_idea = Anti_Dautharik_Movement_ideas
+    }
+}

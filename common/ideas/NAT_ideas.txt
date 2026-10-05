@@ -1,0 +1,166 @@
+ideas = {
+
+    
+    country = {
+        NAT_communist_Veto = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = HUN_resurgent_communist_party_idea
+            modifier = {
+                communism_drift = 0.05
+                stability_factor = -0.05
+                political_power_cost = 0.5
+            }
+        }
+        NAT_worker_propaganda_idea = {
+            picture = generic_communist_drift_bonus
+            modifier = {
+                communism_drift = 0.1
+                stability_factor = 0.02
+            }
+        }
+
+        NAT_economic_concession_idea = {
+            picture = generic_production_bonus
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.03
+            }
+        }
+
+        NAT_economic_reform_idea = {
+            picture = generic_economy_bonus
+            modifier = {
+                research_speed_factor = 0.05
+                political_power_factor = 0.05
+            }
+        }
+
+        NAT_military_industrial_complex_idea = {
+            picture = generic_military_bonus
+            modifier = {
+                production_speed_arms_factory_factor = 0.08
+                production_speed_military_factory_factor = 0.08
+            }
+        }
+
+        NAT_communist_influence_idea = {
+            picture = generic_fascism_drift_bonus
+            modifier = {
+                communism_drift = 0.1
+            }
+        }
+
+        NAT_anti_kpaligonia_propaganda_idea = {
+            picture = generic_propaganda_bonus
+            modifier = {
+                war_support_factor = 0.05
+                army_morale_factor = 0.02
+            }
+        }
+
+        NAT_international_brigades_idea = {
+            picture = generic_manpower_bonus
+            modifier = {
+                conscription = 0.02
+                army_experience_loss_factor = -0.10
+            }
+        }
+
+        NAT_anti_kpaligonia_crusade_idea = {
+            picture = generic_military_crusade
+            modifier = {
+                army_attack_factor = 0.10
+                war_support_factor = 0.15
+                conscription = 0.04
+            }
+        }
+
+        NAT_Scouts_training = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = CHI_protracted_warfare
+            modifier = {
+                conscription = 0.05
+                training_time_factor = -0.3
+            }
+        }
+
+        NAT_Scout_State = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = AFG_from_the_ashes
+            modifier = {
+                conscription = 0.02
+                political_power_gain = 0.2
+                stability_factor = 0.05
+                war_support_factor = 0.1
+	            army_attack_speed_factor = 0.5
+	            defence = 0.2
+                offence = 0.2
+            }
+        }
+        NAT_neutral_State = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = neutrality_idea
+            modifier = {
+                army_core_defence_factor = 0.5
+                army_core_attack_factor = 0.5
+                political_power_gain = 0.2
+                conscription = 0.05
+            }
+        }
+        NAT_fortification_plan = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = generic_fortify_the_borders
+            modifier = {
+                state_bunker_max_level_terrain_limit = 2
+                production_speed_bunker_factor = 0.5 
+            }
+        }
+        NAT_Paid_leave_idea = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = BRA_dasp
+            modifier = {
+                consumer_goods_factor = 0.02
+                stability_factor = 0.05
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        NAT_military_cooperation = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = LIT_paramilitarists
+            modifier = {
+                training_time_factor = -0.2
+                conscription = 0.02
+            }
+        }
+        NAT_eastern_fear = {
+			allowed_civil_war = {
+				always = yes
+			} 
+            picture = CHI_protracted_warfare
+            modifier = {
+                conscription = 0.05
+                army_core_defence_factor = 0.2
+                army_core_attack_factor = 0.2
+            }
+			targeted_modifier = {
+				tag = KPA
+                attack_bonus_against = 0.1
+			}
+            
+        }
+    }
+}

@@ -1,0 +1,61 @@
+﻿capital = 20
+
+oob = "DET_1936"
+
+set_convoys = 20
+set_research_slots = 3
+set_stability = 0.40
+set_war_support = 0.4
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = neutrality  
+	last_election = "1936.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+add_ideas = DET_Provence_war 
+add_ideas = DET_Annoying_Old_Guard
+add_ideas = DET_Legacy_of_Frankism
+add_ideas = DET_A_Dysfunctional_Economy
+add_ideas = DET_Light_of_Technocracy
+
+recruit_character = DET_detN
+recruit_character = DET_detF
+recruit_character = DET_detD
+recruit_character = DET_detC
+
+set_autonomy = {
+	target = VND
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+
+set_popularities = {
+	democratic = 20
+	neutrality = 65
+	fascism = 9
+	communism = 6
+}
+
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+
+	declare_war_on = {
+		target = PRO
+		type = annex_everything
+	}
+}

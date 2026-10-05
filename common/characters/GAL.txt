@@ -1,0 +1,41 @@
+characters = {
+    GAL_LevN = {
+        name="Lev III"
+        portraits={
+            civilian={
+                large="GFX_MOLLevN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    GAL_TykchaC = {
+        name="Bronislav Tykcha"
+        portraits={
+            civilian={
+                large="GFX_TykchaC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+    GAL_TykchaSSR = {
+        name="Bronislav Tykcha"
+        portraits={
+            civilian={
+                large="GFX_TykchaSSR"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+}

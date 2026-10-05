@@ -1,0 +1,350 @@
+add_namespace = NAT
+country_event = {
+    id = NAT.1
+    title = NAT.1.t
+    desc = NAT.1.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.1.a
+        ai_chance = { factor = 90 }        
+        SIL = {
+            add_state_core = 74
+            transfer_state = 74            
+        }
+        CEC = {
+            remove_state_core = 74
+        }
+        BMS = {
+            country_event = { id = CEC.5 days = 2 }
+        }        
+    }
+    option = {
+        name = NAT.1.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = NAT.2
+    title = NAT.2.t
+    desc = NAT.2.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.2.a
+        ai_chance = { factor = 90 }        
+        NAT = {
+            add_state_core = 90
+            add_state_core = 92
+            transfer_state = 90    
+            transfer_state = 92       
+        }
+     
+    }
+    option = {
+        name = NAT.2.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = AUR
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NAT.3
+    title = NAT.3.t
+    desc = NAT.3.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.3.a
+        ai_chance = { factor = 60 }        
+        NAT = {
+            annex_country = {
+                target = AUR
+                transfer_troops = yes
+            }       
+        }
+     
+    }
+    option = {
+        name = NAT.3.b
+        ai_chance = { factor = 40 }
+        NAT = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = AUR
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = NAT.4
+    title = NAT.4.t
+    desc = NAT.4.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.4.a
+        ai_chance = { factor = 70 }        
+        NAT = {
+            puppet = AUR  
+        }
+        AUR = {
+            set_cosmetic_tag = AUR_Scouts_Junta
+        }
+     
+    }
+    option = {
+        name = NAT.4.b
+        ai_chance = { factor = 30 }
+        NAT = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = AUR
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NAT.5
+    title = NAT.5.t
+    desc = NAT.5.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.5.a
+        ai_chance = { factor = 10 }        
+        NAT = {
+            annex_country = {
+                target = BMS
+                transfer_troops = yes
+            }       
+        }
+     
+    }
+    option = {
+        name = NAT.5.b
+        ai_chance = { factor = 90 }
+        NAT = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = BMS
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = NAT.6
+    title = NAT.6.t
+    desc = NAT.6.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.6.a
+        ai_chance = { factor = 40 }        
+        NAT = {
+            annex_country = {
+                target = GAL
+                transfer_troops = yes
+            }       
+        }
+     
+    }
+    option = {
+        name = NAT.6.b
+        ai_chance = { factor = 60 }
+        NAT = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = GAL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NAT.7
+    title = NAT.7.t
+    desc = NAT.7.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.7.a
+        ai_chance = { factor = 95 }        
+        KPA = {
+            annex_country = {
+            target = POD
+            transfer_troops = yes
+            }
+        }    
+    }
+    option = {
+        name = NAT.7.b
+        ai_chance = { factor = 5 }
+    }
+}
+
+country_event = {
+    id = NAT.8
+    title = NAT.8.t
+    desc = NAT.8.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.8.a
+        ai_chance = { factor = 95 }        
+        if = {
+            limit = {
+                country_exists = LES
+            }
+            LES = {
+                annex_country = {
+                    target = SIL
+                    transfer_troops = yes
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                NOT = {country_exists = LES}
+            }
+
+            NGC = {
+                annex_country = {
+                    target = SIL
+                    transfer_troops = yes
+                }
+            }            
+        }   
+    }
+    option = {
+        name = NAT.8.b
+        ai_chance = { factor = 5 }
+    }
+}
+
+country_event = {
+    id = NAT.9
+    title = NAT.9.t
+    desc = NAT.9.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.9.a
+        ai_chance = { factor = 100 } 
+        NAT = {
+            transfer_state = 86
+            add_state_core = 86
+            if = {
+                limit = {
+                    POD = {
+                        is_puppet_of = NAT
+                    }
+
+                }
+                NAT ={
+                    annex_country = {
+                        target = POD
+                        transfer_troops = yes
+                    }
+                add_state_core = 814
+                add_state_core = 87
+                }
+
+            }
+                set_cosmetic_tag = NAT_NGC
+
+                retire_character = NAT_NatanieliaN
+
+                recruit_character = NAT_NathanNGC	       
+        
+			    add_country_leader_role = {
+			    	character = NAT_NathanNGC
+			    	promote_character = yes
+                    country_leader = {
+                    ideology = neutrality_type
+                    expire = ""     
+			    }
+            } 
+        }       
+        NGC = { 
+            puppet = NAT 
+            transfer_state = 910
+            transfer_state = 807
+            transfer_state = 85
+            transfer_state = 5
+            transfer_state = 763
+            transfer_state = 188
+            add_state_core = 910
+            add_state_core = 807
+            add_state_core = 85
+            add_state_core = 5 
+            add_state_core = 763
+            add_state_core = 188
+        }
+
+
+    }
+    option = {
+        name = NAT.9.b
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = NAT.10
+    title = NAT.10.t
+    desc = NAT.10.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NAT.10.a
+        ai_chance = { factor = 55 }        
+        NAT = {
+            annex_country = {
+                target = AUR
+                transfer_troops = yes
+            } 
+            add_state_core = 90 
+            add_state_core = 92
+            add_state_core = 88
+            add_state_core = 72
+            add_state_core = 71    
+        }
+     
+    }
+    option = {
+        name = NAT.10.b
+        ai_chance = { factor = 45 }
+        NGC = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = AUR
+            }
+        }
+        NAT = {
+            add_state_core = 90
+            add_state_core = 92
+        }
+    }
+}

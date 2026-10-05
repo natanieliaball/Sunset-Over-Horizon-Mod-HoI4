@@ -1,0 +1,15 @@
+characters = {
+    CRE_KaravakisPOM = {
+        name="Nikos Karavakis"
+        portraits={
+            civilian={
+                large="GFX_KaravakisPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

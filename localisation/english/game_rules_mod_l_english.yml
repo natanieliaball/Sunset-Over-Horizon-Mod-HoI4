@@ -1,0 +1,14 @@
+﻿l_english:
+ RULE_OPTION_GERMANY_FRAGMENTED_MOD:  "Fragmented Germany"
+ RULE_OPTION_GERMANY_FRAGMENTED_MOD_DESC: "In this game mod North German Confederation Explode into multiple smaller state"
+
+ #NGC_AI_BEHAVIOR: "@NGC North German Confederation"
+
+ #RULE_OPTION_DEMOCRATIC_NGC: "Democratic North German Confederation"
+ #RULE_OPTION_DEMOCRATIC_NGC_DESC: "WIP"
+ 
+ #RULE_OPTION_MILITARIST_NGC: "Militarist North German Confederation"
+ #RULE_OPTION_MILITARIST_NGC_DESC: "WIP"
+ 
+ #RULE_OPTION_PAN_GERMANIST_NGC: "Pan-Germanist North German Confederation"
+ #RULE_OPTION_PAN_GERMANIST_NGC_DESC: "WIP"

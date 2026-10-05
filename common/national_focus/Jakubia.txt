@@ -1,0 +1,1665 @@
+focus_tree = {
+
+	id = JAK_fascist_tree
+
+	continuous_focus_position = { x = 0 y = 1500}
+
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = JAK
+		}
+	}
+
+### F branch
+    focus = {
+		id = JAK_Rally_the_Right_Opposition
+		icon = GFX_goal_support_fascism
+		x = 21
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus =  JAK_Oppose_the_Nationalist_Movement
+		}
+		prerequisite = {}
+
+		completion_reward = {
+        	add_popularity = {
+            	ideology = fascism
+            	popularity = 0.10
+        	}
+		}
+    }
+ ## KPA F
+    focus = {
+		id = JAK_Work_with_the_Devil
+		icon = GFX_goal_generic_military_deal
+		x = 24
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Prepare_a_Coup
+		}
+		prerequisite = {
+			focus = JAK_Rally_the_Right_Opposition
+		}
+
+		completion_reward = {
+			add_stability = -0.2
+			add_opinion_modifier = {
+    			target = KPA
+    			modifier = JAK_Collaboration
+			}
+			KPA = {
+				add_opinion_modifier = {
+    				target = JAK
+    				modifier = JAK_Collaboration
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Jakubian_Invasion
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 24
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Work_with_the_Devil
+		}
+
+		completion_reward = {
+			KPA = { country_event = { id = JAK.1 days = 3 } }
+            retire_character = JAK_SirkF
+
+            recruit_character =  JAK_RodzaevskyKPA 
+        
+			add_country_leader_role = {
+				character = JAK_RodzaevskyKPA 
+				promote_character = yes
+                country_leader = {
+                    ideology = fascism_ideology
+                    expire = ""     
+			    }
+            }
+		}
+
+    }
+
+    focus = {
+		id = JAK_Form_a_Military_District
+		icon = GFX_focus_generic_fascist_troops
+		x = 24
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Jakubian_Invasion
+		}
+
+		completion_reward = {
+			KPA = { country_event = { id = JAK.2 days = 3 } }
+		}
+    }
+
+    focus = {
+		id = JAK_Exile_the_NPJ_K
+		icon = GFX_SOV_smersh_ccp_2d_sov_compatibility
+		x = 26
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Jakubian_Invasion
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 120
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+				long_name = "Military Council of Jakubian District"
+    			name = "MCJD"
+            }
+		}
+    }
+ ## F/N path
+    focus = {
+		id = JAK_Prepare_a_Coup
+		icon = GFX_focus_generic_conspiracy
+		x = 18
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Work_with_the_Devil
+		}
+		prerequisite = {
+			focus = JAK_Rally_the_Right_Opposition
+		}
+
+		completion_reward = {
+        	add_popularity = {
+            	ideology = democratic
+            	popularity = -0.1
+        	}
+		}
+    }
+
+    focus = {
+		id = JAK_Demand_Support_from_the_PJ
+		icon = GFX_focus_secret_rearmament
+		x = 20
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Prepare_a_Coup
+		}
+		available = {
+			NOT = { has_completed_focus = JAK_Launch_the_Coup}
+		}
+		completion_reward = {
+			add_popularity = {
+            	ideology = neutrality 
+            	popularity = 0.10
+        	}
+		}
+    }
+
+    focus = {
+		id = JAK_Launch_the_Coup
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility 
+		x = 18
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Prepare_a_Coup
+		}
+
+		completion_reward = {
+			set_politics = {
+   	 			ruling_party = fascism
+    			elections_allowed = no
+			}
+			add_popularity = {
+            	ideology = democratic 
+            	popularity = -1
+        	}
+			add_popularity = {
+            	ideology = communism
+            	popularity = -1
+        	}
+			add_stability = -0.1			
+		}
+    }
+
+
+    focus = {
+		id = JAK_Royal_Dictatorship
+		icon = GFX_focus_PRC_arms_recovery_efforts
+		x = 21
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_A_Puppet_King
+		}
+		prerequisite = {
+			focus = JAK_Launch_the_Coup
+		}
+		prerequisite = {
+			focus = JAK_Demand_Support_from_the_PJ
+		}
+		completion_reward = {
+			add_political_power = 120
+			set_politics = {
+   	 			ruling_party = neutrality
+    			elections_allowed = no
+			}
+			add_popularity = {
+            	ideology = neutrality 
+            	popularity = 0.50
+        	}
+			remove_ideas = JAK_Jakubian_Nationalism
+		}
+    }
+
+
+    focus = {
+		id = JAK_A_Puppet_King
+		icon = GFX_focus_FIN_parmis_devils
+		x = 17
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Royal_Dictatorship
+		}
+		prerequisite = {
+			focus = JAK_Launch_the_Coup
+		}
+		available = {
+			NOT = { has_completed_focus = JAK_Demand_Support_from_the_PJ }
+		}
+		completion_reward = {
+			add_political_power = 120
+			add_popularity = {
+            	ideology = neutrality 
+            	popularity = -0.20
+        	}
+		}
+    }
+
+ ## Shared path
+    focus = {
+		id = JAK_Jakubian_Revanchism
+		icon = GFX_focus_generic_fascist_troops
+		x = 20
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_A_Puppet_King focus = JAK_Royal_Dictatorship
+		}
+
+		completion_reward = {
+			add_war_support = 0.2
+		}
+    }
+
+    focus = {
+		id = JAK_Work_with_Local_Resistance
+		icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+		x = 20
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		available = {
+			KPA = {
+				controls_state = 210
+				controls_state = 209
+				controls_state = 810
+			}
+		}
+		prerequisite = {
+			focus = JAK_Jakubian_Revanchism
+		}
+
+		completion_reward = {
+			JAK = {
+				add_state_core = 209 
+				add_state_core = 210 
+				add_state_core = 810
+			}
+			KPA = {
+				remove_state_core = 209 
+				remove_state_core = 210
+				remove_state_core = 810
+			}
+			JAK = { 
+				transfer_state = 209
+				transfer_state = 210
+				transfer_state = 810
+			}
+			KPA = { 
+				transfer_state = 209
+				transfer_state = 210
+				transfer_state = 810
+			}
+			209 = {
+				add_resistance = 20
+			}
+			210 = {
+				add_resistance = 20
+			}
+			810 = {
+				add_resistance = 20
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Finance_Rebels_in_Bakubia
+		icon = GFX_focus_GER_support_the_proletarian_uprising
+		x = 20
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Work_with_Local_Resistance
+		}
+
+		completion_reward = {
+			209 = {
+				add_resistance = 50
+			}
+			210 = {
+				add_resistance = 50
+			}
+			810 = {
+				add_resistance = 50
+			}
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+		    	producer = JAK
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Last_Preparation
+		icon = GFX_SOV_strengthen_the_mobilization_plan_ccp_2d_sov_compatibility
+		x = 20
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Finance_Rebels_in_Bakubia
+		}
+
+		prerequisite = {
+			focus = JAK_Offensive_Posture focus = JAK_Defensive_Posture focus = JAK_SVE_JAK_Allience
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+    }
+
+    focus = {
+		id = JAK_War_of_Unification
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 20
+		y = 8
+		cost = 1
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Last_Preparation
+		}
+		will_lead_to_war_with = KPA
+		completion_reward = {
+			declare_war_on = {
+    			target = KPA
+    			type = annex_everything
+			}
+			209 = {
+				set_resistance = 100
+			}
+			210 = {
+				set_resistance = 100
+			}
+			810 = {
+				set_resistance = 100
+			}
+			set_country_flag = JAK_War_of_unification
+		}
+    }
+ ## F 
+
+    focus = {
+		id = JAK_Work_with_NGC
+		icon = GFX_focus_GER_party_chancellor_hess
+		x = 22
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Royal_Dictatorship
+		}
+
+		completion_reward = {
+			NGC = {
+        		add_opinion_modifier = {
+            		target = JAK
+            		modifier = JAK_work_with_the_german
+        		}
+			}
+        	add_opinion_modifier = {
+            	target = NGC
+            	modifier = JAK_work_with_the_german
+        	}
+		}
+    }
+
+
+    focus = {
+		id = JAK_Ask_for_a_German_Guarantee
+		icon = GFX_goal_generic_dangerous_deal
+		x = 24
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Work_with_NGC
+		}
+
+		completion_reward = {
+			NGC = { country_event = { id = JAK.3 days = 3 } }
+			remove_ideas = Jak_fear_of_the_genocide
+		}
+    }
+
+
+    focus = {
+		id = JAK_German_Military_School
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+		x = 22
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Work_with_NGC
+		}
+
+		completion_reward = {
+			army_experience = 150
+		}
+    }
+
+
+    focus = {
+		id = JAK_Offensive_Posture
+		icon = GFX_SOV_protect_the_white_sea_baltic_canal_ccp_2d_sov_compatibility
+		x = 22
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Defensive_Posture
+		}
+		prerequisite = {
+			focus = JAK_German_Military_School
+		}
+
+		completion_reward = {
+			add_ideas = JAK_offensive_Posture_idea
+		}
+    }
+
+
+    focus = {
+		id = JAK_Defensive_Posture
+		icon =GFX_SOV_the_means_to_wage_war_ccp_2d_sov_compatibility
+		x = 24
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Offensive_Posture
+		}
+		prerequisite = {
+			focus = JAK_German_Military_School
+		}
+
+		completion_reward = {
+			add_ideas = JAK_Defensive_Posture_idea
+		}
+    }
+
+
+    focus = {
+		id = JAK_Indoctrinate_Jakubian_Youth
+		icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
+		x = 18
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_A_Puppet_King focus = JAK_Royal_Dictatorship
+		}
+
+		completion_reward = {
+			add_ideas = JAK_indoctrinated_youth
+		}
+    }
+
+
+
+
+    focus = {
+		id = JAK_Southern_Wall
+		icon = GFX_goal_fortify_the_westwall
+		x = 24
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Defensive_Posture
+		}
+
+		completion_reward = {
+			808 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 9340 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 10232 instant_build = yes 
+				}
+			}
+			12 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 10463 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 11302 instant_build = yes 
+				}
+			}
+			191 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 9485 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 592 instant_build = yes 
+				}
+			}
+						
+		}
+    }
+ ## N
+    focus = {
+		id = JAK_Royal_Dictatorshi1
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 16
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		prerequisite = {
+			focus = JAK_A_Puppet_King
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+			
+		}
+    }
+
+    focus = {
+		id = JAK_change_the_mindset_of_the_people
+		icon = GFX_goal_generic_propaganda
+		x = 16
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		prerequisite = {
+			focus = JAK_Royal_Dictatorshi1
+		}
+
+		completion_reward = {
+			remove_ideas = Jak_fear_of_the_genocide
+			add_stability = 0.1
+		}
+    }
+
+    focus = {
+		id = JAK_Seek_for_ally 
+		icon = GFX_goal_generic_major_alliance
+		x = 18
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		prerequisite = {
+			focus = JAK_Royal_Dictatorshi1
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+    }
+
+    focus = {
+		id = JAK_Promoting_large_families
+		icon = GFX_focus_generic_population_growth
+		x = 16
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		prerequisite = {
+			focus = JAK_change_the_mindset_of_the_people
+		}
+
+		completion_reward = {
+			add_ideas = JAK_Promote_large_families
+		}
+    }
+    focus = {
+		id = JAK_SVE_JAK_Allience
+		icon = GFX_focus_FIN_viron_kansa
+		x = 18
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		prerequisite = {
+			focus = JAK_change_the_mindset_of_the_people focus = JAK_Seek_for_ally
+		}
+
+		completion_reward = {
+			SVE = { country_event = { id = JAK.4 days = 3 } }
+		}
+    }
+
+    focus = {
+		id = JAK_Form_Ubia
+		icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+		x = 22
+		y = 9
+		cost = 10
+
+		mutually_exclusive = {
+
+		}
+		available = {
+			JAK = {
+				controls_state = 210
+				controls_state = 209
+				controls_state = 810
+				has_war = no
+			}
+		}
+		prerequisite = {
+			focus = JAK_War_of_Unification
+		}
+		prerequisite = {
+			focus = JAK_Southern_Wall focus = JAK_Offensive_Posture
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = UBIA
+		}
+    }
+## C and D
+    focus = {
+		id = JAK_Oppose_the_Nationalist_Movement
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+		x = 8
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Rally_the_Right_Opposition
+		}
+		prerequisite = {}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_popularity = {
+            	ideology = democratic
+            	popularity = 0.05
+        	}
+			add_popularity = {
+            	ideology = communism
+            	popularity = 0.10
+        	}
+		}
+    }
+
+
+    focus = {
+		id = JAK_Censor_the_NPJ_K
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 8
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Oppose_the_Nationalist_Movement
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+            	ideology = fascism
+            	popularity = -0.1
+        	}
+		}
+    }
+
+ ## C
+    focus = {
+		id = JAK_Towards_a_Red_Government
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		x = 5
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {focus = JAK_Save_the_democratie}
+		prerequisite = {
+			focus = JAK_Censor_the_NPJ_K
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = communism
+            	popularity = 0.05
+        	}
+		}
+    }
+
+
+    focus = {
+		id = JAK_Concessions_to_the_Unions
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 4
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Towards_a_Red_Government
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			add_popularity = {
+            	ideology = communism
+            	popularity = 0.05
+        	}			
+		}
+    }
+
+
+    focus = {
+		id = JAK_Ban_the_NPJ_K
+		icon = GFX_focus_AUS_ban_dnsap
+		x = 6
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Towards_a_Red_Government
+
+	
+		}
+
+		completion_reward = {
+			remove_ideas = JAK_Jakubian_Nationalism
+			add_popularity = {
+            	ideology = fascism
+            	popularity = -1
+        	}	
+			add_stability = -0.05
+		}
+    }
+
+
+    focus = {
+		id = JAK_Exile_the_Pretender_to_the_Throne
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 8
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Towards_a_Red_Government
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = neutrality
+            	popularity = -1
+        	}	
+			add_stability = -0.1
+		}
+    }
+
+
+    focus = {
+		id = JAK_Secure_Our_Seats_in_Parliament
+		icon = GFX_goal_support_communism
+		x = 6
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Ban_the_NPJ_K
+
+		}
+		prerequisite = {
+			focus = JAK_Exile_the_Pretender_to_the_Throne
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = communism
+            	popularity = 0.15
+        	}		
+		}
+    }
+
+
+    focus = {
+		id = JAK_Call_for_Premeditated_Elections
+		icon = GFX_SOV_inheritor_of_the_mantle_of_lenin_ccp_2d_sov_compatibility
+		x = 4
+		y = 5
+		cost = 7
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Concessions_to_the_Unions
+		}
+		prerequisite = {
+			focus = JAK_Secure_Our_Seats_in_Parliament
+		}
+		completion_reward = {
+			set_politics = {
+   	 			ruling_party = communism
+    			elections_allowed = no
+			}
+		}
+    }
+
+
+    focus = {
+		id = JAK_The_Red_Heart_of_the_Baltic
+		icon = GFX_focus_FIN_keepers_of_the_baltic_countries
+		x = 4
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Call_for_Premeditated_Elections
+		}
+
+		completion_reward = {
+			add_ideas = Red_heart_of_the_Baltic_idea
+		}
+    }
+
+
+    focus = {
+		id = JAK_Industrial_Collectivisation
+		icon = GFX_focus_generic_communist_industry
+		x = 2
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_The_Red_Heart_of_the_Baltic
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = JAK_Collectivisation_of_Agriculture
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 2
+		y = 8
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Industrial_Collectivisation
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = JAK_Agricultural_Collectivization_idea
+		}
+    }
+
+
+
+    focus = {
+		id = JAK_Grant_Women_the_Right_to_Vote
+		icon = GFX_focus_PER_women_vote
+		x = 4
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_The_Red_Heart_of_the_Baltic
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+    }
+
+
+    focus = {
+		id = JAK_What_About_Our_Politics
+		icon = GFX_SOV_beaten_but_not_defeated_ccp_2d_sov_compatibility
+		x = 6
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_The_Red_Heart_of_the_Baltic
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			remove_ideas = Jak_fear_of_the_genocide
+		}
+    }
+
+
+
+  # C in one country 
+    focus = {
+		id = JAK_Communism_in_One_Country
+		icon = GFX_focus_SWE_socialist_reforms
+		x = 8
+		y = 8
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Spread_the_Revolution
+		}
+		prerequisite = {
+			focus = JAK_What_About_Our_Politics
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = JAK_Communism_in_One_Country_idea
+		}
+    }
+    focus = {
+		id = JAK_Southern_Wall_1
+		icon = GFX_goal_generic_fortify_city
+		x = 10
+		y = 9
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Communism_in_One_Country
+		}
+
+		completion_reward = {
+			808 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 9340 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 10232 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 10493 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 10323 instant_build = yes 
+				}
+			}
+			12 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 10463 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 11302 instant_build = yes 
+				}
+			}
+			191 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 9485 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 3 province = 592 instant_build = yes 
+				}
+			}
+			813 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 4640 instant_build = yes 
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Ban_the_Democratic_Party
+		icon = GFX_SOV_offer_autonomy_to_former_soviet_republics_ccp_2d_sov_compatibility
+		x = 8
+		y = 9
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Communism_in_One_Country
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = democratic
+            	popularity = -1
+        	}
+			add_stability = -0.05
+		}
+    }
+
+    focus = {
+		id = JAK_Anti_KPA_Propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 8
+		y = 10
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Ban_the_Democratic_Party
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+		}
+    }
+  ## C spread the revolution
+
+    focus = {
+		id = JAK_Spread_the_Revolution
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 4
+		y = 8
+		cost = 10
+		available = {
+			country_exist = ARO
+			
+		}
+		mutually_exclusive = {
+			focus = JAK_Communism_in_One_Country
+		}
+		prerequisite = {
+			focus = JAK_What_About_Our_Politics
+		}
+
+		completion_reward = {
+			add_ideas = JAK_Spread_the_Revolution_idea
+		}
+    }
+
+    focus = {
+		id = JAK_Aro_Question_Revolution
+		icon = GFX_focus_GER_the_peoples_victory
+		x = 4
+		y = 9
+		cost = 10
+		will_lead_to_war_with = ARO
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = JAK_Spread_the_Revolution
+		}
+
+		completion_reward = {
+			declare_war_on = {
+    			target = ARO
+    			type = annex_everything
+			}
+
+		}
+    }
+
+
+    focus = {
+		id = JAK_ARO_JAK_SSR
+		icon = GFX_SOV_the_komsomol_ccp_2d_sov_compatibility
+		x = 4
+		y = 10
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Prepare_a_Revolution_in_Arsorin
+		}
+		prerequisite = {
+			focus = JAK_Aro_Question_Revolution
+		}
+		available = {
+			JAK = {
+				controls_state = 190
+				controls_state = 809
+				controls_state = 189
+				controls_state = 815
+				controls_state = 808
+				controls_state = 12
+				controls_state = 191
+				controls_state = 13
+				controls_state = 811
+				controls_state = 813
+				controls_state = 812
+			}
+		}
+		completion_reward = {
+			set_cosmetic_tag = ARO_JAK
+			add_state_core = 190
+			add_state_core = 809
+			add_state_core = 189
+			add_state_core = 815
+			add_state_core = 808
+			add_state_core = 12
+			add_state_core = 191
+			add_state_core = 12
+			add_state_core = 811
+			add_state_core = 813
+			add_state_core = 812
+			add_state_core = 188
+			add_state_core = 209
+			add_state_core = 210
+			add_state_core = 810
+			add_state_core = 11
+            retire_character = JAK_ValjasC
+
+            recruit_character =  JAK_JAKAssemblyC
+        
+			add_country_leader_role = {
+				character = JAK_JAKAssemblyC
+				promote_character = yes
+                country_leader = {
+                    ideology = leninism
+                    expire = ""     
+			    }
+            }
+		}
+    }
+ # D
+    focus = {
+		id = JAK_Save_the_democratie
+		icon = GFX_goal_support_democracy
+		x = 11
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {
+			focus = JAK_Towards_a_Red_Government
+		}
+		prerequisite = {
+			focus = JAK_Censor_the_NPJ_K
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = democratic
+            	popularity = 0.1
+        	}
+		}
+    } 
+    focus = {
+		id = JAK_Ban_The_Milirist_party
+		icon = GFX_focus_generic_crush_the_military
+		x = 10
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Save_the_democratie
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = neutrality
+            	popularity = -1
+        	}	
+			add_stability = -0.1
+		}
+    }
+    focus = {
+		id = JAK_deal_with_the_communist 
+		icon = GFX_focus_generic_communist
+		x = 12
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Save_the_democratie
+		}
+
+		completion_reward = {
+			add_popularity = {
+            	ideology = communism
+            	popularity = 0.1
+        	}	
+			add_popularity = {
+            	ideology = democratic
+            	popularity = 0.1
+        	}
+			add_stability = 0.05
+		}
+    }
+    focus = {
+		id = JAK_ban_the_NPJ_K_2
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 11
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Ban_The_Milirist_party
+		}
+		prerequisite = {
+			focus = JAK_deal_with_the_communist 
+		}
+
+		completion_reward = {
+			remove_ideas = JAK_Jakubian_Nationalism
+			add_popularity = {
+            	ideology = fascism
+            	popularity = -1
+        	}	
+			add_stability = -0.05
+		}
+    }
+    focus = {
+		id = JAK_calm_the_population
+		icon = GFX_SOV_call_for_aid_ccp_2d_sov_compatibility
+		x = 10
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_ban_the_NPJ_K_2
+		}
+
+		completion_reward = {
+			remove_ideas = Jak_fear_of_the_genocide
+		}
+    }
+
+    focus = {
+		id = JAK_Nationalise_key_industry
+		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
+		x = 8
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_ban_the_NPJ_K_2
+		}
+
+		completion_reward = {
+			remove_ideas = Jak_fear_of_the_genocide
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+		id = JAK_war_propaganda
+		icon = GFX_SOV_lessons_of_war_ccp_2d_sov_compatibility
+		x = 12
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_ban_the_NPJ_K_2
+		}
+
+		completion_reward = {
+			add_war_support = 0.2
+
+		}
+    }
+    focus = {
+		id = JAK_Reafirme_our_neutrality 
+		icon = GFX_goal_generic_neutrality_focus
+		x = 14
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_ban_the_NPJ_K_2
+		}
+
+		completion_reward = {
+			add_stability = 0.3
+
+		}
+    }
+### INdustry
+    focus = {
+		id = JAK_Modernize_Our_Industry
+		icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
+		x = 31
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			
+		}
+
+		completion_reward = {
+            swap_ideas = {
+                remove_idea = JAK_agrarian_society
+                add_idea = JAK_agrarian_society_2
+            } 
+		}
+    }
+
+    focus = {
+		id = JAK_Riga_talin_highway
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		x = 31
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Modernize_Our_Industry
+		}
+
+		completion_reward = {
+			808 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			12 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			13 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			812 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_industrial_countryside
+		icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+		x = 31
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Riga_talin_highway
+		}
+
+		completion_reward = {
+			191 = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			813 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			13 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Finish_the_industrialisation
+		icon = GFX_focus_generic_industry_3
+		x = 31
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_industrial_countryside
+		}
+
+		completion_reward = {
+			remove_ideas = JAK_agrarian_society_2
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_Exploit_natural_resources
+		icon = GFX_focus_GER_factories_for_resources
+		x = 33
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Modernize_Our_Industry
+		}
+
+		completion_reward = {
+            add_resource = {
+                type = Steel
+                amount = 6
+                state = 808
+            } 
+            add_resource = {
+                type = Steel
+                amount = 3
+                state = 12
+            } 
+            add_resource = {
+                type = Steel
+                amount = 8
+                state = 13
+            } 
+		}
+    }
+
+    focus = {
+		id = JAK_arm_the_nation
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 29
+		y = 1
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_Modernize_Our_Industry
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		id = JAK_continue_to_arm_the_nation
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 29
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		
+		prerequisite = {
+			focus = JAK_arm_the_nation
+		}
+		prerequisite = {
+			focus = JAK_industrial_countryside
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+}

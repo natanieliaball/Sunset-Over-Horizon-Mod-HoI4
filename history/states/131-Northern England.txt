@@ -1,0 +1,35 @@
+
+state={
+	id=131
+	name="STATE_131"
+	manpower = 2128860
+	
+	state_category = city
+	resources = {
+		steel = 18
+		coal = 23 #initial distribution
+		
+	}
+
+	history = {
+		owner = DAN
+		add_core_of = DAN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			351 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			351 8 
+		}
+	}
+
+	provinces={
+		351 11270 11299 
+	}
+
+	local_supplies=14.0 
+}

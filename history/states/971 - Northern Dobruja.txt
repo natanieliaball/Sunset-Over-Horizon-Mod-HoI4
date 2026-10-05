@@ -1,0 +1,26 @@
+state = {
+	id = 971
+	name = "STATE_971" # Northern Dobruja
+	manpower = 490000
+	resources = {
+	}
+
+	state_category = city
+
+	history = {
+		owner = DAC
+		add_core_of = DAC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 
+			657 3 
+		}
+	}
+
+	provinces = {
+		657 9635 3076 687
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,15 @@
+characters = {
+    LES_SchonaichNGC = {
+        name="Franz Schönaich"
+        portraits={
+            civilian={
+                large="GFX_SchonaichNGC"
+            }
+        }
+        country_leader={
+            ideology=Officer_Rule
+            expire=""
+			id = -1
+        }
+    }
+}

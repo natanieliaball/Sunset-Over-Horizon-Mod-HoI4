@@ -1,0 +1,30 @@
+state = {
+	id = 735
+	name = "STATE_735"
+
+	state_category = town
+
+	manpower = 496080
+
+	history = {
+		owner = DET
+		add_core_of = DET
+		add_claim_by = NIT
+		add_core_of = ALP
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			778 2 # Annecy
+		}
+	}
+
+	provinces = {
+		778 9603 11573 6609 9745 
+	}
+	
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 0.0 
+}

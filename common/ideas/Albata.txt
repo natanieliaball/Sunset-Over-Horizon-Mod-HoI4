@@ -1,0 +1,495 @@
+ideas = {
+	country = {
+        Furries_Republic = {
+			picture = ABT_Furries_Republic_idea_icon
+			allowed = {
+				original_tag = ABT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.01
+                political_power_factor = 0.10
+                
+			}                               
+        }
+    
+        Memory_of_the_1933_revolution = {
+			picture = ARG_women_in_industry
+			allowed = {
+				original_tag = ABT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}    
+            
+			removal_cost = -1
+
+			modifier = {
+				communism_drift = 0.1
+				war_support_factor = 0.1
+                
+			}                               
+        }
+    	ABT_workers_councils_idea = {
+    		picture = por_iberian_workers_united
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+        		industrial_capacity_factory = 0.04
+        		production_speed_buildings_factor = 0.05
+        		stability_factor = -0.03
+   	 		}
+		}
+
+		ABT_five_year_plan_idea = {
+    		picture = eng_spirit_of_the_industrial_revolution
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+        		civilian_factory_use = 5
+        		production_speed_industrial_complex_factor = 0.15
+        		production_speed_arms_factory_factor = 0.10
+    		}
+		}
+		ABT_veterans_1933_idea = {
+    		picture = generic_women_in_the_army
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+        		army_core_attack_factor = 0.03
+        		army_core_defence_factor = 0.03
+        		experience_gain_army = 0.05
+    		}
+		}
+
+		ABT_peoples_army_idea = {
+    		picture = MEX_revolutionary_army
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+       			conscription = 0.2
+        		training_time_factor = -0.02
+        		land_reinforce_rate = 0.05
+    		}
+		}
+
+		ABT_export_revolution_idea = {
+    		picture = home_of_revolution
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+        		send_volunteers_tension = -0.50
+        		guarantee_tension = -0.20
+        		political_power_factor = 0.05
+    		}
+		}
+
+		ABT_revolutionary_guard_idea = {
+    		picture = ETH_conservative_high_command
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+
+    		modifier = {
+        		army_attack_factor = 0.02
+        		army_defence_factor = 0.02
+        		special_forces_cap = 0.05
+    		}
+		}
+
+		ABT_Proletarian_Dicratorship_idea = {
+    		picture = SPR_international_brigades
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+                political_power_factor = 0.20
+    		}
+		}
+
+		ABT_direct_democracy_ideas = {
+    		picture = GER_limited_democratic_principles
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+                political_power_factor = -0.15
+				stability_weekly = 0.003
+    		}
+		}
+		ABT_revolution_attack_bonus = {
+    		picture = CZE_army_bop_plus_3
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		army_attack_factor = 0.10
+    		    army_morale_factor = 0.05
+    		}
+		}
+
+		ABT_ACP_support_idea = {
+    		picture = trotskyite_plot_purged_nsb_ccp_sov_compatibility
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+       			communism_drift = 0.1
+        		stability_factor = -0.05
+    		}
+		}
+		ABT_resource_bonus_idea = {
+    		picture = raj_metal_and_steel_factory_ishapore
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		local_resources_factor = 0.5
+    		}
+		}
+		ABT_Democratic_support = {
+    		picture = generic_democratic_drift_bonus
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		democratic_drift = 0.15
+				political_power_gain = 0.2
+    		}
+		}
+ ## fachist
+		ABT_fachist_support = { 
+    		picture = FRA_scw_intervention_nationalists_focus
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		fascism_drift = 0.2
+				war_support_factor = 0.3
+    		}
+			}
+		ABT_rearm_nation_idea = {
+		    picture = HUN_secret_rearmament
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        production_speed_arms_factory_factor = 0.10
+		        army_org_factor = 0.05
+		    }
+		}
+
+		ABT_war_economy_idea = {
+		    picture = ARG_war_division
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        consumer_goods_factor = -0.10
+		        industrial_capacity_factory = 0.10
+		    }
+		}
+
+		ABT_blitzkrieg_idea = {
+		    picture = generic_acquire_tanks
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  			
+		    modifier = {
+		        army_speed_factor = 0.10
+		        army_attack_factor = 0.10
+		        org_loss_when_moving = -0.10
+    		}
+		}	
+
+		ABT_fortress_idea = {
+		    picture = FRA_fortification_focus
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        army_defence_factor = 0.15
+		        max_dig_in = 2
+		        defence = 0.10
+		    }
+		}
+
+		ABT_military_industry_idea = {
+		    picture = NORDIC_industry_communist
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  			
+    		modifier = {
+	        production_speed_arms_factory_factor = 0.15
+	        industrial_capacity_dockyard = 0.10
+    		}
+		}
+
+		ABT_civilian_industry_idea = {
+		    picture = generic_improved_industries
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  			
+		    modifier = {
+		        production_speed_industrial_complex_factor = 0.15
+		        consumer_goods_factor = -0.05
+		    }
+		}	
+		ABT_Monarchist_support = { 
+    		picture =  AUS_habsburg_monarchy_restored
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		neutrality_drift = 0.5
+				stability_factor = 0.3
+    		}
+		}
+		ABT_Anti_Communist_propaganda = { 
+    		picture = SOV_factionalism_modifier
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		communism_drift = -0.15
+				stability_factor = 0.05
+    		}
+		}
+  	
+	#### ABT demo 
+
+		ABT_social_reforms_idea = {
+		    picture = ARG_social_welfare_fund_ns
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        stability_factor = 0.025
+		        consumer_goods_factor = -0.05
+		    }
+		}
+
+		ABT_universal_suffrage_idea = {
+		    picture = generic_democratic_drift_bonus
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        political_power_gain = 0.15
+		        democratic_drift = 0.08
+		        stability_factor = 0.05
+		    }
+		}
+		
+		ABT_federal_republic_idea = {
+		    picture = YUG_federal_defense_council
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        political_power_gain = 0.15
+		        political_advisor_cost_factor = -0.20
+		        war_support_factor = 0.05
+		    }
+		}
+		
+		ABT_parliamentary_monarchy_idea = {
+		    picture = generic_monarchist_uprising
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        stability_factor = 0.05
+		        political_power_gain = 0.10
+		        neutrality_drift = 0.02
+		        democratic_drift = 0.02
+		    }
+		}
+		
+		ABT_welfare_state_idea = {
+		    picture = FIN_socialist_welfare
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        stability_factor = 0.10
+		        consumer_goods_factor = 0.05
+		        conscription = 0.02
+		        training_time_factor = -0.05
+		    }
+		}
+		
+		ABT_industrial_democracy_idea = {
+		    picture = man_five_year_plan_industry
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        industrial_capacity_factory = 0.15
+		        production_speed_buildings_factor = 0.10
+		        consumer_goods_factor = -0.05
+		    }
+		}
+		
+		ABT_agrarian_reform_idea = {
+		    picture = generic_agrarian_reform
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        stability_factor = 0.02
+		        conscription = 0.01
+		        war_support_factor = 0.05
+		    }
+		}
+		
+		ABT_volunteer_army_idea = {
+		    picture = generic_volunteer_expedition_bonus
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        army_org_factor = 0.10
+		        training_time_factor = -0.10
+		        army_attack_factor = 0.05
+		
+		    }
+		}
+		
+		ABT_democratic_defence_idea = {
+		    picture = POL_ideology_drift_defence
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        army_defence_factor = 0.10
+		        max_dig_in = 2
+		        defence = 0.08
+		    }
+		}
+		
+		ABT_beacon_democracy_idea = {
+		    picture = generic_democratic_drift_bonus
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        political_power_gain = 0.20
+		        democratic_drift = 0.05
+		        guarantee_tension = -0.20
+		        send_volunteers_tension = -0.30
+		   			}
+				}
+		
+		ABT_divided_nation = {
+		    picture = FRA_scw_intervention_nationalists_focus
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		        political_power_gain = -0.50
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.2
+		   	}
+		}
+
+		ABT_1928_humaliation = {
+		    picture = BEL_scars_of_ww1
+		    removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+		    modifier = {
+		    	war_support_factor = -0.3   
+				army_attack_factor = -0.2
+		   	}
+		}
+		ABT_Cooperation_Sphere = {
+    		picture = generic_research_bonus
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+        		research_speed_factor = 0.05
+    		}
+		}
+		Research_improvement = {
+    		picture = generic_research_bonus
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+				research_speed_factor = 0.08
+                political_power_factor = 0.10
+    		}
+		}
+		Furry_Army = {
+    		picture = AFG_afghanistan_bank
+    		removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}  
+    		modifier = {
+       			conscription = 0.10
+        		training_time_factor = -0.5
+	        	army_speed_factor = 2
+		        army_attack_factor = 0.6
+		        org_loss_when_moving = 0.5
+				army_defence_factor = -0.6
+				breakthrough_factor = 0.5
+    		}
+		}
+	}
+}
+

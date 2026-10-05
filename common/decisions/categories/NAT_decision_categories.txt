@@ -1,0 +1,12 @@
+Civil_war_NAT_F = {
+	priority = 50
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+        tag = NAT
+	}
+    visible = {
+        tag = NAT
+        has_country_flag = NAT_Civil_war_F
+        NOT = { has_country_flag = NAT_Civil_war_F_END }
+    }
+}

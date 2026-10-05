@@ -1,0 +1,296 @@
+Albata_Natanielia_A = {
+    color = rgb { 79 0 79 }
+    color_ui = rgb { 79 0 79 }
+}
+
+Albata_Natanielia_N = {
+    color = rgb { 79 0 79 }
+    color_ui = rgb { 79 0 79 }
+}
+
+SCH_ABT = {
+    color = rgb {10 10  91 }
+    color_ui = rgb {10 10  91 }
+}
+
+SIL_NAT = {
+    color = rgb {76  197  123 }
+    color_ui = rgb {76  197  123 }
+}
+
+POZ_NAT = {
+    color = rgb {76  197  123 }
+    color_ui = rgb {76  197  123 }
+}
+
+POD_NAT = {
+    color = rgb {76  197  123 }
+    color_ui = rgb {76  197  123 }
+}
+
+ABT_FURRY = {
+    color = rgb {130  2  87 }
+    color_ui = rgb {130  2  87 }
+}
+
+BOSTA = {
+    color = rgb {246  180  23 }
+    color_ui = rgb {246  180  23 }
+}
+
+ALBA = {
+    color = rgb {1  2  35 }
+    color_ui = rgb {1  2  35 }
+}
+
+AAU = {
+    color = rgb {206  24  33 }
+    color_ui = rgb {206  24  33 }
+}
+
+BOS = {
+	color = rgb {246  180  23 }
+	color_ui = rgb {246  180  23 }
+}
+
+ALB = {
+	color = rgb {1  2  35 }
+	color_ui = rgb {1  2  35 }
+}
+
+ABT_KINGDOM_ABSOLUTE = {
+	color = rgb {200  200  200 }
+	color_ui = rgb {200  200  200 }
+}   
+
+GAL_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}   
+
+MOL_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+SVE_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+AUR_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+JAK_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+NAT_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+ARO_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+POZ_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+POD_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+SIL_SSR = {
+    color = rgb {71  193  118 }
+    color_ui = rgb {71  193  118 }
+}
+
+NGC_SOR = {
+    color = rgb {70  70  70 }
+    color_ui = rgb {70  70  70 }
+}
+
+NGC_LES = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+SAX_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+HAN_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+SAX_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+MEK_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+THU_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+PMR_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+SOR_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+LES_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+BOH_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+MRV_NGC = {
+    color = rgb {64  64  64 }
+    color_ui = rgb {64  64  64 }
+}
+
+CRT_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+VND_DET = {
+    color = rgb {34  37  87  }
+    color_ui = rgb {34  37  87  }
+}
+
+AEG_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+ANT_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+NAT_NGC = {
+    color = rgb {70  70  70 }
+    color_ui = rgb {70  70  70 }
+}
+
+ABT_NGC = {
+    color = rgb {70  70  70 }
+    color_ui = rgb {70  70  70 }
+}
+
+ATH_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+IST_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+EDI_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+SIC_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+SUZ_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+GIB_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+AUR_Scouts_Junta = {
+    color = rgb {76  197  123 }
+    color_ui = rgb {76  197  123 }
+}
+
+GBC_COS = {
+    color = rgb {193  83  125 }
+    color_ui = rgb {193  83  125 }
+}
+
+OCE_COS = {
+    color = rgb {53  53  53 }
+    color_ui = rgb {53  53  53 }
+}
+LGR_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+TNG_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+CAS_POM = {
+    color = rgb {168 168 255 }
+    color_ui = rgb {168 168 255 }
+}
+
+SCS_F = {
+    color = rgb {92 177 172 }
+    color_ui = rgb {92 177 172 }
+}
+
+ITALY = {
+    color = rgb {0 81 14 }
+    color_ui = rgb {0 81 14 }
+}
+
+PIEDMONT = {
+    color = rgb {0 49 165 }
+    color_ui = rgb {0 49 165 }    
+}
+
+ARO_JAK = {
+    color = rgb {204 64 15 }
+    color_ui = rgb {204 64 15 } 
+}    
+
+Germany = {
+    color = rgb {132 132 132 }
+    color_ui = rgb {132 132 132 }
+}
+
+BH_Union = {
+    color = rgb {0 36 94}
+    color_ui = rgb {0 36 94}
+}
+
+Atlasta = {
+    color = rgb {236 175 37}
+    color_ui = rgb {236 175 37}  
+}

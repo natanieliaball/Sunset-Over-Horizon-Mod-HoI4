@@ -1,0 +1,22 @@
+state={
+	id=1051
+	name="Lot et Garonne"
+	state_category = city
+	provinces={
+		755 6775 9734 11718 11720 
+	}
+	history = {
+		owner = MPL
+		add_core_of = MPL	
+		victory_points = {
+			6775  5
+		}	
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+	}
+	manpower=252760
+	buildings_max_level_factor=1
+	local_supplies=0
+}

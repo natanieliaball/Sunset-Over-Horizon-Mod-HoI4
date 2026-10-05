@@ -1,0 +1,25 @@
+state={
+	id=1057
+	name="Oberlausitz"
+	provinces={
+		11415 13385 13386
+	}
+	history = {
+		owner = SOR
+		add_core_of = NGC
+		add_core_of = SOR
+		add_core_of = BRB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			13385 5 # Cottbus
+		}
+	}
+	manpower=100010
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = town
+}

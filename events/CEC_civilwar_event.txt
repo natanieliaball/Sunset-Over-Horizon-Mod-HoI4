@@ -1,0 +1,304 @@
+add_namespace = CEC
+
+# Mort du leader
+country_event = {
+    id = CEC.1
+    title = CEC.1.t
+    desc = CEC.1.d
+    picture = GFX_SPT_meristra_death
+    is_triggered_only = yes
+
+    option = {
+        name = CEC.1.a
+        kill_country_leader = yes
+        set_stability = 0
+        news_event = { id = CEC_news.1 }
+        country_event = { id = CEC.2 days = 7 }
+        SPT = {
+            add_ideas = SPT_Disunite_governement
+            add_ideas = SPT_Army_coruption
+        }
+    }
+}
+
+ # Liberation de LOR
+country_event = {
+    id = CEC.2
+    title = CEC.2.t
+    desc = CEC.2.d
+    picture = GFX_SPT_LOR_independance
+    is_triggered_only = yes
+
+    option = {
+		ai_chance = {
+			factor = 100
+		}
+        name = CEC.2.a
+        SPT = { release = LOR }
+        LOR = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+        }
+        random_days_delay = {
+            days = 1
+            random = 3
+        }
+        country_event = { id = CEC.3 days = 7 }
+    }
+    option = {
+        name = CEC.2.a
+        SPT = { release = LOR }
+        LOR = { change_tag_from = SPT }
+        LOR = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+        }
+        random_days_delay = {
+            days = 1
+            random = 3
+        }
+        
+        SPT = {country_event = { id = CEC.3 days = 7 }}
+    }
+}
+
+# Guerre civile communiste
+country_event = {
+    id = CEC.3
+    title = CEC.3.t
+    desc = CEC.3.d
+    picture = GFX_report_event_ger_civil_war
+    is_triggered_only = yes
+
+    option = {
+        name = CEC.3.a
+		ai_chance = {
+			factor = 100
+		}
+        CEC = {
+            transfer_state = 4
+            transfer_state = 976
+            transfer_state = 102
+            transfer_state = 853
+            transfer_state = 736
+            transfer_state = 852
+            transfer_state = 152
+            transfer_state = 153
+    
+            add_state_core = 4
+            add_state_core = 976
+            add_state_core = 102
+            add_state_core = 853
+            add_state_core = 736
+            add_state_core = 852
+            add_state_core = 152
+            add_state_core = 153
+            add_state_core = 848
+            add_state_core = 52
+            add_state_core = 50
+            add_state_core = 978
+            add_state_core = 54
+            add_state_core = 53
+        }
+        transfer_units_fraction = {
+	        target = CEC
+	        size = 0.5
+	        stockpile_ratio = 0.5    
+            }
+        SPT = {
+            declare_war_on = {
+                target = CEC
+				type = civil_war
+            }
+        }
+        NAT = {
+            country_event = { id = NAT.1 days = 3 }
+        }
+        SPT = {
+            country_event = { id = CEC.4 days = 2 } 
+        }
+        SPT = {set_country_flag = SPT_Civilwar_SPT}   
+        CEC = {set_country_flag = SPT_Civilwar_CEC}     
+    }
+    option = {
+        name = CEC.8.b
+        CEC = { change_tag_from = SPT }
+        CEC = {
+            transfer_state = 4
+            transfer_state = 976
+            transfer_state = 102
+            transfer_state = 853
+            transfer_state = 736
+            transfer_state = 852
+            transfer_state = 152
+            transfer_state = 153
+    
+            add_state_core = 4
+            add_state_core = 976
+            add_state_core = 102
+            add_state_core = 853
+            add_state_core = 736
+            add_state_core = 852
+            add_state_core = 153
+            add_state_core = 152
+            add_state_core = 848
+            add_state_core = 52
+            add_state_core = 50
+            add_state_core = 978
+            add_state_core = 54
+            add_state_core = 53
+        }
+        transfer_units_fraction = {
+	        target = CEC
+	        size = 0.6
+	        stockpile_ratio = 0.6    
+            }
+        SPT = {
+            declare_war_on = {
+                target = CEC
+				type = civil_war
+            }
+        }
+        NAT = {
+            country_event = { id = NAT.1 days = 3 }
+        }
+        SPT = {
+            country_event = { id = CEC.4 days = 2 } 
+        }   
+        SPT = {set_country_flag = SPT_Civilwar_SPT}   
+        CEC = {set_country_flag = SPT_Civilwar_CEC} 
+    
+    }
+}
+
+country_event = {
+    id = CEC.4
+    title = CEC.4.t
+    desc = CEC.4.d
+    picture = GFX_SPT_BMS_independance
+    is_triggered_only = yes
+
+    option = {
+		ai_chance = {
+			factor = 100
+		}
+        name = CEC.4.a
+        SPT = { release = BMS }
+        BMS = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+        }
+        BMS = {
+            transfer_state = 1062
+            transfer_state = 972
+            transfer_state = 75
+            transfer_state = 9
+            transfer_state = 1065
+            transfer_state = 70
+        }
+        random_days_delay = {
+            days = 10
+            random = 3
+        }
+        SPT = {
+        country_event = { id = CEC.7 days = 10 }  
+        }      
+    }
+
+    option = {
+
+        name = CEC.4.b
+        SPT = { release = BMS }
+        BMS = { change_tag_from = SPT } 
+        BMS = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+        }
+        BMS = {
+            transfer_state = 1062
+            transfer_state = 972
+            transfer_state = 75
+            transfer_state = 9
+            transfer_state = 1065
+            transfer_state = 70
+        }
+        random_days_delay = {
+            days = 10
+            random = 3
+        }
+        SPT = {
+        country_event = { id = CEC.7 days = 10 }  
+        }     
+ 
+    }
+}
+
+country_event = {
+    id = CEC.5
+    title = CEC.5.t
+    desc = CEC.5.d
+    picture = GFX_A
+    is_triggered_only = yes
+
+    option = {
+        name = CEC.5.a
+    }
+}
+
+country_event = {
+    id = CEC.7
+    title = CEC.7.t
+    desc = CEC.7.d
+    picture = GFX_SPT_FRK_independance
+    is_triggered_only = yes
+
+    option = {
+		ai_chance = {
+			factor = 100
+		}
+        name = CEC.7.a
+        FRK = { add_state_core = 55 }
+        SPT = { release = FRK }
+        FRK = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+            add_ideas = FRK_junta_chaos_1
+        }
+    }
+    option = {
+        name = CEC.7.a
+        FRK = { add_state_core = 55 }
+        SPT = { release = FRK }
+        FRK = {
+            set_politics = {
+                ruling_party = neutrality
+                last_election = "1936.1.1"
+                election_frequency = 48
+                elections_allowed = no
+            }
+            add_ideas = FRK_junta_chaos_1
+        }
+        FRK = { change_tag_from = SPT }
+    }
+}
+

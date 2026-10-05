@@ -1,0 +1,17 @@
+state = {
+	id = 320
+	name = "STATE_320"
+	manpower = 286410
+
+	state_category = enclave
+
+	history = {
+		victory_points = {
+			10149 1 # Pondicherry
+		}
+	}
+
+	provinces = { 10149 }
+
+	local_supplies = 0.0 
+}

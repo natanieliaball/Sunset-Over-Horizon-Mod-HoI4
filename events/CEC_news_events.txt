@@ -1,0 +1,18 @@
+add_namespace = CEC_news
+
+news_event = {
+    id = CEC_news.1
+    title = CEC_news.1.t
+    desc = CEC_news.1.d
+    picture = GFX_SPT_death
+    is_triggered_only = yes
+    major = yes
+
+    trigger = {
+        NOT = { tag = SPT }
+    }
+
+    option = {
+        name = CEC_news.1.a
+    }
+}

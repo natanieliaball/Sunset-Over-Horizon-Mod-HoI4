@@ -1,0 +1,15 @@
+characters = {
+    SUZ_SayyadPOM = {
+        name="Bahri Al-Sayyad"
+        portraits={
+            civilian={
+                large="GFX_SayyadPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

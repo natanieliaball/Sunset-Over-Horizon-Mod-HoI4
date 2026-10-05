@@ -1,0 +1,35 @@
+state = {
+	id = 1056
+	name = "Essen"
+	manpower = 1667762
+	resources = {
+		steel = 15 #was 12 was 32 #was 53 # was: 90
+		coal = 12 # initial distribution
+	}
+
+	state_category = metropolis
+
+
+	history = {
+
+		owner = ABT
+		add_core_of = ABT
+		add_core_of = ALB
+		add_claim_by = NGC
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+		victory_points = {
+			6469 10 # Essen
+		}
+	}
+
+	provinces = {
+		529 6570 9482 6469 3512
+	}
+
+	local_supplies = 0.0 
+}

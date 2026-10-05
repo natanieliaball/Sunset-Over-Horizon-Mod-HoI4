@@ -1,0 +1,38 @@
+
+state={
+	id=344
+	name="STATE_344"
+	manpower = 1081781
+	
+	resources = {
+		coal = 2 #initial distribution
+	}
+
+	state_category = town
+
+	history = {
+		owner = PRL
+		add_core_of = PRL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			9893 15
+		}
+		victory_points = {
+			7620 10
+		}
+		victory_points = {
+			6813 3
+		}
+
+	}
+
+	provinces={
+		3889 6813 7620 9893 9912 
+	}
+
+
+	local_supplies=0.0 
+}

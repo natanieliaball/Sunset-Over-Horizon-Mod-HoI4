@@ -1,0 +1,91 @@
+﻿capital = 103
+
+oob = "POM_1936"
+
+set_convoys = 100
+set_research_slots = 2
+set_stability = 0.35
+set_war_support = 0.2
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	marines = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	mtg_transport = 1
+}
+
+recruit_character = POM_AdrijanC
+recruit_character = POM_LukaD
+recruit_character =  POM_MarinoIIN
+recruit_character = POM_KormanosF
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 12
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	neutrality = 20
+	fascism = 10
+	communism = 45
+}
+
+set_autonomy = {
+	target = CRT
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = AEG
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = ATH
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = IST
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = EDI
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = SUZ
+	autonomous_state = autonomy_colony
+}
+set_autonomy = {
+	target = GIB
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = SCL
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+set_autonomy = {
+	target = ANT
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+
+set_autonomy = {
+	target = TNG
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}

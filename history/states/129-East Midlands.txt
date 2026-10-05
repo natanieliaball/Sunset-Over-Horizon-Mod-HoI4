@@ -1,0 +1,35 @@
+
+state={
+	id=129
+	name="STATE_129"
+	manpower = 2212021
+	
+	state_category = city
+	
+	resources={
+		steel = 11 # was: 20
+		coal = 8 #initial distribution
+	}
+
+	history = {
+		owner = DAN
+		add_core_of = DAN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 3
+
+		}
+		victory_points = {
+			6237 10 #Nottingham
+		}
+		victory_points = {
+			11279 3 #Leicester
+		}
+	}
+
+	provinces={
+		364 3353 6237 9250 9268 9322 11279 
+	}
+
+	local_supplies=0.0 
+}

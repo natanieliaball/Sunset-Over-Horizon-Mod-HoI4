@@ -1,0 +1,70 @@
+characters = {
+    NIT_FontanaD = {
+        name="Marco Fontana"
+        portraits={
+            civilian={
+                large="GFX_FontanaD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    NIT_FeliceN = {
+        name="Felice II di Savoia"
+        portraits={
+            civilian={
+                large="GFX_FelixN"
+            }
+        }
+        country_leader={
+            ideology=Monarchism
+            expire=""
+			id = -1
+        }
+    }
+
+    NIT_BastianD = {
+        name="Colami Bastian"
+        portraits={
+            civilian={
+                large="GFX_BastianD"
+            }
+        }
+        country_leader={
+            ideology=Conservatism
+            expire=""
+			id = -1
+        }
+    }
+    
+    NIT_FarinelliC = {
+        name="Antonio Farinelli"
+        portraits={
+            civilian={
+                large="GFX_FarinelliC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+
+    NIT_GiacomoF = {
+        name="Perido Giacomof"
+        portraits={
+            civilian={
+                large="GFX_GiacomoF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+}

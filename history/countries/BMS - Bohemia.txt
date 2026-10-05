@@ -1,0 +1,44 @@
+﻿capital = 9
+
+oob = "TAG_1936"
+
+set_convoys = 0
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 12
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 35
+	neutrality = 40
+	fascism = 20
+	communism = 5
+}
+
+add_ideas = BMS_unstable_Politic
+add_ideas = BMS_unstable_Economy
+add_ideas = BMS_survivor_of_hell
+add_ideas = BMS_Silesian_Question
+add_ideas = BMS_presence_of_anarchism
+
+recruit_character = BMS_ProvisionalCouncilN
+recruit_character = BMS_JarosD 
+recruit_character = BMS_KuceraC
+recruit_character = BMS_JezekN
+recruit_character = BMS_ZahoraF
+recruit_character = BMS_JozinD

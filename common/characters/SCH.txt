@@ -1,0 +1,15 @@
+characters = {
+    SCH_MeridaABT = {
+        name="Merida Schlovadja "
+        portraits={
+            civilian={
+                large="GFX_MeridaABT"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+}

@@ -1,0 +1,12 @@
+JAK_war_of_unification = {
+	priority = 50
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+        tag = JAK
+	}
+    visible = {
+        tag = JAK
+        has_country_flag = JAK_War_of_unification
+        NOT = { has_country_flag = JAK_War_of_unification_END }
+    }
+}

@@ -1,0 +1,15 @@
+characters = {
+    ATH_NereusPOM = {
+        name="Nauplios Nereus"
+        portraits={
+            civilian={
+                large="GFX_NereusPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

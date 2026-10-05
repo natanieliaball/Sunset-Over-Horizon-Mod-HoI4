@@ -1,0 +1,15 @@
+characters = {
+    AEG_PelagiosPOM = {
+        name="Pelagios Naftis"
+        portraits={
+            civilian={
+                large="GFX_NaftisPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

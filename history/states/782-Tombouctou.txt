@@ -1,0 +1,18 @@
+state = {
+	id = 782
+	name = "STATE_782" # Tombouctou
+	manpower = 79243
+	
+	state_category = wasteland
+	impassable = yes
+	force_link_ownership_to = 898 # Gao
+
+	history = {
+	}
+
+	provinces = {
+		10771 1897 1115 10725 10868 12849 10749
+	}
+
+	local_supplies = 0.0 
+}

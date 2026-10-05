@@ -1,0 +1,357 @@
+focus_tree = {
+    id = FRK_focus_tree
+	continuous_focus_position = { x = 800 y = 100 }
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = FRK
+        }
+    }
+
+    default = no
+
+    focus = {
+        id = FRK_establish_the_junta
+        icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+        x = 3
+        y = 0
+        cost = 1
+
+        completion_reward = {
+            add_stability = 0.20
+            add_war_support = 0.10
+			add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = FRK_restore_order
+        icon = GFX_SOV_coup_detat_ccp_2d_sov_compatibility
+        x = 3
+        y = 1
+        cost = 7
+        prerequisite = { focus = FRK_establish_the_junta }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FRK_junta_chaos_1
+                add_idea = FRK_junta_chaos_2
+            }
+            add_stability = 0.10
+        }
+    }
+
+    focus = {
+        id = FRK_rebuild_supply_lines
+        icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+        x = 1
+        y = 2
+        cost = 7
+        prerequisite = { focus = FRK_restore_order }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = FRK_military_reorganisation
+        icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+        x = 3
+        y = 2
+        cost = 7
+        prerequisite = { focus = FRK_restore_order }
+
+        completion_reward = {
+            army_experience = 150
+        }
+    }
+
+    focus = {
+        id = FRK_peoples_militia
+        icon = GFX_focus_generic_manpower
+        x = 5
+        y = 2
+        cost = 5
+        prerequisite = { focus = FRK_restore_order }
+
+        completion_reward = {
+            add_manpower = 10000
+            55 = {
+			create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+				    owner = ROOT
+				    count = 6
+				}
+            } 
+        }
+    }
+
+    focus = {
+        id = FRK_stabilise_the_economy
+        icon = GFX_focus_generic_industry_2
+        x = 1
+        y = 3
+        cost = 10
+        prerequisite = { focus = FRK_rebuild_supply_lines }
+
+        completion_reward = {
+
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = FRK_forge_the_army
+        icon = GFX_goal_continuous_reduce_training_time
+        x = 3
+        y = 3
+        cost = 10
+        prerequisite = { focus = FRK_military_reorganisation }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FRK_junta_chaos_2
+                add_idea = FRK_junta_chaos_3
+            }
+            army_experience = 75
+            create_unit = {
+                name = "1st Frankfurt Infantry"
+                location = 6488
+                division_template = "Infantry Division"
+                start_experience_factor = 0.4
+                start_equipment_factor = 1.0
+            }
+        }
+    }
+
+    focus = {
+        id = FRK_volkssturm
+        icon = GFX_focus_generic_manpower
+        x = 5
+        y = 3
+        cost = 7
+        prerequisite = { focus = FRK_peoples_militia }
+
+        completion_reward = {
+            add_manpower = 20000
+            55 = {
+			    create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+				    owner = ROOT
+				    count = 6
+				}
+            } 
+        }
+    }
+
+    # Mutuellement exclusifs - Doctrine
+    focus = {
+        id = FRK_doctrine_maneuver
+        icon = GFX_focus_generic_army_doctrines_2
+        x = 2
+        y = 4
+        cost = 10
+        prerequisite = { focus = FRK_forge_the_army }
+        mutually_exclusive = { focus = FRK_doctrine_defense }
+
+        completion_reward = {
+            add_ideas = FRK_doctrine_maneuver_idea
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = FRK_doctrine_defense
+        icon = GFX_goal_generic_defence
+        x = 4
+        y = 4
+        cost = 10
+        prerequisite = { focus = FRK_forge_the_army }
+        mutually_exclusive = { focus = FRK_doctrine_maneuver }
+
+        completion_reward = {
+            add_ideas = FRK_doctrine_defense_idea
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = FRK_specialise_infantry
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 2
+        y = 5
+        cost = 10
+        prerequisite = { focus = FRK_doctrine_maneuver focus = FRK_doctrine_defense }
+        mutually_exclusive = { focus = FRK_specialise_artillery }
+
+        completion_reward = {
+            add_ideas = FRK_specialise_infantry_idea
+        }
+    }
+
+    focus = {
+        id = FRK_specialise_artillery
+        icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+        x = 4
+        y = 5
+        cost = 10
+        prerequisite = { focus = FRK_doctrine_maneuver focus = FRK_doctrine_defense }
+        mutually_exclusive = { focus = FRK_specialise_infantry }
+
+        completion_reward = {
+            add_ideas = FRK_specialise_artillery_idea
+        }
+    }
+
+
+    # Diplo
+
+
+    focus = {
+        id = FRK_albatian_question
+        icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+        x = 3
+        y = 6
+        cost = 1
+        available = {
+            OR = {
+                has_government = neutrality
+                has_government = fascism
+            }
+        }
+        prerequisite = { focus = FRK_specialise_infantry focus = FRK_specialise_artillery }
+        will_lead_to_war_with = ABT
+        completion_reward = {
+            declare_war_on = {
+                target = ABT
+                type = annex_everything
+            }
+            add_timed_idea = {
+                idea = FRK_surprise_attack_ABT
+                days = 30
+            }
+        }
+    }
+
+    focus = {
+        id = FRK_cores_on_albata
+        icon = GFX_goal_generic_forceful_treaty
+        x = 2
+        y = 7
+        cost = 7
+        prerequisite = { focus = FRK_albatian_question }
+	    available = {
+            NOT = {
+			    country_exists = ABT
+            }
+		}
+
+        completion_reward = {
+            every_state = {
+                limit = { is_core_of = ABT }
+                add_core_of = FRK
+            }
+        }
+    }
+
+    focus = {
+        id = FRK_NGC_question
+        icon = GFX_focus_generic_diplomatic_treaty
+        x = 4
+        y = 7
+        cost = 1
+        prerequisite = { focus = FRK_albatian_question }
+        will_lead_to_war_with = NGC
+	    available = {
+            NOT = {
+			    country_exists = ABT
+            }
+		}
+        completion_reward = {
+            declare_war_on = {
+                target = NGC
+                type = annex_everything
+            }
+            add_timed_idea = {
+                idea = FRK_surprise_attack_NGC
+                days = 30
+            }
+        }
+    }
+
+    focus = {
+        id = FRK_cores_on_NGC
+        icon = GFX_goal_generic_forceful_treaty
+        x = 4
+        y = 8
+        cost = 7
+        prerequisite = { focus = FRK_NGC_question }
+	    available = {
+            NOT = {
+			    country_exists = NGC
+
+            }
+		}
+        completion_reward = {
+            every_state = {
+                limit = { is_core_of = NGC }
+                add_core_of = FRK
+            }
+        }
+    }
+}

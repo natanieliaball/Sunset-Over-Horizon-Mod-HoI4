@@ -1,0 +1,10 @@
+GBC_formable = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+		OR = {
+        	tag = LON
+			tag = DAN
+			tag = COW
+		}
+	}
+}

@@ -1,0 +1,15 @@
+characters = {
+    CEC_MetildeC = {
+        name="Alex Metilde"
+        portraits={
+            civilian={
+                large="GFX_MetildeC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+}

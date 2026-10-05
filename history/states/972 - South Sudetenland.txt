@@ -1,0 +1,28 @@
+state = {
+	id = 972
+	name = "STATE_972"
+	manpower = 253750
+	
+	state_category = town
+	
+	resources = {
+		steel = 2
+	}
+	
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = BMS
+		add_core_of = BOH			
+
+		buildings = {
+			infrastructure = 1		
+		}
+	}
+
+	provinces = {
+		543 5283 7857 
+	}
+	local_supplies = 0.0 
+
+}

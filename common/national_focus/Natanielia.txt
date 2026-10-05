@@ -1,0 +1,2136 @@
+focus_tree = {
+
+	id = Natanielia
+
+	continuous_focus_position = { x = 0 y = 2000 }
+
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = NAT
+		}
+	}
+
+    focus = {
+		
+		id = NAT_The_eastern_Protector
+		icon = GFX_focus_generic_democratic_europe
+		ai_will_do = { factor = 80 }
+		x = 11
+		y = 0
+		cost = 5
+
+		mutually_exclusive = {Focus =NAT_natanielia_first}
+		prerequisite = {}
+
+		completion_reward = {
+            add_political_power = 250
+		}
+    }
+### communisme
+    focus = {
+
+		id = NAT_Concesion_to_the_worker
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+
+		x = 5
+		y = 1
+		cost = 10
+
+		mutually_exclusive = { focus = NAT_Revive_The_treaty_of_Warsaw }
+		prerequisite = { focus = NAT_The_eastern_Protector }
+
+		completion_reward = {
+			remove_ideas = NAT_communist_Veto
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = { ideology = communism popularity = 0.15 }
+			add_political_power = 100
+			add_stability = -0.1
+		}
+    }
+    focus = {
+		id = NAT_support_worker_in_aurinia
+		icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+
+		x = 3
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Concesion_to_the_worker }
+
+		completion_reward = {
+			AUR = {
+				add_ideas = NAT_worker_propaganda_idea
+			}
+		}
+    }
+    focus = {
+		id = NAT_Economic_concesion 
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+
+		x = 5
+		y = 2
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Concesion_to_the_worker }
+
+		completion_reward = {
+			add_ideas = NAT_economic_concession_idea
+			add_political_power = 50
+		}
+    }
+    focus = {
+		id = NAT_launch_a_coup_d_etat
+		icon = GFX_SOV_war_economy_ccp_2d_sov_compatibility
+
+		x = 3
+		y = 3
+		cost = 10
+		available = {
+    		AUR = { communism > 0.2 }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Economic_concesion  }
+		prerequisite = { focus = NAT_support_worker_in_aurinia }
+		completion_reward = {
+			AUR = {
+				add_stability = -0.10
+				add_political_power = 150
+			}
+			AUR = {country_event = { id = NAT_events.1 days = 3 }}
+		}
+    }
+    focus = {
+		id = NAT_taxe_rich_people 
+		icon = GFX_focus_RAJ_war_taxes
+
+		x = 5
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Economic_concesion  }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.1
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+    }
+    focus = {
+		id = NAT_Economic_reforme  
+		icon = GFX_focus_generic_currency_reforms
+
+		x = 7
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Economic_concesion  }
+		completion_reward = {
+			add_ideas = NAT_economic_reform_idea
+		}
+    }
+    focus = {
+		id = NAT_Millitary_industrial_refome 
+		icon = GFX_focus_generic_arms_trade
+
+		x = 5
+		y = 4
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_taxe_rich_people   }
+		prerequisite = { focus = NAT_Economic_reforme  }
+		completion_reward = {
+			add_ideas = NAT_military_industrial_complex_idea
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+    }
+    focus = {
+		id = NAT_foreign_policy
+		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+
+		x = 5
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Millitary_industrial_refome }
+		completion_reward = {
+			add_political_power = 75
+		}
+    }
+    focus = {
+		id = NAT_demand_submition_of_aurinia
+		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+
+		x = 3
+		y = 6
+		cost = 10
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = {country_exists = AUR}
+			}
+		}
+		available = {
+    		AUR = { has_government = communism }
+			NAT = {has_government = communism}
+			NAT = {	is_puppet = no }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_foreign_policy }
+		prerequisite = { focus = NAT_launch_a_coup_d_etat }
+		completion_reward = {
+			AUR = { country_event = { id = NAT_events.2 days = 5 } }
+			add_war_support = 0.05
+		}
+    }
+    focus = {
+		id = NAT_Influence_eastern_Europe 
+		icon = GFX_SOV_a_global_class_struggle_ccp_2d_sov_compatibility
+
+		x = 5
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_foreign_policy }
+		completion_reward = {
+			MOL = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			AUR = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			GAL = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			SVE = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			JAK = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			ARO = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			SIL = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			POD = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			POZ = {
+				add_timed_idea = {
+    				idea = NAT_communist_influence_idea
+    				days = 300
+				}
+			}
+			add_political_power = 100
+		}
+    }
+    focus = {
+		id = NAT_Anti_Kpaligonia_propaganda
+		icon = GFX_goal_generic_propaganda
+
+		x = 7
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_foreign_policy }
+		completion_reward = {
+			add_ideas = NAT_anti_kpaligonia_propaganda_idea
+			add_political_power = 50
+		}
+    }
+    focus = {
+		id = NAT_Spart_the_revolution
+		icon = GFX_focus_GER_legacy_of_the_spartacus_league
+
+		x = 5
+		y = 7
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus =  NAT_Influence_eastern_Europe  }
+		prerequisite = { focus =  NAT_Anti_Kpaligonia_propaganda focus = NAT_International_brigade  }
+		completion_reward = {
+			add_war_support = 0.10
+			add_political_power = 150
+		}
+    }
+    focus = {
+		id = NAT_indoctrinating_the_scouts
+		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+
+		x = 9
+		y = 5
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus =  NAT_Millitary_industrial_refome  }
+		completion_reward = {
+			add_manpower = 40000
+			army_experience = 50
+			add_popularity = {
+				communism = 0.1
+			}
+			add_war_support = 0.1
+		}
+    }
+    focus = {
+		id = NAT_International_brigade
+		icon = GFX_focus_PHI_philippine_scouts
+
+		x = 9
+		y = 6
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus =  NAT_indoctrinating_the_scouts  }
+		completion_reward = {
+			add_manpower = 30000
+			add_ideas = NAT_international_brigades_idea
+			set_rule = {
+        		can_send_volunteers = yes
+    		}
+		}
+    }
+### Ally communist
+    focus = {
+		id = NAT_ally_of_all_time
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+
+		x = 9
+		y = 2
+		cost = 5
+		ai_will_do = { factor = 100 }			
+		available = {
+			ABT ={
+			has_government = communism
+			}
+		}
+
+		mutually_exclusive = {focus = NAT_We_cannot_trust_the_west}
+		prerequisite = { focus =  NAT_Concesion_to_the_worker  }
+		completion_reward = {
+			add_opinion_modifier = { target = ABT modifier = large_increase }
+			ABT = { add_opinion_modifier = { target = NAT modifier = large_increase } }
+			add_political_power = 100
+			
+		}
+    }
+    focus = {
+		id = NAT_Demand_garant_against_ngc
+		icon = GFX_goal_generic_defence
+
+		x = 9
+		y = 3
+		cost = 7
+
+		available = {
+			ABT ={
+			is_faction_leader = yes
+			has_government = communism
+			}
+		}
+
+		mutually_exclusive = {}
+		prerequisite = { focus =  NAT_ally_of_all_time  }
+		completion_reward = {
+			ABT = { country_event = { id = NAT_events.11 }}
+		}
+    }
+    focus = {
+		id = NAT_allience_with_ABT
+		icon = GFX_alliance_nat
+
+		x = 9
+		y = 4
+		cost = 5
+
+		available = {
+			ABT ={
+			is_faction_leader = yes
+			has_government = communism
+			}
+		}
+
+		mutually_exclusive = {}
+		prerequisite = { focus =  NAT_Demand_garant_against_ngc  }
+		completion_reward = {
+			ABT = { country_event = { id = NAT_events.10 }}
+		}
+    }
+    focus = {
+		id = NAT_We_cannot_trust_the_west
+		icon = GFX_SOV_expand_the_agitprop_ccp_2d_sov_compatibility
+
+		x = 11
+		y = 2
+		cost = 5
+		mutually_exclusive = {focus = NAT_ally_of_all_time}
+		prerequisite = { focus =  NAT_Concesion_to_the_worker  }
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "L'International"
+			}
+			add_opinion_modifier = { target = ABT modifier = large_decrease }
+			add_political_power = 150
+			add_war_support = 0.05
+		}
+    }
+### communism influence
+    focus = {
+		id = NAT_Demand_Moldova_Submition
+		icon = GFX_focus_AUS_danubian_socialist_communes
+
+		x = 5
+		y = 8
+		cost = 10
+		will_lead_to_war_with = MOL
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = { country_exists = MOL }
+			}
+		}
+		available = {
+    		MOL = { communism > 0.2 }
+			NAT = {	is_puppet = no }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Spart_the_revolution }
+		completion_reward = {
+			MOL = { country_event = { id = NAT_events.3 days = 5 } }
+			add_war_support = 0.03
+		}
+    }
+    focus = {
+		id = NAT_Demand_Galicia_Submition
+		icon = GFX_focus_AUS_danubian_socialist_communes
+
+		x = 3
+		y = 8
+		cost = 10
+		will_lead_to_war_with = GAL
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = { country_exists = GAL}
+			}
+		}
+		available = {
+    		GAL = { communism > 0.2 }
+			NAT = {	is_puppet = no }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Spart_the_revolution }
+		completion_reward = {
+			GAL = { country_event = { id = NAT_events.4 days = 5 } }
+			add_war_support = 0.03
+		}
+    }
+
+    focus = {
+		id = NAT_Demand_Arsorin_Submition
+		icon = GFX_focus_AUS_danubian_socialist_communes
+
+		x = 1
+		y = 8
+		cost = 10
+		will_lead_to_war_with = ARO
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = { country_exists = ARO}
+			}
+		}
+		available = {
+    		ARO = { communism > 0.2 }
+			country_exists = ARO
+			NAT = {	is_puppet = no }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Spart_the_revolution }
+		completion_reward = {
+			ARO = { country_event = { id = NAT_events.7 days = 5 } }
+			add_war_support = 0.03
+		}
+    }
+
+    focus = {
+		id = NAT_Demand_Svenya_submition
+		icon = GFX_focus_AUS_danubian_socialist_communes
+
+		x = 7
+		y = 8
+		cost = 10
+		will_lead_to_war_with = SVE
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = {country_exists = SVE}
+			}
+		}
+		available = {
+    		SVE = { communism > 0.2 }
+			NAT = {	is_puppet = no }
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Spart_the_revolution }
+		completion_reward = {
+			SVE = { country_event = { id = NAT_events.5 days = 5 } }
+			add_war_support = 0.03
+		}
+    }
+    focus = {
+		id = NAT_demand_Jakubia_submition
+		icon = GFX_focus_AUS_danubian_socialist_communes
+
+		x = 9
+		y = 8
+		cost = 10
+		will_lead_to_war_with = JAK
+		bypass = { 
+			or = {
+				is_puppet = yes
+				NOT = { country_exists = JAK }
+			}
+		}
+		available = {
+    		JAK = { communism > 0.2 }
+			NAT = {	is_puppet = no }
+
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Spart_the_revolution }
+		completion_reward = {
+			JAK = { country_event = { id = NAT_events.6 days = 5 } }
+			add_war_support = 0.03
+		}
+    }
+    focus = {
+		id = NAT_Kpaligonia_must_end 
+		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+
+		x = 5
+		y = 9
+		cost = 10
+
+		mutually_exclusive = {}
+		will_lead_to_war_with = KPA
+		prerequisite = { focus = NAT_Demand_Galicia_Submition }
+		prerequisite = { focus = NAT_Demand_Moldova_Submition }
+		prerequisite = { focus = NAT_Demand_Svenya_submition }
+		prerequisite = { focus = NAT_demand_Jakubia_submition }
+		prerequisite = { focus = NAT_Demand_Arsorin_Submition }
+		completion_reward = {
+			add_ideas = NAT_anti_kpaligonia_crusade_idea
+			create_wargoal = {
+				type = annex_everything
+				target = KPA
+			}
+			add_war_support = 0.20
+		}
+    }
+    focus = {
+		id = NAT_Form_soviet_republic 
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+
+		x = 5
+		y = 10
+		cost = 10
+		available = {
+			NAT = {	is_puppet = no }
+			NAT = {has_government = communism}
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Kpaligonia_must_end }
+		completion_reward = {
+			if = {
+				limit = {
+					GAL = { is_puppet_of = NAT }
+				}	
+				GAL = { set_cosmetic_tag = GAL_SSR }
+				GAL = {
+            		recruit_character = GAL_TykchaSSR
+            		retire_character = GAL_TykchaC
+				}
+			}
+			if = {
+				limit = {
+					MOL = { is_puppet_of = NAT }
+				}	
+				MOL = { set_cosmetic_tag = MOL_SSR }
+				MOL = {
+            		recruit_character = MOL_OteleanuSSR
+            		retire_character = MOL_OteleanuC
+				}
+			}
+			if = {
+				limit = {
+					SVE = { is_puppet_of = NAT }	
+				}
+				SVE = { set_cosmetic_tag = SVE_SSR }
+				SVE = {
+            		recruit_character = SVE_SaarinenSSR
+            		retire_character = SVE_SaarinenC
+				}
+			}
+			if = {
+				limit = {
+					JAK = { is_puppet_of = NAT }	
+				}
+				JAK = { set_cosmetic_tag = JAK_SSR}
+				JAK = {
+            		
+            		retire_character = JAK_ValjasC
+					recruit_character = JAK_ValjasSSR
+					add_country_leader_role = {
+						character = JAK_ValjasSSR
+						promote_character = yes
+                		country_leader = {
+                			ideology = marxism
+                 			expire = ""     
+			    		}
+						promote_leader = yes 
+            		}
+				}
+			}
+			if = {
+				limit = {
+					AUR = { is_puppet_of = NAT }	
+				}
+				AUR = { set_cosmetic_tag = AUR_SSR }
+				AUR = {
+            		recruit_character = AUR_HalickaSSR
+            		retire_character = AUR_NaruanC
+				}
+			}
+			if = {
+				limit = {
+					SIL = { is_puppet_of = NAT }	
+				}
+				annex_country = {
+    				target = SIL
+    				transfer_troops = yes
+				}
+				add_state_core = 159
+				add_state_core = 66 
+				add_state_core = 67
+				add_state_core = 762
+				add_state_core = 74
+				add_state_core = 72
+			}
+			if = {
+				limit = {
+					POZ = { is_puppet_of = NAT }	
+				}
+				annex_country = {
+    				target = POZ
+    				transfer_troops = yes
+				}
+				add_state_core = 86
+			}
+			if = {
+				limit = {
+					POD = { is_puppet_of = NAT }	
+				}
+				annex_country = {
+    				target = POD
+    				transfer_troops = yes
+				}
+				add_state_core = 97
+				add_state_core = 814
+			}
+			if = {
+				limit = {
+					ARO = { is_puppet_of = NAT }	
+				}
+				ARO = { set_cosmetic_tag = ARO_SSR }
+			}
+		NAT = { set_cosmetic_tag = NAT_SSR }
+			
+			add_war_support = 0.20
+            retire_character = NAT_NatanieliaC
+
+            recruit_character = NAT_NatanieliaSSR     
+        
+			add_country_leader_role = {
+				character = NAT_NatanieliaSSR
+				promote_character = yes
+                country_leader = {
+                    ideology = marxism
+                    expire = ""     
+			    }
+            }
+		}
+    }
+#### democratic
+    focus = {
+		id = NAT_Revive_The_treaty_of_Warsaw 
+		icon = GFX_focus_generic_treaty
+
+		x = 18
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { focus = NAT_Concesion_to_the_worker}
+		prerequisite = { focus = NAT_The_eastern_Protector }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = { ideology = democratic popularity = 0.15 }
+			add_political_power = 100
+		}
+    }
+
+    focus = {
+		id = NAT_Crossroads_of_Eastern_Europe 
+		icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+
+		x = 21
+		y = 2
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {focus = NAT_form_the_SUN}
+		prerequisite = { focus = NAT_Revive_The_treaty_of_Warsaw }
+		completion_reward = {
+			add_political_power = 150
+		}
+    }
+	focus = {
+    	id = NAT_form_the_SUN
+    	icon = GFX_goal_generic_national_unity
+    	x = 15
+    	y = 2
+    	cost = 10
+		mutually_exclusive = {focus = NAT_Crossroads_of_Eastern_Europe
+		}
+    	prerequisite = {focus = NAT_Revive_The_treaty_of_Warsaw }
+    	completion_reward = {
+			add_stability = 0.05
+			set_politics = {
+    			ruling_party = democratic
+    			elections_allowed = yes
+    			last_election = "1935.3.20"
+    			election_frequency = 12
+    			long_name = "Socjaldemokratyczna Unia Natanielii"
+    			name = "SUN"
+			}
+			remove_ideas = NAT_communist_Veto
+		}
+	}
+	focus = {
+	    id = NAT_Social_reform
+	    icon = GFX_goal_generic_forceful_treaty
+	    x = 15
+	    y = 3
+	    cost = 10
+	    prerequisite = { focus = NAT_form_the_SUN }
+	    completion_reward = {
+			add_political_power = 150
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+	}
+	focus = {
+	    id = NAT_8h_workday 
+	    icon = GFX_SOV_paced_industrialization_ccp_2d_sov_compatibility
+	    x = 13
+	    y = 4
+	    cost = 10
+	    prerequisite = { focus = NAT_Social_reform }
+	    completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+	    id = NAT_improve_infrastructure_in_countryside
+	    icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+	    x = 15
+	    y = 4
+	    cost = 10
+	    prerequisite = { focus = NAT_Social_reform }
+	    completion_reward = {
+			1055 = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			98 = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			5 = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = NAT_Nationalize_the_military_industries
+	    icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
+	    x = 17
+	    y = 4
+ 	    cost = 10
+ 	    prerequisite = { focus = NAT_Social_reform }
+ 	    completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+# ========================
+# NIVEAU 3
+# ========================
+
+	focus = {
+	    id = NAT_Paid_leave
+	    icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+	    x = 13
+	    y = 5
+	    cost = 10
+	    prerequisite = { focus = NAT_8h_workday }
+	    completion_reward = {
+			add_ideas = NAT_Paid_leave_idea
+		}
+	}
+
+	focus = {
+	    id = NAT_investisment_in_the_dominion
+	    icon = GFX_SOV_eastern_development_ccp_2d_sov_compatibility
+	    x = 15
+	    y = 5
+	    cost = 10
+	    prerequisite = { focus = NAT_improve_infrastructure_in_countryside }
+	    completion_reward = {
+			97 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			86 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = NAT_nationalise_key_industry 
+	    icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+	    x = 17
+	    y = 5
+	    cost = 10
+	    prerequisite = { focus = NAT_Nationalize_the_military_industries }
+	    completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+	    id = NAT_the_eastern_question
+	    icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+	    x = 15
+	    y = 6
+	    cost = 10
+	    prerequisite = { focus = NAT_Paid_leave }
+	    prerequisite = { focus = NAT_investisment_in_the_dominion }
+	    prerequisite = { focus = NAT_nationalise_key_industry  }
+	
+	    completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+	    id = NAT_build_eastern_alliance
+	    icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
+	    x = 13
+	    y = 7
+	    cost = 10
+	    prerequisite = { focus = NAT_the_eastern_question }
+	    mutually_exclusive = { focus = NAT_bilateral_agreements }
+	    completion_reward = {
+			create_faction = "Eastern Pact"
+		}
+	}
+
+	focus = {
+	    id = NAT_bilateral_agreements
+	    icon = GFX_focus_generic_diplomatic_treaty
+	    x = 17
+	    y = 7
+	    cost = 10
+	    prerequisite = { focus = NAT_the_eastern_question }
+	    mutually_exclusive = { focus = NAT_build_eastern_alliance }
+		available = {
+			or = {
+				ABT = { has_government = democratic }
+				ABT = { has_government = communism }
+			}
+		}
+	    completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+# ========================
+# BRANCHE ALLIANCE COLLECTIVE
+# ========================
+
+	focus = {
+	    id = NAT_contact_JAK_SVE
+	    icon = GFX_SOV_reinforce_western_naval_bases_ccp_2d_sov_compatibility
+	    x = 11
+	    y = 8
+	    cost = 10
+	    prerequisite = { focus = NAT_build_eastern_alliance }
+	    completion_reward = {
+		    SVE = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		    JAK = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		    ARO = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		}
+	}
+
+	focus = {
+	    id = NAT_contact_GAL_AUR
+	    icon = GFX_goal_tripartite_pact
+	    x = 13
+	    y = 8
+	    cost = 10
+	    prerequisite = { focus = NAT_build_eastern_alliance }
+	    completion_reward = {
+		    GAL = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		    AUR = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		}
+	}
+
+	focus = {
+	    id = NAT_invite_MOL
+	    icon = GFX_focus_SOV_reinforce_southern_naval_bases
+	    x = 12
+	    y = 9
+	    cost = 10
+	    prerequisite = { focus = NAT_contact_JAK_SVE }
+	    prerequisite = { focus = NAT_contact_GAL_AUR }
+	    completion_reward = {
+		    MOL = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }
+		    CRI = {
+	        country_event = { id = NAT_events.12 days = 3 }
+		    }		
+		}
+	}
+
+	focus = {
+	    id = NAT_Help_democratic_movement
+	    icon = GFX_focus_generic_democratic_europe
+	    x = 11
+	    y = 10
+	    cost = 10
+	    prerequisite = { focus = NAT_invite_MOL }
+	    completion_reward = {
+			every_faction_member = {
+				add_popularity = { ideology = democratic popularity = 0.15 }
+			}
+		}
+	}
+
+	focus = {
+	    id = NAT_pact_military_cooperation
+	    icon = GFX_focus_generic_little_entente
+	    x = 13
+	    y = 10
+	    cost = 10
+	    prerequisite = { focus = NAT_invite_MOL }
+	    completion_reward = {
+			every_faction_member = {
+				add_ideas = NAT_military_cooperation
+				add_political_power = 100
+			}
+		}
+	}
+
+	focus = {
+	    id = NAT_eastern_shield
+	    icon = GFX_focus_ARG_defense_and_democracy
+	    x = 12
+	    y = 11
+	    cost = 10
+	    prerequisite = { focus = NAT_Help_democratic_movement }
+	    prerequisite = { focus = NAT_pact_military_cooperation }
+ 	    completion_reward = {
+			every_faction_member = {
+				add_stability = 0.1
+				add_war_support = 0.1
+				add_popularity = { ideology = democratic popularity = 0.15 }
+				if = {
+					limit = {
+						democratic > 0.4
+						NOT = {has_government = democratic}
+					}
+					set_politics = {
+    				ruling_party = democratic
+    				elections_allowed = yes
+    				election_frequency = 24
+					}		
+				}
+			}
+		}
+	}
+
+# ========================
+# BRANCHE ACCORDS BILATÉRAUX
+# ========================
+
+	focus = {
+	    id = NAT_alliance_with_abt
+    	icon = GFX_alliance_nat
+    	x = 15
+    	y = 8
+    	cost = 10
+		available = {
+			or = {
+				ABT = { has_government = democratic }
+				ABT = { has_government = communism }
+			}
+			ABT = {
+				is_faction_leader = yes
+			}
+		}
+    	prerequisite = { focus = NAT_bilateral_agreements }
+    	completion_reward = {
+			add_opinion_modifier = { target = ABT modifier = large_increase }
+			ABT = { add_opinion_modifier = { target = NAT modifier = large_increase } }s
+		    ABT = {
+	        country_event = { id = NAT_events.13 days = 3 }
+		    }			
+		}
+	}
+
+	focus = {
+	    id = NAT_Buy_the_Baltic_islands
+	    icon = GFX_focus_generic_baltic_sea_fleet
+	    x = 17
+	    y = 8
+	    cost = 10
+	    prerequisite = { focus = NAT_bilateral_agreements }
+	    completion_reward = {
+			SVE = {
+				country_event = { id = NAT_events.16 days = 3 }
+			}
+			JAK = {
+				country_event = { id = NAT_events.15 days = 3 }
+			}
+		}
+	}
+
+	focus = {
+    	id = NAT_continue_investisment_in_the_dominion
+    	icon = GFX_focus_generic_industry_investment
+    	x = 19 
+    	y = 8
+    	cost = 10
+    	prerequisite = { focus = NAT_bilateral_agreements }
+    	completion_reward = {
+			97 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			86 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+
+	focus = {
+	    id = NAT_War_propaganda
+	    icon = GFX_goal_generic_propaganda
+	    x = 17
+	    y = 9
+	    cost = 10
+	    prerequisite = { focus = NAT_Buy_the_Baltic_islands }
+	    completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.2
+		}
+	}
+
+	focus = {
+    	id = NAT_Natanielian_Federation_project
+    	icon = GFX_focus_GER_european_confederation
+    	x = 19
+    	y = 9
+    	cost = 10
+    	prerequisite = { focus = NAT_continue_investisment_in_the_dominion }
+    	completion_reward = {
+		    SIL = {
+	        country_event = { id = NAT_events.14 days = 3 }
+		    }	
+		    POD = {
+	        country_event = { id = NAT_events.14 days = 3 }
+		    }	
+		    POZ = {
+	        country_event = { id = NAT_events.14 days = 3 }
+		    }
+			add_state_core = 86
+			add_state_core = 67
+			add_state_core = 762	
+			add_state_core = 97
+			add_state_core = 814
+		}
+	}
+
+	focus = {
+	    id = NAT_bilateral_guarente
+	    icon = GFX_goal_generic_major_alliance
+	    x = 17
+	    y = 10
+	    cost = 10
+	    prerequisite = { focus = NAT_War_propaganda }
+	    prerequisite = { focus = NAT_nat_aur_border_agreement }
+	    completion_reward = {
+			ARO = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}
+			SVE = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}	
+			JAK = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}
+			AUR = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}	
+			GAL = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}	
+			MOL = {
+				country_event = { id = NAT_events.17 days = 3 }
+			}		
+		}
+	}
+	focus = {
+	    id = NAT_the_fear_of_the_east
+	    icon = GFX_focus_RAJ_lions_of_the_great_war
+	    x = 15
+	    y = 12
+	    cost = 10
+	    prerequisite = { focus = NAT_eastern_shield focus = NAT_bilateral_guarente }
+	    completion_reward = {
+			add_ideas = NAT_eastern_fear
+			
+		}
+	}
+
+	focus = {
+	    id = NAT_warning_to_KPA
+	    icon = GFX_goal_generic_major_war
+	    x = 15
+	    y = 13
+	    cost = 10
+		will_lead_to_war_with = KPA
+	    prerequisite = { focus = NAT_the_fear_of_the_east }
+	    completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KPA
+			}
+		}
+	}
+
+
+### Small path
+    focus = {
+		id = NAT_Abandon_POD
+		icon = GFX_focus_CZE_german_puppet
+
+		x = 22
+		y = 3
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {focus = NAT_protect_POD  }
+		prerequisite = { focus = NAT_Crossroads_of_Eastern_Europe }
+		completion_reward = {
+			KPA = { country_event = { id = NAT.7 days = 3 } }
+		}
+    }
+
+    focus = {
+		id = NAT_protect_POD 
+		icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+
+		x = 24
+		y = 3
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {focus = NAT_Abandon_POD}
+		prerequisite = { focus = NAT_Crossroads_of_Eastern_Europe }
+		completion_reward = {
+            814 = { add_building_construction = { type = bunker level = 2 province = 6281 instant_build = yes } }
+			814 = { add_building_construction = { type = bunker level = 2 province = 3272 instant_build = yes } }
+			814 = { add_building_construction = { type = bunker level = 2 province = 6407 instant_build = yes } }
+            34 = { add_building_construction = { type = bunker level = 2 province = 3516 instant_build = yes } }
+            97 = { add_building_construction = { type = bunker level = 2 province = 290 instant_build = yes } }
+			97 = { add_building_construction = { type = bunker level = 2 province = 11247 instant_build = yes } }
+			97 = { add_building_construction = { type = bunker level = 2 province = 347 instant_build = yes } }
+			97 = { add_building_construction = { type = bunker level = 2 province = 400 instant_build = yes } }
+
+		}
+    }
+
+    focus = {
+		id = NAT_Abandon_the_treaty_of_berlin
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+
+		x = 20
+		y = 3
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {}
+		prerequisite = { focus = NAT_Crossroads_of_Eastern_Europe }
+		completion_reward = {
+			NGC = { country_event = { id = NAT.8 days = 3 } }
+		}
+    }
+    focus = {
+		id = NAT_A_neutral_country
+		icon = GFX_goal_generic_neutrality_focus
+
+		x = 23
+		y = 4
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {focus =  NAT_Total_submition_to_germany}
+		prerequisite = { focus = NAT_Abandon_the_treaty_of_berlin  }
+		prerequisite = {focus = NAT_Abandon_POD focus = NAT_protect_POD }
+		completion_reward = {
+			add_ideas = NAT_neutral_State
+			remove_ideas = NAT_communist_Veto
+		}
+    }
+
+    focus = {
+		id = NAT_University_of_warsaw
+		icon = GFX_SOV_military_engineering_university_ccp_2d_sov_compatibility
+
+		x = 23
+		y = 5
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		prerequisite = { focus = NAT_A_neutral_country  }
+		completion_reward = {
+			add_research_slot = 1
+		}
+    }
+
+    focus = {
+		id = NAT_fortification_plan
+		icon = GFX_goal_fortify_the_westwall
+
+		x = 25
+		y = 5
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		prerequisite = { focus = NAT_A_neutral_country  }
+		completion_reward = {
+			add_ideas = NAT_fortification_plan
+		}
+    }
+
+    focus = {
+		id = NAT_Total_submition_to_germany
+		icon = GFX_focus_FIN_parmis_devils
+
+		x = 19
+		y = 4
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		mutually_exclusive = {focus =  NAT_A_neutral_country}
+		prerequisite = { focus = NAT_Abandon_the_treaty_of_berlin  }
+		prerequisite = {focus = NAT_Abandon_POD focus = NAT_protect_POD}
+		completion_reward = {
+			NGC = { country_event = { id = NAT.9 days = 3 } }
+			remove_ideas = NAT_communist_Veto
+		}
+    }
+
+    focus = {
+		id = NAT_NGC_Technology
+		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
+
+		x = 21
+		y = 5
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		prerequisite = { focus = NAT_Total_submition_to_germany }
+		completion_reward = {
+			add_research_slot = 1
+		}
+    }
+
+    focus = {
+		id = NAT_Aurinian_question
+		icon = GFX_goal_generic_major_war
+
+		x = 19
+		y = 5
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		will_lead_to_war_with = AUR
+		prerequisite = { focus = NAT_Total_submition_to_germany }
+		completion_reward = {
+			NGC = { country_event = { id = NAT.10 days = 3 } }
+		}
+    }
+
+    focus = {
+		id = NAT_Eastern_Claim
+		icon = GFX_focus_GER_eastern_grand_duchies
+
+		x = 19
+		y = 6
+		cost = 10
+		bypass = { 
+		}
+		available = {
+		}
+		prerequisite = { focus = NAT_Aurinian_question }
+		completion_reward = {
+			add_state_claim = 73
+			add_state_claim = 89
+			add_state_claim = 91
+			add_state_claim = 199
+			add_state_claim = 93
+			add_state_claim = 94
+			add_state_claim = 97
+			add_state_claim = 814
+		}
+    }
+
+
+### industrial 
+
+    focus = {
+        id = NAT_industrial_mobilization
+        icon = GFX_SOV_development_aid_for_eastern_allies_ccp_2d_sov_compatibility
+        x = 45
+        y = 0
+        cost = 5
+        prerequisite = { }
+
+        completion_reward = {
+            add_ideas = NAT_industrial_focus_idea
+            add_political_power = 100
+        }
+    }
+
+    focus = {
+        id = NAT_modernize_factories
+        icon = GFX_SOV_modernize_aircraft_facilities_ccp_2d_sov_compatibility
+        x = 45
+        y = 1
+        cost = 5
+        prerequisite = { focus = NAT_industrial_mobilization }
+
+        completion_reward = {
+            add_ideas = NAT_modern_factories_idea
+            add_political_power = 75
+        }
+    }
+
+
+
+    focus = {
+        id = NAT_civilian_factory_expansion
+        icon = GFX_focus_generic_industry_3
+        x = 42
+        y = 2
+        cost = 10
+        prerequisite = { focus = NAT_modernize_factories }
+
+        completion_reward = {
+            add_political_power = 50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = NAT_civil_production_boost
+        icon = GFX_focus_JAP_expand_coal_islands
+        x = 42
+        y = 3
+        cost = 5
+        prerequisite = { focus = NAT_civilian_factory_expansion }
+
+        completion_reward = {
+            add_ideas = NAT_civilian_production_idea
+        }
+    }
+
+    focus = {
+        id = NAT_expand_coal_mining
+        icon = GFX_focus_JAP_expand_coal_islands
+        x = 39
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_civil_production_boost }
+
+        completion_reward = {
+            add_political_power = 50
+			87 = {
+            	add_resource = { 
+                	type = coal
+                	amount = 20
+				}
+            }
+        }
+    }
+
+    focus = {
+        id = NAT_steel_production
+        icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
+        x = 41
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_civil_production_boost }
+
+        completion_reward = {
+			87 = {
+            add_resource = {
+            	    type = steel
+            	    amount = 20
+            	}
+			}
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = NAT_oil_refineries
+        icon = GFX_goal_generic_oil_refinery
+        x = 43
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_civil_production_boost }
+
+        completion_reward = {
+			910 = {
+            add_resource = {
+                	type = oil
+                	amount = 15
+            	}
+			}
+        }
+    }
+
+
+
+    focus = {
+        id = NAT_military_factory_expansion
+        icon = GFX_focus_generic_military_industry
+        x = 48
+        y = 2
+        cost = 10
+        prerequisite = { focus = NAT_modernize_factories }
+
+        completion_reward = {
+            add_political_power = 50
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = NAT_military_production_boost
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 48
+        y = 3
+        cost = 5
+        prerequisite = { focus = NAT_military_factory_expansion }
+
+        completion_reward = {
+            add_ideas = NAT_military_production_idea
+        }
+    }
+
+    focus = {
+        id = NAT_ammunition_production
+        icon = GFX_focus_generic_arms_trade
+        x = 47
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_military_production_boost }
+
+        completion_reward = {
+            add_political_power = 50
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+            }
+        }
+    }
+
+    focus = {
+        id = NAT_aircraft_production
+        icon = GFX_SOV_long_range_aircraft_ccp_2d_sov_compatibility
+        x = 49
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_military_production_boost }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = light_air
+            }
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = NAT_tank_production
+        icon = GFX_SOV_development_of_tankograd_ccp_2d_sov_compatibility
+        x = 51
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_military_production_boost }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = armor
+            }
+        }
+    }
+
+
+
+    focus = {
+        id = NAT_improve_infrastructure
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 45
+        y = 4
+        cost = 5
+        prerequisite = { focus = NAT_civil_production_boost }
+        prerequisite = { focus = NAT_military_production_boost }
+
+        completion_reward = {
+            add_ideas = NAT_infrastructure_idea
+            add_political_power = 75
+        }
+    }
+
+
+
+    focus = {
+        id = NAT_industrial_supremacy
+        icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+        x = 45
+        y = 5
+        cost = 10
+        prerequisite = { focus = NAT_oil_refineries }
+        prerequisite = { focus = NAT_steel_production }
+        prerequisite = { focus = NAT_expand_coal_mining }
+        prerequisite = { focus = NAT_tank_production }
+        prerequisite = { focus = NAT_aircraft_production }
+        prerequisite = { focus = NAT_ammunition_production }
+        prerequisite = { focus = NAT_improve_infrastructure }
+
+        completion_reward = {
+            add_ideas = NAT_industrial_supremacy_idea
+            add_political_power = 150
+            add_research_slot = 1
+        }
+    }
+### fachist 
+
+    focus = {
+        id = NAT_natanielia_first
+        icon = GFX_goal_support_fascism
+        x = 33
+        y = 0
+        cost = 10
+        mutually_exclusive = { focus = NAT_The_eastern_Protector }
+		ai_will_do = { factor = 50 }
+        prerequisite = {}
+
+        completion_reward = {
+            add_popularity = { ideology = fascism popularity = 0.08 }
+            add_political_power = 100
+            add_war_support = 0.05
+        }
+    }
+### SCOUTH
+    focus = {
+        id = NAT_revive_scouts_millitia 
+        icon = GFX_focus_ITA_generic_fascist_workers
+        x = 32
+        y = 1
+        cost = 10
+        prerequisite = { focus = NAT_natanielia_first }
+		mutually_exclusive = { focus = NAT_give_back_POD }
+        completion_reward = {
+            add_popularity = { ideology = fascism popularity = 0.08 }
+            add_war_support = 0.05
+			set_country_flag = NAT_Civil_war_F
+			87 = {set_state_flag = NAT_State_under_F}
+        }
+    }
+    focus = {
+        id = NAT_Overthrow_the_Government
+        icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
+        x = 32
+        y = 2
+        cost = 10
+		available = {
+			has_country_flag = NAT_Civil_war_F_END
+			has_civil_war = no
+		}
+        prerequisite = { focus = NAT_revive_scouts_millitia }
+        completion_reward = {
+			add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = NAT_reclaim_the_dominion
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        x = 32
+        y = 3
+        cost = 10
+        prerequisite = { focus = NAT_Overthrow_the_Government }
+		will_lead_to_war_with = SIL
+		will_lead_to_war_with = POZ
+		will_lead_to_war_with = POD
+        completion_reward = {
+			create_wargoal = {	
+    			type = puppet_wargoal_focus
+    			target = SIL
+            }
+
+			create_wargoal = {	
+    			type = puppet_wargoal_focus
+    			target = POZ
+            }
+
+			create_wargoal = {	
+    			type = puppet_wargoal_focus
+    			target = POD
+            }
+        }
+    }
+    focus = {
+        id = NAT_Reoganise_the_army
+        icon = GFX_focus_generic_army_doctrines_2
+        x = 26
+        y = 3
+        cost = 10
+        prerequisite = { focus = NAT_Overthrow_the_Government }
+        completion_reward = {
+			army_experience = 100
+        }
+    }
+
+    focus = {
+        id = NAT_Scouts_training
+        icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+        x = 26
+        y = 4
+        cost = 10
+        prerequisite = { focus = NAT_Reoganise_the_army }
+        completion_reward = {
+			add_ideas = NAT_Scouts_training
+        }
+    }
+    focus = {
+        id = NAT_Exile_the_communists
+        icon = GFX_focus_GER_end_european_communism
+        x = 30
+        y = 3
+        cost = 10
+        prerequisite = { focus = NAT_Overthrow_the_Government }
+        completion_reward = {
+			remove_ideas = NAT_communist_Veto
+        }
+    }
+
+    focus = {
+        id = NAT_Total_power_to_the_scouts
+        icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+        x = 28
+        y = 4
+        cost = 10
+        prerequisite = { focus = NAT_Exile_the_communists }
+        prerequisite = { focus = NAT_Reoganise_the_army }
+        completion_reward = {
+			add_political_power = 150
+			add_ideas = NAT_Scout_State
+        }
+    }
+
+    focus = {
+        id = NAT_Establis_Eastern_Scout_Union
+        icon = GFX_focus_CHL_mobilize_the_veteran_legionaries
+        x = 30
+        y = 5
+        cost = 10
+        prerequisite = { focus = NAT_Scouts_training }
+        prerequisite = { focus = NAT_Total_power_to_the_scouts }
+        prerequisite = { focus = NAT_F_foreign_policy }
+        completion_reward = {
+            10 = {
+				create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 1 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    count = 5
+				}
+            } 
+        }
+    }
+
+    focus = {
+        id = NAT_Finance_Scout_movement_in_BMS
+        icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+        x = 28
+        y = 6
+        cost = 10
+        prerequisite = { focus = NAT_Establis_Eastern_Scout_Union }
+		will_lead_to_war_with = BMS
+        completion_reward = {
+			BMS = {country_event = { id = NAT.5 days = 1 }}
+        }
+    }
+
+    focus = {
+        id = NAT_Finance_Scout_movement_in_GAL
+        icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+        x = 28
+        y = 7
+        cost = 10
+        prerequisite = { focus = NAT_Finance_Scout_movement_in_BMS }
+		will_lead_to_war_with = GAL
+			completion_reward = {
+			GAL = {country_event = { id = NAT.6 days = 1 }}
+        }
+    }
+
+    focus = {
+        id = NAT_WOSM
+        icon = GFX_focus_CHL_the_scouts_monarchist_youth_organization
+        x = 24
+        y = 6
+        cost = 10
+        prerequisite = { focus = NAT_Establis_Eastern_Scout_Union }
+		bypass = {
+			NAT = {  is_in_faction = yes }
+		}
+        completion_reward = {
+			create_faction = "World Organisation of Scout Movement"
+        }
+    }
+
+    focus = {
+        id = NAT_Treaty_with_KPA
+        icon = GFX_focus_ARG_fascist_researchers
+        x = 26
+        y = 6
+        cost = 10
+        prerequisite = { focus = NAT_Establis_Eastern_Scout_Union }
+
+        completion_reward = {
+			add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = NAT_Forme_Greater_NAT
+        icon = GFX_SOV_great_commander_ccp_2d_sov_compatibility
+        x = 29
+        y = 8
+        cost = 10
+        prerequisite = { focus = NAT_Finance_Scout_movement_in_GAL }
+        prerequisite = { focus = NAT_Establish_a_junta_in_AUR focus = NAT_Demand_AUR_submition }
+		available = {
+			controls_state = 814
+			controls_state = 97
+			controls_state = 92
+			controls_state = 90
+			controls_state = 91
+			controls_state = 89
+			controls_state = 73
+			controls_state = 70
+			controls_state = 74
+			controls_state = 75
+			controls_state = 9
+			controls_state = 69
+			controls_state = 972
+			controls_state = 1062
+
+		}
+        completion_reward = {
+			if = {
+				limit = {
+					AUR = {
+						is_puppet_of = NAT
+					}
+				}
+				annex_country = {
+    				target = AUR
+    				transfer_troops = yes
+				}
+				
+			}
+			set_cosmetic_tag = NAT_Greater_Natanielia
+			add_state_core = 814
+			add_state_core = 97
+			add_state_core = 92
+			add_state_core = 90
+			add_state_core = 88
+			add_state_core = 71
+			add_state_core = 91
+			add_state_core = 89
+			add_state_core = 73
+			add_state_core = 70
+			add_state_core = 74
+			add_state_core = 75
+			add_state_core = 9
+			add_state_core = 69
+			add_state_core = 972
+			add_state_core = 1062
+			add_state_core = 66
+			add_state_core = 1059
+			add_state_core = 86
+        }
+    }
+
+#   focus = {
+#       id = NAT_Establis_Scout_Millitary_GOV
+#       icon = GFX_focus_generic_fascism_drift
+#       x = 25 
+#       y = 9
+#       cost = 10
+#        prerequisite = { focus = NAT_Forme_Greater_NAT }
+#        prerequisite = { focus = NAT_WOSM }
+#
+#        completion_reward = {
+#        }
+#    }
+
+    focus = {
+        id = NAT_F_Reunite_silesia
+        icon = GFX_focus_POL_reassert_silesian_claims
+        x = 29
+        y = 9
+        cost = 10
+        prerequisite = { focus = NAT_Forme_Greater_NAT }
+		will_lead_to_war_with = NGC
+        completion_reward = {
+			create_wargoal = {	
+    			type = puppet_wargoal_focus
+    			target = NGC
+            }
+        }
+    }
+
+    focus = {
+        id = NAT_F_foreign_policy
+        icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+        x = 34
+        y = 4
+        cost = 10
+        prerequisite = { focus = NAT_reclaim_the_dominion }
+        completion_reward = {
+			add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = NAT_Demand_State_90
+
+        icon = GFX_goal_demand_sudetenland
+        x = 32
+        y = 5
+        cost = 10
+		will_lead_to_war_with = AUR
+        prerequisite = { focus = NAT_F_foreign_policy }
+        completion_reward = {
+			AUR = {country_event = { id = NAT.2 days = 1 }}
+        }
+    }
+
+
+    focus = {
+        id = NAT_Demand_AUR_submition
+
+        icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
+        x = 32
+        y = 6
+        cost = 10
+		will_lead_to_war_with = AUR
+		mutually_exclusive = {Focus =NAT_Establish_a_junta_in_AUR}
+        prerequisite = { focus = NAT_Demand_State_90 }
+        completion_reward = {
+			AUR = {country_event = { id = NAT.3 days = 1 }}
+        }
+    }
+
+    focus = {
+        id = NAT_Establish_a_junta_in_AUR
+
+        icon = GFX_focus_BRA_air_force
+        x = 30
+        y = 6
+        cost = 10
+		will_lead_to_war_with = AUR
+		mutually_exclusive = {focus = NAT_Demand_AUR_submition }
+        prerequisite = { focus = NAT_Demand_State_90 }
+        prerequisite = { focus = NAT_Establis_Eastern_Scout_Union }
+        completion_reward = {
+			AUR = {country_event = { id = NAT.4 days = 1 }}
+        }
+    }
+### treaty of minsk 
+    focus = {
+        id = NAT_give_back_POD
+        icon = GFX_focus_generic_fascism_drift
+        x = 34
+        y = 1
+        cost = 10
+		ai_will_do = { factor = -50 }
+        mutually_exclusive = { focus = NAT_revive_scouts_millitia }
+        prerequisite = {focus = NAT_natanielia_first }
+
+        completion_reward = {
+            KPA = {
+				annex_country = {
+    				target = POD
+				}
+			}
+        }
+    }
+}

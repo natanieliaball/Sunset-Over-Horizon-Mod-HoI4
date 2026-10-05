@@ -1,0 +1,175 @@
+ideas = {
+	country = {
+        SPT_Disunite_governement = {
+			picture = RAJ_partition_india_united
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -1				
+				stability_factor = -0.5
+                political_advisor_cost_factor = 0.5
+				improve_relations_maintain_cost_factor = 0.5
+			}                               
+        }
+
+        SPT_Army_coruption = {
+			picture = CHI_corruption_armed_forces
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				offence = -0.2
+				defence = -0.2
+				army_attack_speed_factor = -0.5
+				training_time_factor = 0.4
+				surrender_limit = -0.2
+				military_industrial_organization_research_bonus = -1
+			}                               
+        }
+
+        SPT_Secure_the_homeland = {
+			picture = generic_women_in_the_army
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.05
+                
+			}                               
+        }
+        SPT_Total_Mobilisation_ideas = {
+			picture = tot_economic_mobilisation
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.10
+				consumer_goods_factor = -0.5
+				production_factory_efficiency_gain_factor = 0.5
+				production_factory_max_efficiency_factor = 0.5 
+				production_speed_buildings_factor = 1
+				war_support_weekly = 0.02
+                stability_factor = -0.2
+				local_factory_energy_consumption = 1
+			}                               
+        }
+        SPT_indoctrinated_youth_Idea = {
+			picture = FRA_national_mobilization_focus
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+				training_time_factor = -0.1
+                
+			}                               
+        }
+        Women_in_the_army_idea= {
+			picture = generic_women_in_the_army
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.05
+                
+			}                               
+        }
+        SPT_National_recontruction_idea = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.2
+			}                               
+        }
+		Anti_Dautharik_Movement_ideas = {
+			picture = generic_purge
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.1
+				conscription = -0.2
+			}			
+		}
+		Final_step_ideas= {
+			picture = SOV_fascist_womens_movement
+			allowed = {
+				original_tag = SPT
+			}      
+ 
+			allowed_civil_war = {
+				always = yes
+			}   
+            
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.2
+				army_core_defence_factor = 0.4
+				army_core_ofence_factor = 0.2
+			}			
+		}
+	}
+}
+

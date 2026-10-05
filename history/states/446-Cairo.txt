@@ -1,0 +1,36 @@
+state = {
+	id = 446
+	name = "STATE_446" # Suez
+	manpower = 131732
+	state_category = town
+
+	history = {
+		owner = SUZ
+		add_core_of = SUZ
+		add_core_of = PRL
+		add_core_of = ACA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			4073  = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			12049 5 
+		}
+		
+		victory_points = {
+			4073 3 
+		}
+	
+	}
+	provinces = {
+		1155 4073 9947 12049 
+	}
+	buildings_max_level_factor = 1.000
+	
+	local_supplies = 0.000
+}

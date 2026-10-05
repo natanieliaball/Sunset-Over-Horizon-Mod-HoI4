@@ -1,0 +1,176 @@
+ideas = {
+	country = {
+        BMS_unstable_Politic = {
+            picture = DEN_occupation_laws
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }            
+            modifier = {
+                stability_factor = -0.20
+                war_support_factor = -0.05
+                political_power_factor = -0.2
+                fascist_drift = 0.4
+            }
+        }
+
+        BMS_unstable_Politic_2 = {
+            picture = DEN_occupation_laws
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }            
+            modifier = {
+                stability_factor = -0.1
+                political_power_factor = -0.1
+                fascist_drift = 0.2
+            }
+        }
+
+        BMS_unstable_Economy = {
+            picture = generic_economic_crisis
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = -0.2
+                production_speed_buildings_factor = -0.4
+                consumer_goods_factor = 0.60
+                production_factory_efficiency_gain_factor = -0.5
+                production_factory_max_efficiency_factor = -0.3 
+            }
+        }
+
+        BMS_unstable_Economy_2 = {
+            picture = generic_economic_recovery
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = -0.1
+                production_speed_buildings_factor = -0.3
+                consumer_goods_factor = 0.35
+                production_factory_efficiency_gain_factor = -0.2
+                production_factory_max_efficiency_factor = -0.1
+            }
+        }
+
+        BMS_unstable_Economy_3 = {
+            picture = generic_mild_economic_recovery
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = -0.05
+                production_speed_buildings_factor = -0.1
+                consumer_goods_factor = 0.15
+                production_factory_efficiency_gain_factor = -0.1
+                production_factory_max_efficiency_factor = -0.05
+            }
+        }
+
+        BMS_survivor_of_hell = {
+            picture =BEL_scars_of_ww1
+            removal_cost = -1
+            allowed_civil_war = {
+            }
+            modifier = {
+                war_support_factor = 0.1
+            }
+        }
+        BMS_Silesian_Question = {
+            picture = chi_war_of_resistance
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                war_support_factor = 0.1
+                army_core_attack_factor = 0.2
+                army_core_defence_factor = 0.2
+            }
+        }
+
+        BMS_presence_of_anarchism = {
+            picture = SPR_anarchist_society
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                political_power_factor = -0.1
+                production_speed_buildings_factor = -0.2
+                conscription = -0.05
+
+            }
+        }
+        BMS_Millitary_training_ideas = {
+            picture = chi_army_corruption3
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                training_time_factor = -0.3
+                conscription = 0.05
+
+            }
+        }
+        BMS_NMPBMS_Fascist_support = {
+            picture = generic_fascism_drift_bonus
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                fascism_drift = 0.15
+
+            }
+        }
+        BMS_militarism_Propaganda_ideas = {
+            picture = SOV_rehabilitated_military_ns_nsb_ccp_sov_compatibility
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                conscription = 0.1
+                war_support_factor = 0.1
+            }
+        }
+        BMS_People_Army = {
+            picture = MEX_politicised_army
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                conscription = 0.10
+                training_time_factor = -0.1
+            }
+        }
+        BMS_Defencive_posture = {
+            picture = YUG_federal_defense_council
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                defence = 0.2
+            }
+        }
+        BMS_offencive_posture = {
+            picture = ast_volunteer_defence_corps
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                offence = 0.2
+            }
+        }
+    }
+}

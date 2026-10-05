@@ -1,0 +1,54 @@
+characters = {
+    ATL_Anir = {
+        name="Anire Belia"
+        portraits={
+            civilian={
+                large="GFX_Anir_Belia"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire="1936.1.14"
+			id = -1
+        }
+    }
+    ATL_GabriliaC = {
+        name="Gabrilia Morinie"
+        portraits={
+            civilian={
+                large="GFX_GabriliaC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    ATL_PeloriF = {
+        name="Pelori Sarisma"
+        portraits={
+            civilian={
+                large="GFX_PeloriF"
+            }
+        }
+        country_leader={
+            ideology=rexism
+            expire=""
+			id = -1
+        }
+    }
+    ATL_DidierD = {
+        name="Didier Covil"
+        portraits={
+            civilian={
+                large="GFX_DidierD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+}

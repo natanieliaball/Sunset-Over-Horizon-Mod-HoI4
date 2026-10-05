@@ -1,0 +1,23 @@
+state={
+	id=1054
+	name="Jersey"
+	history = {
+		owner = ATL
+		add_core_of = ATL
+
+		buildings = {
+				infrastructure = 2
+			13382 = {
+				naval_base = 2
+			}		
+		}
+	}
+	provinces={
+		13382
+	}
+
+	manpower=98200
+	buildings_max_level_factor=1
+	state_category = rural
+	local_supplies=0
+}

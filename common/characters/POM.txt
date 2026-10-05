@@ -1,0 +1,75 @@
+characters = {
+    POM_AdrijanC = {
+        name="Admiral Adrijan Kapetanović"
+        portraits={
+            civilian={
+                large="GFX_AdrijanCPOM"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    POM_LukaD = {
+        name="Luka Mornar"
+        portraits={
+            civilian={
+                large="GFX_LukaDPOM"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+        POM_MarinoIIN = {
+        name="Marino II"
+        portraits={
+            civilian={
+                large="GFX_MarinoIINPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+        POM_KormanosF = {
+        name="Voden Kormanoš"
+        portraits={
+            civilian={
+                large="GFX_KormanosFPOM"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+ # advisor
+    POM_Jadran_Ribaric = {
+        name = "Jadran Ribarić"
+        portraits = {
+            army = {
+                small = "europe_generic_2"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = POM_Jadran_Ribaric
+            allowed = {
+                original_tag = ABT
+            }
+            traits = { industry_reformer }
+            ai_will_do = {
+                factor = 1
+            }
+            cost = 150
+        }
+    }
+}

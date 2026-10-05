@@ -1,0 +1,15 @@
+characters = {
+    EDI_TaylanPOM = {
+        name="Deniz Taylan"
+        portraits={
+            civilian={
+                large="GFX_TaylanPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

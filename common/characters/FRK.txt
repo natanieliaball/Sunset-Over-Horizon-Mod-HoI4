@@ -1,0 +1,15 @@
+characters = {
+    FRK_mcN = {
+        name="Albato-German Military Council"
+        portraits={
+            civilian={
+                large="GFX_mcN"
+            }
+        }
+        country_leader={
+            ideology=Officer_Rule
+            expire=""
+			id = -1
+        }
+    }
+}

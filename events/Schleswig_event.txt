@@ -1,0 +1,41 @@
+add_namespace = SCH
+
+country_event = {
+    id = SCH.1
+    title = SCH_independence.t
+    desc = SCH_independence.d
+    picture = GFX_report_event_sanation_left_victory
+
+    is_triggered_only = yes
+
+    option = {
+    name = SCH_independence.a
+    ai_chance = { factor = 100 }
+
+    SCH = {
+        every_country = {
+            limit = { is_overlord_of = SCH }
+            end_puppet = SCH
+        }
+        set_cosmetic_tag = SCH
+    
+        }
+    
+        ABT = {
+            country_event = {
+                id = ABT.1
+                days = 1
+            }
+        }
+    }
+
+    option = {
+        name = SCH_independence.b
+        ai_chance = { factor = 5 }
+
+        ABT = {
+        puppet = SCH
+        }
+    }
+
+}

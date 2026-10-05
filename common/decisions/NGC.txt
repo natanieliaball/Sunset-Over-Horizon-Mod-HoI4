@@ -1,0 +1,222 @@
+
+NGC_influence_BMS = {
+    NGC_finance_local_militia = {
+        icon = GFX_decision_generic_military
+        allowed = { always = yes }
+
+        visible = {
+            tag = NGC
+            BMS = { exists = yes }
+        }
+        available = {
+            has_equipment = {
+                infantry_equipment_1 > 999
+            }
+        }
+        days_remove = 30
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = NGC_BMS_influence value = 15}
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+			}
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    NGC_Pro_NGC_propaganda = {
+        icon = GFX_decision_ger_mefo_bills
+        allowed = { always = yes }
+
+        visible = {
+            tag = NGC
+            BMS = { exists = yes }
+        }
+        available = {
+                political_power > 49
+
+        }
+        days_remove = 15
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = NGC_BMS_influence value = 5}
+        }
+        complete_effect = {
+			add_political_power = -50
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    NGC_influence_BMS_economy = {
+        icon = GFX_decision_generic_factory
+        allowed = { always = yes }
+
+        visible = {
+            tag = NGC
+            BMS = { exists = yes }
+        }
+        available = {
+        }
+        days_remove = 70
+        fire_only_once = no
+        modifier = {
+            NGC = {
+                consumer_goods_factor = 0.20
+            }
+
+        }
+        remove_effect = {
+            add_to_variable = { var = NGC_BMS_influence value = 25}
+        }
+        complete_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    NGC_Demande_BMS_submition = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { always = yes }
+
+        visible = {
+            tag = NGC
+            BMS = { exists = yes }
+            NOT = { BMS = { is_puppet_of = NGC } }
+        }
+        available = {
+            check_variable = {
+                NGC_BMS_influence > 99
+            }
+        }
+
+        complete_effect = {
+            set_variable = {
+                var = NGC_BMS_influence
+                value = 0
+            }
+            clr_country_flag = NGC_can_influence_BMS
+            BMS = {
+                country_event = { id = NGC_BMS_influence_event.1 days = 3 }
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
+
+NGC_establish_puppets_regime = {
+    establish_Confederate_natanielia = {
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 87
+                state = 10
+                state = 98
+                state = 814
+                state = 97
+            }
+        }    
+        visible = {
+            TAG = NGC
+            has_country_flag = NGC_forme_puppet_regime
+        }
+        available = {                
+
+                controls_state = 87
+                controls_state = 10
+                controls_state = 98
+                controls_state = 814
+                controls_state = 97
+                NAT = { 
+                    exists = no
+                }
+            
+        }
+
+        cost = 150
+        fire_only_once = yes
+        on_map_mode = map_and_decisions_view
+        complete_effect = {
+            NAT = {
+                transfer_state = 87
+                transfer_state = 10
+                transfer_state = 98
+                transfer_state = 814
+                transfer_state = 97 
+                set_cosmetic_tag = NAT_NGC
+
+                retire_character = NAT_NatanieliaN
+
+                recruit_character = NAT_NathanNGC	       
+        
+			    add_country_leader_role = {
+			    	character = NAT_NathanNGC
+			    	promote_character = yes
+                    country_leader = {
+                        ideology = neutrality_type
+                        expire = ""     
+			        }
+                }                
+                
+            }
+            NGC = {
+                puppet = NAT
+            }
+        }
+    }
+    establish_Confederate_albata = {
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 36
+                state = 7
+                state = 35
+                state = 977
+            }
+        }    
+        visible = {
+            TAG = NGC
+            has_country_flag = NGC_forme_puppet_regime
+        }
+        available = {                
+
+                controls_state = 36
+                controls_state = 7
+                controls_state = 35
+                controls_state = 977
+                ABT = { 
+                    exists = no
+                }
+            
+        }
+
+        cost = 150
+        fire_only_once = yes
+        on_map_mode = map_and_decisions_view
+        complete_effect = {
+            ABT = {
+                transfer_state = 36
+                transfer_state = 7
+                transfer_state = 35
+                transfer_state = 977 
+                set_cosmetic_tag = ABT_NGC
+                
+            }
+            NGC = {
+                puppet = ABT
+            }
+        }
+    }
+}

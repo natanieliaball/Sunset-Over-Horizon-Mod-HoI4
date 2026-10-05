@@ -1,0 +1,26 @@
+state = {
+	id = 1062
+	name = "Moravian Sudetenland"
+	manpower = 143520
+	state_category = rural
+	
+	history = {
+		owner = SPT
+		add_core_of = BMS
+		add_core_of = SPT
+		add_core_of = MRV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1	
+		}
+		victory_points = {
+			557 1
+		}
+	}
+
+	provinces = {
+		11525 557
+ 	}
+
+	local_supplies = 0.0 
+}

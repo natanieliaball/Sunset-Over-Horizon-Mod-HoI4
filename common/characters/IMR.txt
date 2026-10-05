@@ -1,0 +1,15 @@
+characters = {
+    IMR_YasinskyC = {
+        name="Vojtech Yasinsky"
+        portraits={
+            civilian={
+                large="GFX_YasinskyC"
+            }
+        }
+        country_leader={
+            ideology=stalinism
+            expire=""
+			id = -1
+        }
+    }
+}

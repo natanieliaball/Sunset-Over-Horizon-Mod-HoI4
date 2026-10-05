@@ -1,0 +1,59 @@
+
+BRI_influence_CON = {
+	priority = 50
+    icon = GFX_decision_category_generic_propaganda
+    allowed = {
+        tag = BRI
+
+    }
+    visible = {
+        MUN = { country_exist = yes }
+        tag = BRI
+        has_country_flag = BRI_Influences_CON_Island_game
+    }
+}
+
+
+BRI_influence_MUN = {
+	priority = 49
+    icon = GFX_decision_category_generic_propaganda
+    allowed = {
+        tag = BRI
+
+    }
+    visible = {
+        MUN = { country_exist = yes }
+        tag = BRI
+        has_country_flag = BRI_Influences_MUN_Island_game
+    }
+}
+
+
+BRI_influence_ULS = {
+	priority = 48
+    icon = GFX_decision_category_generic_propaganda
+    allowed = {
+        tag = BRI
+
+    }
+    visible = {
+        ULS = { country_exist = yes }
+        tag = BRI
+        has_country_flag = BRI_Influences_ULS_Island_game
+    }
+}
+
+
+BRI_influence_LEI = {
+	priority = 47
+    icon = GFX_decision_category_generic_propaganda
+    allowed = {
+        tag = BRI
+
+    }
+    visible = {
+        LEI = { country_exist = yes }
+        tag = BRI
+        has_country_flag = BRI_Influences_LEI_Island_game
+    }
+}

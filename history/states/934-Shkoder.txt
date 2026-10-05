@@ -1,0 +1,35 @@
+
+state = {
+	id = 934
+	name = "STATE_934"
+	resources = {
+		aluminium = 1.000
+        chromium = 1.000
+        coal = 1 # initial distribution = with infra 1.4 / 1 total
+	}
+
+	history = {
+		owner = GAU
+		add_core_of = GAU
+		victory_points = {
+            9780 3 
+        }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			air_base = 3
+			9780 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces = {
+		3896 9780 11762
+	}
+	manpower = 246933
+	state_category = city
+	local_supplies = 5.000
+}

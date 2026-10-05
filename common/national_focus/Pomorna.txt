@@ -1,0 +1,924 @@
+focus_tree = {
+    id = POM_focus_tree
+	continuous_focus_position = { x = 0  y = 2000 }
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = POM
+        }
+    }
+
+    default = no
+
+
+    focus = {
+        id = POM_Pomornian_Plan
+        icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+        x = 13
+        y = 0
+        cost = 5
+        prerequisite = {}
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+ # commie
+  # premiere party 
+    focus = {
+        id = POM_Stay_Loyal_to_Admiral
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        x = 8
+        y = 1
+        cost = 5
+        prerequisite = { focus = POM_Pomornian_Plan }
+        completion_reward = {
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = POM_Plan_out_the_Reforms
+        icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+        x = 8
+        y = 2
+        cost = 5
+        prerequisite = { focus = POM_Stay_Loyal_to_Admiral }
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = POM_Industrial_Reforms
+        icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+        x = 4
+        y = 3
+        cost = 5
+        prerequisite = { focus = POM_Plan_out_the_Reforms }
+        completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+        }
+    }
+
+    focus = {
+        id = POM_Highway_Complex
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 4
+        y = 4
+        cost = 5
+        available = {
+            controls_state = 163
+            controls_state = 103
+            controls_state = 804
+        }
+        prerequisite = { focus = POM_Industrial_Reforms }
+        completion_reward = {
+			163 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			103 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			804 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}            
+        }
+    }
+
+    focus = {
+        id = POM_Revalue_the_Army
+        icon = GFX_focus_PRC_arms_recovery_efforts
+        x = 6
+        y = 3
+        cost = 5
+        prerequisite = { focus = POM_Plan_out_the_Reforms }
+        completion_reward = {
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = POM_Naval_Training
+        icon = GFX_SOV_an_oceangoing_navy_ccp_2d_sov_compatibility
+        x = 6
+        y = 4
+        cost = 5
+        prerequisite = { focus = POM_Revalue_the_Army}
+        completion_reward = {
+            navy_experience = 50
+            add_ideas = POM_Naval_Training_ideas
+        }
+    }
+
+    focus = {
+        id = POM_work_on_desertion
+        icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+        x = 6
+        y = 5
+        cost = 5
+        prerequisite = { focus = POM_Naval_Training }
+        completion_reward = {
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = POM_Plan_Oversee
+        icon = GFX_focus_generic_mediterranean_sea_focus
+        x = 8
+        y = 3
+        cost = 5
+        prerequisite = { focus = POM_Plan_out_the_Reforms }
+        completion_reward = {
+            every_subject_country = {
+                add_stability = 0.1
+                add_political_power = 150
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Reform_Assistent_Cabinet
+        icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+        x = 10
+        y = 4
+        cost = 5
+        prerequisite = { focus = POM_Plan_Oversee }
+        completion_reward = {
+            add_ideas = POM_Reformed_Cabinet_idea
+        }
+    }
+
+    focus = {
+        id = POM_Invest_in_Administrations
+        icon = GFX_SOV_fourth_five_year_plan_ccp_2d_sov_compatibility
+        x = 8
+        y = 4
+        cost = 5
+        prerequisite = { focus = POM_Plan_Oversee }
+        prerequisite = { focus = POM_Industrial_Reforms}
+        completion_reward = {
+            add_offsite_building = { type = industrial_complex level = 3 }
+            every_subject_country = {
+                add_offsite_building = { type = industrial_complex level = 2 }
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Volunteers_from_Naval_Administrations
+        icon = GFX_focus_SWE_refuge_for_revolutionaries
+        x = 8
+        y = 5
+        cost = 5
+        prerequisite = { focus = POM_Invest_in_Administrations }
+        prerequisite = { focus = POM_Naval_Training }
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				    owner = ROOT
+				    count = 8
+				}
+            } 
+        }
+    }
+
+    focus = {
+        id = POM_Form_Advisor_Captains_Council
+        icon = GFX_focus_SWI_dissolve_the_federal_council
+        x = 10
+        y = 5
+        cost = 5
+        prerequisite = { focus = POM_Reform_Assistent_Cabinet }
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+  # second part
+    focus = {
+        id = POM_Experiment_with_Formations
+        icon = GFX_goal_generic_special_forces
+        x = 2
+        y = 6
+        cost = 5
+        prerequisite = { focus = POM_work_on_desertion }
+        completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.1
+				uses = 3
+				category = cat_special_forces_generic
+			}
+        }
+    }
+
+    focus = {
+        id = POM_Mix_Army_with_Navy
+        icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
+        x = 2
+        y = 7
+        cost = 5
+        prerequisite = { focus = POM_Experiment_with_Formations }
+        completion_reward = {
+            navy_experience = 50
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = POM_Teach_Naval_Landing
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        x = 0
+        y = 8
+        cost = 5
+        prerequisite = { focus = POM_Mix_Army_with_Navy }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = POM_Naval_Training_ideas
+                add_idea = POM_Naval_Training_ideas_2
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Gather_the_best_men
+        icon = GFX_focus_PRC_army_command
+        x = 2
+        y = 8
+        cost = 5
+        prerequisite = { focus = POM_Mix_Army_with_Navy }
+        completion_reward = {
+            create_corps_commander = {
+	            name = "Kristijan Bartolićy"
+	            skill = 2
+	            attack_skill = 2
+	            defense_skill = 1
+	            planning_skill = 3
+	            logistics_skill = 1
+            } 
+            create_corps_commander = {
+	            name = "Žarko Alajbeg"
+	            skill = 3
+	            attack_skill = 1
+	            defense_skill = 3
+	            planning_skill = 2
+	            logistics_skill = 3
+            }  
+            create_corps_commander = {
+	            name = "Imanuel Soldo"
+	            skill = 2
+	            attack_skill = 3
+	            defense_skill = 2
+	            planning_skill = 1
+	            logistics_skill = 1
+            }            
+        }
+    }
+
+    focus = {
+        id = POM_Marine_Corpse
+        icon = GFX_focus_PHI_marine_corps
+        x = 2
+        y = 9
+        cost = 5
+        prerequisite = { focus = POM_Gather_the_best_men }
+        prerequisite = { focus = POM_Teach_Naval_Landing }
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Marine\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				    owner = ROOT
+				    count = 5
+				}
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Launch_Militarisation_in_Unused_Factories
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 4
+        y = 6
+        cost = 5
+        prerequisite = { focus = POM_Highway_Complex }
+        prerequisite = { focus = POM_Volunteers_from_Naval_Administrations }
+        completion_reward = {
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = POM_Connect_belgrade
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 4
+        y = 7
+        cost = 5
+        prerequisite = { focus = POM_Launch_Militarisation_in_Unused_Factories }
+		available = {
+			controls_state = 107
+			controls_state = 104
+
+		}
+		completion_reward = {
+			build_railway = {		
+				path = { 11586 9599 797 11741 11899}
+				level = 2
+			}
+		}
+    }
+
+    focus = {
+        id = POM_Naval_Experiments
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 4
+        y = 8
+        cost = 5
+        prerequisite = { focus = POM_Connect_belgrade }
+        prerequisite = { focus = POM_Mix_Army_with_Navy}
+        completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 4
+				category = naval_equipment
+			}            
+        }
+    }
+
+    focus = {
+        id = POM_Naval_facility
+        icon = GFX_focus_POL_develop_polish_shipbuilding
+        x = 4
+        y = 9
+        cost = 5
+        available = {
+            controls_state = 163
+        }
+        prerequisite = { focus = POM_Naval_Experiments }
+        completion_reward = {
+            163 = {
+				add_building_construction = { 
+					type = naval_facility 
+                    level = 1 
+                    province = 3943 
+                    instant_build = yes 
+				}
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Work_on_the_Navy
+        icon = GFX_goal_generic_occupy_states_coastal
+        x = 6
+        y = 6
+        cost = 5
+        prerequisite = { focus = POM_Volunteers_from_Naval_Administrations }
+  
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+                        NOT = { state = 163 }
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}			
+        }
+    }
+
+    focus = {
+        id = POM_Relaunch_Zadar_Dockayards
+        icon = GFX_focus_generic_refit_civilian_ships
+        x = 6
+        y = 7
+        cost = 5
+        prerequisite = { focus = POM_Work_on_the_Navy }
+        prerequisite = { focus = POM_Launch_Militarisation_in_Unused_Factories }
+        available = {
+            controls_state = 163
+        }
+        completion_reward = {
+			163 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+        }
+    }
+
+    focus = {
+        id = POM_SABP_Kapetanovic
+        icon = GFX_focus_generic_cruiser2
+        x = 6
+        y = 8
+        cost = 5
+        prerequisite = { focus = POM_Relaunch_Zadar_Dockayards }
+        completion_reward = {
+            POM = {
+                create_ship = {
+                    type = light_cruiser
+                    equipment_variant = "S Class"
+                    creator = POM
+                    name = "SABP Kapetanovic"
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POM_SABP_Admiralitet
+        icon = GFX_focus_generic_navy_battleship2
+        x = 6
+        y = 9
+        cost = 5
+        prerequisite = { focus = POM_SABP_Kapetanovic}
+        completion_reward = {
+            POM = {
+                create_ship = {
+                    type = light_cruiser
+                    equipment_variant = "S Class"
+                    creator = POM
+                    name = "SABP Kapetanovic"
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = POM_Indoctrine_the_Schools
+        icon = GFX_focus_NOR_moscows_education_centers
+        x = 8
+        y = 6
+        cost = 5
+        prerequisite = { focus = POM_Volunteers_from_Naval_Administrations }
+        prerequisite = { focus = POM_Form_Advisor_Captains_Council}
+        completion_reward = {
+            add_ideas = POM_Indoctrined_Schools
+            add_research_slot = 1
+        }
+    }
+
+    focus = {
+        id = POM_Socialist_Schools_Act
+        icon = GFX_focus_prc_agrarian_socialism
+        x = 8
+        y = 7
+        cost = 5
+        prerequisite = { focus = POM_Indoctrine_the_Schools }
+        completion_reward = {
+            add_ideas = POM_Socialist_Schools_Act
+        }
+    }
+
+    focus = {
+        id = POM_Youth_Sailor_Project
+        icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
+        x = 10
+        y = 7
+        cost = 5
+        prerequisite = { focus = POM_Indoctrine_the_Schools }
+        completion_reward = {
+            army_experience = 15
+            division_template = {
+                is_locked = yes
+                name = "Youth Sailor"
+                is_locked = yes
+                priority = 1
+                template_counter = 0
+                regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 2 y = 0 }
+                    infantry = { x = 2 y = 1 }
+                    infantry = { x = 2 y = 2 }
+                    artillery_brigade = { x = 3 y = 0 }
+                    artillery_brigade = { x = 3 y = 1 }
+                }
+            }            
+        }
+    }
+
+    focus = {
+        id = POM_Form_Youth_Divisions
+        icon = GFX_focus_SOV_builder_of_the_red_army
+        x = 8
+        y = 8
+        cost = 5
+        prerequisite = { focus = POM_Youth_Sailor_Project }
+        prerequisite = { focus = POM_Socialist_Schools_Act }
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Youth Sailor\" start_experience_factor = 0.6 start_equipment_factor = 1"
+				    owner = ROOT
+				    count = 5
+				}
+            }
+        }
+    }
+
+    # ========================
+    # BRANCHE COMMUNISTE
+    # ========================
+
+    focus = {
+        id = POM_Spirit_of_Naval_Youth
+        icon = GFX_focus_PHI_war_for_the_oceans
+        x = 8
+        y = 9
+        cost = 10
+        prerequisite = { focus = POM_Form_Youth_Divisions }
+        prerequisite = { focus = POM_SABP_Kapetanovic }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = POM_Indoctrined_Schools
+                add_idea = POM_Indoctrined_Schools_2
+            }
+        }
+    }
+
+    focus = {
+        id = POM_We_are_ready
+        icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+        x = 6
+        y = 10
+        cost = 10
+        prerequisite = { focus = POM_Marine_Corpse }
+        prerequisite = { focus = POM_Naval_facility }
+        prerequisite = { focus = POM_SABP_Admiralitet }
+        prerequisite = { focus = POM_Spirit_of_Naval_Youth }
+        completion_reward = {
+            add_manpower = 100000
+            add_political_power = 100
+            navy_experience = 50
+            army_experience = 50
+        }
+    }
+
+    focus = {
+        id = ARO_spread_revolution_jakubla
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_proclaim_worker_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_form_socialist_union
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_spread_revolution_jakubla }
+        completion_reward = {}
+    }
+
+
+    focus = {
+        id = ARO_take_revenge_kpaligonia
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_form_socialist_union }
+        completion_reward = {}
+    }
+
+
+    # ========================
+    # BRANCHE FASCISTE
+    # ========================
+
+    focus = {
+        id = ARO_form_militia_divisions
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_abolish_elections }
+        mutually_exclusive = { focus = ARO_gain_support_workers }
+        mutually_exclusive = { focus = ARO_we_are_too_weak }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_take_control_state
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_form_militia_divisions }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_memel_or_war
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_war_propaganda_jakubla
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_execute_kpaligonian_citizens
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_sudova_podlachia
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_memel_or_war }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_indoctrinate_jakubians
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_war_propaganda_jakubla }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_gotland
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_execute_kpaligonian_citizens }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_let_hell_break_loose
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_indoctrinate_jakubians }
+        prerequisite = { focus = ARO_demand_gotland }
+        prerequisite = { focus = ARO_demand_sudova_podlachia }
+        completion_reward = {}
+    }
+
+
+    focus = {
+        id = ARO_establish_sun_empire
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_let_hell_break_loose }
+        completion_reward = {}
+    }
+
+    # ========================
+    # BRANCHE FAIBLE
+    # ========================
+
+    focus = {
+        id = ARO_we_are_too_weak
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_abolish_elections }
+        mutually_exclusive = { focus = ARO_gain_support_workers }
+        mutually_exclusive = { focus = ARO_form_militia_divisions }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_seek_a_protector
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_we_are_too_weak }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_memel_claims_protection
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_turn_back_kpaligonia }
+        mutually_exclusive = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_turn_back_kpaligonia
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_memel_claims_protection }
+        mutually_exclusive = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_germans_shall_help
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_turn_back_kpaligonia }
+        mutually_exclusive = { focus = ARO_memel_claims_protection }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_we_cant_hold_longer
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_memel_claims_protection }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_say_sorry_rebellion
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_turn_back_kpaligonia }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_open_pipeline
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_become_natanielian_dominion
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_we_cant_hold_longer }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_allow_kpaligonian_commandment
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_say_sorry_rebellion }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_confederate_german_banner
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_open_pipeline }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_dominion_arsorin
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_become_natanielian_dominion }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_general_state_arsorin
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_allow_kpaligonian_commandment }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_confederate_state_arsorin
+        icon = GFX_
+        x = 12
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_confederate_german_banner }
+        completion_reward = {}
+    }
+}

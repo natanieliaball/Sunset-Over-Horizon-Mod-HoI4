@@ -1,0 +1,15 @@
+characters = {
+    SEC_siech = {
+        name="Adam Siech"
+        portraits={
+            civilian={
+                large="GFX_SiechN"
+            }
+        }
+        country_leader={
+            ideology=moderatism
+            expire=""
+	    	id = -1
+        }
+    }
+}

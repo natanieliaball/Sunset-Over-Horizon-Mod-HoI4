@@ -1,0 +1,18 @@
+state={
+	id=1073
+	name="Tunisian Route"
+	history = {
+		owner = AFR
+		add_core_of = AFR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		13412 13414 
+	}
+	manpower=4200
+	buildings_max_level_factor=1
+	state_category = wasteland
+	local_supplies=0
+}

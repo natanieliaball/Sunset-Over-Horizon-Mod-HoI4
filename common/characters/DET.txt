@@ -1,0 +1,68 @@
+characters = {
+    DET_kitsunedetektiv = {
+        name="Detektiv :3"
+        portraits={
+            civilian={
+                large="GFX_Furry_det_UwUDET"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            traits = { DET_TRUE_FORM }
+            expire=""
+			id = -1
+        }
+    }
+    DET_detN = {
+        name="Detektiv"
+        portraits={
+            civilian={
+                large="GFX_DetN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    DET_detF = {
+        name="Marechal Detektiv"
+        portraits={
+            civilian={
+                large="GFX_DetF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+    DET_detC = {
+        name="Camarade Det"
+        portraits={
+            civilian={
+                large="GFX_DetC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    DET_detD = {
+        name="Detektive"
+        portraits={
+            civilian={
+                large="GFX_DetD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+}

@@ -1,0 +1,27 @@
+
+state = {
+	id = 879
+	name = "STATE_879" # Kargopol
+	manpower = 210177
+	
+	state_category = rural
+
+	history = {
+		owner = ARK
+		add_core_of = ARK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			138 1 
+		}
+	}
+
+	provinces = {
+		3 18 26 72 89 127 138 3031 3086 6034 6051 6075 6109 9187 11071 11137 11178
+	}
+
+	local_supplies = 0.0 
+}

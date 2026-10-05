@@ -1,0 +1,19 @@
+state={
+	id=1072
+	name="Tripoli Route"
+	history = {
+		owner = AFR
+		add_core_of = AFR
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces={
+		13404 
+	}
+
+	manpower=1250
+	buildings_max_level_factor=1
+	state_category = wasteland
+	local_supplies=0
+}

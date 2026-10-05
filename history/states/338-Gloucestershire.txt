@@ -1,0 +1,31 @@
+
+state={
+	id=338
+	name="STATE_338"
+	manpower = 1800615
+	resources={
+		steel=9 # was: 16
+	}
+
+	state_category = city
+
+	history = {
+		owner = WLS
+		add_core_of = WLS
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		victory_points = {
+			3369 5 
+		}
+	}
+
+	provinces={
+		3369 6221 6351 6378 9484 11471 
+	}
+
+	local_supplies=0.0 
+}

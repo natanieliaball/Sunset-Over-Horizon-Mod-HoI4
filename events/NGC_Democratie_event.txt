@@ -1,0 +1,364 @@
+add_namespace = NGC_republic
+
+# Elections libres
+country_event = {
+    id = NGC_republic.1
+    title = NGC_republic.1.t
+    desc = NGC_republic.1.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_republic.1.a
+        NAT = {country_event = { id =NGC_republic.2 days = 3 }}
+        ai_chance = { factor = 50 }
+    }
+    option = {
+        name = NGC_republic.1.b
+        NAT = {country_event = { id =NGC_republic.3 days = 3 }}
+        ai_chance = { factor = 30 }
+    }
+    option = {
+        name = NGC_republic.1.c
+        NAT = {country_event = { id =NGC_republic.4 days = 3 }}
+        ai_chance = { factor = 20 }
+    }
+}
+
+country_event = {
+    id = NGC_republic.2
+    title = NGC_republic.2.t
+    desc = NGC_republic.2.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_republic.2.a
+        ai_chance = { factor = 80 }
+        NGC = {
+            end_puppet = LES
+        }
+        LES = {
+            annex_country = {
+                target = SIL
+                transfer_troops = yes
+            }
+            add_popularity = {
+            ideology = democratic
+            popularity = 0.4
+            }            
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+                last_election = "1935.6.10"
+                election_frequency = 12
+            }  
+
+            transfer_state = 1059
+            give_resource_rights = {
+                receiver = NAT
+                state = 762
+            }
+            give_resource_rights = {
+                receiver = NAT
+                state = 67
+            }
+            give_resource_rights = {
+                receiver = NGC
+                state = 66
+            }
+            give_resource_rights = {
+                receiver = NGC
+                state = 1059
+            }
+        }
+        NGC = {
+
+            diplomatic_relation = {
+                country = LES
+                relation = guarantee
+            }
+            diplomatic_relation = {
+                country = NAT
+                relation = non_aggression_pact
+            }
+        }
+        NAT = {
+            diplomatic_relation = {
+                country = LES
+                relation = guarantee
+            }
+        }
+    }
+    option = {
+        name = NGC_republic.2.b
+        ai_chance = { factor = 10}
+    }
+}
+
+country_event = {
+    id = NGC_republic.3
+    title = NGC_republic.3.t
+    desc = NGC_republic.3.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_republic.3.a
+        ai_chance = { factor = 50 }
+        LES = {
+            
+            annex_country = {
+                target = SIL
+                transfer_troops = yes
+            }
+            add_popularity = {
+            ideology = democratic
+            popularity = 0.4
+            }            
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+                last_election = "1935.6.10"
+                election_frequency = 12
+            }  
+
+            transfer_state = 1059
+            give_resource_rights = {
+                receiver = NGC
+                state = 762
+            }
+            give_resource_rights = {
+                receiver = NAT
+                state = 67
+            }
+        }
+        NGC = {
+            diplomatic_relation = {
+                country = NAT
+                relation = non_aggression_pact
+            }
+        }
+    }
+    option = {
+        ai_chance = { factor = 50 }
+        name = NGC_republic.3.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.4
+    title = NGC_republic.4.t
+    desc = NGC_republic.4.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_republic.4.a
+        ai_chance = { factor = 90 }
+        SIL= {
+            annex_country = {
+                target = LES
+                transfer_troops = yes
+            }
+  
+            transfer_state = 1059
+            give_resource_rights = {
+                receiver = NGC
+                state = 66
+            }
+            give_resource_rights = {
+                receiver = NGC
+                state = 1059
+            }
+        }
+        NGC = {
+            diplomatic_relation = {
+                country = NAT
+                relation = non_aggression_pact
+            }
+        }
+    }
+    option = {
+        ai_chance = { factor = 10 }
+        name = NGC_republic.4.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.5
+    title = NGC_republic.5.t
+    desc = NGC_republic.5.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 80 }
+        name = NGC_republic.5.a
+        FRK = {
+            add_popularity = {
+            ideology = democratic
+            popularity = 0.6
+            }            
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+                last_election = "1935.6.10"
+                election_frequency = 12
+            }        
+        }
+        NGC = {
+            add_to_faction = FRK
+        }
+    }
+    option = {
+        ai_chance = { factor = 20 }
+        name = NGC_republic.5.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.6
+    title = NGC_republic.6.t
+    desc = NGC_republic.6.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 85}
+        name = NGC_republic.6.a
+        NGC = {
+            add_to_faction = ROOT
+        }
+    }
+    option = {
+        ai_chance = { factor = 15 }
+        name = NGC_republic.6.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.7
+    title = NGC_republic.7.t
+    desc = NGC_republic.7.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 60 }
+        name = NGC_republic.7.a
+        ABT = {
+            end_puppet = SCH
+        }
+        NGC = {
+            add_to_faction = SCH
+        }
+    }
+    option = {
+        ai_chance = { factor = 40 }
+        name = NGC_republic.7.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.8
+    title = NGC_republic.8.t
+    desc = NGC_republic.8.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 90 }
+        name = NGC_republic.8.a
+        NGC = {
+            add_to_faction = SCH
+        }
+    }
+    option = {
+        ai_chance = { factor = 10 }
+        name = NGC_republic.8.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.9
+    title = NGC_republic.9.t
+    desc = NGC_republic.9.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 90 }
+        name = NGC_republic.9.a
+        NGC = {
+            diplomatic_relation = {
+                country = ABT
+                relation = non_aggression_pact
+            }
+            diplomatic_relation = {
+                country = ABT
+                relation = guarantee
+            }
+        }
+    }
+    option = {
+        ai_chance = { factor = 10 }
+        name = NGC_republic.9.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.10
+    title = NGC_republic.10.t
+    desc = NGC_republic.10.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_republic.10.a
+        ai_chance = { factor = 95 }
+        NGC = {
+        annex_country = {
+            target = ROOT
+            transfer_troops = yes
+            }
+        }
+        
+    }
+    option = {
+        ai_chance = { factor = 5 }
+        name = NGC_republic.10.b
+    }
+}
+
+country_event = {
+    id = NGC_republic.11
+    title = NGC_republic.11.t
+    desc = NGC_republic.11.d
+    picture = GFX_goal_generic_dangerous_deal
+    is_triggered_only = yes
+
+    option = {
+        ai_chance = { factor = 95 }
+        name = NGC_republic.11.a
+        NGC = {
+        annex_country = {
+            target = ABT
+            transfer_troops = yes
+            }
+        add_state_core = 36
+        add_state_core = 7
+        add_state_core = 35
+        add_state_core = 977
+        add_state_core = 6
+        add_state_core = 34
+        add_state_core = 29
+        }
+
+        
+    }
+    option = {
+        ai_chance = { factor = 5 }
+        name = NGC_republic.11.b
+    }
+}

@@ -1,0 +1,41 @@
+characters = {
+    SPT_Meristra = {
+        name="Meristra Sptartarn"
+        portraits={
+            civilian={
+                large="GFX_Meristra_Sptatarn"
+            }
+        }
+        country_leader={
+            ideology=emperor_fascism
+            expire="1936.1.14"
+			id = -1
+        }
+    }
+    SPT_Prenitio = {
+        name="Prenitio Sniatar"
+        portraits={
+            civilian={
+                large="GFX_Prenitio_Sniatar"
+            }
+        }
+        country_leader={
+            ideology=emperor_fascism
+            expire="1967.1.24"
+			id = -1
+        }
+    }
+    SPT_DeadMeristra = {
+        name="Meristra Sptartarn"
+        portraits={
+            civilian={
+                large="GFX_DeadMeristraF"
+            }
+        }
+        country_leader={
+            ideology=emperor_fascism
+            expire=""
+			id = -1
+        }
+    }
+}

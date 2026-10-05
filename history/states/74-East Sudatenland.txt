@@ -1,0 +1,36 @@
+state = {
+	id = 74
+	name = "STATE_74"
+	manpower = 820000
+	
+	resources = {
+		coal = 12 # initial distribution / 60 total
+	}
+
+	state_category = rural
+	
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = BMS
+		add_core_of = SIL
+		add_core_of = LES	
+		add_core_of = MRV		
+		victory_points = {
+			3583 5 # Ostrava
+		}
+		victory_points = {
+			3414 2 # Opava
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	provinces = {
+		421 3414 3583 6485
+ 	}
+
+	local_supplies = 2.0 
+}

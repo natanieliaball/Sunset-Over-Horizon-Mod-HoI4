@@ -1,0 +1,6 @@
+DET_Integrating_our_Clay = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+        tag = DET
+	}
+}

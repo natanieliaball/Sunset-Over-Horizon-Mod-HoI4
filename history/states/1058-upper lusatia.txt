@@ -1,0 +1,24 @@
+state={
+	id=1058
+	name="Niederlausitz"
+	provinces={
+		3514 9535 13387
+	}
+	history = {
+		owner = SOR
+		add_core_of = NGC
+		add_core_of = SOR
+		add_core_of = SAX
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			13387  2 # Bautzen
+		}
+	}
+	manpower=38260
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = town
+}

@@ -1,0 +1,16 @@
+state={
+	id=693
+	name="STATE_693"
+	manpower = 15000
+	
+	state_category = tiny_island
+
+	history = {
+	}
+	
+	provinces={
+		1513 10440 
+	}
+
+	local_supplies=0.0 
+}

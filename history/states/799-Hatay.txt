@@ -1,0 +1,32 @@
+state={
+	id=799
+	name="STATE_799"
+	provinces={
+		806 12029 11746 
+	}
+	manpower = 3034379
+	
+	state_category = town
+
+	history = {
+		owner = ABH
+		add_core_of = ABH
+		add_claim_by = PRL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			11746 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			12029 1
+		}
+		victory_points = {
+			11746 5 
+		}
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,18 @@
+state={
+	id=1071
+	name="Lybian Route"
+	history = {
+		owner = AFR
+		add_core_of = AFR
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces={
+		13400 13403 13407 13408 
+	}
+	manpower=6520
+	state_category = wasteland
+	buildings_max_level_factor=1
+	local_supplies=0
+}

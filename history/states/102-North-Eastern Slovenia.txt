@@ -1,0 +1,26 @@
+state=
+{
+	id=102
+	name="STATE_102"
+	manpower = 811050 # was 1144300 before Ljubljana split
+	
+	state_category = large_town
+	
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = ALP
+		
+		victory_points = {
+			665 1
+		}
+		buildings = {
+			infrastructure = 1			
+		}
+	}
+	provinces={
+		596 665 3631 3654 6672 9596
+	}
+	
+	local_supplies=0.0 
+}

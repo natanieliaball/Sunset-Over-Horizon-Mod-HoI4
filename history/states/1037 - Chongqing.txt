@@ -1,0 +1,24 @@
+state = {
+	id = 1037
+	name = "STATE_1037"
+	resources = {
+	}
+
+	history = {
+		victory_points = {
+			6999 20 # Chongqing
+		}
+		victory_points = {
+			11972 1 # Yibin
+		}
+	}
+
+	provinces = {
+		4431 6999 7240 11972 12705 
+	}
+	manpower = 31777980
+	buildings_max_level_factor = 1.000
+	state_category = city
+
+	local_supplies = 0.0 
+}

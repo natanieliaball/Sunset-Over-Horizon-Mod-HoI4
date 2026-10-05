@@ -1,0 +1,58 @@
+﻿capital = 87
+
+oob = "NAT_1936"
+
+set_convoys = 20
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	basic_train = 1
+}
+
+
+
+recruit_character = NAT_NatanieliaD
+recruit_character = NAT_NatanieliaC
+recruit_character = NAT_NatanieliaF
+recruit_character = NAT_NatanieliaN
+recruit_character = NAT_NathanNGC	
+recruit_character = NAT_NatanieliaSSR 
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 45
+	neutrality = 15
+	fascism = 5
+	communism = 35
+}
+
+set_autonomy = {
+	target = SIL
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+
+set_autonomy = {
+	target = POZ
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+
+set_autonomy = {
+	target = POD
+	autonomous_state = autonomy_colony
+	freedom_level = 0.35
+}
+add_ideas = NAT_communist_Veto

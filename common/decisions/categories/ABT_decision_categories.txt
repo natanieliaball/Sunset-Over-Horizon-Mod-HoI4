@@ -1,0 +1,19 @@
+ABT_albata_natanielia_union = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+    OR = {
+        tag = NAT
+        tag = ABT
+    }
+	}
+}
+ABT_Furry_revolution = {
+	icon = GFX_decision_category_generic_political_actions
+	allowed = {
+        tag = ABT
+	}
+    visible = {
+        tag = ABT
+        has_country_flag = ABT_FURRY_REVOLUTION_D
+    }
+}

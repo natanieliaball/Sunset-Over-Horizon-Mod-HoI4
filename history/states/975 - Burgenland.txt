@@ -1,0 +1,28 @@
+state = {
+	id = 975
+	name = "STATE_975"
+	manpower = 298000
+
+	resources = {
+	}
+	
+	state_category = rural
+	
+	history = {
+		owner = SEC
+		add_core_of = SEC
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			3700 1 
+		}
+	}
+
+	provinces = {
+		3700 9661 11630
+	}
+
+	local_supplies = 0.0 
+}

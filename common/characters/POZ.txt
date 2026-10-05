@@ -1,0 +1,28 @@
+characters = {
+    POZ_StefanNAT = {
+        name="Stefan Poseński"
+        portraits={
+            civilian={
+                large="GFX_StefanPOZ"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    POZ_CelakC = {
+        name="Czesław Celak"
+        portraits={
+            civilian={
+                large="GFX_CelakC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+}

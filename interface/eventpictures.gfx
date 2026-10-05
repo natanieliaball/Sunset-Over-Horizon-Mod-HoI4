@@ -1,0 +1,31 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_ABT_furry_in_power"
+		texturefile = "gfx/event_pictures/ABT_furry_in_power.dds"
+	}
+	spriteType = {
+		name = "GFX_SPT_death"
+		texturefile = "gfx/event_pictures/SPT_death.dds"
+	}
+	spriteType = {
+		name = "GFX_SPT_meristra_death"
+		texturefile = "gfx/event_pictures/SPT_meristra_death.dds"
+	}
+	spriteType = {
+		name = "GFX_SPT_BMS_independance"
+		texturefile = "gfx/event_pictures/SPT_BMS_independance.dds"
+	}
+	spriteType = {
+		name = "GFX_SPT_LOR_independance"
+		texturefile = "gfx/event_pictures/SPT_LOR_independance.dds"
+	}
+	spriteType = {
+		name = "GFX_SPT_FRK_independance"
+		texturefile = "gfx/event_pictures/SPT_FRK_independance.dds"
+	}
+	spriteType = {
+		name = "GFX_ABT_SCH_independance"
+		texturefile = "gfx/event_pictures/ABT_SCH_independance.dds"
+	}
+}

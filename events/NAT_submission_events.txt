@@ -1,0 +1,390 @@
+add_namespace = NAT_events
+
+### Coup d'état
+country_event = {
+    id = NAT_events.1
+    title = NAT_events.1.t
+    desc = NAT_events.1.d
+    picture = GFX_report_event_worker_protests
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.1.a
+        ai_chance = { factor = 90 }
+        AUR = {
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+                last_election = "1935.12.17"
+                election_frequency = 48
+            }
+            add_popularity = {
+                ideology = communism
+                popularity = 0.15
+            }
+        }
+    }
+    option = {
+        name = NAT_events.1.b
+        ai_chance = { factor = 10 }
+        AUR = {
+            start_civil_war = {
+                ruling_party = communism
+            }
+        }
+    }
+}
+
+## Aurinia Submission
+country_event = {
+    id = NAT_events.2
+    title = NAT_events.2.t
+    desc = NAT_events.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.2.a
+        ai_chance = { factor = 90 }
+
+        
+        NAT = { puppet = ROOT}
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.2.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = ROOT
+            }
+            add_political_power = -50
+            NAT = { country_event = { id = NAT_news_events.3 } }
+            
+        }
+    }
+}
+
+## Moldova Submission
+country_event = {
+    id = NAT_events.3
+    title = NAT_events.3.t
+    desc = NAT_events.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.3.a
+        ai_chance = { factor = 90 }
+        NAT = { puppet = PREV }
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.3.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = MOL
+            }
+            add_political_power = -50
+        }
+        NAT = { country_event = { id = NAT_news_events.3 } }
+    }
+}
+
+## Galicia Submission
+country_event = {
+    id = NAT_events.4
+    title = NAT_events.4.t
+    desc = NAT_events.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.4.a
+        ai_chance = { factor = 90 }
+        NAT = { puppet = PREV }
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.4.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = GAL
+            }
+            add_political_power = -50
+        }
+        NAT = { country_event = { id = NAT_news_events.3 } }
+    }
+}
+
+## Svenya Submission
+country_event = {
+    id = NAT_events.5
+    title = NAT_events.5.t
+    desc = NAT_events.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.5.a
+        ai_chance = { factor = 90 }
+        NAT = { puppet = PREV }
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.5.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = SVE
+            }
+            add_political_power = -50
+        }
+        NAT = { country_event = { id = NAT_news_events.3 } }
+    }
+}
+
+## Jakubia Submission
+country_event = {
+    id = NAT_events.6
+    title = NAT_events.6.t
+    desc = NAT_events.6.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.6.a
+        ai_chance = { factor = 90 }
+        NAT = { puppet = PREV }
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.6.b
+        ai_chance = { factor = 10 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = JAK
+            }
+            add_political_power = -50
+        }
+        NAT = { country_event = { id = NAT_news_events.3 } }
+    }
+}
+
+country_event = {
+    id = NAT_events.7
+    title = NAT_events.7.t
+    desc = NAT_events.7.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.7.a
+        ai_chance = { factor = 85 }
+        NAT = { puppet = PREV }
+        NAT = { country_event = { id = NAT_news_events.2 } }
+    }
+
+    option = {
+        name = NAT_events.7.b
+        ai_chance = { factor = 15 }
+        NAT = {
+            create_wargoal = {
+                type = annex_everything
+                target = ARO
+            }
+            add_political_power = -50
+        }
+        NAT = { country_event = { id = NAT_news_events.3 } }
+    }
+}
+## Alliance with ABT
+country_event = {
+    id = NAT_events.10
+    title = NAT_events.10.t
+    desc = NAT_events.10.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.10.a
+        ai_chance = { factor = 100 }
+        ABT = {add_to_faction = NAT}
+        NAT = { country_event = { id = NAT_news_events.4 }}
+    }
+    option = {
+        name = NAT_events.10.b
+        ai_chance = { factor = 0 }
+        NAT = { country_event = { id = NAT_news_events.5 }}
+    }
+
+}
+country_event = {
+    id = NAT_events.11
+    title = NAT_events.11.t
+    desc = NAT_events.11.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.11.a
+        ai_chance = { factor = 100 }
+        ABT = {give_guarantee = NAT}
+        NAT = {give_guarantee = ABT}
+        NAT = { country_event = { id = NAT_news_events.6 }}
+    }
+    option = {
+        name = NAT_events.11.a
+        ai_chance = { factor = 0 }
+        NAT = { country_event = { id = NAT_news_events.7 }}
+    }
+}
+country_event = {
+    id = NAT_events.12
+    title = NAT_events.12.t
+    desc = NAT_events.12.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.12.a
+        ai_chance = { factor = 90 }
+        NAT = {
+            add_to_faction = ROOT
+        } 
+    }
+    option = {
+        name = NAT_events.12.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = NAT_events.13
+    title = NAT_events.13.t
+    desc = NAT_events.13.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.13.a
+        ai_chance = { factor = 90 }
+        ABT = {
+            add_to_faction = NAT
+        } 
+    }
+    option = {
+        name = NAT_events.13.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = NAT_events.14
+    title = NAT_events.14.t
+    desc = NAT_events.14.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.14.a
+        ai_chance = { factor = 95 }
+        NAT = {
+            annex_country = {
+                target = ROOT
+                transfer_troops = yes
+            }
+        } 
+    }
+    option = {
+        name = NAT_events.14.b
+        ai_chance = { factor = 5 }
+    }
+}
+
+
+country_event = {
+    id = NAT_events.15
+    title = NAT_events.15.t
+    desc = NAT_events.15.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.15.a
+        ai_chance = { factor = 70 }
+        NAT = {
+            transfer_state = 811
+            811 = {set_compliance = 30}
+            give_guarantee = JAK
+        } 
+    }
+    option = {
+        name = NAT_events.15.b
+        ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+    id = NAT_events.16
+    title = NAT_events.16.t
+    desc = NAT_events.16.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.16.a
+        ai_chance = { factor = 70 }
+        NAT = {
+            transfer_state = 145
+            145 = {set_compliance = 30}
+            if = {
+                limit = { 
+                    SVE = { controls_state = 124 }
+                }
+                transfer_state = 124
+                124 = {set_compliance = 30}
+            }
+            give_guarantee = SVE
+        } 
+    }
+    option = {
+        name = NAT_events.16.b
+        ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+    id = NAT_events.17
+    title = NAT_events.17.t
+    desc = NAT_events.17.d
+    picture = GFX_
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_events.17.a
+        ai_chance = { factor = 80 }
+        NAT = {
+            give_guarantee = ROOT
+        } 
+        ROOT = {
+            give_guarantee = NAT
+        }
+    }
+    option = {
+        name = NAT_events.17.b
+        ai_chance = { factor = 20 }
+    }
+}

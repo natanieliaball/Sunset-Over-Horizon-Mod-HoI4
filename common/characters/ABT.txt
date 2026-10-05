@@ -1,0 +1,127 @@
+characters = {
+    ABT_NoriD = {
+        name="Nori D'alba"
+        portraits={
+            civilian={
+                large="GFX_NoriD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    ABT_NoriC = {
+        name="Félix Koltz"
+        portraits={
+            civilian={
+                large="GFX_NoriC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+       ABT_NoriF = {
+        name="Sylvain Nosbusch"
+        portraits={
+            civilian={
+                large="GFX_NoriF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+        ABT_NoriN = {
+        name="Duc Nori d'Alba et de Bosta"
+        portraits={
+            civilian={
+                large="GFX_NoriN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    ABT_Nori_furry = {
+        name="Nori :3"
+        portraits={
+            civilian={
+                large="GFX_NoriFurry"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    ## advisor
+    ABT_tony_bradant = {
+        name = "Tony Bradant"
+        portraits = {
+            army = {
+                small = "europe_generic_2"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ABT_tony_bradant
+            allowed = {
+                original_tag = ABT
+            }
+            traits = { economy_reformer }
+            ai_will_do = {
+                factor = 5
+            }
+            cost = 150
+        }
+    }
+    ABT_Matilia_Tourneva = {
+        name = "Matilia Tourneva"
+        portraits = {
+            army = {
+                small = "europe_generic_2"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ABT_Matilia_Tourneva 
+            allowed = {
+                original_tag = ABT
+            }
+            traits = { popular_figurehead }
+            ai_will_do = {
+                factor = 5
+            }
+            cost = 150
+        }
+    }
+
+    ABT_Janot_Chemin = {
+        name = "Janot Chemin"
+        portraits = {
+            army = {
+                small = "europe_generic_2"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ABT_Matilia_Tourneva 
+            allowed = {
+                original_tag = ABT
+            }
+            traits = { staunch_monarchist }
+            cost = 150
+        }
+    }
+}
+# Matilia Tourneva 

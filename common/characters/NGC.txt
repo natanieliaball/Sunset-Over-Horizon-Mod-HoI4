@@ -1,0 +1,58 @@
+characters = {
+    NGC_BundeskanzlerN = {
+        name="Wilhelm Schulenberg"
+        portraits={
+            civilian={
+                large="GFX_BundeskanzlerNNGC"
+            }
+        }
+        country_leader={
+            ideology=Officer_Rule
+            expire=""
+            traits = { Die_Bundeskanzler }
+			id = -1
+        }
+    }
+    NGC_AlldeutschemarscF = {
+        name="Hans Jäger"
+        portraits={
+            civilian={
+                large="GFX_AlldeutschemarscF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+            traits = { Alldeutschemarschall }
+			id = -1
+        }
+    }
+    NGC_GeneralsekretarC = {
+        name="Karl Sicher"
+        portraits={
+            civilian={
+                large="GFX_GeneralsekretarC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+            traits = { Generalsekretär }
+			id = -1
+        }
+    }
+    NGC_PräsidentD = {
+        name="Heinrich Meyer"
+        portraits={
+            civilian={
+                large="GFX_PräsidentD"
+            }
+        }
+        country_leader={
+            ideology=populism
+            expire=""
+            traits = { Präsident }
+			id = -1
+        }
+    }
+}

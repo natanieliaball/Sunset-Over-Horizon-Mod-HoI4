@@ -1,0 +1,40 @@
+state = {
+	id = 1060
+	name = "Nice"
+
+	state_category = town
+
+	manpower = 411420
+
+	history = {
+	owner = PRO
+	add_core_of = PRO
+	add_core_of = ALP
+	add_claim_by = DET
+	add_claim_by = NIT
+	DET = {
+		set_province_controller = 9736
+		set_province_controller = 3764
+		set_province_controller = 6975
+	}
+	buildings = {
+		infrastructure = 1
+		arms_factory = 1
+		industrial_complex = 1
+			9909 = {
+				naval_base = 1
+			}		
+	}
+		victory_points = {
+			9909 5 # Nice
+		}
+	}
+
+	provinces = {
+		3959 9909
+	}
+	
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 0.0 
+}

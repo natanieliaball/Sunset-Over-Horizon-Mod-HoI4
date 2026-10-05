@@ -1,0 +1,34 @@
+add_namespace = SPT_Event
+
+country_event = {
+    id = SPT_Event.1
+    title = SPT_Event.t
+    desc = SPT_Event.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = SPT_Event.a
+        ai_chance = { factor = 90 }
+        SPT = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = 1000
+		    	producer = ROOT
+			}
+        }
+        ROOT = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+		    	producer = ROOT
+			}            
+        }
+    }
+
+    option = {
+        name = SPT_Event.b
+        ai_chance = { factor = 10 }
+
+    }
+}

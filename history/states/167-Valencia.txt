@@ -1,0 +1,33 @@
+
+state={
+	id=167
+	name="STATE_167"
+	manpower = 1979294
+	
+	state_category = large_town
+
+	history = {
+		owner = CTV
+		add_core_of = CTV
+		victory_points = {
+			6906 10
+		}
+		victory_points = {
+			4098 3
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			6906 = {
+				naval_base = 5
+			}
+		}
+	}
+
+	provinces={
+		962 3799 3873 4098 6817 6856 6906 6959 9889 9896 
+	}
+
+	local_supplies=0.0 
+}

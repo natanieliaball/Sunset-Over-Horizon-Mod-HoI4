@@ -1,0 +1,2301 @@
+focus_tree = {
+
+	id = Albata
+
+	continuous_focus_position = { x = 0 y = 2000 }
+
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = ABT
+		}
+	}
+
+    focus = {
+		
+		id = ABT_Form_a_New_Governement
+		icon = GFX_focus_AFG_parliamentary_democracy
+		ai_will_do = { factor = 100 }
+		x = 14
+		y = 0
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {}
+
+		completion_reward = {
+            add_political_power = 250
+		}
+    }
+#### Communist 
+    focus = {
+		ai_will_do = { factor = 50}
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ABT_Unite_the_Nationals_movement  }
+				NOT = { has_country_flag = ABT_furry_republic }
+			}
+		}
+		id = ABT_honored_the_1933_revolution
+		icon = GFX_focus_focus_fra_revolution_utmost
+
+		x = 4
+		y = 1
+		cost = 5
+		cancel = {
+			has_country_flag = ABT_furry_republic 
+		}
+		mutually_exclusive = { focus = ABT_Unite_the_Nationals_movement }
+		prerequisite = { focus = ABT_Form_a_New_Governement}
+
+		completion_reward = {
+            add_popularity = {
+            ideology = communism
+            popularity = 0.05
+            }
+            add_ideas = Memory_of_the_1933_revolution
+				if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+    }
+
+    focus = {
+
+		id = ABT_authorise_Communist_Militias
+		icon = GFX_focus_generic_women_in_military
+
+		x = 4
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = ABT_honored_the_1933_revolution}
+
+		completion_reward = {
+            army_experience = 25
+            add_manpower = 35000
+            add_stability = -0.1
+		}
+    }
+
+    focus = {
+
+		id = ABT_Industrial_Collectivisation_plant
+		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
+
+		x = 1
+		y = 3
+		cost = 14.3
+
+		mutually_exclusive = {}
+		prerequisite = { focus = ABT_authorise_Communist_Militias}
+		available = {
+    		has_government = communism
+		}
+
+		completion_reward = {
+						random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+	focus = {
+    	id = ABT_workers_councils
+    	icon = GFX_focus_ICE_embrace_the_workers_revolution
+    	x = 1
+    	y = 5
+    	cost = 10
+   		prerequisite = { focus = ABT_Industrial_Collectivisation_plant }
+
+    	completion_reward = {
+        	add_ideas = ABT_workers_councils_idea
+    	}
+	}
+
+	focus = {
+    	id = ABT_five_year_plan
+    	icon = GFX_focus_GER_prioritize_the_four_year_plan
+    	x = 1
+    	y = 7
+    	cost = 10
+    	prerequisite = { focus = ABT_workers_councils }
+
+    	completion_reward = {
+    	    add_timed_idea = {
+				idea = ABT_five_year_plan_idea
+				days = 1826
+			}
+    	}
+	}
+
+    focus = {
+
+		id = ABT_indoctrinating_young_people
+		icon = GFX_focus_generic_spur_communist_revolutions
+
+		x = 3
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = { focus = ABT_authorise_Communist_Militias}
+		available = {
+    		has_government = communism
+		}
+
+		completion_reward = {
+			remove_ideas = ABT_divided_nation
+		}
+    }
+
+    focus = {
+
+		id = ABT_Proletarian_Dictatorship
+		icon = GFX_focus_GER_proletarian_solidarity
+
+		x = 5
+		y = 3
+		cost = 5
+
+		mutually_exclusive = { focus = ABT_direct_democracy  }
+		prerequisite = { focus = ABT_authorise_Communist_Militias}
+		available = {
+    		has_government = communism
+		}
+
+		completion_reward = {
+			add_ideas = ABT_Proletarian_Dicratorship_idea
+		}
+    }
+
+    focus = {
+
+		id = ABT_direct_democracy 
+		icon = GFX_goal_support_democracy
+
+		x = 7
+		y = 3
+		cost = 5
+
+		mutually_exclusive = { focus = ABT_Proletarian_Dictatorship }
+		prerequisite = { focus = ABT_authorise_Communist_Militias}
+		available = {
+    		has_government = communism
+		}
+
+		completion_reward = {
+			add_ideas = ABT_direct_democracy_ideas
+		}
+    }
+
+	focus = {
+
+    	id = ABT_veterans_of_1933
+    	icon = GFX_focus_CHL_mobilize_the_veteran_legionaries
+    	x = 8
+    	y = 4
+    	cost = 5
+    	prerequisite = { focus = ABT_authorise_Communist_Militias }
+		available = {
+    		has_government = communism
+		}
+
+    	completion_reward = {
+    	    army_experience = 50
+    	    add_ideas = ABT_veterans_1933_idea
+    	}
+	}
+
+	focus = {
+    	id = ABT_peoples_army
+    	icon = GFX_focus_GER_the_peoples_victory
+    	x = 8
+    	y = 6
+    	cost = 5
+    	prerequisite = { focus = ABT_veterans_of_1933 }
+
+    	completion_reward = {
+       		add_ideas = ABT_peoples_army_idea
+    	}
+	}
+	focus = {
+    	id = ABT_purge_counter_revolutionaries
+    	icon = GFX_focus_generic_conspiracy
+    	x = 9
+    	y = 3
+    	cost = 5
+    	prerequisite = { focus = ABT_authorise_Communist_Militias }
+		available = {
+    		has_government = communism
+		}
+
+		completion_reward = {
+        	add_stability = 0.05
+        	add_popularity = {
+            	ideology = communism
+            	popularity = 0.05
+        	}
+        	add_popularity = {
+            	ideology = fascism
+            	popularity = -0.05
+        	}
+        	add_popularity = {
+            	ideology = democratic
+            	popularity = -0.03
+        	}
+    	}
+	}
+
+	focus = {
+    	id = ABT_legacy_of_the_revolution
+    	icon = GFX_focus_BUL_support_macedonian_organizations
+    	x = 9
+    	y = 7
+    	cost = 5
+    	prerequisite = { focus = ABT_purge_counter_revolutionaries }
+
+    	completion_reward = {
+        	add_stability = 0.10
+        	add_popularity = {
+            	ideology = communism
+            	popularity = 0.08
+        	}
+        	country_event = { id = ABT_legacy_revolution.1 days = 1 }
+    	}
+	}
+
+    focus = {
+
+		id = ABT_We_must_continue_the_revolution
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+
+		x = 4
+		y = 4
+		cost = 5
+
+
+		prerequisite = { focus = ABT_indoctrinating_young_people }
+
+		completion_reward = {
+			create_faction = "The international"
+			set_rule = {
+				can_create_a_faction = yes
+			}
+		}
+    }
+
+    focus = {
+
+		id = ABT_Forme_international_brigade
+		icon = GFX_focus_NOR_a_new_norway_Trotsky_communism
+		x = 5
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = ABT_We_must_continue_the_revolution}
+
+		completion_reward = {
+			set_rule = {
+        		can_send_volunteers = yes
+    		}
+		}
+    }   
+
+	focus = {
+    	id = ABT_export_the_revolution
+    	icon = GFX_focus_SOV_international_union_of_soviet_republics
+    	x = 6
+    	y = 6
+    	cost = 5
+    	prerequisite = { focus = ABT_We_must_continue_the_revolution }
+    	prerequisite = { focus = ABT_Forme_international_brigade }
+    	completion_reward = {
+        	add_political_power = 100
+        	add_popularity = {
+            	ideology = communism
+            	popularity = 0.05
+        	}
+        	add_ideas = ABT_export_revolution_idea
+    	}
+	}
+	focus = {
+    	id = ABT_revolutionary_guard
+    	icon = GFX_focus_SWE_refuge_for_revolutionaries
+    	x = 7
+    	y = 7
+   		cost = 5
+    	prerequisite = { focus = ABT_peoples_army }
+    	prerequisite = { focus = ABT_export_the_revolution }
+
+    	completion_reward = {
+        	add_ideas = ABT_revolutionary_guard_idea
+        	army_experience = 50
+    	}
+	}
+
+#### Communist expention
+	focus = {
+	    id = ABT_start_the_revolution
+	    icon = GFX_SOV_the_komsomol_ccp_2d_sov_compatibility
+	    x = 8
+	    y = 8
+	    cost = 5
+	    prerequisite = { focus = ABT_revolutionary_guard }
+	    prerequisite = { focus = ABT_legacy_of_the_revolution }
+	    completion_reward = {
+    	    add_timed_idea = {
+				idea = ABT_revolution_attack_bonus
+				days = 1826
+			}
+	    }
+	}
+
+	focus = {
+	    id = ABT_second_atlasian_albatian_war
+	    icon = GFX_focus_PRC_westward_expansion
+	    x = 7
+	    y = 9
+	    cost = 2
+		will_lead_to_war_with = ATL
+	    prerequisite = { focus = ABT_start_the_revolution }
+	    mutually_exclusive = { focus = ABT_support_the_ACP }
+
+	    completion_reward = {
+	        create_wargoal = {
+	            type = take_state
+	            target = ATL
+	        }
+			remove_ideas = ABT_1928_humaliation
+	    }
+	}
+
+	focus = {
+	    id = ABT_support_the_ACP
+	    icon = GFX_focus_chi_cooperation_with_the_communists
+	    x = 9
+	    y = 9
+	    cost = 10
+	    prerequisite = { focus = ABT_start_the_revolution }
+	    mutually_exclusive = { focus = ABT_second_atlasian_albatian_war }
+
+	    completion_reward = {
+	        ATL = {
+	            add_ideas = ABT_ACP_support_idea
+	        }
+	    }
+	}
+
+	focus = {
+	    id = ABT_atlasian_albatian_union
+	    icon = GFX_ABT_ATL_union
+	    x = 9
+	    y = 10
+	    cost = 10
+	    prerequisite = { focus = ABT_support_the_ACP }
+
+	    available = {
+	        ATL = { has_government = communism }
+			ATL = { is_puppet = no }
+	    }
+
+
+	    completion_reward = {
+	        ATL = {
+	            country_event = { id = ABT.3 days = 1 }
+	        }
+			remove_ideas = ABT_1928_humaliation
+	    }
+	}
+
+	focus = {
+ 		id = ABT_reintegrate_western_belgium
+	    icon = GFX_focus_BEL_defensive_neutrality
+	    x = 6
+	    y = 10
+	    cost = 5
+	    prerequisite = { focus = ABT_second_atlasian_albatian_war }
+	    prerequisite = { focus = ABT_five_year_plan }
+	    available = {
+	       controls_state = 34
+	        controls_state = 6
+	        controls_state = 29
+	    }
+
+	    completion_reward = {
+	        add_state_core = 34
+	        add_state_core = 6
+	        add_state_core = 29
+	    }
+	}
+
+	focus = {
+	    id = ABT_war_against_the_NGC
+	    icon = GFX_focus_GER_tend_to_the_future
+	    x = 8
+	    y = 11
+	    cost = 10
+		will_lead_to_war_with = NGC
+	    prerequisite = {
+	        focus = ABT_reintegrate_western_belgium
+	        focus = ABT_atlasian_albatian_union
+	    }
+	    completion_reward = {
+	        create_wargoal = {
+	            type = take_state
+	            target = NGC
+	        }
+	    }
+	}
+
+	focus = {
+	    id = ABT_albatian_natanielian_treaty
+	    icon = GFX_treaty_nat
+	    x = 13
+	    y = 9
+	    cost = 5
+	    prerequisite = {
+			focus = ABT_start_the_revolution
+			focus = ABT_Reform_the_empire 
+			}
+
+	    completion_reward = {
+    	    NAT = {
+    	        country_event = { id = ABT.4 days = 1 }
+    	    }			
+    	}
+	}
+
+	focus = {
+	    id = ABT_alliance_with_natanielia
+	    icon = GFX_alliance_nat
+	    x = 13
+	    y = 11
+	    cost = 10
+	    prerequisite = { focus = ABT_albatian_natanielian_treaty }
+	    mutually_exclusive = { focus = ABT_alliance_with_Sptatarnia }
+	    available = {
+			ABT = { is_faction_leader = yes }
+			NAT = { is_puppet = no }
+			NAT = { has_same_ideology = yes }
+		}
+
+	    completion_reward = {
+    	    NAT = {
+    	        country_event = { id = ABT.5 days = 1 }
+    	    }
+	    }
+	}
+#### other ideology
+    focus = {
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = ABT_honored_the_1933_revolution  }
+				NOT = { has_country_flag = ABT_furry_republic }
+			}
+		}
+		ai_will_do = { factor = 77 }		
+		id = ABT_Unite_the_Nationals_movement
+		icon = GFX_goal_generic_national_unity
+
+		x = 25
+		y = 1
+		cost = 5
+
+		mutually_exclusive = { focus = ABT_honored_the_1933_revolution }
+		prerequisite = { focus = ABT_Form_a_New_Governement }
+
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 150
+				if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+    }
+
+    focus = {
+
+		id = ABT_Anti_Communist_propaganda
+		icon = GFX_focus_GER_end_european_communism
+		ai_will_do = { factor = 30 }
+		x = 20
+		y = 2
+		Cost = 10
+
+		mutually_exclusive = {focus = ABT_Ban_Communist_party }
+		prerequisite = {focus = ABT_Unite_the_Nationals_movement}
+
+		completion_reward = {
+			add_ideas = ABT_Anti_Communist_propaganda
+		}
+    }
+    
+    focus = {
+		
+		id = ABT_Ban_Communist_party 
+		icon = GFX_SOV_left_opposition_coup_ccp_2d_sov_compatibility
+		ai_will_do = { factor = 70 }
+		x = 22
+		y = 2
+		Cost = 10
+
+		mutually_exclusive = {focus = ABT_Anti_Communist_propaganda}
+		prerequisite = {focus = ABT_Unite_the_Nationals_movement}
+
+		completion_reward = {
+			add_popularity = {
+    		ideology = communism
+    		popularity = -1
+			}
+			start_civil_war = {
+   				ideology = communism
+    			size = 0.05
+				states = {
+					56
+				}
+			}
+		}
+    }
+
+    focus = {
+
+		id = ABT_Support_National_movement
+		icon = GFX_focus_SWI_neutrality_on_the_move
+
+		x = 25
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = ABT_Unite_the_Nationals_movement}
+
+		completion_reward = {
+		}
+    }
+#### democratie
+    focus = {
+		ai_will_do = { factor = 30 }
+		id = ABT_Reoganise_the_democratie
+		icon = GFX_focus_generic_democratic_europe
+		x = 29
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {focus = ABT_The_empty_throne_of_Alba_and_Bosta }
+		mutually_exclusive = {focus = ABT_revive_nationalism_sentiment }
+		mutually_exclusive = { focus = ABT_federalist_movement }
+		prerequisite = {focus = ABT_Support_National_movement}
+
+		completion_reward = {
+			add_ideas = ABT_Democratic_support
+
+		}
+    }
+
+   		focus = {
+   		    id = ABT_free_press
+   		    icon = GFX_focus_generic_printing_press
+   		    x = 29
+   		    y = 4
+   		    Cost = 10
+   		    prerequisite = { focus = ABT_Reoganise_the_democratie }
+   		
+   		    completion_reward = {
+   		        add_stability = 0.025
+   		        add_political_power = 75
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_social_reforms
+   		    icon = GFX_focus_prc_agrarian_socialism
+   		    x = 27
+   		    y = 5
+   		    Cost = 10
+   		    prerequisite = { focus = ABT_free_press }
+   		
+   		    completion_reward = {
+   		        add_stability = 0.05
+   		        add_ideas = ABT_social_reforms_idea
+   		        add_popularity = {
+   		            ideology = democratic
+   		            popularity = 0.10
+   		        }
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_universal_suffrage
+   		    icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+   		    x = 31
+   		    y = 5
+   		    Cost = 10
+   		    prerequisite = { focus = ABT_free_press }
+   		
+   		    completion_reward = {
+   		        add_political_power = 150
+   		        add_ideas = ABT_universal_suffrage_idea
+   		        country_event = { id = ABT_democracy.1 days = 3 }
+				remove_ideas = ABT_divided_nation
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_federal_republic
+   		    icon = GFX_focus_SWI_dissolve_the_federal_council
+   		    x = 27
+   		    y = 6
+   		    cost = 10
+   		    prerequisite = { focus = ABT_social_reforms }
+   		    mutually_exclusive = { focus = ABT_parliamentary_monarchy }
+   		
+   		    available = {
+   		        has_government = democratic
+   		    }
+   		
+   		    completion_reward = {
+   				set_cosmetic_tag = ABT_Reoganise
+   		        add_political_power = 100
+				add_ideas = YUG_federal_defense_council
+   		    }
+   		}
+
+   		focus = {
+   		    id = ABT_parliamentary_monarchy
+   		    icon = GFX_focus_GER_monarchy_compromise
+   		    x = 29
+   		    y = 6
+   		    cost = 10
+   		    prerequisite = { focus = ABT_social_reforms }
+   		    mutually_exclusive = { focus = ABT_federal_republic }
+   		
+   		    available = {
+   		        has_government = democratic
+   		    }
+   		
+   		    completion_reward = {
+   		        set_cosmetic_tag = ABT_DM
+   		        add_ideas = ABT_parliamentary_monarchy_idea
+   		    }
+   		}
+   		focus = {
+   		    id = ABT_welfare_state
+   		    icon = GFX_focus_FIN_socialist_welfare
+   		    x = 31
+   		    y = 6
+   		    cost = 10
+   		    prerequisite = { focus = ABT_universal_suffrage }
+
+   		    completion_reward = {
+   		        add_ideas = ABT_welfare_state_idea
+   		        add_stability = 0.025
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_industrial_democracy
+   		    icon = GFX_focus_generic_modernize_industry
+   		    x = 33
+   		    y = 7
+   		    cost = 10
+   		    prerequisite = { focus = ABT_welfare_state }
+   		    mutually_exclusive = { focus = ABT_agrarian_reform }
+   		
+   		    completion_reward = {
+   		        add_ideas = ABT_industrial_democracy_idea
+   		        random_owned_controlled_state = {
+   		            add_building_construction = {
+   		                type = industrial_complex
+   		                level = 2
+   		                instant_build = yes
+   		            }
+   		        }
+   		        random_owned_controlled_state = {
+   		            add_building_construction = {
+   		                type = arms_factory
+   		                level = 1
+   		                instant_build = yes
+   		            }
+   		        }
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_agrarian_reform
+   		    icon = GFX_focus_generic_modernizing_agriculture
+   		    x = 31
+   		    y = 7
+   		    cost = 10
+   		    prerequisite = { focus = ABT_welfare_state }
+   		    mutually_exclusive = { focus = ABT_industrial_democracy }
+   		
+   		    completion_reward = {
+   		        add_ideas = ABT_agrarian_reform_idea
+   		        add_manpower = 30000
+   		        add_stability = 0.025
+   		    }
+   		}
+
+
+   		focus = {
+   		    id = ABT_volunteer_army
+   		    icon = GFX_focus_NORDIC_com_selector_army
+   		    x = 29
+   		    y = 7
+   		    Cost = 10
+   		    prerequisite = { focus = ABT_federal_republic focus = ABT_parliamentary_monarchy }
+   		
+   		    completion_reward = {
+   		        add_manpower = 20000
+   		        add_ideas = ABT_volunteer_army_idea
+   		        army_experience = 25
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_democratic_defence
+   		    icon = GFX_focus_ARG_defense_and_democracy
+   		    x = 29
+   		    y = 8
+   		    Cost = 10
+   		    prerequisite = { focus = ABT_volunteer_army }
+   		
+   		    completion_reward = {
+   		        add_ideas = ABT_democratic_defence_idea
+   		    }
+   		}
+
+
+   		focus = {
+   		    id = ABT_beacon_of_democracy
+   		    icon = GFX_focus_generic_democratic_europe
+   		    x = 29
+   		    y = 9
+   		    cost = 10
+   		    prerequisite = { focus = ABT_democratic_defence }
+   		    prerequisite = { focus = ABT_industrial_democracy focus = ABT_agrarian_reform }
+   		
+   		    completion_reward = {
+   		        add_political_power = 200
+   		        add_ideas = ABT_beacon_democracy_idea
+   		        add_popularity = {
+   		            ideology = democratic
+   		            popularity = 0.10
+   		        }
+   		    }
+   		}
+   		
+   		focus = {
+   		    id = ABT_democratic_league
+   		    icon = GFX_goal_support_democracy
+   		    x = 29
+   		    y = 10
+   		    cost = 10
+   		    prerequisite = { focus = ABT_beacon_of_democracy }
+   		
+   		    available = {
+   		        has_government = democratic
+    		}
+
+   		    completion_reward = {
+   		        if = {
+   		            limit = { NOT = { has_faction = yes } }
+   		            create_faction = "Democratic League"
+   		        }
+   		        add_political_power = 100
+   		        country_event = { id = ABT_democracy.2 days = 5 }
+   		    }
+   		}
+   		focus = {
+   		    id = ABT_Cooperation_Sphere
+   		    icon = GFX_goal_generic_scientific_exchange
+   		    x = 24
+   		    y = 11
+   		    cost = 10
+   		    prerequisite = { focus = ABT_democratic_league }
+   		
+   		    available = {
+   		        has_government = democratic
+				num_faction_members > 2
+    		}
+
+   		    completion_reward = {
+   		        add_research_slot = 1
+				every_allied_country = {
+					add_ideas = ABT_Cooperation_Sphere
+				}
+   		    }
+   		}
+
+	focus = {
+	    id = ABT_alliance_with_natanielia_2
+	    icon = GFX_treaty_nat
+	    x = 26
+	    y = 11
+	    cost = 10
+	    prerequisite = { focus = ABT_democratic_league }
+	    available = {
+			ABT = { is_faction_leader = yes }
+			NAT = { is_puppet = no }
+			NAT = { has_same_ideology = yes }
+			country_exists = NAT
+		}
+
+	    completion_reward = {
+    	    NAT = {
+    	        country_event = { id = ABT.5 days = 1 }
+    	    }
+	    }
+	}   		
+   		focus = {
+   		    id = ABT_Renounce_claims_on_belgium
+   		    icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+   		    x = 33
+   		    y = 11
+   		    cost = 10
+   		    prerequisite = { focus = ABT_democratic_league }
+
+			completion_reward = {
+				ATL = {
+        			add_opinion_modifier = {
+            			target = ABT
+            			modifier = ABT_Renounce_claims_on_belgium
+        			}
+				}
+				6 = { remove_claim_by = ABT }
+				34 = { remove_claim_by = ABT }
+				29 = { remove_claim_by = ABT }	
+				remove_ideas = ABT_1928_humaliation			
+   		    }
+   		}
+
+   		focus = {
+   		    id = ABT_ATL_democratic_union
+   		    icon = GFX_ABT_ATL_union
+   		    x = 34
+   		    y = 12
+   		    cost = 10
+   		    prerequisite = { focus = ABT_Renounce_claims_on_belgium}
+   			mutually_exclusive = {focus = ABT_Alliance_with_Atlasia}
+
+   		    available = {
+   		        ATL = { has_government = democratic }
+				
+				country_exists = ATL
+   		    }
+   		   		
+   		    completion_reward = {
+   		        ATL = {
+   		            country_event = { id = ABT_democracy.3 days = 3 }
+   		        }
+   		    }
+   		}   
+   		focus = {
+   		    id = ABT_Alliance_with_Atlasia
+   		    icon = GFX_focus_CHL_a_french_alliance
+   		    x = 32
+   		    y = 12
+   		    cost = 10
+   		    prerequisite = { focus = ABT_Renounce_claims_on_belgium }
+
+   			mutually_exclusive = {focus = ABT_ATL_democratic_union}
+   		    available = {
+				OR = {
+   		        ATL = { has_government = democratic }
+				ATL = { has_government = neutrality }
+				country_exists = ATL
+				}
+   		    }
+   		   		
+   		    completion_reward = {
+   		        ATL = {
+   		            country_event = { id = ABT_democracy.5 days = 3 }
+   		        }
+   		    }
+   		}
+
+   		focus = {
+   		    id = ABT_Alliance_with_lorraine
+   		    icon = GFX_goal_generic_military_deal
+   		    x = 28
+   		    y = 11
+   		    cost = 10
+			prerequisite = {focus = ABT_democratic_league}
+   		    available = {
+				OR = {
+   		        LOR = { has_government = democratic }
+				LOR = { has_government = neutrality }
+				country_exists = LOR
+				}
+   		    }
+   		   		
+   		    completion_reward = {
+   		        LOR = {
+   		            country_event = { id = ABT_democracy.7 days = 3 }
+   		        }
+   		    }
+   		}
+   		focus = {
+   		    id = ABT_Alliance_with_Nothern_italy
+   		    icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+   		    x = 28
+   		    y = 12
+   		    cost = 10
+			prerequisite = {focus = ABT_Alliance_with_lorraine}
+   		    available = {
+				OR = {
+   		        NIT = { has_government = democratic }
+				NIT = { has_government = neutrality }
+				country_exists = NIT
+				}
+   		    }
+   		   		
+   		    completion_reward = {
+   		        NIT = {
+   		            country_event = { id = ABT_democracy.8 days = 3 }
+   		        }
+   		    }
+   		}
+
+		focus = {
+   		    id = ABT_Sptartania_must_end
+   		    icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+   		    x = 27
+   		    y = 13
+   		    cost = 10
+			prerequisite = {focus = ABT_democratic_league}
+   		    available = {
+				country_exists = SPT
+				num_faction_members > 2
+   		    }
+   		   	will_lead_to_war_with = SPT	
+   		    completion_reward = {
+    	    	create_wargoal = {
+    	    	    type = annex_everything
+    	    	    target = SPT
+    	    	}  		        
+   		    }
+   		}
+   		focus = {
+   		    id = ABT_NGC_democratic_pressure
+   		    icon = GFX_focus_generic_strike_at_democracy2
+   		    x = 30
+   		    y = 11
+   		    cost = 10
+   		    prerequisite = { focus = ABT_democratic_league }
+			will_lead_to_war_with = NGC
+   		    available = {
+   		        has_government = democratic
+				country_exists = NGC
+   		    }
+			bypass = {
+				NGC = {has_government = democratic}
+			}   		
+   		    completion_reward = {
+   		        NGC = {
+   		            add_popularity = {
+   		                ideology = democratic
+   		                popularity = 0.05
+   		            }
+   		        }
+   		        add_political_power = 100
+				NGC = {
+   		        	country_event = { id = ABT_democracy.4 days = 7 }
+				}
+   		    }
+   		}
+   		focus = {
+   		    id = ABT_NGC_membership
+   		    icon = GFX_focus_generic_diplomatic_treaty
+   		    x = 30
+   		    y = 12
+   		    cost = 10
+   		    prerequisite = { focus = ABT_NGC_democratic_pressure }
+			bypass = {
+				NGC = { is_in_faction_with = ABT }
+			}
+   		    available = {
+   		        has_government = democratic
+				NGC = {has_government = democratic}
+				country_exists = NGC
+   		    }
+   		
+   		    completion_reward = {
+				NGC = {
+   		        	country_event = { id = ABT_democracy.6 days = 2}
+				}
+   		    }
+   		}
+### Federal focus 
+		#focus = {
+		#	ai_will_do = { factor = 0 }
+		#    id = ABT_federalist_movement
+		#    icon = GFX_focus_generic_democratic_europe
+		#    x = 27
+		#    y = 3
+		#    cost = 10
+		#    prerequisite = { focus = ABT_Support_National_movement }
+		#    mutually_exclusive = { focus = ABT_Reoganise_the_democratie }
+		#    mutually_exclusive = { focus = ABT_revive_nationalism_sentiment }
+		#    mutually_exclusive = { focus = ABT_The_empty_throne_of_Alba_and_Bosta }
+
+		#    available = {
+		#        has_government = democratic
+		#    }
+		#
+		#    completion_reward = {
+		#        add_political_power = 100
+		#        add_stability = 0.025
+		#        add_popularity = {
+		#            ideology = democratic
+		#            popularity = 0.10
+		#        }
+		#        country_event = { id = ABT_federalist.1 days = 3 }
+		#    }
+		#}
+
+#### fachist
+    focus = {
+		ai_will_do = { factor = 30 }
+		id = ABT_revive_nationalism_sentiment
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 21
+		y = 3
+		cost = 10
+
+		mutually_exclusive = {focus = ABT_The_empty_throne_of_Alba_and_Bosta }
+		mutually_exclusive = {focus = ABT_Reoganise_the_democratie}
+		mutually_exclusive = { focus = ABT_federalist_movement }
+		prerequisite = {focus = ABT_Support_National_movement}
+
+		completion_reward = {
+			add_ideas = ABT_fachist_support
+			remove_ideas = ABT_divided_nation
+		}
+    }
+
+	focus = {
+		id = ABT_fascist_state
+    	icon = GFX_focus_ITA_generic_fascist_workers
+    	x = 21
+    	y = 4
+    	cost = 5
+    	prerequisite = { focus = ABT_revive_nationalism_sentiment }
+
+    	completion_reward = {
+			
+			if = {
+				limit = { fascism > 0.5 }
+
+				set_politics = {
+   	 				ruling_party = fascism
+    				elections_allowed = no
+				}
+			}
+			else_if = {
+				limit = { fascism < 0.5 }
+				set_politics = {
+   	 				ruling_party = fascism
+    				elections_allowed = no
+				}
+				start_civil_war = {
+					ideology = democratic
+					size = 0.3
+    				army_ratio = 0.3
+				}
+        	}					
+    	}
+	}
+	focus = {
+		id = ABT_volunteer_corp
+    	icon = GFX_SOV_reinstitute_the_mestnichestvo_ccp_2d_sov_compatibility
+    	x = 19
+    	y = 4
+    	cost = 5
+    	prerequisite = { focus = ABT_revive_nationalism_sentiment }
+    	completion_reward = {
+			set_rule = {
+        		can_send_volunteers = yes
+    		}
+    	}
+	}
+
+	focus = {
+	    id = ABT_rearm_the_nation
+	    icon = GFX_SOV_shift_to_armaments_production_ccp_2d_sov_compatibility
+	    x = 19
+	    y = 5
+	    Cost = 10
+	    prerequisite = { focus = ABT_fascist_state }
+
+    	completion_reward = {
+    	    add_ideas = ABT_rearm_nation_idea
+    	    army_experience = 25
+    	}
+	}
+
+	focus = {
+    	id = ABT_war_economy
+    	icon = GFX_focus_generic_industry_3
+    	x = 23
+    	y = 5
+    	Cost = 10
+    	prerequisite = { focus = ABT_fascist_state }
+
+    	completion_reward = {
+    	    add_ideas = war_economy
+    	}
+	}
+
+
+	focus = {
+	    id = ABT_blitzkrieg_doctrine
+	    icon = GFX_SOV_national_unification_ccp_2d_sov_compatibility
+	    x = 17
+	    y = 6
+	    cost = 10
+	    prerequisite = { focus = ABT_rearm_the_nation }
+	    mutually_exclusive = { focus = ABT_fortress_nation }
+
+	    completion_reward = {
+	        add_ideas = ABT_blitzkrieg_idea
+	        army_experience = 50
+	    }
+	}
+
+	focus = {
+	    id = ABT_fortress_nation
+	    icon = GFX_goal_generic_fortify_city
+	   	x = 19
+	    y = 6
+	    cost = 10
+	    prerequisite = { focus = ABT_rearm_the_nation }
+	    mutually_exclusive = { focus = ABT_blitzkrieg_doctrine }
+
+	    completion_reward = {
+	        add_ideas = ABT_fortress_idea
+	    }
+	}
+
+	focus = {
+ 	   id = ABT_military_industry
+	    icon = GFX_focus_generic_military_industry
+	    x = 21
+	    y = 6
+	    cost = 10
+	    prerequisite = { focus = ABT_war_economy }
+	    mutually_exclusive = { focus = ABT_civilian_industry }
+
+	    completion_reward = {
+	        add_ideas = ABT_military_industry_idea
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+	    }
+	}
+
+	focus = {
+	    id = ABT_civilian_industry
+	    icon = GFX_focus_NORDIC_com_civilian
+	    x = 23
+	    y = 6
+ 	   cost = 10
+ 	   prerequisite = { focus = ABT_war_economy }
+ 	   mutually_exclusive = { focus = ABT_military_industry }
+
+    	completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+    	}
+	}
+
+	focus = {
+	    id = ABT_Reform_the_empire 
+	    icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
+	    x = 19
+	    y = 7
+	    cost = 10
+	    prerequisite = { focus = ABT_blitzkrieg_doctrine focus = ABT_fortress_nation }
+	    prerequisite = { focus = ABT_military_industry focus = ABT_civilian_industry }
+
+	    completion_reward = {
+	        add_popularity = {
+	            ideology = fascism
+	            popularity = 0.10
+	        }
+	        add_war_support = 0.1
+			set_rule = {
+		    	desc = TAG_my_rule_description
+		    	can_create_factions = yes
+			}		
+			create_faction = "Prusenik Pack"
+			remove_ideas = ABT_1928_humaliation
+ 	    }
+	}
+
+	focus = {
+	    id = ABT_anschluss_FRK
+	    icon = GFX_focus_generic_annex_country_2
+	    x = 19
+	    y = 8
+	    cost = 5
+		will_lead_to_war_with = FRK
+		bypass = { 
+			or = {
+				NOT = { country_exists = FRK }
+				FRK = {
+					NOT = { has_war_with = ABT}
+				}
+			}
+		}
+	    prerequisite = { focus = ABT_Reform_the_empire   }
+		    available = {
+				country_exists = FRK
+			}
+	    completion_reward = {
+ 	       FRK = {
+	            country_event = { id = ABT.6 days = 3 }
+	        }
+ 	    }
+	}
+
+	focus = {
+	    id = ABT_alliance_with_Sptatarnia
+	    icon = GFX_goal_generic_forceful_treaty
+	    x = 16
+	    y = 11
+	    cost = 5
+	    prerequisite = { focus = ABT_Reform_the_empire   }
+		mutually_exclusive = { focus = ABT_alliance_with_natanielia }
+		mutually_exclusive = { focus = ABT_alliance_LOR }
+		    available = {
+			SPT = { has_government = fascism }
+			ABT = { is_faction_leader = yes }
+			SPT = { is_puppet = no }
+			}
+	    completion_reward = {
+ 	       SPT = {
+	            country_event = { id = ABT.10 days = 3 }
+	        }
+ 	    }
+	}
+
+	focus = {
+ 	   id = ABT_wargoal_ATL
+	    icon = GFX_focus_CHI_protracted_warfare
+	    x = 21
+	    y = 8
+	    cost = 10
+		will_lead_to_war_with = ATL
+	    prerequisite = { focus = ABT_Reform_the_empire   }
+		bypass = { 
+			ATL = {
+				has_war_with = ABT
+			}
+			
+		}
+ 	    available = {
+	        has_government = fascism
+ 	    }
+
+    	completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = ATL
+    	    }
+    	}
+	}
+
+	focus = {
+ 	   id = ABT_claim_Hatay
+	    icon = GFX_SOV_the_hands_do_ccp_2d_sov_compatibility
+	    x = 23
+	    y = 8
+	    cost = 10
+	    prerequisite = { focus = ABT_Reform_the_empire   }
+		will_lead_to_war_with = ABH
+ 	    available = {
+	        has_government = fascism
+
+ 	    }
+
+    	completion_reward = {
+			add_state_core = 799
+    	    ABH = { country_event = { id = ABT.11 days = 3 }}
+    	}
+	}
+	focus = {
+	    id = ABT_reintegrate_western_belgium_F
+	    icon = GFX_focus_BEL_defensive_neutrality
+	    x = 21
+ 	   y = 9
+		    Cost = 10
+	    prerequisite = { focus = ABT_wargoal_ATL }
+		    available = {
+		       controls_state = 34
+		        controls_state = 6
+		        controls_state = 29
+		    }
+		
+	    completion_reward = {
+	        add_state_core = 34
+	        add_state_core = 6
+	        add_state_core = 29
+	    }
+	}
+
+
+	focus = {
+	    id = ABT_greater_albata
+	    icon = GFX_focus_BEL_dietsland
+	    x = 19
+	    y = 10
+	    cost = 10
+	    prerequisite = { focus = ABT_anschluss_FRK }
+		prerequisite = { focus = ABT_reintegrate_western_belgium_F}
+		    available = {
+		        controls_state = 34
+		        controls_state = 6
+		        controls_state = 29
+		        controls_state = 55
+		    }
+	    completion_reward = {
+			add_state_core = 55
+	        add_war_support = 0.1
+			add_stability = 0.1
+			set_cosmetic_tag = ABT_Greater
+ 	    }
+	}
+
+	focus = {
+ 	   id = ABT_wargoal_DET
+	    icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+	    x = 21
+	    y = 11
+	    cost = 10
+		will_lead_to_war_with = DET
+	    prerequisite = { focus = ABT_greater_albata }
+		bypass = { 
+			ABT = {
+				has_war_with = DET
+			}
+			
+		}
+ 	    available = {
+	        has_government = fascism
+ 	    }
+
+    	completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = DET
+    	    }
+    	}
+	}
+
+	
+	focus = {
+ 	   id = ABT_wargoal_NGC
+	    icon =  GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+	    x = 19
+	    y = 12
+	    cost = 10
+	    prerequisite = { focus = ABT_alliance_with_natanielia focus = ABT_alliance_with_Sptatarnia}
+		prerequisite = { focus = ABT_greater_albata}
+		will_lead_to_war_with = NGC
+ 	    available = {
+	        has_government = fascism
+ 	    }
+		bypass = { 
+			NGC = {
+				has_war_with = ABT
+			}
+			
+		}
+    	completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = NGC
+    	    }
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = SCH
+    	    }
+    	}
+	}
+
+	focus = {
+ 	   id = ABT_alliance_LOR
+	    icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+	    x = 19
+	    y = 11
+	    cost = 10
+	    prerequisite = { focus = ABT_greater_albata }
+		mutually_exclusive = { focus = ABT_alliance_with_Sptatarnia }
+ 	    available = {
+	        has_government = fascism
+			country_exists = LOR
+			
+ 	    }
+
+    	completion_reward = {
+ 	       LOR = {
+	            country_event = { id = ABT.12 days = 3 }
+	        }
+    	}
+	}
+#### Monarchie
+ 
+
+
+#### industry
+	focus = {
+		id =  ABT_Albatian_industry 
+		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
+		x = 37
+		y = 0
+		cost = 5
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_civil_industry 
+		icon = GFX_focus_generic_industry_1
+		x = 35
+		y = 1
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_industry}
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_civil_industry_2
+		icon = GFX_focus_generic_industry_2
+		x = 35
+		y = 2
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_civil_industry }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_civil_industry_3
+		icon = GFX_focus_generic_industry_3
+		x = 35
+		y = 3
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_civil_industry_2 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_civil_industry_4
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 35
+		y = 4
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_civil_industry_3 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_arms_industry 
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 39
+		y = 1
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_industry  }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_arms_industry_2
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 39
+		y = 2
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_arms_industry  }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_arms_industry_3
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 39
+		y = 3
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_arms_industry_2 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_arms_industry_4
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 39
+		y = 4
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_arms_industry_3 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 37
+		y = 1
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_industry  }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_infrastructure_2
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 37
+		y = 2
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_infrastructure }   
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_infrastructure_3
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 37
+		y = 3
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_infrastructure_2 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id =  ABT_Albatian_infrastructure_4
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 37
+		y = 4
+		cost = 5
+        prerequisite = {focus = ABT_Albatian_infrastructure_3 }
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+    focus = {
+        id =  ABT_open_the_ore_factories
+        icon = GFX_focus_generic_coal_mining
+        x = 41
+        y = 1
+        cost = 14.3
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = {focus = ABT_Albatian_industry }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+
+			add_ideas =	ABT_resource_bonus_idea
+			
+        }
+    }
+## Furry Republic
+	focus = {
+ 	   id = ABT_A_new_republic
+	    icon =  GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+	    x = 14
+	    y = 1
+	    cost = 0
+		allow_branch = {
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				
+				has_country_flag = ABT_furry_republic 
+			}
+		}
+		allow_branch = {
+			has_country_flag = ABT_furry_republic 
+		}
+	    prerequisite = { focus = ABT_Form_a_New_Governement }
+ 	    available = {
+ 	    }
+		bypass = { 	
+		}
+    	completion_reward = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+			add_stability = 0.05
+			add_political_power = 120
+    	}
+	}
+    focus = {
+        id =  ABT_National_Propaganda
+        icon = GFX_goal_generic_wolf_pack
+        x = 12
+        y = 2
+        cost = 10
+
+        prerequisite = {focus = ABT_A_new_republic }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+
+			remove_ideas = ABT_divided_nation
+			remove_ideas = ABT_1928_humaliation
+			
+        }
+    }
+    focus = {
+        id =  ABT_Open_factories
+        icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+        x = 16
+        y = 2
+        cost = 20
+
+        prerequisite = {focus = ABT_A_new_republic }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}		
+        }
+    }
+    focus = {
+        id =  ABT_foreign_policy
+        icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
+        x = 14
+        y = 2
+        cost = 10
+
+        prerequisite = {focus = ABT_A_new_republic }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+
+			add_political_power = 150
+			
+        }
+    }
+    focus = {
+        id =  ABT_Free_Furry_State_of_Europe
+        icon = GFX_focus_NOR_the_lone_wolf_norway
+        x = 14
+        y = 3
+        cost = 10
+        prerequisite = {focus = ABT_foreign_policy }
+		prerequisite = {focus = ABT_National_Propaganda }
+		prerequisite = {focus = ABT_Open_factories }
+        available_if_capitulated = yes
+
+        completion_reward = {
+
+			create_faction = "Free Furry State of Europe"
+			
+        }
+    }
+
+    focus = {
+        id =  ABT_Invite_NAT_Furry
+        icon = GFX_focus_BEL_order_of_the_golden_lion
+        x = 14
+        y = 4
+        cost = 10
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = {focus = ABT_Free_Furry_State_of_Europe }
+        available_if_capitulated = yes
+
+        completion_reward = {
+    	    NAT = {
+    	        country_event = { id = ABT.13 days = 1 }
+    	    }
+        }
+    }
+
+    focus = {
+        id =  ABT_Invite_ANI_Furry
+        icon = GFX_focus_generic_farmland
+        x = 12
+        y = 4
+        cost = 10
+
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        prerequisite = {focus = ABT_Free_Furry_State_of_Europe }
+        available_if_capitulated = yes
+
+        completion_reward = {
+    	    ANI = {
+    	        country_event = { id = ABT.14 days = 1 }
+    	    }
+        }
+    }
+
+    focus = {
+        id =  ABT_Invade_NGC_furry
+        icon = GFX_focus_ger_oppose_hitler
+        x = 14
+        y = 5
+        cost = 10
+
+        prerequisite = {focus = ABT_Invite_NAT_Furry }
+        available_if_capitulated = yes
+
+	    completion_reward = {
+	        create_wargoal = {
+	            type = take_state
+	            target = NGC
+	        }
+	        create_wargoal = {
+	            type = take_state
+	            target = FRK
+	        }
+	        create_wargoal = {
+	            type = take_state
+	            target = SCH
+	        }
+	        add_state_core = 55
+	        add_state_core = 59
+	        add_state_core = 58
+			add_state_core = 60
+			add_state_core = 1061
+			add_state_core = 909
+	    }
+    }
+    focus = {
+        id =  ABT_Invade_ATL_furry
+        icon = GFX_focus_GER_strengthen_the_waffen_ss
+        x = 12
+        y = 5
+        cost = 10
+
+        prerequisite = {focus = ABT_Invite_NAT_Furry }
+        available_if_capitulated = yes
+
+	    completion_reward = {
+	        create_wargoal = {
+	            type = take_state
+	            target = ATL
+	        }
+	        add_state_core = 34
+	        add_state_core = 6
+	        add_state_core = 29
+	    }
+    }
+    focus = {
+        id =  ABT_Furry_Army
+        icon = GFX_focus_LIT_new_kind_of_iron_wolf
+        x = 10
+        y = 4
+        cost = 10
+        prerequisite = {focus = ABT_Free_Furry_State_of_Europe }
+        available_if_capitulated = yes
+
+        completion_reward = {
+			add_ideas = Furry_Army
+        }
+    }
+    focus = {
+        id =  ABT_Furry_Research_bonus
+        icon = GFX_focus_NORDIC_com_research
+        x = 16
+        y = 4
+        cost = 10
+
+        prerequisite = {focus = ABT_Free_Furry_State_of_Europe }
+        available_if_capitulated = yes
+
+        completion_reward = {
+			add_research_slot = 1
+        }
+    }
+    focus = {
+        id =  ABT_Furry_nuke
+        icon = GFX_focus_generic_nuclear_development
+        x = 16
+        y = 5
+        cost = 10
+
+        prerequisite = {focus = ABT_Furry_Research_bonus }
+        available_if_capitulated = yes
+
+        completion_reward = {
+			add_tech_bonus = {
+				name = Yum
+				bonus = 30
+				uses = 1
+				category = nuclear
+			}
+        }
+    }
+    focus = {
+        id =  ABT_Furry_revolution
+        icon = GFX_focus_JAP_the_red_sun_rises_for_a_new_era
+        x = 14
+        y = 7
+        cost = 10
+
+        prerequisite = {focus = ABT_Invade_NGC_furry }
+		prerequisite = {focus = ABT_Invade_ATL_furry }
+		prerequisite = {focus = ABT_Furry_nuke }
+
+        available_if_capitulated = yes
+
+        completion_reward = {
+			set_country_flag = ABT_FURRY_REVOLUTION_D
+			
+        }
+    }
+ # communism
+
+}

@@ -1,0 +1,15 @@
+characters = {
+    SOR_LausatienNGC = {
+        name="Arthur Bautzen"
+        portraits={
+            civilian={
+                large="GFX_LausatienNGC"
+            }
+        }
+        country_leader={
+            ideology=Officer_Rule
+            expire=""
+			id = -1
+        }
+    }
+}

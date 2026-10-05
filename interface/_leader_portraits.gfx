@@ -1,0 +1,586 @@
+spriteTypes = {
+
+### NAT ###
+	spriteType = {
+		name = "GFX_NatanieliaD"
+		texturefile = "gfx/leaders/NAT/NatanieliaD.dds"
+	}
+	spriteType = {
+		name = "GFX_NatanieliaC"
+		texturefile = "gfx/leaders/NAT/NatanieliaC.dds"
+	}
+	spriteType = {
+		name = "GFX_NatanieliaF"
+		texturefile = "gfx/leaders/NAT/NatanieliaF.dds"
+	}
+	spriteType = {
+		name = "GFX_NatanieliaN"
+		texturefile = "gfx/leaders/NAT/NatanieliaN.dds"
+	}
+	spriteType = {
+		name = "GFX_NathanNGC"
+		texturefile = "gfx/leaders/NAT/Nathan_NGC.dds"
+	}
+	spriteType = {
+		name = "GFX_NatanieliaSSR"
+		texturefile = "gfx/leaders/NAT/NatanieliaSSR.dds"
+	}
+
+### ALB ### 
+	spriteType = {
+		name = "GFX_NoriD"
+		texturefile = "gfx/leaders/ABT/NoriD.dds"
+	}
+	spriteType = {
+		name = "GFX_NoriC"
+		texturefile = "gfx/leaders/ABT/NoriC.dds"
+	}
+	spriteType = {
+		name = "GFX_NoriF"
+		texturefile = "gfx/leaders/ABT/NoriF.dds"
+	}
+	spriteType = {
+		name = "GFX_NoriN"
+		texturefile = "gfx/leaders/ABT/NoriN.dds"
+	}
+	spriteType = {
+		name = "GFX_NoriFurry"
+		texturefile = "gfx/leaders/ABT/NoriFurry.dds"
+	}
+### SPT ###
+	spriteType = {
+		name = "GFX_Meristra_Sptatarn"
+		texturefile = "gfx/leaders/SPT/MeristraF.dds"
+	}
+	spriteType = {
+		name = "GFX_Prenitio_Sniatar"
+		texturefile = "gfx/leaders/SPT/PrenitioF.dds"
+	}
+	spriteType = {
+		name = "GFX_DeadMeristraF"
+		texturefile = "gfx/leaders/SPT/DeadMeristraF.dds"
+	}
+### ATL ###
+	spriteType = {
+		name = "GFX_Anir_Belia"
+		texturefile = "gfx/leaders/ATL/AnirN.dds"
+	}
+	spriteType = {
+		name = "GFX_GabriliaC"
+		texturefile = "gfx/leaders/ATL/GabriliaC.dds"
+	}
+	spriteType = {
+		name = "GFX_PeloriF"
+		texturefile = "gfx/leaders/ATL/PeloriF.dds"
+	}
+	spriteType = {
+		name = "GFX_DidierD"
+		texturefile = "gfx/leaders/ATL/DidierD.dds"
+	}
+### SCH ###
+	spriteType = {
+		name = "GFX_MeridaABT"
+		texturefile = "gfx/leaders/SCH/MeridaABT.dds"
+	}
+### POZ ###
+	spriteType = {
+		name = "GFX_StefanPOZ"
+		texturefile = "gfx/leaders/POZ/StefanNAT.dds"
+	}
+	spriteType = {
+		name = "GFX_CelakC"
+		texturefile = "gfx/leaders/POZ/CelakC.dds"
+	}
+### SIL ###
+	spriteType = {
+		name = "GFX_DyndrasSIL"
+		texturefile = "gfx/leaders/SIL/DyndrasD.dds"
+	}
+	spriteType = {
+		name = "GFX_KuzniaC"
+		texturefile = "gfx/leaders/SIL/KuzniaC.dds"
+	}
+### POD ###
+	spriteType = {
+		name = "GFX_AleksanderPOD"
+		texturefile = "gfx/leaders/POD/AleksanderNAT.dds"
+	}
+	spriteType = {
+		name = "GFX_KananowiczC"
+		texturefile = "gfx/leaders/POD/KananowiczC.dds"
+	}s
+### DNK ###
+	spriteType = {
+		name = "GFX_LeonidNDNK"
+		texturefile = "gfx/leaders/DNK/LeonidN.dds"
+	}
+### LHK ###
+	spriteType = {
+		name = "GFX_MikhailNLHK"
+		texturefile = "gfx/leaders/LHK/MikhailN.dds"
+	}
+### POM ###
+	spriteType = {
+		name = "GFX_AdrijanCPOM"
+		texturefile = "gfx/leaders/POM/AdrijanC.dds"
+	}
+	spriteType = {
+		name = "GFX_LukaDPOM"
+		texturefile = "gfx/leaders/POM/LukaD.dds"
+	}
+	spriteType = {
+		name = "GFX_MarinoIINPOM"
+		texturefile = "gfx/leaders/POM/MarinoIIN.dds"
+	}
+	spriteType = {
+		name = "GFX_KormanosFPOM"
+		texturefile = "gfx/leaders/POM/KormanosF.dds"
+	}
+### NGC ###
+	spriteType = {
+		name = "GFX_BundeskanzlerNNGC"
+		texturefile = "gfx/leaders/NGC/BundeskanzlerN.dds"
+	}
+	spriteType = {
+		name = "GFX_AlldeutschemarscF"
+		texturefile = "gfx/leaders/NGC/AlldeutschemarscF.dds"
+	}
+	spriteType = {
+		name = "GFX_GeneralsekretarC"
+		texturefile = "gfx/leaders/NGC/GeneralsekretarC.dds"
+	}
+	spriteType = {
+		name = "GFX_PräsidentD"
+		texturefile = "gfx/leaders/NGC/PräsidentD.dds"
+	}
+### KPA ###	
+	spriteType = {
+		name = "GFX_KonstantinFKPA"
+		texturefile = "gfx/leaders/KPA/Konstantin.dds"
+	}	
+	spriteType = {
+		name = "GFX_OtchestvoC"
+		texturefile = "gfx/leaders/KPA/OtchestvoC.dds"
+	}	
+	spriteType = {
+		name = "GFX_ZhenkaN"
+		texturefile = "gfx/leaders/KPA/ZhenkaN.dds"
+	}	
+	spriteType = {
+		name = "GFX_JaroslavD"
+		texturefile = "gfx/leaders/KPA/JaroslavD.dds"
+	}	
+### DET ### 
+	spriteType = {
+		name = "GFX_Furry_det_UwUDET"
+		texturefile = "gfx/leaders/DET/Furry_det_UwU.dds"
+	}	
+	spriteType = {
+		name = "GFX_DetC"
+		texturefile = "gfx/leaders/DET/DetC.dds"
+	}
+	spriteType = {
+		name = "GFX_DetN"
+		texturefile = "gfx/leaders/DET/DetN.dds"
+	}
+	spriteType = {
+		name = "GFX_DetD"
+		texturefile = "gfx/leaders/DET/DetD.dds"
+	}	
+	spriteType = {
+		name = "GFX_DetF"
+		texturefile = "gfx/leaders/DET/DetF.dds"
+	}
+### CRT ###
+	spriteType = {
+		name = "GFX_KaravakisPOM"
+		texturefile = "gfx/leaders/CRT/KaravakisPOM.dds"
+	}
+### AEG ###
+	spriteType = {
+		name = "GFX_NaftisPOM"
+		texturefile = "gfx/leaders/AEG/NaftisPOM.dds"
+	}
+### IST ###
+	spriteType = {
+		name = "GFX_TaylanPOM"
+		texturefile = "gfx/leaders/IST/TaylanPOM.dds"
+	}
+### sec ###
+	spriteType = {
+		name = "GFX_SiechN"
+		texturefile = "gfx/leaders/SEC/SiechN.dds"
+	}
+### SOR ###
+	spriteType = {
+		name = "GFX_LausatienNGC"
+		texturefile = "gfx/leaders/SOR/SOR_LausatienNGC.dds"
+	}
+### LES ###
+	spriteType = {
+		name = "GFX_SchonaichNGC"
+		texturefile = "gfx/leaders/LES/SchonaichNGC.dds"
+	}
+### PIN ###
+	spriteType = {
+		name = "GFX_ViragN"
+		texturefile = "gfx/leaders/PIN/ViragN.dds"
+	}
+	spriteType = {
+		name = "GFX_TolgyF"
+		texturefile = "gfx/leaders/PIN/TolgyF.dds"
+	}
+	spriteType = {
+		name = "GFX_ErdosC"
+		texturefile = "gfx/leaders/PIN/ErdosC.dds"
+	}
+	spriteType = {
+		name = "GFX_FenyoD"
+		texturefile = "gfx/leaders/PIN/FenyoD.dds"
+	}
+### BBR ###
+	spriteType = {
+		name = "GFX_BarbarossaC"
+		texturefile = "gfx/leaders/BBR/BarbarossaC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BarbarossaD"
+		texturefile = "gfx/leaders/BBR/BarbarossaD.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BarbarossaF"
+		texturefile = "gfx/leaders/BBR/BarbarossaF.dds"
+	}
+	spriteType = {
+		name = "GFX_BarbarossaN"
+		texturefile = "gfx/leaders/BBR/BarbarossaN.dds"
+	}
+### IMR ###
+	spriteType = {
+		name = "GFX_YasinskyC"
+		texturefile = "gfx/leaders/IMR/YasinskyC.dds"
+	}
+### ATH ###
+	spriteType = {
+		name = "GFX_NereusPOM"
+		texturefile = "gfx/leaders/ATH/NereusPOM.dds"
+	}
+### FRK ###
+	spriteType = {
+		name = "GFX_mcN"
+		texturefile = "gfx/leaders/FRK/millitary_councilN.dds"
+	}
+### ARO ###
+	spriteType = {
+		name = "GFX_SauliusN"
+		texturefile = "gfx/leaders/ARO/SauliusN.dds"
+	}
+	spriteType = {
+		name = "GFX_SnieckusC"
+		texturefile = "gfx/leaders/ARO/SnieckusC.dds"
+	}
+### AUR ###
+	spriteType = {
+		name = "GFX_AuriN"
+		texturefile = "gfx/leaders/AUR/Auri.dds"
+	}
+	spriteType = {
+		name = "GFX_AurinasD"
+		texturefile = "gfx/leaders/AUR/AurinasD.dds"
+	}
+	spriteType = {
+		name = "GFX_NaruanC"
+		texturefile = "gfx/leaders/AUR/NaruanC.dds"
+	}
+	spriteType = {
+		name = "GFX_AuronF"
+		texturefile = "gfx/leaders/AUR/AuronF.dds"
+	}
+	spriteType = {
+		name = "GFX_HalickaSSR"
+		texturefile = "gfx/leaders/AUR/HalickaSSR.dds"
+	}
+### NIT ###
+	spriteType = {
+		name = "GFX_FontanaD"
+		texturefile = "gfx/leaders/NIT/FontanaD.dds"
+	}
+	spriteType = {
+		name = "GFX_FelixN"
+		texturefile = "gfx/leaders/NIT/FelixN.dds"
+	}
+	spriteType = {
+		name = "GFX_GiacomoF"
+		texturefile = "gfx/leaders/NIT/GiacomoF.dds"
+	}
+	spriteType = {
+		name = "GFX_FarinelliC"
+		texturefile = "gfx/leaders/NIT/FarinelliC.dds"
+	}
+	spriteType = {
+		name = "GFX_BastianD"
+		texturefile = "gfx/leaders/NIT/BastianD.dds"
+	}
+### VNC ###
+	spriteType = {
+		name = "GFX_TrevisanD"
+		texturefile = "gfx/leaders/VNC/TrevisanD.dds"
+	}
+	spriteType = {
+		name = "GFX_FoscariN"
+		texturefile = "gfx/leaders/VNC/FoscariN.dds"
+	}
+### JAK ###
+	spriteType = {
+		name = "GFX_FalipiakD"
+		texturefile = "gfx/leaders/JAK/FalipiakD.dds"
+	}
+	spriteType = {
+		name = "GFX_KaskN"
+		texturefile = "gfx/leaders/JAK/KaskN.dds"
+	}
+	spriteType = {
+		name = "GFX_SirkF"
+		texturefile = "gfx/leaders/JAK/SirkF.dds"
+	}
+	spriteType = {
+		name = "GFX_ValjasC"
+		texturefile = "gfx/leaders/JAK/ValjasC.dds"
+	}
+	spriteType = {
+		name = "GFX_ValjasSSR"
+		texturefile = "gfx/leaders/JAK/ValjasSSR.dds"
+	}
+	spriteType = {
+		name = "GFX_JAKAssemblyC"
+		texturefile = "gfx/leaders/JAK/JAKAssemblyC.dds"
+	}
+	spriteType = {
+		name = "GFX_RodzaevskyKPA"
+		texturefile = "gfx/leaders/JAK/RodzaevskyKPA.dds"
+	}
+### MOL ###
+	spriteType = {
+		name = "GFX_MOLAlexandruN"
+		texturefile = "gfx/leaders/MOL/AlexandruN.dds"
+	}
+	spriteType = {
+		name = "GFX_RVasileD"
+		texturefile = "gfx/leaders/MOL/VasileD.dds"
+	}
+	spriteType = {
+		name = "GFX_OteleanuC"
+		texturefile = "gfx/leaders/MOL/OteleanuC.dds"
+	}
+	spriteType = {
+		name = "GFX_OteleanuSSR"
+		texturefile = "gfx/leaders/MOL/OteleanuSSR.dds"
+	}
+	spriteType = {
+		name = "GFX_GrosuF"
+		texturefile = "gfx/leaders/MOL/GrosuF.dds"
+	}
+### GAL ###
+	spriteType = {
+		name = "GFX_MOLLevN"
+		texturefile = "gfx/leaders/GAL/LevN.dds"
+	}
+	spriteType = {
+		name = "GFX_TykchaC"
+		texturefile = "gfx/leaders/GAL/TykchaC.dds"
+	}
+	spriteType = {
+		name = "GFX_TykchaSSR"
+		texturefile = "gfx/leaders/GAL/TykchaSSR.dds"
+	}
+### SVE ###
+	spriteType = {
+		name = "GFX_BengtN"
+		texturefile = "gfx/leaders/SVE/BengtN.dds"
+	}
+	spriteType = {
+		name = "GFX_SaarinenC"
+		texturefile = "gfx/leaders/SVE/SaarinenC.dds"
+	}
+	spriteType = {
+		name = "GFX_SaarinenSSR"
+		texturefile = "gfx/leaders/SVE/SaarinenSSR.dds"
+	}
+### BMS ###
+	spriteType = {
+		name = "GFX_ProvisionalCouncilN"
+		texturefile = "gfx/leaders/BMS/ProvisionalCouncilN.dds"
+	}
+	spriteType = {
+		name = "GFX_JarosD"
+		texturefile = "gfx/leaders/BMS/JarosD.dds"
+	}
+	spriteType = {
+		name = "GFX_JezekN"
+		texturefile = "gfx/leaders/BMS/JezekN.dds"
+	}
+	spriteType = {
+		name = "GFX_Zahoraf"
+		texturefile = "gfx/leaders/BMS/Zahoraf.dds"
+	}
+	spriteType = {
+		name = "GFX_JozinD"
+		texturefile = "gfx/leaders/BMS/JozinD.dds"
+	}
+	spriteType = {
+		name = "GFX_KuceraC"
+		texturefile = "gfx/leaders/BMS/KuceraC.dds"
+	}
+
+	spriteType = {
+		name = "GFX_MatyasD"
+		texturefile = "gfx/leaders/BMS/MatyasD.dds"
+	}
+	spriteType = {
+		name = "GFX_PavelD"
+		texturefile = "gfx/leaders/BMS/PavelD.dds"
+	}
+	spriteType = {
+		name = "GFX_ZdenekD"
+		texturefile = "gfx/leaders/BMS/ZdenekD.dds"
+	}
+### SLA ###
+	spriteType = {
+		name = "GFX_SokcevicD"
+		texturefile = "gfx/leaders/SLA/SokcevicD.dds"
+	}
+	spriteType = {
+		name = "GFX_FilipovicC"
+		texturefile = "gfx/leaders/SLA/FilipovicC.dds"
+	}
+
+### SAR ###
+	spriteType = {
+		name = "GFX_StampazD"
+		texturefile = "gfx/leaders/SAR/StampazD.dds"
+	}
+	spriteType = {
+		name = "GFX_KlusenF"
+		texturefile = "gfx/leaders/SAR/KlusenF.dds"
+	}
+	spriteType = {
+		name = "GFX_DamC"
+		texturefile = "gfx/leaders/SAR/DamC.dds"
+	}
+	spriteType = {
+		name = "GFX_HertzN"
+		texturefile = "gfx/leaders/SAR/HertzN.dds"
+	}
+### CEC ###
+	spriteType = {
+		name = "GFX_MetildeC"
+		texturefile = "gfx/leaders/CEC/MetildeC.dds"
+	}
+### ACA ###
+	spriteType = {
+		name = "GFX_MelistiN"
+		texturefile = "gfx/leaders/ACA/MelistiN.dds"
+	}
+	spriteType = {
+		name = "GFX_DadkeraD"
+		texturefile = "gfx/leaders/ACA/DadkeraD.dds"
+	}
+	spriteType = {
+		name = "GFX_BentehhorC"
+		texturefile = "gfx/leaders/ACA/BentehhorC.dds"
+	}
+	spriteType = {
+		name = "GFX_AspurtaF"
+		texturefile = "gfx/leaders/ACA/AspurtaF.dds"
+	}
+### BRI ###
+	spriteType = {
+		name = "GFX_QuintinD"
+		texturefile = "gfx/leaders/BRI/QuintinD.dds"
+	}
+	spriteType = {
+		name = "GFX_KerbratF"
+		texturefile = "gfx/leaders/BRI//KerbratF.dds"
+	}
+	spriteType = {
+		name = "GFX_MordeletN"
+		texturefile = "gfx/leaders/BRI/MordeletN.dds"
+	}
+	spriteType = {
+		name = "GFX_CadiouC"
+		texturefile = "gfx/leaders/BRI/CadiouC.dds"
+	} 
+### USR ###
+	spriteType = {
+		name = "GFX_UrsulaN"
+		texturefile = "gfx/leaders/USR/UrsulaN.dds"
+	} 
+	spriteType = {
+		name = "GFX_VildmarkD"
+		texturefile = "gfx/leaders/USR/VildmarkD.dds"
+	} 
+	spriteType = {
+		name = "GFX_JarnbladC"
+		texturefile = "gfx/leaders/USR/JarnbladC.dds"
+	} 
+	spriteType = {
+		name = "GFX_LindstromF"
+		texturefile = "gfx/leaders/USR/LindstromF.dds"
+	} 
+### PAP ###
+	spriteType = {
+		name = "GFX_MarcellinusN"
+		texturefile = "gfx/leaders/PAP/MarcellinusN.dds"
+	}
+### SVT ###
+	spriteType = {
+		name = "GFX_IsbergD"
+		texturefile = "gfx/leaders/SVT/IsbergD.dds"
+	} 
+	spriteType = {
+		name = "GFX_SnedriftN"
+		texturefile = "gfx/leaders/SVT/SnedriftN.dds"
+	} 
+	spriteType = {
+		name = "GFX_VinterbakkeC"
+		texturefile = "gfx/leaders/SVT/VinterbakkeC.dds"
+	} 
+	spriteType = {
+		name = "GFX_FrostvedtF"
+		texturefile = "gfx/leaders/SVT/FrostvedtF.dds"
+	} 
+### IBA ###
+	spriteType = {
+		name = "GFX_AratanF"
+		texturefile = "gfx/leaders/IBA/AratanF.dds"
+	} 
+	spriteType = {
+		name = "GFX_HaleimN"
+		texturefile = "gfx/leaders/IBA/HaleimN.dds"
+	} 
+	spriteType = {
+		name = "GFX_IlajarC"
+		texturefile = "gfx/leaders/IBA/IlajarC.dds"
+	} 
+	spriteType = {
+		name = "GFX_SaramiD"
+		texturefile = "gfx/leaders/IBA/SaramiD.dds"
+	} 
+### GIB ### 
+	spriteType = {
+		name = "GFX_AguadoPOM"
+		texturefile = "gfx/leaders/GIB/AguadoPOM.dds"
+	} 
+### EDI ### 
+	spriteType = {
+		name = "GFX_AkdenizPOM"
+		texturefile = "gfx/leaders/EDI/AkdenizPOM.dds"
+	} 	
+### EDI ### 
+	spriteType = {
+		name = "GFX_SayyadPOM"
+		texturefile = "gfx/leaders/SUZ/SayyadPOM.dds"
+	} 
+}

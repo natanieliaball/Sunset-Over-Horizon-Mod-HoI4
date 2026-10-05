@@ -1,0 +1,1128 @@
+focus_tree = {
+    id = BRI_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = BRI
+        }
+    }
+	continuous_focus_position = { x = 0 y = 200}
+    default = no
+
+    focus = {
+        id = BRI_A_Political_Divided_Nation
+        icon = GFX_SOV_carry_revolution_east_ccp_2d_sov_compatibility
+        x = 9
+        y = 0
+        cost = 5
+
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = BRI_Our_Celtic_Culture 
+        icon = GFX_goal_generic_propaganda
+        x = 16
+        y = 1
+        cost = 5
+
+        prerequisite = {
+            focus = BRI_A_Political_Divided_Nation
+        }
+
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
+
+            add_stability = -0.02
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = BRI_Demand_support_from_Wales
+        icon = GFX_goal_support_fascism
+        x = 15
+        y = 2
+        cost = 5
+
+        prerequisite = {
+            focus = BRI_Our_Celtic_Culture 
+        }
+
+        completion_reward = {
+            WLS = {country_event = { id = BRI.1 days = 1 }}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = BRI_Strengthen_the_SBB
+        icon = GFX_focus_ITA_generic_fascist_workers
+        x = 17
+        y = 2
+        cost = 5
+
+        prerequisite = {
+            focus = BRI_Our_Celtic_Culture 
+        }
+
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+            add_stability = -0.05
+        }
+    }
+
+    focus = {
+        id = BRI_Legalize_far_right_demonstrations
+        icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
+        x = 19
+        y = 2
+        cost = 5
+
+        prerequisite = {
+            focus = BRI_Our_Celtic_Culture
+        }
+
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = -0.05
+
+            add_popularity = {
+                ideology = communism
+                popularity = -0.2
+            }
+
+            add_popularity = {
+                ideology = democratic
+                popularity = -0.1
+            }
+        }
+    }
+
+    focus = {
+        id = BRI_call_for_the_governments_resignation
+        icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
+        x = 16
+        y = 3
+        cost = 5
+        bypass = {
+            has_government = fascism
+        }
+        available = {
+            democratic < party_popularity@fascism
+            neutrality < party_popularity@fascism
+            communism < party_popularity@fascism
+        }
+        prerequisite = {
+            focus = BRI_Strengthen_the_SBB
+            focus = BRI_Demand_support_from_Wales
+            focus = BRI_Legalize_far_right_demonstrations
+        }
+
+        completion_reward = {
+
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            add_stability = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.1
+            }
+        }
+    }
+    focus = {
+        id = BRI_Reformation_Plans
+        icon = GFX_focus_generic_treaty
+        x = 16
+        y = 4
+        cost = 5
+        available = {
+            has_government = fascism
+        }
+        prerequisite = {
+            focus = BRI_call_for_the_governments_resignation
+        }
+
+        completion_reward = {
+
+            add_political_power = 150
+        }
+    }
+    focus = {
+        id = BRI_Economic_Reforms
+        icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+        x = 14
+        y = 5
+        cost = 5
+        available = {
+        }
+        prerequisite = {
+            focus = BRI_Reformation_Plans
+        }
+
+        completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+        }
+    }
+    focus = {
+        id = BRI_Industralize_Brest
+        icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+        x = 12
+        y = 6
+        cost = 5
+        available = {
+            controls_state = 14
+        }
+        prerequisite = {
+            focus = BRI_Economic_Reforms
+        }
+
+        completion_reward = {
+            add_stability = 0.05
+			14 = {
+                add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+        }
+    }
+    focus = {
+        id = BRI_Plan_Moger
+        icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+        x = 10
+        y = 6
+        cost = 5
+        available = {
+            controls_state = 14
+        }
+        prerequisite = {
+            focus = BRI_Economic_Reforms
+        }
+
+        completion_reward = {
+			add_political_power = 50
+            add_ideas = BRI_Moger_Plan
+        }
+    }
+    focus = {
+        id = BRI_Fortify_the_Loire
+        icon = GFX_SOV_fortify_mongolian_border_ccp_2d_sov_compatibility
+        x = 10
+        y = 7
+        cost = 5
+        available = {
+            controls_state = 30
+        }
+        prerequisite = {
+            focus = BRI_Plan_Moger
+        }
+
+        completion_reward = {
+			30 = {
+				add_building_construction = { 
+					type = bunker level = 3 province = 11465 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 4 province = 503 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 4 province = 3495 instant_build = yes 
+				}
+            }
+        }
+    }
+    focus = {
+        id = BRI_Supply_the_Bunkers
+        icon = GFX_goal_generic_fortify_city
+        x = 10
+        y = 8
+        cost = 5
+        prerequisite = {
+            focus = BRI_Fortify_the_Loire
+        }
+        prerequisite = {
+            focus = BRI_Interbreton_Railway
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = BRI_Moger_Plan
+                add_idea = BRI_Moger_Plan_2
+            }  
+        }
+    }
+    focus = {
+        id = BRI_Defensive_State
+        icon = GFX_goal_generic_defence
+        x = 10
+        y = 9
+        cost = 5
+        prerequisite = {
+            focus = BRI_Supply_the_Bunkers
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = BRI_Moger_Plan_2
+                add_idea = BRI_Moger_Plan_3
+            }  
+        }
+    }
+
+    focus = {
+        id = BRI_Appoint_Recovery_Cabinet
+        icon = GFX_focus_generic_economic_recovery
+        x = 14
+        y = 6
+        cost = 5
+
+
+        prerequisite = {
+            focus = BRI_Economic_Reforms
+        }
+        prerequisite = {
+            focus = BRI_we_must_be_ready 
+        }
+
+        completion_reward = {
+			add_political_power = 50
+            add_stability = 0.5
+        }
+    }
+
+    focus = {
+        id = BRI_Interbreton_Railway
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 12
+        y = 7
+        cost = 5
+        available = {
+            controls_state = 14
+            controls_state = 30
+        }
+
+        prerequisite = {
+            focus = BRI_Industralize_Brest
+        }
+        prerequisite = {
+            focus = BRI_Appoint_Recovery_Cabinet
+        }
+
+        completion_reward = {
+			14 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			30 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			} 
+        }
+    }
+    focus = {
+        id = BRI_Fix_the_Economy
+        icon = GFX_focus_RAJ_special_economic_zones
+        x = 14
+        y = 7
+        cost = 5
+        available = {
+            industrial_complex > 7s
+        }
+
+        prerequisite = {
+            focus = BRI_Appoint_Recovery_Cabinet
+        }
+
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = BRI_Foreign_Currency
+                add_idea = BRI_Foreign_Currency_2
+            }  
+        }
+    }
+    focus = {
+        id = BRI_Economic_Rise_in_North
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 12
+        y = 8
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Fix_the_Economy
+        }
+        prerequisite = {
+            focus = BRI_Interbreton_Railway
+        }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			} 
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			} 
+        }
+    }
+    focus = {
+        id = BRI_University_of_renne
+        icon = GFX_focus_research
+        x = 12
+        y = 9
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Economic_Rise_in_North
+        }
+
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+    focus = {
+        id = BRI_New_Currency
+        icon = GFX_focus_generic_monetary_union
+        x = 14
+        y = 8
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Fix_the_Economy
+        }
+
+        completion_reward = {
+			remove_ideas = BRI_Foreign_Currency_2
+        }
+    }
+    focus = {
+        id = BRI_Prospering_State
+        icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+        x = 14
+        y = 9
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_New_Currency
+        }
+        prerequisite = {
+            focus = BRI_Economic_Rise_in_North
+        }
+        completion_reward = {
+			add_stability = 0.1
+        }
+    }
+    focus = {
+        id = BRI_Organized_State
+        icon = GFX_focus_SOV_organize_wreckers
+        x = 12
+        y = 10
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Defensive_State
+        }
+        prerequisite = {
+            focus = BRI_Prospering_State
+        }
+        completion_reward = {
+			add_ideas = BRI_Organized_State
+        }
+    }
+    focus = {
+        id = BRI_we_must_be_ready 
+        icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+        x = 16
+        y = 5
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Reformation_Plans
+        }
+        completion_reward = {
+			add_stability = 0.05
+            add_war_support = 0.1
+        }
+    }
+    focus = {
+        id = BRI_Lauch_the_armement
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 16
+        y = 6
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_we_must_be_ready 
+        }
+        completion_reward = {
+            add_war_support = 0.05
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+    focus = {
+        id = BRI_Anti_Detektivian_Propaganda
+        icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+        x = 16
+        y = 7
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Lauch_the_armement
+        }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+    focus = {
+        id = BRI_Atlasian_Border_Guard
+        icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+        x = 16
+        y = 8
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Anti_Detektivian_Propaganda
+        }
+        prerequisite = {
+            focus = BRI_Fix_the_Economy
+        }
+        completion_reward = {
+            30 = {
+				create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1"
+				    owner = ROOT
+				    count = 3
+				}
+            } 
+        }
+    }
+    focus = {
+        id = BRI_Perfect_State
+        icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+        x = 16
+        y = 10
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Atlasian_Border_Guard
+        }
+        completion_reward = {
+            add_ideas = BRI_Perfect_State
+        }
+    }
+    focus = {
+        id = BRI_Unite_the_People
+        icon = GFX_goal_generic_national_unity
+        x = 18
+        y = 5
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Reformation_Plans
+        }
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+    }
+    focus = {
+        id = BRI_Ban_the_Communists
+        icon = GFX_goal_anti_comintern_pact
+        x = 18
+        y = 6
+        cost = 5
+        bypass = {
+            communism < 0.05
+        }
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Unite_the_People
+        }
+        completion_reward = {
+            add_stability = -0.05
+            add_popularity = {
+                ideology = communism
+                popularity = -1
+            }
+        }
+    }
+    focus = {
+        id = BRI_Breton_Nationalism
+        icon = GFX_goal_support_fascism
+        x = 20
+        y = 6
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Unite_the_People
+        }
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+        }
+    }
+    focus = {
+        id = BRI_Strenghten_the_Patriotism
+        icon = GFX_SOV_muster_the_old_guard_ccp_2d_sov_compatibility
+        x = 20
+        y = 7
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Breton_Nationalism
+        }
+        prerequisite = {
+            focus = BRI_Ban_the_Communists
+        }
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.1
+        }
+    }
+    focus = {
+        id = BRI_Ban_Monarchism
+        icon = GFX_focus_generic_monarchy_1
+        x = 18
+        y = 8
+        cost = 5
+        available = {
+        }
+        bypass = {
+            neutrality < 0.05
+        }
+        prerequisite = {
+            focus = BRI_Strenghten_the_Patriotism
+        }
+        prerequisite = {
+            focus = BRI_Anti_Detektivian_Propaganda
+        }
+        completion_reward = {
+            add_stability = -0.1
+            add_popularity = {
+                ideology = neutrality
+                popularity = -1
+            }
+        }
+    }
+    focus = {
+        id = BRI_Kick_out_the_Democrats
+        icon = GFX_focus_generic_strike_at_democracy2
+        x = 18
+        y = 9
+        cost = 5
+        available = {
+        }
+        bypass = {
+            democratic < 0.05
+        }
+        prerequisite = {
+            focus = BRI_Ban_Monarchism
+        }
+        completion_reward = {
+            add_stability = -0.1
+            add_popularity = {
+                ideology = democratic
+                popularity = -1
+            }
+        }
+    }
+    focus = {
+        id = BRI_One_Nationality
+        icon = GFX_SOV_coup_detat_ccp_2d_sov_compatibility
+        x = 20
+        y = 10
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Kick_out_the_Democrats
+        }
+
+        prerequisite = {
+            focus = BRI_Strenghten_the_Patriotism
+        }    
+        completion_reward = {
+            add_ideas = BRI_One_Nationality
+        }
+    }
+    focus = {
+        id = BRI_Prest_omp
+        icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+        x = 16
+        y = 11
+        cost = 5
+        available = {
+        }
+
+        prerequisite = {
+            focus = BRI_Organized_State
+        }
+        prerequisite = {
+            focus = BRI_Perfect_State
+        } 
+        prerequisite = {
+            focus = BRI_One_Nationality
+        }    
+        completion_reward = {
+            add_stability = 0.1
+            add_war_support = 0.1
+        }
+    }
+
+    focus = {
+		id = BRI_Pan_Celticism
+		icon = GFX_BRI_celtic_unity
+		x = 13
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {
+            focus = BRI_Our_Claim
+        }
+		prerequisite = {
+            focus = BRI_Prest_omp
+        }
+
+		completion_reward = {
+            add_state_claim = 1054
+            add_state_claim = 123
+            add_state_claim = 122
+            add_state_claim = 338
+            add_state_claim = 128
+            add_state_claim = 132
+            add_state_claim = 932
+            add_state_claim = 931
+            add_state_claim = 131
+            add_state_claim = 121
+            add_state_claim = 133
+            add_state_claim = 136
+            add_state_claim = 120
+            add_state_claim = 1066
+            add_state_claim = 933
+            add_state_claim = 119
+            add_state_claim = 134
+            add_state_claim = 113
+            add_state_claim = 135
+            add_state_claim = 171
+            add_state_claim = 180
+            add_state_claim = 174
+            add_state_claim = 790
+		}
+    }
+
+    focus = {
+		id = BRI_Influences_irish_Island
+		icon = GFX_focus_generic_fascist_propaganda
+		x = 11
+		y = 13
+		cost = 5
+
+		prerequisite = {
+            focus = BRI_Pan_Celticism
+        }
+
+		completion_reward = {
+            set_country_flag = BRI_Influences_CON_Island_game
+            set_country_flag = BRI_Influences_MUN_Island_game
+            set_country_flag = BRI_Influences_ULS_Island_game
+            set_country_flag = BRI_Influences_LEI_Island_game
+		}
+    }
+
+    focus = {
+		id = BRI_Integrate_Ireland
+		icon = GFX_focus_generic_treaty
+		x = 11
+		y = 14
+		cost = 5
+        available = {
+            controls_state = 119
+            controls_state = 134
+            controls_state = 113
+            controls_state = 135
+        }
+		prerequisite = {
+            focus = BRI_Influences_irish_Island
+        }
+
+		completion_reward = {
+            add_state_core = 119
+            add_state_core = 134
+            add_state_core = 113
+            add_state_core = 135
+		}
+    }
+
+    focus = {
+		id = BRI_Our_Claim
+		icon = GFX_BRI_Our_Claim
+		x = 19
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {
+            focus = BRI_Pan_Celticism
+        }
+		prerequisite = {
+            focus = BRI_Prest_omp
+        }
+
+		completion_reward = {
+            add_state_claim = 1054
+            add_state_claim = 15
+            add_state_claim = 23
+		}
+    }
+
+
+    focus = {
+		id = BRI_Unite_Agains_DET
+		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+		x = 19
+		y = 13
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Our_Claim
+		}
+
+		completion_reward = {
+            create_faction = "Anti-Detektivian Block"
+		}
+    }
+
+
+    focus = {
+		id = BRI_Demande_AQU
+		icon = GFX_goal_demand_sudetenland
+		x = 17
+		y = 14
+		cost = 5
+        bypass = {
+            or = {
+                NOT = {
+                    country_exists = AQU
+                }
+                AQU = {
+                    has_war_with = BRI    
+                    is_puppet = yes   
+                }              
+            }
+
+        }
+        available = {
+            is_puppet = no
+            AQU = {
+                is_puppet = no
+                NOT = { has_war_with = BRI }
+            }
+        }
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Unite_Agains_DET
+		}
+        will_lead_to_war_with = AQU
+		completion_reward = {
+            AQU = {country_event = { id = BRI.3 days = 1 }}
+		}
+    }
+
+
+    focus = {
+		id = BRI_Alliance_With_MPL
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+		x = 19
+		y = 14
+		cost = 5
+
+		mutually_exclusive = {}
+        bypass = {
+            or = {
+                NOT = {
+                    country_exists = MPL
+                }
+                MPl = {
+                    has_war_with = BRI    
+                    is_puppet = yes
+                    is_in_faction_with = BRI
+                }
+                 
+            }
+
+        }
+        available = {
+            is_puppet = no
+            MPL = {
+                is_puppet = no
+                NOT = { has_war_with = BRI }
+            }
+        }
+		prerequisite = {
+			focus = BRI_Unite_Agains_DET
+		}
+
+		completion_reward = {
+            MPL = {country_event = { id = BRI.2 days = 1 }}
+		}
+    }
+
+
+    focus = {
+		id = BRI_Alliance_With_ATL
+		icon = GFX_goal_generic_alliance
+		x = 21
+		y = 14
+		cost = 5
+        bypass = {
+            or = {
+                NOT = {
+                    country_exists = ATL
+                }
+                ATL = {
+                    has_war_with = BRI    
+                    is_puppet = yes
+                    is_in_faction_with = BRI
+                }
+                 
+            }
+
+        }
+        available = {
+            is_puppet = no
+            ATL = {
+                is_puppet = no
+                NOT = { has_war_with = BRI }
+            }
+        }
+		mutually_exclusive = {
+			focus = BRI_Demande_Jersey
+		}
+		prerequisite = {
+			focus = BRI_Unite_Agains_DET
+		}
+
+		completion_reward = {
+            ATL = {country_event = { id = BRI.2 days = 1 }}
+		}
+    }
+
+
+    focus = {
+		id = BRI_Demande_Jersey
+		icon = GFX_SOV_the_lonely_island_ccp_2d_sov_compatibility
+		x = 23
+		y = 14
+		cost = 5
+        bypass = {
+            controls_state = 1054
+        }
+        available = {
+            is_puppet = no
+        }        
+		mutually_exclusive = {
+			focus = BRI_Alliance_With_ATL
+		}
+		prerequisite = {
+			focus = BRI_Unite_Agains_DET
+		}
+
+		completion_reward = {
+           ATL = {country_event = { id = BRI.4 days = 1 }} 
+		}
+    }
+
+
+    focus = {
+		id = BRI_Military_Training
+		icon = GFX_SOV_intensify_pilot_training_program_ccp_2d_sov_compatibility
+		x = 19
+		y = 15
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Demande_AQU
+			focus = BRI_Alliance_With_MPL
+			focus = BRI_Alliance_With_ATL
+		}
+
+		completion_reward = {
+            army_experience = 100
+		}
+    }
+
+
+    focus = {
+		id = BRI_Destroy_ATL
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = 23
+		y = 15
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Demande_Jersey
+		}
+        will_lead_to_war_with = ATL
+		completion_reward = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = ATL
+            }
+		}
+    }
+
+
+    focus = {
+		id = BRI_Destroy_DET
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+		x = 19
+		y = 16
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Military_Training
+		}
+        will_lead_to_war_with = DET
+		completion_reward = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = DET
+            }
+		}
+    }
+
+
+    focus = {
+		id = BRI_Breton_Empire
+		icon = GFX_BRI_Breton_Empire
+		x = 23
+		y = 16
+		cost = 5
+        available = {
+            controls_state = 14
+            controls_state = 30
+            controls_state = 15
+            controls_state = 1054
+            controls_state = 23
+        }
+		mutually_exclusive = {}
+		prerequisite = {
+			focus = BRI_Military_Training
+			focus = BRI_Destroy_ATL
+		}
+
+		completion_reward = {
+            set_cosmetic_tag = BRI_Empire
+            add_state_core = 15
+            add_state_core = 1054
+            add_state_core = 23
+		}
+    }
+
+}

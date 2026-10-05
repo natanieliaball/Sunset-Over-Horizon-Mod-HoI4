@@ -1,0 +1,40 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = SCH
+                    is_puppet = yes
+                    OVERLORD = {
+                        OR = {
+                            tag = ABT
+                            original_tag = ABT
+                        }
+                        has_civil_war = yes
+                    }
+                    NOT = { has_country_flag = SCH_independence_triggered }
+                }
+                set_country_flag = SCH_independence_triggered
+                country_event = { id = SCH.1 days = 3 }
+            }
+        }
+    }
+}
+
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    focus_progress = {
+                    focus = ABT_honored_the_1933_revolution
+                    progress > 0.4
+                    }
+                    NOT = { has_country_flag = ABT_Furry_republic_event }
+                }
+                set_country_flag = ABT_Furry_republic_event
+                country_event = { id = ABT.2 days = 3 }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+state={
+	id=1068
+	name="Dunajská Streda District"
+	provinces={
+		11679 3716 
+	}
+	History = {
+		owner = SEC
+		add_core_of = SEC
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1		
+		}
+		victory_points = {
+			3716 3 
+		}
+	}
+	manpower=128450
+	state_category = city
+	buildings_max_level_factor=1
+	local_supplies=0
+}

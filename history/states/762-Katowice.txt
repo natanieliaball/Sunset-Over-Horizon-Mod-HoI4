@@ -1,0 +1,35 @@
+state = {
+	id = 762
+	name = "STATE_762"
+	
+	manpower = 1000000
+
+	resources = {
+		steel = 19 # was: 60
+		aluminium = 7 # was: 20
+		coal = 32 # initial distribution
+	}
+
+	state_category = city
+
+	history = {
+		owner = SIL
+		add_core_of = SIL
+		add_claim_by = NGC
+		add_core_of = BMS	
+		add_core_of = LES
+		victory_points = {
+			6464 5 # Katovice
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	provinces = {
+		506 6464
+	}
+
+	local_supplies = 0.0 
+}

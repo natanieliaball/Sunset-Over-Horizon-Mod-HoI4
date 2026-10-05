@@ -1,0 +1,39 @@
+state = {
+	id = 137
+	name = "STATE_137"
+	manpower = 1061607
+	
+	state_category = city
+
+	history = {
+		owner = CRI
+		add_core_of = CRI
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 1
+			3686 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			3686 20 # Sevastopol
+		}
+		victory_points = {
+			9680 1 # Kerch
+		}
+		victory_points = {
+			6704 1 # Yalta
+		}
+		victory_points = {
+			705 3 # Simferopol
+		}
+	}
+
+	provinces = {
+		705 3686 3722 6704 6724 9677 9680 9718 11649 
+	}
+
+	local_supplies = 10.0 
+}

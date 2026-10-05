@@ -1,0 +1,196 @@
+add_namespace = NIT
+country_event = {
+    id = NIT.1
+    title = NIT.1.t
+    desc = NIT.1.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.1.a
+        ai_chance = { factor = 90 }
+        NIT = { 
+            add_to_faction = ROOT
+        }             
+    }
+    option = {
+        name = NIT.1.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = NIT.2
+    title = NIT.2.t
+    desc = NIT.2.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.2.a
+        ai_chance = { factor = 80 }
+        NIT = { 
+            transfer_state = 157
+            add_state_core = 157
+        }             
+    }
+    option = {
+        name = NIT.2.b
+        ai_chance = { factor = 20 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROOT
+			}
+        }
+    }
+}
+
+country_event = {
+    id = NIT.3
+    title = NIT.3.t
+    desc = NIT.3.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.3.a
+        ai_chance = { factor = 80 }
+        NIT = { 
+            transfer_state = 1
+            transfer_state = 114
+            add_state_core = 1
+            add_state_core = 114
+        }             
+    }
+    option = {
+        name = NIT.3.b
+        ai_chance = { factor = 20 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = PIS
+			}
+        }
+    }
+}
+
+country_event = {
+    id = NIT.4
+    title = NIT.4.t
+    desc = NIT.4.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.4.a
+        ai_chance = { factor = 60 }
+        NIT = { 
+            puppet = VNC
+        }
+                     
+    }
+    option = {
+        name = NIT.4.b
+        ai_chance = { factor = 40 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = VNC
+			}
+        }
+    }
+}
+
+country_event = {
+    id = NIT.5
+    title = NIT.5.t
+    desc = NIT.5.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.5.a
+        ai_chance = { factor = 70 }
+        NIT = { 
+            annex_country = {
+                target = PIS
+                transfer_troops = yes
+            }
+            add_state_core = 1046
+            add_state_core = 1
+            add_state_core = 114
+            add_state_core = 177
+        }
+        
+                     
+    }
+    option = {
+        name = NIT.5.b
+        ai_chance = { factor = 30 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = PIS
+			}
+        }
+    }
+}
+
+country_event = {
+    id = NIT.6
+    title = NIT.6.t
+    desc = NIT.6.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.6.a
+        ai_chance = { factor = 70 }
+        NIT = { 
+            transfer_state = 736
+            transfer_state = 852
+            add_state_core = 736
+            add_state_core = 852
+        }
+        
+                     
+    }
+    option = {
+        name = NIT.6.b
+        ai_chance = { factor = 30 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROOT
+			}
+        }
+    }
+}
+
+country_event = {
+    id = NIT.7
+    title = NIT.7.t
+    desc = NIT.7.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = NIT.7.a
+        ai_chance = { factor = 60 }
+        NIT = { 
+            puppet = SIT
+        }
+                     
+    }
+    option = {
+        name = NIT.7.b
+        ai_chance = { factor = 40 }
+        NIT = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = SIT
+			}
+        }
+    }
+}

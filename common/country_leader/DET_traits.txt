@@ -1,0 +1,10 @@
+leader_traits = {
+    DET_TRUE_FORM = {
+        random = no
+        sprite = 1
+        stability_factor = 0.05
+        ai_will_do = {
+            base = 2
+        }
+    }
+}

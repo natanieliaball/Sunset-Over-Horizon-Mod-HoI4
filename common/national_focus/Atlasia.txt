@@ -1,0 +1,1926 @@
+focus_tree = {
+    id = ATL_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = ATL
+        }
+
+    }
+	continuous_focus_position = { x = 0 y = 1800}
+    default = no
+    focus = {
+        id = ATL_victoire_amere
+        icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+        x = 10
+        y = 0
+        cost = 5
+
+        completion_reward = {
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = ATL_evaluer_les_degats
+        icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
+        x = 16
+        y = 1
+        cost = 10
+        mutually_exclusive = { focus = ATL_Autonomy_for_BOS}
+        prerequisite = { focus = ATL_victoire_amere }
+
+        completion_reward = {
+            add_stability = 0.02
+
+        }
+    }
+
+###########################################################
+################### RECONSTRUCTION #########################
+###########################################################
+
+    focus = {
+        id = ATL_administration_provisoire
+        icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+        x = 18
+        y = 2
+        cost = 10
+
+        prerequisite = { focus = ATL_evaluer_les_degats }
+
+        completion_reward = {
+            29 = {
+                add_compliance = 15
+            }
+            34 = {
+                add_compliance = 15
+            }
+            6 = {
+                add_compliance = 15
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_reconstruction_nationale
+        icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+        x = 16
+        y = 2
+        cost = 10
+
+        prerequisite = { focus = ATL_evaluer_les_degats }
+
+        completion_reward = {
+    	    add_timed_idea = {
+				idea = ATL_rebuild_the_nation_idea
+				days = 365
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_reorganiser_larmee
+        icon = GFX_focus_PRC_reorganize_divisions
+        x = 10
+        y = 2
+        cost = 5
+
+        prerequisite = { focus = ATL_evaluer_les_degats focus = ATL_Autonomy_for_BOS}
+
+        completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+        }
+    }
+
+###########################################################
+
+    focus = {
+        id = ATL_upgrade_calais
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 19
+        y = 3
+        cost = 10
+
+        prerequisite = { focus = ATL_administration_provisoire }
+
+        completion_reward = {
+            29 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}                
+            }
+			29 = {
+				add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+            29 = {
+                add_compliance = 10
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_services_publics
+        icon = GFX_SOV_infiltrate_the_nkvd_ccp_2d_sov_compatibility
+        x = 17
+        y = 3
+        cost = 5
+
+        prerequisite = { focus = ATL_reconstruction_nationale }
+
+        completion_reward = {
+            add_ideas = ATL_reformes_sociales_idea
+        }
+    }
+
+    focus = {
+        id = ATL_relancer_lindustrie
+        icon = GFX_focus_generic_economic_recovery
+        x = 15
+        y = 3
+        cost = 10
+
+        prerequisite = { focus = ATL_reconstruction_nationale }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_reformer_letat_major
+        icon = GFX_focus_generic_army_doctrines_2
+        x = 12
+        y = 3
+        cost = 5
+
+        prerequisite = { focus = ATL_reorganiser_larmee }
+
+        completion_reward = {
+            army_experience = 15
+        }
+    }
+
+###########################################################
+
+    focus = {
+        id = ATL_upgrade_Belgium
+        icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+        x = 19
+        y = 4
+        cost = 10
+
+        prerequisite = { focus = ATL_upgrade_calais }
+
+        completion_reward = {
+            6 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}                
+            }
+			6 = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			6 = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+            6 = {
+                add_compliance = 10
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_reconstruction_des_villes
+        icon = GFX_SOV_restoration_and_development_ccp_2d_sov_compatibility
+        x = 17
+        y = 4
+        cost = 10
+
+        prerequisite = { focus = ATL_services_publics }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_reouvrir_les_usines
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 15
+        y = 4
+        cost = 10
+
+        prerequisite = { focus = ATL_relancer_lindustrie }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_stabilize_the_government
+        icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility
+        x = 13
+        y = 4
+        cost = 5
+
+
+        prerequisite = { focus = ATL_relancer_lindustrie }
+        completion_reward = {
+            remove_ideas = ATL_instabilite_politique
+        }
+    }
+
+###########################################################
+
+    focus = {
+        id = ATL_apaiser_la_population
+        icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+        x = 17
+        y = 5
+        cost = 10
+
+        prerequisite = {
+
+            focus = ATL_reconstruction_des_villes
+        }
+        prerequisite = {
+            focus = ATL_upgrade_Belgium
+
+        }
+        completion_reward = {
+            add_stability = 0.03
+            remove_ideas = ATL_crise_legitimite
+        }
+    }
+
+    focus = {
+        id = ATL_moderniser_les_infrastructures
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 15
+        y = 5
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_reouvrir_les_usines
+            focus = ATL_stabilize_the_government
+        }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+###########################################################
+
+    focus = {
+        id = ATL_integration_pas_de_calais
+        icon = GFX_SOV_military_reorganization_ccp_2d_sov_compatibility
+        x = 17
+        y = 6
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_apaiser_la_population
+  
+        }
+        prerequisite = {
+   
+            focus = ATL_moderniser_les_infrastructures
+        }
+
+        completion_reward = {
+
+            remove_ideas = ATL_occupation_pas_de_calais_idea
+
+            6 = { add_core_of = ATL }
+            29 = { add_core_of = ATL }
+            34 = { add_core_of = ATL }
+
+            add_stability = 0.05
+            add_research_slot = 1
+
+        }
+    }
+###############################################################
+################ MODERNISER LES FORCES ARMÉES #################
+###############################################################
+
+    focus = {
+        id = ATL_moderniser_forces_armees
+        icon = GFX_focus_CZE_army_reform
+        x = 10
+        y = 3
+        cost = 5
+
+       prerequisite = { focus = ATL_reorganiser_larmee }
+
+        completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_reforme_ministere_guerre
+        icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+        x = 10
+        y = 4
+        cost = 5
+
+       prerequisite = { focus = ATL_moderniser_forces_armees }
+        prerequisite = { focus = ATL_reformer_letat_major }
+        
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+    focus = {
+        id = ATL_etat_major_unifie
+        icon = GFX_focus_FIN_parmis_devils
+        x = 10
+        y = 5
+        cost = 10
+
+        prerequisite = { focus = ATL_reforme_ministere_guerre }
+
+        completion_reward = {
+            remove_ideas = ATL_tensions_militaires
+        }
+    }
+## armée de terre
+# ========================
+# ARMÉE DE TERRE
+# ========================
+
+    focus = {
+        id = ATL_academie_militaire
+        icon = GFX_focus_generic_military_academy
+        x = 10
+        y = 6
+        cost = 10
+        prerequisite = { focus = ATL_etat_major_unifie }
+
+        completion_reward = {
+            add_ideas = ATL_academie_militaire_idea
+        }
+    }
+
+    focus = {
+        id = ATL_exercices_nationaux
+        icon = GFX_goal_continuous_reduce_training_time
+        x = 10
+        y = 7
+        cost = 5
+        prerequisite = { focus = ATL_academie_militaire }
+
+        completion_reward = {
+            add_command_power = 25
+            army_experience = 15
+            add_manpower = 15000
+        }
+    }
+
+    focus = {
+        id = ATL_moderniser_infanterie
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 9
+        y = 8
+        cost = 5
+        prerequisite = { focus = ATL_exercices_nationaux }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 2
+                category = infantry_weapons
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_developper_artillerie
+        icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+        x = 11
+        y = 8
+        cost = 5
+        prerequisite = { focus = ATL_exercices_nationaux }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 0.75
+                uses = 2
+                category = artillery
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_bataillons_genie
+        icon = GFX_SOV_intensify_pilot_training_program_ccp_2d_sov_compatibility
+        x = 9
+        y = 9
+        cost = 5
+        prerequisite = { focus = ATL_moderniser_infanterie }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = support_tech
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_corps_motorises
+        icon = GFX_goal_generic_army_motorized
+        x = 11
+        y = 9
+        cost = 5
+        prerequisite = { focus = ATL_developper_artillerie }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = motorized_equipment
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_defensive_doctrine
+        icon = GFX_goal_generic_defence
+        x = 9
+        y = 10
+        cost = 5
+        prerequisite = { focus = ATL_bataillons_genie }
+        mutually_exclusive = { focus = ATL_doctrine_offensive }
+
+        completion_reward = {
+            add_ideas = ATL_doctrine_defensive_idea
+        }
+    }
+
+    focus = {
+        id = ATL_doctrine_offensive
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        x = 11
+        y = 10
+        cost = 5
+        prerequisite = { focus = ATL_corps_motorises }
+        mutually_exclusive = { focus = ATL_defensive_doctrine }
+
+        completion_reward = {
+            add_ideas = ATL_doctrine_offensive_idea
+        }
+    }
+
+    focus = {
+        id = ATL_armee_professionnelle
+        icon = GFX_goal_generic_army_doctrines
+        x = 10
+        y = 11
+        cost = 5
+        prerequisite = { focus = ATL_defensive_doctrine focus = ATL_doctrine_offensive }
+
+        completion_reward = {
+            add_ideas = ATL_professional_army
+            army_experience = 30
+            add_manpower = 25000
+        }
+    }
+
+# ========================
+# ARMÉE NAVALE
+# ========================
+
+    focus = {
+        id = ATL_reconstruction_navale
+        icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
+        x = 6
+        y = 6
+        cost = 10
+        prerequisite = { focus = ATL_etat_major_unifie }
+        completion_reward = {
+            navy_experience = 25
+        }
+
+    }
+
+    focus = {
+        id = ATL_chantiers_navals
+        icon = GFX_SOV_rebuild_the_far_eastern_fleet_ccp_2d_sov_compatibility
+        x = 6
+        y = 7
+        cost = 5
+        prerequisite = { focus = ATL_reconstruction_navale }
+
+            completion_reward = {
+                
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_destroyers_modernes
+        icon = GFX_focus_generic_destroyer
+        x = 5
+        y = 8
+        cost = 5
+        prerequisite = { focus = ATL_chantiers_navals }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = dd_tech
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_force_sous_marine
+        icon = GFX_focus_PRC_submarines
+        x = 7
+        y = 8
+        cost = 5
+        prerequisite = { focus = ATL_chantiers_navals }
+
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = ss_tech
+            }
+        }
+    }
+
+# ========================
+# AVIATION
+# ========================
+
+    focus = {
+        id = ATL_reorganiser_aviation
+        icon = GFX_SOV_long_range_aircraft_ccp_2d_sov_compatibility
+        x = 2
+        y = 6
+        cost = 10
+        prerequisite = { focus = ATL_etat_major_unifie }
+
+        completion_reward = {
+            air_experience = 20
+        }
+    }
+
+    focus = {
+        id = ATL_ecole_pilotes
+        icon = GFX_focus_generic_pilot_training
+        x = 2
+        y = 7
+        cost = 5
+        prerequisite = { focus = ATL_reorganiser_aviation }
+
+        completion_reward = {
+            add_ideas = ATL_ecole_pilotes_idea
+        }
+    }
+
+focus = {
+    id = ATL_chasseurs_modernes
+    icon = GFX_goal_generic_air_fighter
+    x = 1
+    y = 8
+    cost = 5
+    prerequisite = { focus = ATL_ecole_pilotes }
+
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 1
+            uses = 2
+            category = light_fighter
+        }
+    }
+}
+
+focus = {
+    id = ATL_bombardement_tactique
+    icon = GFX_goal_generic_air_bomber
+    x = 3
+    y = 8
+    cost = 5
+    prerequisite = { focus = ATL_ecole_pilotes }
+
+    completion_reward = {
+        add_tech_bonus = {
+            bonus = 1
+            uses = 2
+            category = tactical_bomber
+        }
+    }
+}
+
+###############################################################
+############## PREPARATION CONTRE ALBATA #######################
+###############################################################
+
+    focus = {
+        id = ATL_lecons_de_la_guerre
+        icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
+        x = 14
+        y = 6
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_etat_major_unifie
+        }
+
+        completion_reward = {
+            army_experience = 20
+            add_war_support = 0.1
+        }
+    }
+
+    focus = {
+        id = ATL_planification_strategique
+        icon = GFX_focus_PHI_war_plan_orange
+        x = 14
+        y = 7
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_lecons_de_la_guerre
+        }
+
+        completion_reward = {
+            army_experience = 25
+            add_command_power = 25
+        }
+    }
+
+###############################################################
+####################### BRANCHE 3 ##############################
+###############################################################
+
+    focus = {
+        id = ATL_fortifier_frontiere
+        icon = GFX_SOV_far_east_fortification_ccp_2d_sov_compatibility
+        x = 13
+        y = 8
+        cost = 10
+        available = {
+            controls_state = 6
+            controls_state = 34
+        }
+        prerequisite = {
+            focus = ATL_planification_strategique
+        }
+
+        completion_reward = {
+            6 = { add_building_construction = { type = bunker level = 3 province = 6560 instant_build = yes } }
+            6 = { add_building_construction = { type = bunker level = 2 province = 516 instant_build = yes } }
+            34 = { add_building_construction = { type = bunker level = 2 province = 3516 instant_build = yes } }
+            34 = { add_building_construction = { type = bunker level = 2 province = 11519 instant_build = yes } }
+        }
+    }
+
+    focus = {
+        id = ATL_industrie_de_guerre
+        icon = GFX_focus_generic_military_industry
+        x = 15
+        y = 8
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_planification_strategique
+        }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+###############################################################
+######################## FINAL #################################
+###############################################################
+
+    focus = {
+        id = ATL_last_preperation
+        icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+        x = 14
+        y = 9
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_fortifier_frontiere
+        }
+        prerequisite = {
+            focus = ATL_industrie_de_guerre
+        }
+        completion_reward = {
+            add_war_support = 0.15
+        }
+    }
+
+    focus = {
+        id = ATL_operation_horizon
+        icon = GFX_goal_generic_territory_or_war
+        x = 14
+        y = 10
+        cost = 5
+        will_lead_to_war_with = ABT
+        prerequisite = {
+            focus = ATL_last_preperation
+        }
+
+        mutually_exclusive = {
+            focus = ATL_best_friend_abt
+        }
+
+        available = {
+            OR = {
+                has_government = neutrality
+                has_government = fascism
+                has_government = communism
+            }
+        }
+
+        completion_reward = {
+
+            create_wargoal = {
+                type = take_state
+                target = ABT
+            }
+
+            add_named_threat = {
+                threat = 3
+                name = ATL_Preventive_War
+            }
+        }
+    }
+###############################################################
+################ GOUVERNEMENT D'ANIR ###########################
+###############################################################
+
+    focus = {
+        id = ATL_consolider_le_gouvernement
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        x = 17
+        y = 7
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_integration_pas_de_calais
+        }
+        mutually_exclusive = {focus = ATL_mouvement_national }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = 0.05
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+        }
+    }
+
+###############################################################
+##################### PREMIERE DIVISION ########################
+###############################################################
+
+    focus = {
+        id = ATL_reunir_le_conseil
+        icon = GFX_focus_SWI_dissolve_the_federal_council
+        x = 17
+        y = 8
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_consolider_le_gouvernement
+        }
+
+        completion_reward = {
+            add_political_power = 50
+            add_ideas = ATL_united_council_idea
+        }
+    }
+
+###############################################################
+########################## FUSION ##############################
+###############################################################
+
+    focus = {
+        id = ATL_consensus_national
+        icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+        x = 17
+        y = 9
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_reunir_le_conseil
+        }
+
+        completion_reward = {
+            add_stability = 0.03
+
+            add_political_power = 50
+        }
+    }
+
+###############################################################
+##################### SECONDE DIVISION #########################
+###############################################################
+
+    focus = {
+        id = ATL_restaurer_linfluence
+        icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+        x = 17
+        y = 10
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_consensus_national
+        }
+
+        completion_reward = {
+            add_political_power = 150
+        }
+    }
+
+###############################################################
+###################### DEVELOPPEMENT ###########################
+###############################################################
+
+
+
+    focus = {
+        id = ATL_demand_champagne
+        icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+        x = 16
+        y = 11
+        cost = 5
+        will_lead_to_war_with = LOR
+        prerequisite = {
+            focus = ATL_restaurer_linfluence
+        }
+        available = {
+            LOR = { controls_state = 18 }
+        }
+        completion_reward = {
+            LOR = {
+	            country_event = { id = ATL_event.1 days = 3 }
+	        }
+        }
+    }
+
+    focus = {
+        id = ATL_demand_demilitarization_DET
+        icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
+        x = 18
+        y = 11
+        cost = 5
+        will_lead_to_war_with = DET
+        available = {
+            DET = {
+                controls_state = 24
+                controls_state = 27 
+                NOT = {has_war = yes}
+            }
+        }
+        prerequisite = {
+            focus = ATL_restaurer_linfluence
+        }
+
+        completion_reward = {
+            DET = {
+	            country_event = { id = ATL_event.2 days = 3 }
+	        }
+        }
+    }
+
+###############################################################
+########################## FINAL ###############################
+###############################################################
+
+    focus = {
+        id = ATL_demand_bri_submition
+        icon = GFX_focus_generic_subjugation
+        x = 17
+        y = 12
+        cost = 5
+        will_lead_to_war_with = BRI
+        prerequisite = {
+            focus = ATL_demand_champagne
+            focus = ATL_demand_demilitarization_DET
+        }
+        available = {
+            BRI = {
+                is_puppet = no
+
+            }
+            country_exists = BRI
+        }
+        completion_reward = {
+            BRI = {
+	            country_event = { id = ATL_event.3 days = 3 }
+	        }
+        }
+    }
+###############################################################
+################ ETAT NATIONAL ATLASIEN ########################
+###############################################################
+
+    focus = {
+        id = ATL_mouvement_national
+        icon = GFX_focus_generic_fascist_troops
+        x = 21
+        y = 7
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_integration_pas_de_calais
+        }
+
+        mutually_exclusive = { focus = ATL_consolider_le_gouvernement }
+
+		completion_reward = {
+			set_politics = {
+   	 			ruling_party = fascism
+    			elections_allowed = no
+			}
+			add_popularity = {
+            	ideology = fascism
+            	popularity = 0.4				
+			}
+			start_civil_war = {
+				ideology = neutrality
+				size = 0.6
+    			army_ratio = 0.2
+				
+        	}
+		}
+    }
+
+    focus = {
+        id = ATL_rassembler_les_patriotes
+        icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
+        x = 21
+        y = 8
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_mouvement_national
+        }
+
+        completion_reward = {
+            add_war_support = 0.1
+            add_ideas = ATL_national_unity_idea
+        }
+    }
+
+###############################################################
+######################### DIVISION #############################
+###############################################################
+
+    focus = {
+        id = ATL_propagande_nationale
+        icon = GFX_SOV_collectivist_propaganda_ccp_2d_sov_compatibility
+        x = 20
+        y = 9
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_rassembler_les_patriotes
+        }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_war_support = 0.1
+			add_popularity = {
+            	ideology = fascism
+            	popularity = 0.1				
+			            
+            }
+        }
+    }
+    focus = {
+        id = ATL_jeunesse_atlasienne
+        icon = GFX_focus_HUN_reestablish_the_rongyos_garda
+        x = 22
+        y = 9
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_rassembler_les_patriotes
+        }
+
+        completion_reward = {
+            add_ideas = ATL_Atlasian_Youth_idea
+            army_experience = 20
+
+        }
+    }
+
+###############################################################
+########################## FUSION ##############################
+###############################################################
+
+    focus = {
+        id = ATL_Destroy_Lorraine
+        icon = GFX_goal_generic_territory_or_war
+        x = 21
+        y = 10
+        cost = 10
+        will_lead_to_war_with = LOR
+        available = {
+            has_army_manpower = {
+                size > 100000
+            }
+        }
+        prerequisite = {
+            focus = ATL_propagande_nationale
+            focus = ATL_jeunesse_atlasienne
+        }
+
+    	completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = LOR
+    	    }
+    	}
+    }
+
+###############################################################
+######################### DIVISION #############################
+###############################################################
+
+    focus = {
+        id = ATL_destroy_BRI
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 20
+        y = 11
+        cost = 10
+        will_lead_to_war_with = BRI
+        prerequisite = {
+            focus = ATL_Destroy_Lorraine
+        }
+
+
+    	completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = BRI
+    	    }
+    	}
+        
+    }
+
+    focus = {
+        id = ATL_destroy_DET
+        icon = GFX_SOV_demand_eastern_poland_ccp_2d_sov_compatibility
+        x = 22
+        y = 11
+        cost = 10
+        will_lead_to_war_with = DET
+        available = {
+            has_army_manpower = {
+                size > 350000
+            }
+        }
+        prerequisite = {
+            focus = ATL_Destroy_Lorraine
+        }
+
+        completion_reward = {
+    	    create_wargoal = {
+    	        type = annex_everything
+    	        target = DET
+    	    }
+        }
+    }
+
+    focus = {
+        id = ATL_revendiquer_les_terres_atlasiennes
+        icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+        x = 21
+        y = 12
+        cost = 5
+
+        prerequisite = {
+            focus = ATL_destroy_BRI
+            focus = ATL_destroy_DET
+        }
+        available = {
+            controls_state = 14
+            controls_state = 30
+            controls_state = 24
+            controls_state = 18
+            controls_state = 27
+            controls_state = 15
+            controls_state = 16
+            controls_state = 785
+            controls_state = 29
+            controls_state = 34
+            controls_state = 6
+        }
+        completion_reward = {
+            add_state_core = 14
+            add_state_core = 30
+            add_state_core = 24
+            add_state_core = 18
+            add_state_core = 27
+            add_stability = 0.05
+        }
+    }
+ # commie / democratic 
+    focus = {
+        id = ATL_Autonomy_for_BOS
+        icon = GFX_SOV_offer_autonomy_to_former_soviet_republics_ccp_2d_sov_compatibility
+        y = 1
+        x = 4
+        cost = 10
+        mutually_exclusive = {
+            focus = ATL_evaluer_les_degats
+        }
+        prerequisite = {
+            focus = ATL_victoire_amere
+        }
+
+        completion_reward = {
+            release_puppet = BOS
+            remove_ideas = ATL_occupation_pas_de_calais_idea
+        }
+    }
+ # common branch 
+
+    focus = {
+        id = ATL_Atl_BOS_union
+        icon = GFX_goal_generic_military_deal
+        y = 3
+        x = 3
+        cost = 10
+        available = {
+            BOS = {
+                is_puppet_of = ATL
+            }
+            OR = {
+                has_government = democratic
+                has_government = communism
+            }
+        }
+        mutually_exclusive = {
+            focus = ATL_Secure_bos
+        }
+        prerequisite = {
+            focus = ATL_worker_concession focus = ATL_ALLA_UDA_Deal
+        }
+
+        completion_reward = {
+            annex_country = {
+                target = BOS
+                transfer_troops = yes
+            }
+            set_cosmetic_tag = Atlasta
+            add_state_core = 29
+            add_state_core = 34
+            add_state_core = 6
+            add_state_core = 977
+            add_state_core = 35
+            add_state_core = 51
+        }
+    } 
+
+    focus = {
+        id = ATL_Secure_bos
+        icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+        y = 3
+        x = 5
+        cost = 10
+        available = {
+            BOS = {
+                is_puppet_of = ATL
+            }
+            OR = {
+                has_government = democratic
+                has_government = communism
+            }
+        }
+        mutually_exclusive = {
+            focus = ATL_Atl_BOS_union
+        }
+        prerequisite = {
+            focus = ATL_worker_concession focus = ATL_ALLA_UDA_Deal
+        }
+
+        completion_reward = {
+            29 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}                
+            }
+			29 = {
+				add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_Nationalise_key_industry 
+        icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
+        y = 4
+        x = 4
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_Atl_BOS_union focus = ATL_Secure_bos
+
+        }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_Arms_the_Nation
+        icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+        y = 5
+        x = 6
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_Nationalise_key_industry 
+
+        }
+
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = ATL_industrial_investment
+        icon = GFX_focus_generic_modernize_industry
+        y = 5
+        x = 4
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_Nationalise_key_industry 
+
+        }
+
+        completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 5
+				category = industry
+			}			
+        }
+    }
+
+    focus = {
+        id = ATL_improve_ore_extraction
+        icon = GFX_focus_generic_mining_industry
+        y = 5
+        x = 2
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_Nationalise_key_industry 
+
+        }
+
+        completion_reward = {
+			add_resource = {
+                type = steel
+                amount = 15
+                state = 785
+            }	
+			add_resource = {
+                type = steel
+                amount = 22
+                state = 29
+            }		
+        }
+    }
+
+    focus = {
+        id = ATL_University_of_Paris
+        icon = GFX_SOV_socialist_humanism_ccp_2d_sov_compatibility
+        y = 5
+        x = 0
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_Nationalise_key_industry 
+
+        }
+
+        completion_reward = {
+			add_research_slot = 1	
+        }
+    }
+
+
+
+
+
+    focus = {
+        id = ATL_worker_concession 
+        icon = GFX_focus_GER_liberate_exploited_colonial_workers
+        y = 2
+        x = 1
+        cost = 10
+        mutually_exclusive = {
+            focus = ATL_ALLA_UDA_Deal
+        }
+        prerequisite = {
+            focus = ATL_Autonomy_for_BOS
+        }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_popularity = {
+                ideology = communism
+                popularity = 0.1
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_a_new_form_of_republic
+        icon = GFX_focus_generic_social_democracy
+        y = 3
+        x = 1
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_worker_concession 
+        }
+
+        completion_reward = {
+            remove_ideas = ATL_instabilite_politique
+            add_stability = 0.1
+            add_popularity = {
+                ideology = communism
+                popularity = 0.3
+            }
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = yes
+                election_frequency = 60
+            }
+if = {
+                limit = {
+                    BOS = {
+                        is_puppet_of = ATL
+                    } 	
+                }
+                BOS = {
+                    add_popularity = {
+                        ideology = communism
+                        popularity = 0.45
+                    }
+                    set_politics = {
+                        ruling_party = communism
+                        elections_allowed = yes
+                        election_frequency = 12
+                    }                    
+                }
+            }
+        }
+    }    
+
+    focus = {
+        id = ATL_Raise_the_Red_Flag
+        icon = GFX_SOV_beaten_but_not_defeated_ccp_2d_sov_compatibility
+        y = 4
+        x = 2
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_a_new_form_of_republic
+        }
+
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = 0.05
+        }
+    }
+
+    focus = {
+        id = ATL_Communist_propaganda
+        icon = GFX_focus_prc_agrarian_socialism
+        y = 4
+        x = 0
+        cost = 10
+
+        prerequisite = {
+            focus = ATL_a_new_form_of_republic
+        }
+
+        completion_reward = {
+            add_war_support = 0.25
+            add_stability = 0.20
+            remove_ideas = ATL_crise_legitimite
+        }
+    }
+
+    
+
+
+    focus = {
+        id = ATL_ALLA_UDA_Deal
+        icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+        y = 2
+        x = 7
+        cost = 10
+        mutually_exclusive = {
+            focus = ATL_worker_concession 
+        }
+        prerequisite = {
+            focus = ATL_Autonomy_for_BOS
+        }
+
+        completion_reward = {
+            add_stability = 0.05
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.1
+            }
+        }
+    }
+    focus = {
+        id = ATL_Re_authorize_free_elections
+        icon = GFX_goal_support_democracy
+        y = 3
+        x = 7
+        cost = 10
+        mutually_exclusive = {
+
+        }
+        prerequisite = {
+            focus = ATL_ALLA_UDA_Deal
+        }
+
+        completion_reward = {
+            remove_ideas = ATL_instabilite_politique
+            add_stability = 0.1
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.4
+            }
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = yes
+                election_frequency = 60
+            }
+            if = {
+                limit = {
+                    BOS = {
+                        is_puppet_of = ATL
+                    } 	
+                }
+                BOS = {
+                    add_popularity = {
+                        ideology = democratic
+                        popularity = 0.45
+                    }
+                    set_politics = {
+                        ruling_party = democratic
+                        elections_allowed = yes
+                        election_frequency = 12
+                    }                    
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = ATL_freedom_of_the_people
+        icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+        y = 4
+        x = 7
+        cost = 10
+        mutually_exclusive = {
+
+        }
+        prerequisite = {
+            focus = ATL_Re_authorize_free_elections
+        }
+
+        completion_reward = {
+            add_stability = 0.3
+            remove_ideas = ATL_crise_legitimite
+        }
+    }
+}

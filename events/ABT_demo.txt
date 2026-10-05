@@ -1,0 +1,184 @@
+add_namespace = ABT_democracy
+
+# Elections libres suite au suffrage universel
+country_event = {
+    id = ABT_democracy.1
+    title = ABT_democracy.1.t
+    desc = ABT_democracy.1.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_democracy.1.a
+        add_stability = 0.05
+        add_political_power = 50
+        add_popularity = {
+            ideology = democratic
+            popularity = 0.05
+        }
+    }
+}
+
+# Création de la ligue démocratique
+country_event = {
+    id = ABT_democracy.2
+    title = ABT_democracy.2.t
+    desc = ABT_democracy.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_democracy.2.a
+        add_political_power = 100
+        add_stability = 0.05
+    }
+}
+
+# Union démocratique avec ATL
+country_event = {
+    id = ABT_democracy.3
+    title = ABT_democracy.3.t
+    desc = ABT_democracy.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_democracy.3.a
+        ai_chance = { factor = 70 }
+        ABT = {
+            annex_country = {
+                target = ATL
+                transfer_troops = yes
+            }
+            every_state = {
+                limit = { is_core_of = ATL }
+                add_core_of = ABT
+            }
+            set_cosmetic_tag = AAU
+        }
+    }
+
+    option = {
+        name = ABT_democracy.3.b
+        ai_chance = { factor = 30 }
+    }
+}
+
+
+country_event = {
+    id = ABT_democracy.4
+    title = ABT_democracy.4.t
+    desc = ABT_democracy.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_democracy.4.a
+        # NGC accepte la pression
+        ai_chance = { factor = 5 }
+        NGC = {
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.40
+            }
+            ruling_party = democratic
+        }
+        ABT = { add_political_power = 50 }
+    }
+
+    option = {
+        name = ABT_democracy.4.b
+        # NGC refuse
+        ai_chance = { factor = 95 }
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = NGC
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ABT_democracy.5
+    title = ABT_ATL_Alliance.t
+    desc = ABT_ATL_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_ATL_Alliance.a
+        ai_chance = { factor = 90 }
+        ABT = { 
+            add_to_faction = ATL           
+        }
+    }
+        option = {
+        name = ABT_ATL_Alliance.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = ABT_democracy.6
+    title = ABT_NGC_Alliance.t
+    desc = ABT_NGC_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_NGC_Alliance.a
+        ai_chance = { factor = 80 }
+        ABT = { 
+            add_to_faction = NGC       
+        }
+    }
+        option = {
+        name = ABT_NGC_Alliance.b
+        ai_chance = { factor = 20 }
+    }
+}
+
+country_event = {
+    id = ABT_democracy.7
+    title = ABT_LOR_Alliance.t
+    desc = ABT_LOR_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_LOR_Alliance.a
+        ai_chance = { factor = 85 }
+        ABT = { 
+            add_to_faction = LOR           
+        }
+    }
+        option = {
+        name = ABT_LOR_Alliance.b
+        ai_chance = { factor = 15 }
+    }
+}
+
+country_event = {
+    id = ABT_democracy.8
+    title = ABT_NIT_Alliance.t
+    desc = ABT_NIT_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_NIT_Alliance.a
+        ai_chance = { factor = 85 }
+        ABT = { 
+            add_to_faction = NIT          
+        }
+    }
+        option = {
+        name = ABT_NIT_Alliance.b
+        ai_chance = { factor = 15 }
+    }
+}

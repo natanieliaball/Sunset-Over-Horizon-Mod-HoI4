@@ -1,0 +1,19 @@
+add_namespace = MODE
+
+country_event = {
+    id = MODE.1
+    title = MODE.1.t
+    desc = MODE.1.d
+    picture = GFX_
+
+    is_triggered_only = yes
+
+    option = {
+        name = MODE.1.a
+        ai_chance = { factor = 100 }
+        every_state = {
+            add_core_of = ROOT
+        }
+    }
+}
+

@@ -1,0 +1,25 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = ARO
+                    
+                    controls_state = 189 
+                    controls_state = 815
+                    NOT = { has_country_flag = end_war_ind }
+                }
+                ARO = {
+                    transfer_state = 189
+                    transfer_state = 815
+                    white_peace = KPA
+                    set_country_flag = end_war_ind
+                }
+                SVE = {
+                    transfer_state = 124
+                }
+
+            }
+        }
+    }
+}

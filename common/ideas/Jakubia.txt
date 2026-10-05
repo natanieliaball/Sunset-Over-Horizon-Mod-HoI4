@@ -1,0 +1,150 @@
+ideas = {
+    country = {
+        JAK_Jakubian_Nationalism = {
+            picture = FRA_scw_intervention_nationalists_focus
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                fascism_drift = 0.03 
+                war_support_factor = 0.05
+            }
+        }
+        Jak_fear_of_the_genocide = {
+            picture = generic_purge
+            
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = -0.2
+            }
+        }
+        JAK_agrarian_society = {
+            picture = generic_agrarian_society
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.2
+                production_speed_buildings_factor = -0.1
+                industrial_capacity_factory = -0.1
+                stability_factor = 0.05
+            }
+        }
+        JAK_agrarian_society_2 = {
+            picture = generic_agrarian_society
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.1
+                production_speed_buildings_factor = -0.06
+                industrial_capacity_factory = -0.08
+            }
+        }
+        JAK_indoctrinated_youth = {
+            picture = chi_army_corruption2
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                conscription = 0.1
+                training_time_factor = -0.3
+                army_core_attack_factor = 0.4
+                army_core_defence_factor = 0.4
+            }
+        }
+        JAK_offensive_Posture_idea = {
+            picture = generic_women_in_the_army
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                offence = 0.2
+            }
+        }
+        JAK_Defensive_Posture_idea = {
+            picture = generic_women_in_the_army
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                defence = 0.2
+            }
+        }
+        JAK_Promote_large_families = {
+            picture = BEL_traditional_family_values
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                monthly_population = 0.05
+            }
+        }  
+        Red_heart_of_the_Baltic_idea = {
+            picture = JAP_socialist_pioneers
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                conscription = 0.10
+                training_time_factor = -0.1
+                stability_factor = 0.1
+                war_support_factor = 0.1
+            }
+        }    
+        JAK_Agricultural_Collectivization_idea = {
+            picture = generic_agrarian_reform
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                conscription = 0.05
+            }
+        }
+        JAK_Communism_in_One_Country_idea = {
+            picture = generic_shield_against_communism
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.05
+                production_factory_max_efficiency_factor = 0.05
+            }
+        }
+        JAK_Spread_the_Revolution_idea = {
+            picture = trotskyite_plot_purged_nsb_ccp_sov_compatibility
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+		        communism_drift = 0.05
+		        communism_acceptance = 10
+            }
+        }
+    }
+}

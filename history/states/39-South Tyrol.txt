@@ -1,0 +1,32 @@
+
+state = {
+	id = 39
+	name = "STATE_39" # (South Tyrol) Alto Adige
+	manpower = 298290 # was 641650 before Trentino split
+	
+	state_category = town
+	
+	resources = {
+		aluminium = 14 # was: 22
+	}
+
+	history = {
+		owner = VNC
+		add_core_of = VNC
+		add_core_of = ALP
+		add_claim_by = NIT
+			victory_points = { #Bolzano
+			11598 1
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1 
+		}
+	}
+
+	provinces = {
+		656 6675 9630 11598 11615
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,32 @@
+add_namespace = CEC_event
+country_event = {
+    id = CEC_event.1
+    title = CEC_event.1.t
+    desc = CEC_event.1.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = CEC_event.1.a
+        ai_chance = { factor = 90 }
+        POM = {
+            transfer_state = 852
+            transfer_state = 853
+            transfer_state = 736
+            add_state_core = 852
+            add_state_core = 853
+            add_state_core = 736
+            declare_war_on = {
+                target = SPT
+                type = annex_everything
+            }
+        }
+        CEC_event = {    	
+            give_military_access = POM
+        }                
+    }
+    option = {
+        name = CEC_event.1.b
+        ai_chance = { factor = 10 }
+    }
+}

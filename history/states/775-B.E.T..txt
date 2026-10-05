@@ -1,0 +1,22 @@
+state = {
+	id = 775
+	name = "STATE_775" # BET - Borkou-Ennedi-Tibesti region
+	manpower = 18744
+	
+	state_category = wasteland
+	impassable = yes
+	force_link_ownership_to = 774 # Chad
+
+	history = {
+		owner = AXO
+		add_core_of = AXO
+	}
+
+	provinces = {
+		 5136 10893 1956 8128 10917 10780 10805 10758 12022
+	}
+	
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 1.0 
+}

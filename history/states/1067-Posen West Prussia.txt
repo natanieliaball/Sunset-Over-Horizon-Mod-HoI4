@@ -1,0 +1,23 @@
+state={
+	id=1067
+	name="Posen–West Prussia"
+	provinces={
+		9252 11260 11288 11316
+	}
+	History = {
+		owner = NGC
+		add_core_of = NGC
+		add_core_of = PMR
+		victory_points = {
+			11260 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1		
+		}
+	}
+	manpower=332400
+	state_category = city
+	buildings_max_level_factor=1
+	local_supplies=0
+}

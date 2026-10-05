@@ -1,0 +1,15 @@
+characters = {
+        PAP_MarcellinusN = {
+        name="Marcellinus IX"
+        portraits={
+            civilian={
+                large="GFX_MarcellinusN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

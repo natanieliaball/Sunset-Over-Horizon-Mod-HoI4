@@ -1,0 +1,37 @@
+
+state = {
+	id = 849
+	name = "STATE_849"
+	manpower = 2642000 
+	state_category = city
+	history = {
+		owner = SIT
+		add_core_of = SIT
+		
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 2
+			11837 = {
+				naval_base = 5
+			}
+		}
+		victory_points = { #Bari
+			9784 3
+		}
+		victory_points = { #Brindisi
+			11998 3
+		}
+		victory_points = { #Taranto
+			11837 15 
+		}
+		victory_points = { #Foggia
+			883 3
+		}
+
+	}
+	provinces = {
+		883	6843 6939 6980 6979 9784 11837 11998
+	}
+	local_supplies = 0.000
+}

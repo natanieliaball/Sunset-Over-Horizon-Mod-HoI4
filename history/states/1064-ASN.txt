@@ -1,0 +1,24 @@
+state={
+	id=1064
+	name="ASN"
+	provinces={
+		13388 
+	}
+	history = {
+		owner = NIT
+		add_core_of = NIT
+		#owner = ASN
+		#add_core_of = ASN
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		#victory_points = { 
+		#	13388 5 
+		#}			
+	}
+	manpower=27546
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = town
+}

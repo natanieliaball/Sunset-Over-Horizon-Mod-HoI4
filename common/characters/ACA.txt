@@ -1,0 +1,54 @@
+characters = {
+    ACA_MelistiN = {
+        name="Melisti XI"
+        portraits={
+            civilian={
+                large="GFX_MelistiN"
+            }
+        }
+        country_leader={
+            ideology=Monarchism
+            expire=""
+			id = -1
+        }
+    }
+    ACA_DadkeraD = {
+        name="Mahu Dadkera"
+        portraits={
+            civilian={
+                large="GFX_DadkeraD"
+            }
+        }
+        country_leader={
+            ideology=liberalism
+            expire=""
+			id = -1
+        }
+    }
+    ACA_BentehhorC = {
+        name="Seken Bentehhor"
+        portraits={
+            civilian={
+                large="GFX_BentehhorC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+    ACA_AspurtaF = {
+        name="Philitis Aspurta"
+        portraits={
+            civilian={
+                large="GFX_AspurtaF"
+            }
+        }
+        country_leader={
+            ideology=falangism
+            expire=""
+			id = -1
+        }
+    }
+}

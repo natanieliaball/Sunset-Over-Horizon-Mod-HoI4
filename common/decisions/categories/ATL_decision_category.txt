@@ -1,0 +1,8 @@
+### --- A AJOUTER dans common/decisions/categories/ATL_decision_categories.txt ---
+
+ATL_politique_decisions = {
+    icon = GFX_decision_category_generic_political_actions
+    allowed = {
+        tag = ATL
+    }
+}

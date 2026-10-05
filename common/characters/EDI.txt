@@ -1,0 +1,15 @@
+characters = {
+    EDI_AkdenizPOM = {
+        name="Engin Akdeniz"
+        portraits={
+            civilian={
+                large="GFX_AkdenizPOM"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

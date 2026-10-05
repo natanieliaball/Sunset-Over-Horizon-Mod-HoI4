@@ -1,0 +1,11 @@
+state={
+	id=1074
+	name=" Algeirs Route"
+	provinces={
+		13415 13416 13417 
+	}
+	manpower=10750
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = wasteland
+}

@@ -1,0 +1,101 @@
+add_namespace = JAK
+
+country_event = {
+    id = JAK.1
+    title = JAK.1.t
+    desc = JAK.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = JAK.1.a
+        ai_chance = { factor = 100 }
+        KPA = {
+            puppet = JAK
+            
+        }
+        JAK = {
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+            set_popularities = {
+	            democratic = 0
+	            neutrality = 0
+	            fascism = 100
+	            communism = 0
+            }
+            start_civil_war = {
+                ideology = democratic
+                army_ratio = 0.1
+                states = {
+                    812 813 13 191 811
+                }
+
+            } 
+        }
+        KPA = {
+            add_civil_war_target = JAK
+        }
+    }
+
+    option = {
+        name = JAK.1.b
+        ai_chance = { factor = 0 }
+
+    }
+}
+
+country_event = {
+    id = JAK.2
+    title = JAK.2.t
+    desc = JAK.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = JAK.2.a
+        ai_chance = { factor = 100 }
+        JAK = {
+            transfer_state = 810
+            transfer_state = 209
+            transfer_state = 210
+            add_state_core = 810
+            add_state_core = 209
+            add_state_core = 210
+            set_cosmetic_tag = JAK_military_District
+        }
+    }
+
+    option = {
+        name = JAK.2.b
+        ai_chance = { factor = 0 }
+
+    }
+}
+
+country_event = {
+    id = JAK.4
+    title = JAK.4.t
+    desc = JAK.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = JAK.4.a
+        ai_chance = { factor = 90 }
+        JAK = {
+            give_guarantee = SVE
+        }
+        SVE = {
+            give_guarantee = JAK
+        }
+    }
+
+    option = {
+        name = JAK.4.b
+        ai_chance = { factor = 10 }
+
+    }
+}
+

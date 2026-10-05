@@ -1,0 +1,100 @@
+﻿l_english:
+
+ SCH_independence.t: "Independence ?"
+ SCH_independence.d: "L'Albata fall into a civil war and the first time since many years we have chance to become independent, what we do ?"
+ SCH_independence.a: "It's now or never!"
+ SCH_independence.b: "We must stay loyal"
+
+ ABT_civilwar.t: "Schleswig declare independence"
+ ABT_civilwar.d: "Since the outbreak of the civil war, our administration has been unable to maintain stable contact with the Schleswig protectorate.Telegrams go unanswered, and our envoys have not returned. This morning, a letter bearing the seal of Schleswig was delivered to the capital. Its contents were brief We are no longer yours to command. The situation in Schleswig remains unclear. Whether this represents a formal declaration of intent or merely the chaos of war remains to be seen. However, one thing is certain, we will not allow the protectorate to slip away without consequence"
+ ABT_civilwar.a: "oh..."
+ 
+ CEC.1.t: "Death of Meristra Sptatarn"
+ CEC.1.d: "Our Great Leader Meristra Sptatarn has suddenly passed away in his office in the middle of the night, we declared 1 month mourning in the whole country, many party members are worried for the future of our pact and many of it's independence movements."
+ CEC.1.a: "shit..."
+
+ CEC.2.t: "Independence of Lorraine"
+ CEC.2.d: "As we speculated, pact is starting to crumble, first blow is Lorraine, a large region in the west of our country, with strong independence ideas, whole party decided to let it slide and let them exist for now, thought our problems don't end here…"
+ CEC.2.a: "We will get them one day
+
+ CEC.3.t: "The Sptatarnian Civil war !"
+ CEC.3.d: "After our new leader Prenitio Sniatar was chosen into the office, socialists have shown their strong dissaproval and hatred to the new leader, sadly our militia failed to stop the revolution, and now our pact is facing a civil war"
+ CEC.3.a: "Let's show the glory of our Nation!!!!"
+
+ CEC.4.t: "Independence of Bohemia"
+ CEC.4.d: "Another blow to our pact, Small independence Movements of Silesia, Bohemia and Moravia united together, and formed an united state, with our current state of country. Our whole party yet again decided to let it pass, because of our current problems with socialists."
+ CEC.4.a: "We have bigger problems as of right now."
+
+ CEC.5.t: "Natanielia took control of silesia"
+ CEC.5.d: "Our country faces yet another crisis in Silesia, Natanielia, in the name of it's dominion of Silesia has claimed Sudeten Silesia as Rightious Silesian Land taking it away from us, party members decided to let it slide, knowing that it would be either taken by them or newly formed Bohemia-Moravia-Silesia."
+ CEC.5.a: "We will show them who is the rightious owner of Silesia one day."
+
+ CEC.7.t: "Military uprising in Frankfurt"
+ CEC.7.d: "In the middle of the night Generals from Albata and Germany have escaped a prison in Frankfurt to reclaim Hessen as their rightous land for both nations, luckly neither Germany nor Albata helped them, in revenge on all three nations, by executing 2, Sptatarnian citizens, and declaring plan to annex Albata and Germany."
+ CEC.7.a: "The souls of the perished shall haunt their nation…"
+
+
+
+
+ BMS.1.t: "Assassination of Alois Jaroš"
+ BMS.1.d: "On our latest Independence Parade in Plzeň, our president Alois Jaroš got shot 3 Times, he fell to the ground, whole crowd went into panic, shortly after the murderer got caught, and turned out to be a Radical Sptartanian Fanatic, seeking revenge for fall of his nation, thought we suspect Sptartanian Government has something to do with it, but nonetheless, our leader is dead…"
+ BMS.1.a: "Oh my God..."
+
+ BMS.2.t: "Election Resulte!"
+ BMS.2.d: "In 1st Democratic Elections in our nation, Mr. Alois Jaroš has won the election with major acceptance especially securing centrist votes, it's a great moment for our nation, to finally get a democratic government, and not submiting to Sptartanian Tyranny"
+ BMS.2.a: "Sláva vlasti!"
+
+ BMS.3.t: "Slovakia for Peace"
+ BMS.3.d: "Newly Created State of Bohemia-Moravia-Silesia have come up to us, and suggested with an idea, they will cede Slovakia to us, in exchange they want for us to sign a non-aggresion pact, so they can assure safety on eastern border"
+ BMS.3.a: "Sure, let's unite Slovakia under Aurinian Rule!" 
+ BMS.3.b: "No, we don't need your filthy land."
+
+ BMS.4.t: "Sudetenland for Protection"
+ BMS.4.d: "The State of Bohemia-Moravia-Silesia representative have sent an information to Berlin, regarding territorial exchange, where we would gain Northern Sudetenland, a rightious German land, but in exchange they want us to sign Non-Aggresion pact, but it would also mean acceptation of existance of this fictional state."
+ BMS.4.a: "Let the Sudeten Germans go back home!"
+ BMS.4.b: "We shall never recognize this mess of a state!"
+
+
+ BMS.5.t: "South Sudetenland for Acceptance"
+ BMS.5.d: "The fresh rebel state of Bohemia-Moravia-Silesia has approched us, regarding acceptance of their existance, and signing non-aggresion pact with them, in exchange they shall cede South Sudetenland to us, as a proof of peaceful intentions."
+ BMS.5.a: "One step closer to reuniting our nation"
+ BMS.5.b: "No, we will reclaim these land, but the time will come for it..."
+
+
+ NGC_republic.1.t: "Silesian Question"
+ NGC_republic.1.d: "WIP"
+ NGC_republic.1.a: "One Independent Silesian State"
+ NGC_republic.1.b: "A German Silesia"
+ NGC_republic.1.c: "A Natanielian Silesia"
+
+ NGC_republic.2.t: "German Proposition about the Silesian Question"
+ NGC_republic.2.d: "German Ambassador has sent a letter to us, in which they suggested to form an independent Silesian state, they say that we will both be able to control the state resources"
+ NGC_republic.2.a: "Yes, let the Silesians unite!"
+ NGC_republic.2.b: "No, Silesia is ours!"
+
+ NGC_republic.3.t: "German Proposition about the Silesian Question"
+ NGC_republic.3.d: "WIP"
+ NGC_republic.3.a: "We must abandon Silesia"
+ NGC_republic.3.b: "A German silesia ?! NO"
+
+ NGC_republic.4.t: "German Proposition about the Silesian Question"
+ NGC_republic.4.d: "WIP"
+ NGC_republic.4.a: "We can't refuse that!"
+ NGC_republic.4.b: "NO i"
+
+ NGC_republic.5.t: "A New Republic"
+ NGC_republic.5.d: "WIP"
+ NGC_republic.5.a: "Why not"
+ NGC_republic.5.b: "They betrayed us, so no."
+
+ CEC_event.1.t: "Istria for Intervention"
+ CEC_event.1.d: "WIP"
+ CEC_event.1.a: "Unite Against Fascism"
+ CEC_event.1.b: "Sptartania is to powerful"
+
+ BRI.1.t: "Bretons Ask for Help"
+ BRI.1.d: "Breton Embassy in Cardiff just sent us a letter, in which it read: Dear Leader of Cymru, we kindly ask for your support in our party to arise in the state, and spread idea of fascism and celtic beliefs in the continent.
+ - With Regard, Leader of SBB
+ Eler Kerbrat"
+ BRI.1.a: "Let's Help our celtic brothers in need!"
+ BRI.1.b: "We should keep out of Continental Affairs."

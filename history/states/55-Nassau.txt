@@ -1,0 +1,42 @@
+state = {
+	id = 55
+	name = "STATE_55"
+	manpower = 3798235
+
+	resources = {
+		coal = 8 # initial distribution
+	}
+
+	state_category = large_city
+
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = ALB
+		add_claim_by = ABT
+		add_claim_by = NGC
+	
+		victory_points = {
+			6488 20 # Frankfurt
+		}
+		victory_points = {
+			564 3 # Kassel
+		}
+		victory_points = {
+			6444 2 # Wiesbaden
+		}
+
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+			industrial_complex = 2
+			arms_factory = 3	
+		}
+	}
+
+	provinces = {
+		564 589 3397 3524 3574 6444 6488 6549 9486 9524 9547 11445 11533
+	}
+
+	local_supplies = 15.0 
+}

@@ -1,0 +1,435 @@
+add_namespace = ABT
+
+country_event = {
+    id = ABT.1
+    title = ABT_civilwar.t
+    desc = ABT_civilwar.d
+    picture = GFX_ABT_SCH_independance
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_civilwar.a
+        ai_chance = { factor = 100 }
+    }
+}
+
+country_event = {
+    id = ABT.2
+    title = ABT_furry_in_power.t
+    desc = ABT_furry_in_power.d
+    picture = GFX_ABT_furry_in_power
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_furry_in_power.a
+        ai_chance = { factor = 5 }
+    ABT = {
+
+            retire_character = ABT_NoriC 
+
+            recruit_character = ABT_Nori_furry	       
+        
+			add_country_leader_role = {
+				character = ABT_Nori_furry
+				promote_character = yes
+                country_leader = {
+                    ideology = communism_type
+                    expire = ""     
+			    }
+            }
+    
+        set_politics = {
+            ruling_party = communism
+            elections_allowed = no
+            last_election = "1936.1.1"
+            election_frequency = 48
+            long_name = ABT_FURRY_long
+            name = ABT_FURRY_party
+        }
+        set_cosmetic_tag = ABT_FURRY
+        add_ideas = Furries_Republic 
+        set_country_flag = ABT_furry_republic 
+        complete_national_focus = ABT_A_new_republic
+        end_puppet = SCH
+    }
+
+    }
+    option = {
+        name = ABT_furry_in_power.b
+        ai_chance = { factor = 95 }
+    }
+}
+
+country_event = {
+    id = ABT.3
+    title = ABT_ATL_union.t
+    desc = ABT_ATL_union.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_ATL_union.a
+        ai_chance = { factor = 90 }
+
+        ABT = { set_cosmetic_tag = AAU }
+        if = {
+            every_state = {
+                limit = { is_core_of = ATL }
+                add_core_of = ABT
+            }
+        }
+        ABT = {
+            annex_country = {
+                target = ATL
+                transfer_troops = yes
+            }
+        }        
+    }
+
+    option = {
+        name = ABT_ATL_union.b
+        ai_chance = { factor = 10 }
+        ABT = {
+            puppet = {
+                target = ATL
+                end_wars = no
+            }
+        }
+    }
+
+    option = {
+        name = ABT_ATL_union.c
+        ai_chance = { factor = 0 }
+    }
+}
+
+country_event = {
+    id = ABT.4
+    title = ABT_NAT_Trad.t
+    desc = ABT_NAT_Trad.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_NAT_Trad.a
+        ai_chance = { factor = 90 }
+        ABT = {
+	        add_research_slot = 1
+	        add_tech_bonus = {
+    	        bonus = 0.5
+        	    uses = 2
+            	category = land_doctrine
+        	}            
+        }
+        NAT = {
+	        add_tech_bonus = {
+    	        bonus = 0.5
+        	    uses = 3
+            	category = land_doctrine
+        	}            
+        }
+    }
+        option = {
+        name = ABT_NAT_Trad.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = ABT.5
+    title = ABT_NAT_Alliance.t
+    desc = ABT_NAT_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_NAT_Alliance.a
+        ai_chance = { factor = 90 }
+        ABT = { 
+            add_to_faction = NAT           
+        }
+    }
+        option = {
+        name = ABT_NAT_Alliance.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = ABT.6
+    title = ABT_anschluss.1.t
+    desc = ABT_anschluss.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_anschluss.1.a
+        ai_chance = { factor = 80 }
+
+        ABT = {
+            annex_country = {
+                target = FRK
+                transfer_troops = yes
+            }
+            add_state_core = 55
+        }
+    }
+
+    option = {
+        name = ABT_anschluss.1.b
+        ai_chance = { factor = 20 }
+
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRK
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ABT.7
+    title = ABT_Alba_union.1.t
+    desc = ABT_Alba_union.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_Alba_union.1.a
+        ai_chance = { factor = 60 }
+        if = {
+            limit = { tag = ABT }
+            every_state = {
+                limit = { is_core_of = ATL }
+                add_core_of = ABT
+            }
+        }
+        ABT = {
+            annex_country = {
+                target = ATL
+                transfer_troops = yes
+            }
+        }
+    }
+
+    option = {
+        name = ABT_Alba_union.1.b
+        ai_chance = { factor = 40 }
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = ATL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ABT.8
+    title = ABT_Bosta_union.1.t
+    desc = ABT_Bosta_union.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_Bosta_union.1.a
+        ai_chance = { factor = 60 }
+        if = {
+            limit = { tag = ABT }
+            every_state = {
+                limit = { is_core_of = LOR }
+                add_core_of = ABT
+            }
+        }
+        ABT = {
+            annex_country = {
+                target = LOR
+                transfer_troops = yes
+            }
+        }
+    }
+
+    option = {
+        name = ABT_Bosta_union.1.b
+        ai_chance = { factor = 40 }
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = LOR
+            }
+        }
+    }
+}
+
+# Integration SCH
+country_event = {
+    id = ABT.9
+    title = ABT_SCH_integration.1.t
+    desc = ABT_SCH_integration.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_SCH_integration.1.a
+        ai_chance = { factor = 75 }
+        ABT = {
+            annex_country = {
+                target = SCH
+                transfer_troops = yes
+            }
+            every_state = {
+                limit = { is_core_of = SCH }
+                add_core_of = ABT
+            }
+        }
+    }
+
+    option = {
+        name = ABT_SCH_integration.1.b
+        ai_chance = { factor = 25 }
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = SCH
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ABT.10
+    title = ABT_CEC_Alliance.t
+    desc = ABT_CEC_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_CEC_Alliance.a
+        ai_chance = { factor = 90 }
+        ABT = { 
+            add_to_faction = SPT          
+        }
+    }
+        option = {
+        name = ABT_CEC_Alliance.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = ABT.11
+    title = ABT.11.t
+    desc = ABT.11.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = ABT.11.a
+        ai_chance = { factor = 40 }
+        ABT = {
+            annex_country = {
+                target = ABH
+                transfer_troops = yes
+            }
+        }
+    }
+
+    option = {
+        name = ABT.11.b
+        ai_chance = { factor = 50 }
+        ABT = {
+            create_wargoal = {
+                type = annex_everything
+                target = ABH
+                 
+            }
+        }
+    }
+}
+
+country_event = {
+    id = ABT.12
+    title = ABT_CEC_Alliance.t
+    desc = ABT_CEC_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_CEC_Alliance.a
+        ai_chance = { factor = 70 }
+        ABT = { 
+            add_to_faction = LOR         
+        }
+    }
+        option = {
+        name = ABT_CEC_Alliance.b
+        ai_chance = { factor = 30 }
+    }
+}
+
+country_event = {
+    id = ABT.13
+    title = ABT_NAT_furry_Alliance.t
+    desc = ABT_NAT_furry_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_NAT_Alliance.a
+        ai_chance = { factor = 90 }
+        ABT = { 
+            add_to_faction = NAT           
+        }
+        NAT = { set_cosmetic_tag = NAT_FURRY }
+        NAT = {
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+                last_election = "1936.1.1"
+                election_frequency = 48
+
+            }
+			add_popularity = {
+    		    ideology = communism
+    		    popularity = 1
+			}
+        }
+        
+    }
+        option = {
+        name = ABT_NAT_Alliance.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+country_event = {
+    id = ABT.14
+    title = ABT_ANI_furry_Alliance.t
+    desc = ABT_ANI_furry_Alliance.d
+    picture = GFX_report_event_worker_protests
+
+    is_triggered_only = yes
+
+    option = {
+        name = ABT_ANI_Alliance.a
+        ai_chance = { factor = 100 }
+        ABT = { 
+            add_to_faction = ANI         
+        }
+        
+        
+    }
+        option = {
+        name = ABT_NAT_Alliance.b
+        ai_chance = { factor = 0 }
+    }
+}

@@ -1,0 +1,22 @@
+state = {
+	id = 1016
+	name = "STATE_1016"
+	manpower = 85000
+	
+	state_category = pastoral
+
+	history = {
+		owner = YEM
+		add_core_of = YEM
+		add_claim_by = PLY
+		victory_points = {
+			2103 1 # Salalah
+		}
+	}
+
+	provinces = {
+		2059 2103
+	}
+
+	local_supplies = 0.0 
+}

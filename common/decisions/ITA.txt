@@ -1,0 +1,241 @@
+ITE_Risorgimento = {
+    ITE_Risorgimento_1 = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+            OR = {
+                tag = VNC
+                tag = NIT
+                tag = SIT
+                tag = PIS
+                tag = PAP
+                tag = SCL
+            }
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 160
+                state = 850
+                state = 39
+                state = 159
+                state = 161
+                state = 162
+                state = 158
+                state = 846
+
+                state = 1064
+                state = 2
+                state = 157
+                state = 117
+                state = 849
+                state = 156
+                state = 1063
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 160
+                controls_state = 850
+                controls_state = 39
+                controls_state = 159
+                controls_state = 161
+                controls_state = 162
+                controls_state = 158
+                controls_state = 846
+
+                controls_state = 1064
+                controls_state = 2
+                controls_state = 157
+                controls_state = 117
+                controls_state = 849
+                controls_state = 156
+                controls_state = 1063
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_state_core = 160
+            add_state_core = 850
+            add_state_core = 39
+            add_state_core = 159
+            add_state_core = 161
+            add_state_core = 162
+            add_state_core = 158
+            add_state_core = 846
+
+            add_state_core = 1064
+            add_state_core = 2
+            add_state_core = 157
+            add_state_core = 117
+            add_state_core = 849
+            add_state_core = 156
+            add_state_core = 1063
+            set_cosmetic_tag = ITALY
+            set_country_flag = ITE_Risorgimento_fase_2
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    ITE_Risorgimento_Alpe = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+            OR = {
+                tag = VNC
+                tag = NIT
+                tag = SIT
+                tag = PIS
+                tag = PAP
+                tag = SCL
+            }
+        }
+        visible = {
+            has_country_flag = ITE_Risorgimento_fase_2
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 1060
+                state = 735
+                state = 847
+                state = 151
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 1060
+                controls_state = 735
+                controls_state = 847
+                controls_state = 151
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_state_core = 1060
+            add_state_core = 735
+            add_state_core = 847
+            add_state_core = 151
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+    ITE_Risorgimento_island = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+            OR = {
+                tag = VNC
+                tag = NIT
+                tag = SIT
+                tag = PIS
+                tag = PAP
+                tag = SCL
+            }
+        }
+        visible = {
+            has_country_flag = ITE_Risorgimento_fase_2
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 1
+                state = 114
+                state = 115
+                state = 116
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 1
+                controls_state = 114
+                controls_state = 115
+                controls_state = 116
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_state_core = 1
+            add_state_core = 114
+            add_state_core = 115
+            add_state_core = 116
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+    ITE_Risorgimento_istria = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+            OR = {
+                tag = VNC
+                tag = NIT
+                tag = SIT
+                tag = PIS
+                tag = PAP
+                tag = SCL
+            }
+        }
+        visible = {
+            has_country_flag = ITE_Risorgimento_fase_2
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 736
+                state = 852
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 736
+                controls_state = 852
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_state_core = 736
+            add_state_core = 852
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+

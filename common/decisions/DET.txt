@@ -1,0 +1,506 @@
+DET_Integrating_our_Clay = {
+# ATL 
+    DET_Give_Bread_to_People_ATL = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 15
+                controls_state = 16
+                controls_state = 1054
+                controls_state = 785
+                controls_state = 29
+                controls_state = 34
+                controls_state = 6
+            }
+            
+        }
+
+        visible = {
+            NOT = {
+                15 = {is_core_of = DET }
+                16 = {is_core_of = DET }
+                1054 = {is_core_of = DET }
+                785 = {is_core_of = DET }
+                29 = {is_core_of = DET }
+                34 = {is_core_of = DET }
+                6 = {is_core_of = DET }
+            }
+        }
+        days_remove = 20
+        cost = 15
+        fire_only_once = no
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+        }
+        complete_effect = {
+            every_state = {
+                limit = { is_core_of = ATL }
+                add_compliance = 15
+            }          
+            DET = { set_country_flag = DET_Decisions_IOC_waits }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    DET_Integrate_ATL = {
+        icon = GFX_decision_generic_nationalism
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 15
+                controls_state = 16
+                controls_state = 1054
+                controls_state = 785
+                controls_state = 29
+                controls_state = 34
+                controls_state = 6
+            }
+
+            16 = {   	
+                compliance > 40
+                resistance < 10
+            }
+        }
+
+        visible = {
+            NOT = {
+                15 = {is_core_of = DET }
+                16 = {is_core_of = DET }
+                1054 = {is_core_of = DET }
+                785 = {is_core_of = DET }
+                29 = {is_core_of = DET }
+                34 = {is_core_of = DET }
+                6 = {is_core_of = DET }
+            }
+        }
+        days_remove = 30
+        cost = 0
+        fire_only_once = yes
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+            15 = {add_core_of = DET }
+            16 = {add_core_of = DET }
+            1054 = {add_core_of = DET }
+            785 = {add_core_of = DET }
+            29 = {add_core_of = DET }
+            34 = {add_core_of = DET }
+            6 = {add_core_of = DET }  
+        }
+        complete_effect = {    
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+# BRI
+
+    DET_Give_Bread_to_People_BRI = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 14
+                controls_state = 30
+
+            }
+            
+        }
+
+        visible = {
+            NOT = {
+                14 = {is_core_of = DET }
+                30 = {is_core_of = DET }
+            }
+        }
+        days_remove = 20
+        cost = 15
+        fire_only_once = no
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+        }
+        complete_effect = {
+            every_state = {
+                limit = { is_core_of = BRI }
+                add_compliance = 15
+            }          
+            DET = { set_country_flag = DET_Decisions_IOC_waits }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    DET_Integrate_BRI = {
+        icon = GFX_decision_generic_nationalism
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 14
+                controls_state = 30
+            }
+
+            14 = {   	
+                compliance > 40
+                resistance < 10
+            }
+        }
+
+        visible = {
+            NOT = {
+                14 = {is_core_of = DET }
+                30 = {is_core_of = DET }
+            }
+        }
+        days_remove = 30
+        cost = 0
+        fire_only_once = yes
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+            14 = {add_core_of = DET }
+            30 = {add_core_of = DET } 
+        }
+        complete_effect = {    
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+# AQU
+   
+    DET_Give_Bread_to_People_AQU = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 19
+                controls_state = 1050
+                controls_state = 806
+            }
+            
+        }
+
+        visible = {
+            NOT = {
+                19 = {is_core_of = DET }
+                1050 = {is_core_of = DET }
+                806 = {is_core_of = DET }
+            }
+        }
+        days_remove = 20
+        cost = 15
+        fire_only_once = no
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+        }
+        complete_effect = {
+            every_state = {
+                limit = { is_core_of = AQU }
+                add_compliance = 15
+            }          
+            DET = { set_country_flag = DET_Decisions_IOC_waits }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    DET_Integrate_AQU = {
+        icon = GFX_decision_generic_nationalism
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 19
+                controls_state = 1050
+                controls_state = 806
+            }
+
+            19 = {   	
+                compliance > 40
+                resistance < 10
+            }
+        }
+
+        visible = {
+            NOT = {
+                19 = {is_core_of = DET }
+                1050 = {is_core_of = DET }
+                806 = {is_core_of = DET }
+            }
+        }
+        days_remove = 30
+        cost = 0
+        fire_only_once = yes
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+            19 = {add_core_of = DET }
+            1050 = {add_core_of = DET } 
+            806 = {add_core_of = DET } 
+        }
+        complete_effect = {    
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+# MPL
+
+    DET_Give_Bread_to_People_MPL = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 1053
+                controls_state = 1052
+                controls_state = 1051
+                controls_state = 22
+                controls_state = 31
+            }
+            
+        }
+
+        visible = {
+            NOT = {
+                1053 = {is_core_of = DET }
+                1052 = {is_core_of = DET }
+                1051 = {is_core_of = DET }
+                22 = {is_core_of = DET }
+                31 = {is_core_of = DET }
+            }
+        }
+        days_remove = 20
+        cost = 15
+        fire_only_once = no
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+        }
+        complete_effect = {
+            every_state = {
+                limit = { is_core_of = MPL }
+                add_compliance = 15
+            }          
+            DET = { set_country_flag = DET_Decisions_IOC_waits }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    DET_Integrate_MPL = {
+        icon = GFX_decision_generic_nationalism
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 1053
+                controls_state = 1052
+                controls_state = 1051
+                controls_state = 22
+                controls_state = 31
+            }
+
+            22 = {   	
+                compliance > 40
+                resistance < 10
+            }
+        }
+
+        visible = {
+            NOT = {
+                1053 = {is_core_of = DET }
+                1052 = {is_core_of = DET }
+                1051 = {is_core_of = DET }
+                22 = {is_core_of = DET }
+                31 = {is_core_of = DET }
+            }
+        }
+        days_remove = 30
+        cost = 0
+        fire_only_once = yes
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+            1053 = {add_core_of = DET }
+            1052 = {add_core_of = DET } 
+            1051 = {add_core_of = DET }
+            22 = {add_core_of = DET } 
+            31 = {add_core_of = DET }
+        }
+        complete_effect = {    
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+# LOR
+    DET_Give_Bread_to_People = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 17
+                controls_state = 28
+                controls_state = 18
+                controls_state = 1047
+                controls_state = 845
+                controls_state = 3
+                controls_state = 42
+                controls_state = 8
+                controls_state = 980
+            }
+            
+        }
+
+        visible = {
+            NOT = {
+                17 = {is_core_of = DET }
+                28 = {is_core_of = DET }
+                18 = {is_core_of = DET }
+                1047 = {is_core_of = DET }
+                845 = {is_core_of = DET }
+                3 = {is_core_of = DET }
+                42 = {is_core_of = DET }
+                8 = {is_core_of = DET }
+                980 = {is_core_of = DET }  
+                has_country_flag =  DET_Deplace_the_capital 
+            }
+        }
+        days_remove = 20
+        cost = 15
+        fire_only_once = no
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+        }
+        complete_effect = {
+            every_state = {
+                limit = { is_core_of = LOR }
+                add_compliance = 10
+            }          
+            DET = { set_country_flag = DET_Decisions_IOC_waits }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+
+    DET_Integrate_Lor = {
+        icon = GFX_decision_generic_nationalism
+        allowed = {
+            TAG = DET
+ 
+            
+        }  
+        available = {
+            NOT = { has_country_flag =  DET_Decisions_IOC_waits }
+            if = {
+                controls_state = 17
+                controls_state = 28
+                controls_state = 18
+                controls_state = 1047
+                controls_state = 845
+                controls_state = 3
+                controls_state = 42
+                controls_state = 8
+                controls_state = 980
+            }
+
+            17 = {   	
+                compliance > 40
+                resistance < 10
+            }
+        }
+
+        visible = {
+            NOT = {
+                17 = {is_core_of = DET }
+                28 = {is_core_of = DET }
+                18 = {is_core_of = DET }
+                1047 = {is_core_of = DET }
+                845 = {is_core_of = DET }
+                3 = {is_core_of = DET }
+                42 = {is_core_of = DET }
+                8 = {is_core_of = DET }
+                980 = {is_core_of = DET }
+                has_country_flag =  DET_Deplace_the_capital   
+            }
+        }
+        days_remove = 30
+        cost = 0
+        fire_only_once = yes
+        remove_effect = {
+            DET = { clr_country_flag = DET_Decisions_IOC_waits }
+            17 = {add_core_of = DET }
+            28 = {add_core_of = DET }
+            18 = {add_core_of = DET }
+            1047 = {add_core_of = DET }
+            845 = {add_core_of = DET }
+            3 = {add_core_of = DET }
+            42 = {add_core_of = DET }
+            8 = {add_core_of = DET }
+            980 = {add_core_of = DET } 
+            DET = { set_country_flag = DET_Deplace_the_capital }     
+        }
+        complete_effect = {
+         
+            DET = { set_country_flag = Move_capital_to_Metz }     
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}

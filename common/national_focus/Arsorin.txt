@@ -1,0 +1,677 @@
+focus_tree = {
+    id = ARO_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = GGG
+        }
+    }
+	continuous_focus_position = { x = 0 y = 250 }
+    default = no
+
+    # ========================
+    # RACINE
+    # ========================
+
+    focus = {
+        id = ARO_fight_for_independence
+        icon = GFX_
+        x = 15
+        y = 0
+        cost = 10
+        prerequisite = {}
+        completion_reward = {}
+    }
+
+    # ========================
+    # NIVEAU 1
+    # ========================
+
+    focus = {
+        id = ARO_race_to_arms
+        icon = GFX_
+        x = 15
+        y = 1
+        cost = 10
+        prerequisite = { focus = ARO_fight_for_independence }
+        completion_reward = {}
+    }
+
+    # ========================
+    # NIVEAU 2
+    # ========================
+
+    focus = {
+        id = ARO_svenyan_gotland_help
+        icon = GFX_
+        x = 12
+        y = 2
+        cost = 10
+        prerequisite = { focus = ARO_race_to_arms }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_gather_up_guns
+        icon = GFX_
+        x = 14
+        y = 2
+        cost = 10
+        prerequisite = { focus = ARO_race_to_arms }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_recruit_young_men
+        icon = GFX_
+        x = 16
+        y = 2
+        cost = 10
+        prerequisite = { focus = ARO_race_to_arms }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_sabotage_kpaligonian_army
+        icon = GFX_
+        x = 18
+        y = 2
+        cost = 10
+        prerequisite = { focus = ARO_race_to_arms }
+        completion_reward = {}
+    }
+
+    # ========================
+    # NIVEAU 3
+    # ========================
+
+    focus = {
+        id = ARO_death_to_kpaligonia
+        icon = GFX_
+        x = 15
+        y = 3
+        cost = 10
+        prerequisite = { focus = ARO_svenyan_gotland_help }
+        prerequisite = { focus = ARO_gather_up_guns }
+        prerequisite = { focus = ARO_recruit_young_men }
+        prerequisite = { focus = ARO_sabotage_kpaligonian_army }
+        completion_reward = {}
+    }
+
+    # ========================
+    # NIVEAU 4
+    # =======================
+
+    focus = {
+        id = ARO_new_independent_reality
+        icon = GFX_
+        x = 15
+        y = 4
+        cost = 10
+        prerequisite = { focus = ARO_death_to_kpaligonia }
+        completion_reward = {}
+    }
+
+
+    # ========================
+    # NIVEAU 5 - MUTUALLY EXCLUSIVE
+    # ========================
+
+    focus = {
+        id = ARO_stay_loyal_to_king
+        icon = GFX_
+        x = 9
+        y = 5
+        cost = 10
+        prerequisite = { focus = ARO_new_independent_reality }
+        mutually_exclusive = { focus = ARO_overthrow_the_king }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_form_democratic_government
+        icon = GFX_
+        x = 15
+        y = 6
+        cost = 10
+        prerequisite = { focus = ARO_overthrow_the_king }
+        mutually_exclusive = { focus = ARO_abolish_elections }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_overthrow_the_king
+        icon = GFX_
+        x = 19
+        y = 5
+        cost = 10
+        prerequisite = { focus = ARO_new_independent_reality }
+        mutually_exclusive = { focus = ARO_stay_loyal_to_king }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_abolish_elections
+        icon = GFX_
+        x = 23
+        y = 6
+        cost = 10
+        prerequisite = { focus = ARO_overthrow_the_king }
+        mutually_exclusive = { focus = ARO_form_democratic_government }
+        completion_reward = {}
+    }
+
+    # ========================
+    # BRANCHE MONARCHISTE
+    # ========================
+
+    focus = {
+        id = ARO_we_shall_not_be_attacker
+        icon = GFX_
+        x = 9
+        y = 6
+        cost = 10
+        prerequisite = { focus = ARO_stay_loyal_to_king }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_royal_memel
+        icon = GFX_
+        x = 5
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_we_shall_not_be_attacker }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_mobilize_kings_guard
+        icon = GFX_
+        x = 7
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_we_shall_not_be_attacker }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_begin_the_sun_cult
+        icon = GFX_
+        x = 9
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_we_shall_not_be_attacker }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_royal_vilnius
+        icon = GFX_
+        x = 5
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_demand_royal_memel }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_mechanize_royal_army
+        icon = GFX_
+        x = 7
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_mobilize_kings_guard }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_pray_to_sun_gods
+        icon = GFX_
+        x = 9
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_begin_the_sun_cult }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_fortify_the_borders
+        icon = GFX_
+        x = 5
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_demand_royal_vilnius }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_begin_training_campaign
+        icon = GFX_
+        x = 7
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_mechanize_royal_army }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_sun_gods_lawful_religion
+        icon = GFX_
+        x = 9
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_pray_to_sun_gods }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_we_will_defend_every_corner
+        icon = GFX_
+        x = 9
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_fortify_the_borders }
+        prerequisite = { focus = ARO_begin_training_campaign }
+        prerequisite = { focus = ARO_sun_gods_lawful_religion }
+        completion_reward = {}
+    }
+
+
+    # ========================
+    # BRANCHE DEMOCRATIQUE
+    # ========================
+
+    focus = {
+        id = ARO_memel_for_protection
+        icon = GFX_
+        x = 15
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_form_democratic_government }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_form_baltic_treaty
+        icon = GFX_
+        x = 15
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_memel_for_protection }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_invite_svenya
+        icon = GFX_
+        x = 11
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_form_baltic_treaty }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_invite_jakubla
+        icon = GFX_
+        x = 13
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_form_baltic_treaty }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_invite_nataniella
+        icon = GFX_
+        x = 15
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_form_baltic_treaty }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_invite_germany
+        icon = GFX_
+        x = 17
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_form_baltic_treaty }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_deal_kpaligonia_final_blow
+        icon = GFX_
+        x = 15
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_invite_svenya }
+        prerequisite = { focus = ARO_invite_jakubla }
+        prerequisite = { focus = ARO_invite_nataniella }
+        prerequisite = { focus = ARO_invite_germany }
+        completion_reward = {}
+    }
+
+    # ========================
+    # BRANCHE COMMUNISTE
+    # ========================
+
+    focus = {
+        id = ARO_gain_support_workers
+        icon = GFX_
+        x = 19
+        y = 7
+        cost = 10
+        mutually_exclusive = { focus = ARO_form_militia_divisions }
+        mutually_exclusive = { focus = ARO_we_are_too_weak }
+        prerequisite = { focus = ARO_abolish_elections }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_proclaim_worker_state
+        icon = GFX_
+        x = 19
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_gain_support_workers }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_spread_revolution_jakubla
+        icon = GFX_
+        x = 19
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_proclaim_worker_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_form_socialist_union
+        icon = GFX_
+        x = 19
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_spread_revolution_jakubla }
+        completion_reward = {}
+    }
+
+
+    focus = {
+        id = ARO_take_revenge_kpaligonia
+        icon = GFX_
+        x = 19
+        y = 11
+        cost = 10
+        prerequisite = { focus = ARO_form_socialist_union }
+        completion_reward = {}
+    }
+
+
+    # ========================
+    # BRANCHE FASCISTE
+    # ========================
+
+    focus = {
+        id = ARO_form_militia_divisions
+        icon = GFX_
+        x = 23
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_abolish_elections }
+        mutually_exclusive = { focus = ARO_gain_support_workers }
+        mutually_exclusive = { focus = ARO_we_are_too_weak }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_take_control_state
+        icon = GFX_
+        x = 23
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_form_militia_divisions }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_memel_or_war
+        icon = GFX_
+        x = 21
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_war_propaganda_jakubla
+        icon = GFX_
+        x = 23
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_execute_kpaligonian_citizens
+        icon = GFX_
+        x = 25
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_take_control_state }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_sudova_podlachia
+        icon = GFX_
+        x = 21
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_memel_or_war }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_indoctrinate_jakubians
+        icon = GFX_
+        x = 23
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_war_propaganda_jakubla }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_demand_gotland
+        icon = GFX_
+        x = 25
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_execute_kpaligonian_citizens }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_let_hell_break_loose
+        icon = GFX_
+        x = 23
+        y = 11
+        cost = 10
+        prerequisite = { focus = ARO_indoctrinate_jakubians }
+        prerequisite = { focus = ARO_demand_gotland }
+        prerequisite = { focus = ARO_demand_sudova_podlachia }
+        completion_reward = {}
+    }
+
+
+    focus = {
+        id = ARO_establish_sun_empire
+        icon = GFX_
+        x = 23
+        y = 12
+        cost = 10
+        prerequisite = { focus = ARO_let_hell_break_loose }
+        completion_reward = {}
+    }
+
+    # ========================
+    # BRANCHE FAIBLE
+    # ========================
+
+    focus = {
+        id = ARO_we_are_too_weak
+        icon = GFX_
+        x = 29
+        y = 7
+        cost = 10
+        prerequisite = { focus = ARO_abolish_elections }
+        mutually_exclusive = { focus = ARO_gain_support_workers }
+        mutually_exclusive = { focus = ARO_form_militia_divisions }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_seek_a_protector
+        icon = GFX_
+        x = 29
+        y = 8
+        cost = 10
+        prerequisite = { focus = ARO_we_are_too_weak }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_memel_claims_protection
+        icon = GFX_
+        x = 27
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_turn_back_kpaligonia }
+        mutually_exclusive = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_turn_back_kpaligonia
+        icon = GFX_
+        x = 29
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_memel_claims_protection }
+        mutually_exclusive = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_germans_shall_help
+        icon = GFX_
+        x = 31
+        y = 9
+        cost = 10
+        prerequisite = { focus = ARO_seek_a_protector }
+        mutually_exclusive = { focus = ARO_turn_back_kpaligonia }
+        mutually_exclusive = { focus = ARO_memel_claims_protection }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_we_cant_hold_longer
+        icon = GFX_
+        x = 27
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_memel_claims_protection }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_say_sorry_rebellion
+        icon = GFX_
+        x = 29
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_turn_back_kpaligonia }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_open_pipeline
+        icon = GFX_
+        x = 31
+        y = 10
+        cost = 10
+        prerequisite = { focus = ARO_germans_shall_help }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_become_natanielian_dominion
+        icon = GFX_
+        x = 27
+        y = 11
+        cost = 10
+        prerequisite = { focus = ARO_we_cant_hold_longer }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_allow_kpaligonian_commandment
+        icon = GFX_
+        x = 29
+        y = 11
+        cost = 10
+        prerequisite = { focus = ARO_say_sorry_rebellion }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_confederate_german_banner
+        icon = GFX_
+        x = 31
+        y = 11
+        cost = 10
+        prerequisite = { focus = ARO_open_pipeline }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_dominion_arsorin
+        icon = GFX_
+        x = 27
+        y = 12
+        cost = 10
+        prerequisite = { focus = ARO_become_natanielian_dominion }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_general_state_arsorin
+        icon = GFX_
+        x = 29
+        y = 12
+        cost = 10
+        prerequisite = { focus = ARO_allow_kpaligonian_commandment }
+        completion_reward = {}
+    }
+
+    focus = {
+        id = ARO_confederate_state_arsorin
+        icon = GFX_
+        x = 31
+        y = 12
+        cost = 10
+        prerequisite = { focus = ARO_confederate_german_banner }
+        completion_reward = {}
+    }
+}

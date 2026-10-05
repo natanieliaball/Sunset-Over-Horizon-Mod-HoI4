@@ -1,0 +1,30 @@
+state={
+	id=162
+	name="STATE_162"
+	provinces={
+		1616 3885 6973 9879 9907 11889 
+	}
+	history = {
+		owner = NIT
+		add_core_of = NIT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+			6973 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			9907 3 
+		}
+		victory_points = {
+			6973 1 
+		}
+	
+	}
+	manpower=1084933
+	buildings_max_level_factor=1
+	state_category=large_city
+	local_supplies=0
+}

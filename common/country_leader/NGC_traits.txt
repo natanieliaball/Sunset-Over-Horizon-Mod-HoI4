@@ -1,0 +1,36 @@
+leader_traits = {
+    Die_Bundeskanzler = {
+        random = no
+        sprite = 1
+        stability_factor = 0.1
+        ai_will_do = {
+            base = 2
+        }
+    }
+    Alldeutschemarschall = {
+        random = no
+        sprite = 1
+        conscription = 0.01
+        war_support_factor = 0.05
+        ai_will_do = {
+            base = 2
+        }
+    }
+    Generalsekretär = {
+        random = no
+        sprite = 1
+        conscription = 0.02
+        drift_defence_factor = 0.2
+        ai_will_do = {
+            base = 2
+        }
+    } 
+    Präsident = {
+        random = no
+        sprite = 1
+        stability_factor = 0.15
+        ai_will_do = {
+            base = 2
+        }
+    } 
+}

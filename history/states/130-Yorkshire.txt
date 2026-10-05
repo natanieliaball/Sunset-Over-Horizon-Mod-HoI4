@@ -1,0 +1,41 @@
+
+state={
+	id=130
+	name="STATE_130"
+	manpower = 4762495
+	
+	state_category = metropolis
+	
+	resources={
+		steel = 71 # was: 120
+		coal = 51 # initial distribution
+	}
+
+	history = {
+		owner = DAN
+		add_core_of = DAN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			dockyard = 3
+			11297 = {
+				naval_base = 7
+			}
+		}
+		victory_points = {
+			9379 10 
+		}
+		victory_points = {
+			11297 20
+		}
+		victory_points = {
+			9315 15
+		}
+	}
+
+	provinces={
+		6268 9269 9315 9332 9379 9397 11297 11317 11382 
+	}
+
+	local_supplies=0.0 
+}

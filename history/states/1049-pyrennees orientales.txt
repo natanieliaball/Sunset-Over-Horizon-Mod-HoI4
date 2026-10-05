@@ -1,0 +1,26 @@
+state={
+	id=1049
+	name="Pyrennes orientales"
+	history={
+		owner = CTV
+		add_core_of = CTV
+		victory_points = {
+			9853 5 
+		}	
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 1
+			9853 = {
+				naval_base = 2
+			}
+		}	
+	}
+	provinces={
+		3946 6960 9853 
+	}
+	manpower=233300
+	state_category = large_town
+	buildings_max_level_factor=1
+	local_supplies=0
+}

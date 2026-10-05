@@ -1,0 +1,35 @@
+
+state={
+	id=1048
+	name="Nazareth"
+	manpower = 78007
+	
+	state_category = rural
+	
+	resources={
+
+	}
+
+	history = {
+		owner = ARI 
+		add_core_of = ARI 
+		add_claim_by = PRL
+		victory_points = {
+			1065 1 # Nazareth
+		}
+
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+	}
+
+	provinces={
+		1065 1201
+	}
+
+	local_supplies=0.0 
+}

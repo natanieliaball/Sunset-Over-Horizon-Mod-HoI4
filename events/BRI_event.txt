@@ -1,0 +1,131 @@
+add_namespace = BRI
+country_event = {
+    id = BRI.1
+    title = BRI.1.t
+    desc = BRI.1.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = BRI.1.a
+        ai_chance = { factor = 100 }
+        add_political_power = -50
+        BRI = { 
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+        }             
+    }
+    option = {
+        name = BRI.1.b
+        ai_chance = { factor = 0 }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+    }
+}
+
+country_event = {
+    id = BRI.2
+    title = BRI.2.t
+    desc = BRI.2.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = BRI.2.a
+        ai_chance = { factor = 90 }
+        BRI = { 
+            add_to_faction = ROOT
+        }             
+    }
+    option = {
+        name = BRI.2.b
+        ai_chance = { factor = 10 }
+    }
+}
+
+
+country_event = {
+    id = BRI.3
+    title = BRI.3.t
+    desc = BRI.3.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = BRI.3.a
+        ai_chance = { factor = 80 }
+        BRI = { 
+            puppet = ROOT
+        }             
+    }
+    option = {
+        name = BRI.3.b
+        ai_chance = { factor = 20 }
+        BRI = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROOT
+			}
+        }
+    }
+}
+
+country_event = {
+    id = BRI.4
+    title = BRI.4.t
+    desc = BRI.4.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = BRI.4.a
+        ai_chance = { factor = 80 }
+        BRI = { 
+            transfer_state = 1054
+        }             
+    }
+    option = {
+        name = BRI.4.b
+        ai_chance = { factor = 20 }
+        BRI = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROOT
+			}
+        }
+    }
+}
+
+country_event = {
+    id = BRI.5
+    title = BRI.5.t
+    desc = BRI.5.d
+    picture = GFX_report_event_generic_funeral
+    is_triggered_only = yes
+
+    option = {
+        name = BRI.5.a
+        ai_chance = { factor = 100 }
+        BRI = { 
+            annex_country = {
+                target = ROOT
+                transfer_troops = yes
+            }
+        }             
+    }
+    option = {
+        name = BRI.5.b
+        ai_chance = { factor = 0 }
+        BRI = {
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROOT
+			}
+        }
+    }
+}
+

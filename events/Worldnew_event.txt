@@ -1,0 +1,13 @@
+add_namespace = news_nori
+news_event = {
+	id = news_nori.1
+	title = news_nori.1.t
+	desc = news_nori.1.d
+	picture = GFX_news_event_bulgarian_partisans
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = news_nori.1.a
+	}
+}

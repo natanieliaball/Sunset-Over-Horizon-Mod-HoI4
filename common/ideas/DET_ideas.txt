@@ -1,0 +1,375 @@
+ideas = {
+	country = {
+        DET_Provence_war = {
+            picture = SOV_consolidate_power_ccp_sov_compatibility
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }            
+            modifier = {
+                stability_factor = -0.10
+                war_support_factor = 0.05
+                production_speed_buildings_factor = -0.1
+                production_factory_efficiency_gain_factor = -0.5 
+            }
+        }
+        DET_Annoying_Old_Guard = {
+            picture = RAJ_private_military_complex
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                experience_gain_army_factor = -0.5
+                experience_gain_navy_factor = -0.5
+                experience_gain_air_factor = -0.5
+                offence = -0.1
+                defence = -0.1
+                command_power_gain_mult = -0.25
+                surrender_limit = -0.1
+                political_power_factor = -0.20
+            }
+        }
+        DET_Legacy_of_Frankism = {
+            picture = CHL_legacy_of_caupolican
+            removal_cost = -1
+            allowed_civil_war = {
+            }
+            modifier = {
+                war_support_factor = 0.2
+                stability_factor = -0.05
+            }
+        }
+        DET_Frankism_Vision_Achieved = {
+            picture = CHL_legacy_of_caupolican
+            removal_cost = -1
+            allowed_civil_war = {
+            }
+            modifier = {
+                war_support_factor = 0.2
+                offence = 0.05
+            }
+        }
+        DET_A_Dysfunctional_Economy = {
+            picture = CHI_inefficient_economy
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = -0.25
+                production_speed_buildings_factor = -0.25
+                consumer_goods_factor = 0.30
+                production_factory_efficiency_gain_factor = -0.1
+                production_factory_max_efficiency_factor = -0.05 
+            }
+        }
+
+        DET_A_Dysfunctional_Economy_2 = {
+            picture = CHI_inefficient_economy
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = -0.15
+                production_speed_buildings_factor = -0.15
+                consumer_goods_factor = 0.20
+                production_factory_efficiency_gain_factor = -0.105
+                production_factory_max_efficiency_factor = -0.05 
+            }
+        }
+        DET_Light_of_Technocracy = {
+            picture = jap_supremacy_of_technology
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = 0.1
+                research_speed_factor = 0.1
+                monthly_population = 0.02
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+            }
+        }
+        DET_Light_of_Technocracy_2 = {
+            picture = jap_supremacy_of_technology
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = 0.15
+                research_speed_factor = 0.15
+                monthly_population = 0.5
+                consumer_goods_factor = -0.1
+                stability_factor = 0.08
+            }
+        }
+        DET_Light_of_Technocracy_3 = {
+            picture = jap_supremacy_of_technology
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = 0.15
+                research_speed_factor = 0.15
+                monthly_population = 0.5
+                consumer_goods_factor = -0.15
+                stability_factor = 0.02
+            }
+        }
+        DET_Light_of_Technocracy_4 = {
+            picture = jap_supremacy_of_technology
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                local_resources_factor = 0.15
+                research_speed_factor = 0.15
+                monthly_population = 0.5
+                consumer_goods_factor = -0.20
+                stability_factor = 0.04
+                war_support_factor = -0.02
+            }
+        }    
+#### Monarchist 
+
+        DET_Grant_Workers_Consessions = {
+            picture = ARG_public_works_investment
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                war_support_factor = 0.05
+                political_power_factor = 0.05
+                consumer_goods_factor = -0.025
+
+            }
+        }
+        DET_Grant_Workers_Consessions_2 = {
+            picture = ARG_public_works_investment
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.1
+                war_support_factor = -0.05
+                political_power_factor = 0.05
+                consumer_goods_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                production_speed_buildings_factor = 0.1
+
+            }
+        }
+        DET_Maintain_Technonomics = {
+            picture = ARG_public_works_investment
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.15
+                war_support_factor = 0.1
+                political_power_factor = 0.05
+                consumer_goods_factor = -0.1
+                production_factory_efficiency_gain_factor = 0.15
+                production_speed_buildings_factor = 0.15
+            }
+        }
+        DET_Protect_the_Nation = {
+            picture = generic_shield_against_communism
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                production_speed_buildings_factor = 0.05
+                production_speed_industrial_complex_factor = -0.1 
+                
+            }
+        }
+        DET_Monarcho_Futurism_for_another_1000_years = {
+            picture = generic_shield_against_communism
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.1
+                conscription = 0.02
+                consumer_goods_factor = -0.05
+                production_speed_buildings_factor = 0.1
+                political_power_factor = 0.1
+                
+                
+            }
+        }
+    
+### economique
+        DET_Four_Year_Plan = {
+            picture = ARG_economic_reactivation
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = - 10
+                production_speed_buildings_factor = 0.1
+                production_speed_industrial_complex_factor = 0.1   
+                production_factory_efficiency_gain_factor = 0.10
+                stability_factor = 0.05
+                war_support_factor = -0.2
+            }
+        }
+        DET_No_unemployment = {
+            picture = COG_the_invisible_roof
+            removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.5
+                production_speed_buildings_factor = 0.1 
+                conscription = -0.0075
+            }
+        }
+## army
+        DET_Annoying_Old_Guard_2 = {
+            picture = RAJ_private_military_complex
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                experience_gain_army_factor = -0.2
+                experience_gain_navy_factor = -0.2
+                experience_gain_air_factor = -0.2
+                offence = -0.05
+                defence = -0.05
+                command_power_gain_mult = -0.20
+                surrender_limit = -0.05
+                political_power_factor = -0.15
+            }
+        }
+        DET_Start_of_the_remilitarisation = {
+            picture = man_five_year_plan_industry
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+            }
+        }
+        DET_Traditional_Fighting_idea = {
+            picture = chi_army_corruption3
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                defence = 0.2
+                offence = 0.2
+                army_speed_factor = -0.1
+            }
+        }
+        DET_New_Methods_idea = {
+            picture = chi_army_corruption3
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                defence = 0.1
+                offence = 0.1
+                army_speed_factor = 0.1
+            }
+        }
+        DET_Modern_Military_idea = {
+            picture = generic_women_in_the_army
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                defence = 0.1
+                offence = 0.1
+                army_speed_factor = 0.2
+                training_time_factor = -0.2
+                conscription = 0.03
+                experience_gain_army = 0.2
+            }
+        }
+        Det_spy_agency  = {
+            picture = generic_spy_coup
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                army_intel_factor = 0.5
+            }
+        }
+### communisme 
+        DET_Grant_More_Right_to_Workers_idea  = {
+            picture = por_iberian_workers_united
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.5
+                production_factory_max_efficiency_factor = 0.1
+                production_speed_buildings_factor = 0.1
+                communism_drift = 0.02
+            }
+        }
+        DET_A_Paradise_on_Earth_Idea  = {
+            picture = FIN_socialist_welfare
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                stability_factor = 0.02
+                monthly_population = 0.20
+                conscription = 0.02
+                communism_drift = 0.02
+            }
+        }
+        DET_A_Perfect_Empire  = {
+            picture = ITA_new_roman_empire_ns
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.1
+                conscription = 0.01
+            }
+        }
+        DET_The_Frank_Detektivite_Synthesis = {
+            picture = man_five_year_plan_industry
+            removal_cost = -1
+            allowed_civil_war = {
+                TAG = ROOT
+            }
+            modifier = {
+                stability_factor = 0.05
+                consumer_goods_factor = -0.05
+                conscription = 0.01
+                production_speed_buildings_factor = 0.10
+            }
+        }
+    }
+}

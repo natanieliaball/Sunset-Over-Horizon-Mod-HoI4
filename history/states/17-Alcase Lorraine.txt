@@ -1,0 +1,42 @@
+
+state={
+	id=17
+	name="Lorraine" # 
+	manpower = 1170000
+	
+	state_category = city
+	
+	resources={
+		steel=28 # was: 48
+	}
+
+	history = {
+		owner = SPT
+		add_core_of = SPT
+		add_core_of = LOR
+		add_claim_by = DET
+		
+		victory_points = {
+			9642 5 
+		}
+		victory_points = {
+			11516 25
+		}
+		victory_points = {
+			3560 1
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			industrial_complex = 2
+			arms_factory = 1			
+		}
+	}
+
+	provinces={
+		521 3546 3560 5291 6545 9505 11488 11516 11642 
+	}
+
+
+	local_supplies=0.0 
+}

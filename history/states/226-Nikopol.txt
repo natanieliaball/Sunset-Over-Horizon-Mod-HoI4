@@ -1,0 +1,27 @@
+state={
+	id=226
+	name="STATE_226"
+	resources={
+		oil=4
+	}
+	provinces={
+		6423 9419 9433 11422 11437 11561 
+	}
+	history={
+		owner = KPA
+		add_core_of = KPA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			11437 10 
+		}
+		victory_points = {
+			11561 1
+		}
+	}
+	manpower=2391047
+	buildings_max_level_factor=1
+	state_category=town
+	local_supplies=0
+}

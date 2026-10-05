@@ -1,0 +1,25 @@
+
+NGC_influence_BMS = {
+    icon = GFX_decision_category_CZE_divided_nation_icon
+    allowed = {
+        tag = NGC
+
+    }
+    visible = {
+        tag = NGC
+        BMS = { exists = yes }
+        has_country_flag = NGC_can_influence_BMS
+    }
+}
+
+NGC_establish_puppets_regime = {
+    icon = GFX_decision_category_CZE_divided_nation_icon
+    allowed = {
+        tag = NGC
+
+    }
+    visible = {
+        tag = NGC
+        has_country_flag = NGC_forme_puppet_regime
+    }
+}

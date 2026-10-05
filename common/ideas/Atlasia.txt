@@ -1,0 +1,128 @@
+ideas = {
+    country = {
+
+        ### --- DEBUFFS DE DEPART (à mettre dans history/countries/ATL) ---
+
+        ATL_tensions_militaires = {
+            picture = generic_manpower_bonus
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                military_leader_cost_factor = 0.15
+                conscription = -0.01
+                war_support_factor = -0.05
+            }
+        }
+
+        ATL_occupation_pas_de_calais_idea = {
+            picture = generic_manpower_bonus
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                production_speed_buildings_factor = -0.2
+                conscription = -0.01
+                stability_factor = -0.05
+                war_support_factor = -0.1
+            }
+        }
+
+        ATL_instabilite_politique = {
+            picture = generic_pp_unity_bonus
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = -0.12
+                stability_factor = -0.08
+                drift_defence_factor = -0.08
+            }
+        }
+
+        ATL_crise_legitimite = {
+            picture = generic_infantry_bonus
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.05
+                government_stability_factor = -0.10
+            }
+        }
+
+        ### --- IDEAS DEMOCRATIE ---
+
+        ATL_reformes_sociales_idea = {
+            picture = FIN_socialist_welfare
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.05
+                stability_weekly = 0.01
+                conscription = 0.02
+            }
+        }
+        ATL_rebuild_the_nation_idea = {
+            picture = generic_goods_red_bonus
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.2
+                production_speed_buildings_factor = 0.2
+            }
+        }
+        ATL_academie_militaire_idea = {
+            picture = AUS_women_in_academia
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = { training_time_factor = -0.10 army_org_factor = 0.05 }
+        }
+        ATL_doctrine_defensive_idea = {
+            picture = YUG_federal_defense_council
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = { defence = 0.20 max_dig_in = 2}
+        }
+        ATL_doctrine_offensive_idea = {
+            picture = chi_army_corruption2
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = { offence = 0.10 army_speed_factor = 0.05 breakthrough_factor = 0.08 }
+        }
+        ATL_ecole_pilotes_idea = {
+            picture = generic_air_fighter
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier =  { air_ace_generation_chance_factor = 0.10 experience_gain_air_factor = 0.10 }
+        }
+        ATL_united_council_idea = {
+            picture = YUG_federal_defense_council
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier =  { political_power_factor = 0.20 }
+        }
+        ATL_national_unity_idea= {
+            picture = AFG_from_the_ashes
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier =  { conscription = 0.01 war_support_factor = 0.1 }
+        }
+        ATL_Atlasian_Youth_idea = {
+            picture = AFG_from_the_ashes
+            allowed = { original_tag = ATL }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier =  { conscription = 0.05 training_time_factor = -0.20
+        }
+    }
+    }
+}

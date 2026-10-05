@@ -1,0 +1,73 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = SPT
+                    has_government = fascism
+                    has_country_leader = {
+                        character = SPT_Meristra
+                    }
+                    date > 1936.2.13
+                    NOT = { has_country_flag = SPT_meristra_dead }
+                }
+                set_country_flag = SPT_meristra_dead
+                country_event = { id = CEC.1 days = 1 }
+
+                    news_event = { id = news_nori.1 days = 1 } 
+                      
+            }
+        }
+    }
+}
+
+on_actions = {
+    on_daily = {
+        effect = {
+            SPT = {
+                if = {
+                    limit = {
+                        CEC = {has_capitulated = yes}
+                        SPT = {NOT = { has_country_flag = SPT_end_civil_war }}
+                    }                  
+                    annex_country = {
+                        target = CEC
+                    }
+                    every_state = {
+                        limit = { is_core_of = CEC }
+                        remove_core_of = CEC
+                    }
+                    SPT = { set_country_flag = SPT_end_civil_war } 
+                    CEC = { set_country_flag = SPT_end_civil_war }  
+
+                }
+            }
+        }
+    }
+}
+
+
+
+on_actions = {
+    on_daily = {
+        effect = {
+            CEC = {
+                if = {
+                    limit = {
+                        SPT = {has_capitulated = yes}
+                        CEC = {NOT = { has_country_flag = SPT_end_civil_war }}
+                    }                  
+                    annex_country = {
+                        target = SPT
+                    }
+                    SPT = { set_country_flag = SPT_end_civil_war } 
+                    CEC = { set_country_flag = SPT_end_civil_war }
+                    every_state = {
+                        limit = { is_core_of = SPT }
+                        remove_core_of = SPT
+                    }  
+                }
+            }
+        }
+    }
+}

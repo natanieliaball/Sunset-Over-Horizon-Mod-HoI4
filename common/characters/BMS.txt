@@ -1,0 +1,121 @@
+characters = {
+    BMS_ProvisionalCouncilN = {
+        name="Provisional Governement"
+        portraits={
+            civilian={
+                large="GFX_ProvisionalCouncilN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_JarosD = {
+        name="Alois Jaroš"
+        portraits={
+            civilian={
+                large="GFX_JarosD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+
+    BMS_JezekN = {
+        name="Tomáš Ježek"
+        portraits={
+            civilian={
+                large="GFX_JezekN"
+            }
+        }
+        country_leader={
+            ideology=despotism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_ZahoraF = {
+        name="Rudolf Zahora"
+        portraits={
+            civilian={
+                large="GFX_Zahoraf"
+            }
+        }
+        country_leader={
+            ideology=rexism
+            expire=""
+			id = -1
+        }
+    }
+
+    BMS_JozinD = {
+        name="Jožin Černý"
+        portraits={
+            civilian={
+                large="GFX_JozinD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_KuceraC = {
+        name="Antonín Kučera"
+        portraits={
+            civilian={
+                large="GFX_KuceraC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_PavelD = {
+        name="Pavel Horák"
+        portraits={
+            civilian={
+                large="GFX_PavelD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_MatyasD = {
+        name="Matyáš Dvořák"
+        portraits={
+            civilian={
+                large="GFX_MatyasD"
+            }
+        }
+        country_leader={
+            ideology=populism
+            expire=""
+			id = -1
+        }
+    }
+    BMS_ZdenekD = {
+        name="Zdeněk Dvorský"
+        portraits={
+            civilian={
+                large="GFX_ZdenekD"
+            }
+        }
+        country_leader={
+            ideology=populism
+            expire=""
+			id = -1
+        }
+    }
+}

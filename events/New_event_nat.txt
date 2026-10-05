@@ -1,0 +1,86 @@
+add_namespace = NAT_news_events
+
+country_event = {
+    id = NAT_news_events.1
+    title = NAT_news_events.1.t
+    desc = NAT_news_events.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.1.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.2
+    title = NAT_news_events.2.t
+    desc = NAT_news_events.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.2.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.3
+    title = NAT_news_events.3.t
+    desc = NAT_news_events.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.3.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.4
+    title = NAT_news_events.4.t
+    desc = NAT_news_events.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.4.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.5
+    title = NAT_news_events.5.t
+    desc = NAT_news_events.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.5.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.6
+    title = NAT_news_events.6.t
+    desc = NAT_news_events.6.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.6.a
+        ai_chance = { factor = 100 }
+    }
+}
+country_event = {
+    id = NAT_news_events.7
+    title = NAT_news_events.7.t
+    desc = NAT_news_events.7.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NAT_news_events.7.a
+        ai_chance = { factor = 100 }
+    }
+}

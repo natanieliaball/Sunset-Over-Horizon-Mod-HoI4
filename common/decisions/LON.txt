@@ -1,0 +1,98 @@
+GBC_formable = {
+    GBC_formable_D = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+		OR = {
+        	tag = LON
+			tag = DAN
+			tag = COW
+		}
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 123
+                state = 127
+                state = 126
+                state = 338
+                state = 122
+                state = 128
+                state = 125
+                state = 129
+                state = 132
+                state = 130
+                state = 931
+                state = 131
+                state = 133
+                state = 121
+                state = 136
+                state = 120
+                state = 1066
+                state = 933
+                state = 932
+
+                    
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 123
+                controls_state = 127
+                controls_state = 126
+                controls_state = 338
+                controls_state = 122
+                controls_state = 128
+                controls_state = 125
+                controls_state = 129
+                controls_state = 132
+                controls_state = 130
+                controls_state = 931
+                controls_state = 131
+                controls_state = 133
+                controls_state = 121
+                controls_state = 136
+                controls_state = 120
+                controls_state = 1066
+                controls_state = 933
+                controls_state = 932
+
+
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            add_state_core = 123
+            add_state_core = 127
+            add_state_core = 126
+            add_state_core = 338
+            add_state_core = 122
+            add_state_core = 128
+            add_state_core = 125
+            add_state_core = 129
+            add_state_core = 132
+            add_state_core = 130
+            add_state_core = 931
+            add_state_core = 131
+            add_state_core = 133
+            add_state_core = 121
+            add_state_core = 136
+            add_state_core = 120
+            add_state_core = 1066
+            add_state_core = 933
+            add_state_core = 932
+            set_cosmetic_tag = GBC_COS
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}

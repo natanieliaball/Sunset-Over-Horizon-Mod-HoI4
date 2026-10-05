@@ -1,0 +1,140 @@
+add_namespace = DET_event
+
+
+country_event = {
+    id = DET_event.1
+    title = DET_event.1.t
+    desc = DET_event.1.d
+    picture = GFX_report_event_generic_elections
+    is_triggered_only = yes
+
+    option = {
+        name = DET_event.1.a
+        complete_national_focus = DET_The_Kingdom_Persists
+    }
+
+    option = {
+        name = DET_event.1.b
+        complete_national_focus = DET_Leftward_Turn
+    }
+}
+
+country_event = {
+    id = DET_event.2
+    title = DET_event.2.t
+    desc = DET_event.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = DET_event.2.a
+        ai_chance = { factor = 80 }
+        DET = {
+            transfer_state = 1049
+        }
+        ROOT = {
+            add_offsite_building = { type = industrial_complex level = 4 }
+        }
+        DET = {
+            add_offsite_building = { type = industrial_complex level = -4 }
+        }
+    }
+
+    option = {
+        name = DET_event.2.b
+        ai_chance = { factor = 20 }
+       DET = {
+            create_wargoal = {
+                type = annex_everything
+                target = PREV
+            }
+        }
+    }
+}
+
+country_event = {
+    id = DET_event.3
+    title = DET_event.3.t
+    desc = DET_event.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = DET_event.3.a
+        ai_chance = { factor = 90 }
+        DET = {
+            puppet = BRI
+        }
+    }
+
+    option = {
+        name = DET_event.3.b
+        ai_chance = { factor = 10 }
+       DET = {
+            create_wargoal = {
+                type = annex_everything
+                target = BRI
+            }
+        }
+    }
+}
+
+country_event = {
+    id = DET_event.4
+    title = DET_event.4.t
+    desc = DET_event.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = DET_event.4.a
+        ai_chance = { factor = 30 }
+        DET = {
+            transfer_state = 762
+            transfer_state = 172
+            add_state_core = 762
+            add_state_core = 172
+        }
+    }
+
+    option = {
+        name = DET_event.4.b
+        ai_chance = { factor = 70 }
+       DET = {
+            create_wargoal = {
+                type = annex_everything
+                target = ROOT
+            }
+        }
+    }
+}
+
+country_event = {
+    id = DET_event.5
+    title = DET_event.5.t
+    desc = DET_event.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = DET_event.5.a
+        ai_chance = { factor = 80 }
+        DET = {
+            transfer_state = 166
+            transfer_state = 165
+            add_state_core = 166
+            add_state_core = 165
+        }
+    }
+
+    option = {
+        name = DET_event.5.b
+        ai_chance = { factor = 20 }
+       DET = {
+            create_wargoal = {
+                type = annex_everything
+                target = ROOT
+            }
+        }
+    }
+}

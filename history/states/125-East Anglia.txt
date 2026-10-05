@@ -1,0 +1,31 @@
+state = {
+	id = 125
+	name = "STATE_125"
+	manpower = 1363174
+	
+	state_category = city
+
+	history = {
+		owner = DAN
+		add_core_of = DAN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			271 = {
+				naval_base = 2
+			}
+		}
+		victory_points = { 
+			271 2 # Ipswich
+		}
+		victory_points = { 
+			322 3 # Norwich
+		}
+	}
+
+	provinces = {
+		221 271 296 322 3287 11221 11253 
+	}
+
+	local_supplies = 0.0 
+}

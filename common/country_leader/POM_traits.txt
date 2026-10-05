@@ -1,0 +1,12 @@
+leader_traits = {
+    God_of_the_Dautharik_church = {
+        random = no
+        sprite = 1
+        political_power_gain = 0.2
+        stability_factor = 0.1
+        ai_will_do = {
+            base = 2
+        }
+    }
+
+}

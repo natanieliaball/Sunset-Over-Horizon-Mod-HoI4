@@ -1,0 +1,54 @@
+characters = {
+    SAR_StampazD = {
+        name="Stefan Stampaz"
+        portraits={
+            civilian={
+                large="GFX_StampazD"
+            }
+        }
+        country_leader={
+            ideology=liberalism
+            expire=""
+			id = -1
+        }
+    }
+    SAR_KlusenF = {
+        name="Martin Klusen"
+        portraits={
+            civilian={
+                large="GFX_KlusenF"
+            }
+        }
+        country_leader={
+            ideology=falangism
+            expire=""
+			id = -1
+        }
+    }
+    SAR_DamC = {
+        name="Konrad Dam"
+        portraits={
+            civilian={
+                large="GFX_DamC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+    SAR_HertzN = {
+        name="Valdemar Hertz"
+        portraits={
+            civilian={
+                large="GFX_HertzN"
+            }
+        }
+        country_leader={
+            ideology=oligarchism
+            expire=""
+			id = -1
+        }
+    }
+}

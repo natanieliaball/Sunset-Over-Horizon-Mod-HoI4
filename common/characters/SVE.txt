@@ -1,0 +1,41 @@
+characters = {
+        SVE_BengtN = {
+        name="Bengt III"
+        portraits={
+            civilian={
+                large="GFX_BengtN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    SVE_SaarinenC = {
+        name="Taisto Saarinen"
+        portraits={
+            civilian={
+                large="GFX_SaarinenC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+    SVE_SaarinenSSR = {
+        name="Taisto Saarinen"
+        portraits={
+            civilian={
+                large="GFX_SaarinenSSR"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+}

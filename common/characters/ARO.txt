@@ -1,0 +1,28 @@
+characters = {
+    ARO_SauliusN = {
+        name="Saulius II"
+        portraits={
+            civilian={
+                large="GFX_SauliusN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    ARO_SnieckusC = {
+        name="Aušrius Sniečkus"
+        portraits={
+            civilian={
+                large="GFX_SnieckusC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+}

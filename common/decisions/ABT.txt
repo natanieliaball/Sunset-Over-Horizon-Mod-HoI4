@@ -1,0 +1,131 @@
+ABT_albata_natanielia_union = {
+    ABT_albata_natanielia = {
+        icon = GFX_decision_generic_form_nation
+        allowed = {
+            OR = {
+                tag = NAT
+                tag = ABT
+            }
+        }
+
+
+		highlight_states = { 
+			highlight_state_targets = {
+                state = 35
+                state = 1056
+                state = 1055
+                state = 56
+                state = 57
+                state = 51
+                state = 36
+                state = 7
+                state = 977
+                state = 910
+                state = 188
+                state = 763
+                state = 5
+                state = 85
+                state = 807
+                state = 98
+                state = 10
+                state = 87
+                    
+                }
+            }    
+        available = {                
+            if = {
+                controls_state = 56
+                controls_state = 57
+                controls_state = 51
+                controls_state = 36
+                controls_state = 7
+                controls_state = 977
+                controls_state = 910
+                controls_state = 188
+                controls_state = 763
+                controls_state = 5
+                controls_state = 85
+                controls_state = 807
+                controls_state = 98
+                controls_state = 10
+                controls_state = 87
+                controls_state = 35
+                controls_state = 1056
+                controls_state = 1055
+
+            }
+        }
+
+        visible = {
+            always = yes
+        }
+
+        cost = 0
+        fire_only_once = yes
+
+        complete_effect = {
+            if = {
+                limit = { tag = ABT }
+                every_state = {
+                    limit = { is_core_of = NAT }
+                    add_core_of = ABT
+                }
+                ABT = { set_cosmetic_tag = Albata_Natanielia_A }
+            }
+            if = {
+                limit = { tag = NAT }
+                every_state = {
+                    limit = { is_core_of = ABT }
+                    add_core_of = NAT
+                }
+                NAT = { set_cosmetic_tag = Albata_Natanielia_N }
+            }
+        }
+
+        ai_will_do = {
+            base = 100
+        }
+    }
+}
+
+ABT_Furry_revolution = {
+    ABT_border_conflit = {
+        priority = 50
+		allowed = { tag = ABT }
+
+		icon = POL_organize_strike_two
+
+		available = {
+		    TAG = ABT
+            NOT = { has_country_flag = ABT_border_war_waits }
+		}
+
+		fire_only_once = yes
+        cost = 150
+        days_remove = 30
+		target_trigger = {
+            FROM = {
+                is_neighbor_of = ABT
+                NOT = {is_ally_with = ABT}
+                has_civil_war = no
+                NOT = {has_war_with = ABT}
+            }
+		}
+		visible = {
+			has_country_flag = ABT_FURRY_REVOLUTION_D
+		}
+		
+
+        remove_effect = {
+            clr_country_flag = ABT_border_war_waits
+            create_wargoal = {
+	            type = take_state
+	            target = FROM
+	        }
+        }
+		complete_effect = {
+            set_country_flag = ABT_border_war_waits
+		}
+
+    }    
+}

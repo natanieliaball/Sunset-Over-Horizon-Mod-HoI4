@@ -1,0 +1,15 @@
+state={
+	id=1070
+	name="Axotrapian Route"
+	history = {
+		owner = AXO
+		add_core_of = AXO
+	}
+	provinces={
+		13392 13396 13401 
+	}
+	manpower=4560
+	buildings_max_level_factor=1
+	state_category = wasteland
+	local_supplies=0
+}

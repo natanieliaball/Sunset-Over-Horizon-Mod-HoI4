@@ -1,0 +1,398 @@
+ATL_politique_decisions = {
+
+    ### --- DECISIONS DEMO ---
+
+    ATL_accord_flandre_demo = {
+        icon = GFX_decision_generic_positive_trade_relations
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_constitution_demo
+            has_completed_focus = ATL_alliance_ngc
+        }
+        available = {
+            has_political_power > 199
+            ABT = { has_government = democratic }
+            NOT = { has_country_flag = ATL_accord_flandre_fait }
+        }
+        cost = 200
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = ATL_accord_flandre_fait
+            add_opinion_modifier = { target = ABT modifier = medium_increase }
+            add_stability = 0.03
+            country_event = { id = ATL_dec.1 days = 3 }
+        }
+        ai_will_do = { base = 25 }
+    }
+
+    ATL_elections_libres = {
+        icon = GFX_decision_generic_political_discourse
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_bloc_populaire
+            has_government = democratic
+        }
+        available = {
+            has_political_power > 99
+            NOT = { has_country_flag = ATL_election_cooldown }
+        }
+        cost = 100
+        days_remove = 180
+        fire_only_once = yes
+
+        modifier = {
+            stability_weekly = 0.0005
+        }
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_election_cooldown days = 180 }
+        }
+
+        remove_effect = {
+            clr_country_flag = ATL_election_cooldown
+            add_stability = 0.01
+        }
+
+        ai_will_do = { base = 5 }
+    }
+
+    ATL_investissement_flandre_demo = {
+        icon = GFX_decision_generic_industry
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_economie_demo
+        }
+        available = {
+            has_political_power > 149
+            NOT = { has_country_flag = ATL_investi_flandre_cooldown }
+        }
+        cost = 150
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_investi_flandre_cooldown days = 300 }
+            6 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 8 }
+    }
+
+    ATL_renforcer_defense_demo = {
+        icon = GFX_focus_generic_fortify_city
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_prepare_defense_demo
+        }
+        available = {
+            has_political_power > 124
+            NOT = { has_country_flag = ATL_defense_fortif_cooldown }
+        }
+        cost = 125
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_defense_fortif_cooldown days = 270 }
+            6 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 6560
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 516
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 6 }
+    }
+
+    ### --- DECISIONS FASCISME ---
+
+    ATL_propagande_atlasienne = {
+        icon = GFX_decision_generic_fascism_drift
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_militarisation_fasc
+            has_government = fascism
+        }
+        available = {
+            has_political_power > 124
+            NOT = { has_country_flag = ATL_propagande_cooldown }
+        }
+        cost = 125
+        days_remove = 150
+        fire_only_once = yes
+
+        modifier = {
+            war_support_weekly = 0.002
+            stability_weekly = -0.0005
+        }
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_propagande_cooldown days = 150 }
+        }
+
+        remove_effect = {
+            clr_country_flag = ATL_propagande_cooldown
+        }
+
+        ai_will_do = { base = 8 }
+    }
+
+    ATL_production_armement_fasc = {
+        icon = GFX_decision_generic_military
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_industrie_guerre_fasc
+        }
+        available = {
+            has_political_power > 174
+            NOT = { has_country_flag = ATL_armement_cooldown }
+        }
+        cost = 175
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_armement_cooldown days = 300 }
+            6 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 10 }
+    }
+
+    ATL_fortifier_belgique_phase1 = {
+        icon = GFX_decision_generic_fortify_city
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_fortifications_fasc
+        }
+        available = {
+            has_political_power > 149
+            NOT = { has_country_flag = ATL_fortif_phase1_fasc }
+        }
+        cost = 150
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = ATL_fortif_phase1_fasc
+            34 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 3516
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 11519
+                    instant_build = yes
+                }
+            }
+            add_war_support = 0.02
+        }
+
+        ai_will_do = { base = 15 }
+    }
+
+    ATL_fortifier_belgique_phase2 = {
+        icon = GFX_decision_generic_fortify_city
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_fortifications_fasc
+            has_country_flag = ATL_fortif_phase1_fasc
+        }
+        available = {
+            has_political_power > 149
+            NOT = { has_country_flag = ATL_fortif_phase2_fasc }
+        }
+        cost = 150
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = ATL_fortif_phase2_fasc
+            6 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 6560
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 3
+                    province = 516
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 12 }
+    }
+
+    ATL_mobilisation_annuelle = {
+        icon = GFX_decision_generic_manpower
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_mobilisation_progressive
+        }
+        available = {
+            has_political_power > 149
+            NOT = { has_country_flag = ATL_mobilisation_cooldown }
+        }
+        cost = 150
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_mobilisation_cooldown days = 360 }
+            add_manpower = 20000
+            add_stability = -0.02
+        }
+
+        ai_will_do = { base = 8 }
+    }
+
+    ATL_exercices_militaires = {
+        icon = GFX_decision_generic_military_training
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_renforcer_armee
+        }
+        available = {
+            has_political_power > 99
+            NOT = { has_country_flag = ATL_exercices_cooldown }
+        }
+        cost = 100
+        days_remove = 120
+        fire_only_once = yes
+
+        modifier = {
+            army_experience = 0.02
+        }
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_exercices_cooldown days = 120 }
+        }
+
+        remove_effect = {
+            army_experience = 10
+        }
+
+        ai_will_do = { base = 6 }
+    }
+
+    ATL_fortifier_flandre_prep = {
+        icon = GFX_decision_generic_fortify_city
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_renforcer_flandre_prep
+        }
+        available = {
+            has_political_power > 124
+            NOT = { has_country_flag = ATL_fortif_prep_cooldown }
+        }
+        cost = 125
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_fortif_prep_cooldown days = 270 }
+            6 = {
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 6560
+                    instant_build = yes
+                }
+                add_building_construction = {
+                    type = bunker
+                    level = 2
+                    province = 516
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 8 }
+    }
+
+    ATL_agrandissement_arsenaux = {
+        icon = GFX_decision_generic_industry
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_expansion_arsenaux
+        }
+        available = {
+            has_political_power > 174
+            NOT = { has_country_flag = ATL_arsenal_cooldown }
+        }
+        cost = 175
+        fire_only_once = yes
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_arsenal_cooldown days = 300 }
+            6 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            34 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+
+        ai_will_do = { base = 10 }
+    }
+
+    ATL_produire_equipement = {
+        icon = GFX_decision_generic_military
+        allowed = { tag = ATL }
+        visible = {
+            has_completed_focus = ATL_industrie_militaire_prep
+        }
+        available = {
+            has_political_power > 99
+            NOT = { has_country_flag = ATL_equipement_cooldown }
+        }
+        cost = 100
+        days_remove = 90
+        fire_only_once = yes
+
+        modifier = {
+            production_speed_arms_factory_factor = 0.03
+        }
+
+        complete_effect = {
+            set_country_flag = { flag = ATL_equipement_cooldown days = 90 }
+        }
+
+        remove_effect = {
+            clr_country_flag = ATL_equipement_cooldown
+        }
+
+        ai_will_do = { base = 5 }
+    }
+}

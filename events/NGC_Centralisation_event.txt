@@ -1,0 +1,159 @@
+add_namespace = NGC_centralisation
+
+# Unification de la NGC
+country_event = {
+    id = NGC_centralisation.1
+    title = NGC_centralisation.1.t
+    desc = NGC_centralisation.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_centralisation.1.a
+        add_stability = 0.02
+        add_political_power = 100
+        add_war_support = 0.10
+    }
+}
+
+# Grande Allemagne proclamée
+country_event = {
+    id = NGC_centralisation.2
+    title = NGC_centralisation.2.t
+    desc = NGC_centralisation.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_centralisation.2.a
+        add_stability = 0.02
+        add_political_power = 150
+        add_war_support = 0.15
+    }
+}
+
+# Anschluss FRK
+add_namespace = NGC_anschluss_FRK
+
+country_event = {
+    id = NGC_anschluss_FRK.1
+    title = NGC_anschluss_FRK.1.t
+    desc = NGC_anschluss_FRK.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_anschluss_FRK.1.a
+        ai_chance = { factor = 60 }
+        NGC = {
+            annex_country = {
+                target = FRK
+                transfer_troops = yes
+            }
+            every_state = {
+                limit = { is_core_of = FRK }
+                add_core_of = NGC
+            }
+        }
+    }
+
+    option = {
+        name = NGC_anschluss_FRK.1.b
+        ai_chance = { factor = 40 }
+        NGC = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRK
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NGC_centralisation.3
+    title = NGC_centralisation.3.t
+    desc = NGC_centralisation.3.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_centralisation.3.a
+        ai_chance = { factor = 70 }
+        NGC = {
+            transfer_state = 69
+        }
+    }
+
+    option = {
+        name = NGC_centralisation.3.b
+        ai_chance = { factor = 30 }
+        NGC = {
+            create_wargoal = {
+                type = annex_everything
+                target = PREV
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NGC_centralisation.4
+    title = NGC_centralisation.4.t
+    desc = NGC_centralisation.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_centralisation.4.a
+        ai_chance = { factor = 80 }
+        NGC = {
+            transfer_state = 42
+            transfer_state = 8
+            add_state_core = 42
+            add_state_core = 8
+            give_guarantee = LOR
+        }
+    }
+
+    option = {
+        name = NGC_centralisation.4.b
+        ai_chance = { factor = 20 }
+        NGC = {
+            create_wargoal = {
+                type = annex_everything
+                target = PREV
+            }
+        }
+    }
+}
+
+country_event = {
+    id = NGC_centralisation.5
+    title = NGC_centralisation.5.t
+    desc = NGC_centralisation.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_centralisation.5.a
+        ai_chance = { factor = 30 }
+        NGC = {
+            annex_country = {
+                target = BMS
+                transfer_troops = yes
+            }
+        }
+    }
+
+    option = {
+        name = NGC_centralisation.5.b
+        ai_chance = { factor = 70 }
+        NGC = {
+            create_wargoal = {
+                type = annex_everything
+                target = PREV
+                 
+            }
+        }
+    }
+}

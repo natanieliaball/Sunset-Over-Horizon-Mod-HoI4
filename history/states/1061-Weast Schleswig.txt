@@ -1,0 +1,27 @@
+state = {
+	id = 1061
+	name = "Schlewig"
+	manpower = 85940
+	state_category = rural
+	
+	history = {
+		owner = SCH
+		add_core_of = SCH
+		add_claim_by = NGC
+		buildings = {
+			infrastructure = 2
+			air_base = 4
+			industrial_complex = 1	
+			dockyard = 1
+			3231 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces = {
+		3231 11366
+ 	}
+
+	local_supplies = 0.0 
+}

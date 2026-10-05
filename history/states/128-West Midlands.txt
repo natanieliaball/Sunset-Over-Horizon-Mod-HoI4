@@ -1,0 +1,31 @@
+
+state={
+	id=128
+	name="STATE_128"
+	manpower = 3685235
+	
+	state_category = metropolis
+	resources={
+		steel=27 # was: 48
+		coal = 13 # initial distribution
+	}
+
+	history = {
+		owner = WLS
+		add_core_of = WLS
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		victory_points = {
+			9297 25
+		}
+	}
+
+	provinces={
+		3241 3301 6270 6301 7239 9297 11345 
+	}
+
+	local_supplies=0.0 
+}

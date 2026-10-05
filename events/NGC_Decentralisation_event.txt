@@ -1,0 +1,33 @@
+add_namespace = NGC_BMS_influence_event
+
+country_event = {
+    id = NGC_BMS_influence_event.1
+    title = NGC_BMS_influence_event.1.t
+    desc = NGC_BMS_influence_event.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+
+    option = {
+        name = NGC_BMS_influence_event.1.a
+        ai_chance = {
+            factor = 90
+        }
+
+        NGC = {
+            puppet = BMS
+        }
+    }
+
+    option = {
+        name = NGC_BMS_influence_event.1.b
+        ai_chance = { factor = 10 }
+
+        NGC = {
+            factor = 90
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = BMS
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+JAK_war_of_unification = {
+    JAK_war_of_unification_timeout = {
+        priority = 50
+		allowed = { tag = JAK }
+
+		icon = POL_organize_strike_two
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 100
+		is_good = yes
+		fire_only_once = yes
+
+		activation = {
+            has_country_flag = JAK_War_of_unification
+		}
+
+		visible = {
+			has_country_flag = JAK_War_of_unifications
+		}
+		
+		cancel_effect = {
+			JAK = {
+				has_capitulated = yes
+				is_in_faction = yes
+			}
+		}
+        timeout_effect = { 
+            JAK = {
+				set_country_flag = JAK_War_of_unification_END
+				white_peace = KPA
+			}
+        } 
+    } 
+}

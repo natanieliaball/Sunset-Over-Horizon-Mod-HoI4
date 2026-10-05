@@ -1,0 +1,71 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = germany_fragmentation_status_mod
+						option = GERMANY_FRAGMENTED_MOD
+					}
+				}
+                NGC = {
+                end_puppet = LES
+                LES = {
+                    drop_cosmetic_tag = yes
+                }
+                end_puppet = SOR
+                SOR = {
+                    drop_cosmetic_tag = yes
+                }
+                end_puppet = SCH
+                SCH = {
+                    drop_cosmetic_tag = yes
+                    transfer_state = 58
+                }
+                58 = {
+                    set_demilitarized_zone = no
+                }
+                59 = {
+                    set_demilitarized_zone = no
+                }
+
+                release = BRB  
+                BRB = { change_tag_from = NGC }  
+                release = SAX 
+                release = PMR 
+                release = HAN  
+                release = MEK
+                release = THU
+            
+                    NGC = {
+                        every_state = {
+                            limit = { is_core_of = NGC }
+                            remove_core_of = NGC
+                        }
+                         every_state = {
+                            limit = { is_claim_by = NGC }
+                            remove_claim_by = NGC
+                        }                   
+                    } 
+                }
+			}
+		}
+	}
+}
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = everyone_core_everything
+						option = EVERYONE_CORE_EVERYTHING
+					}
+				}
+                every_country = {
+                    country_event = { id = MODE.1 }
+                }
+			}
+		}
+	}
+}

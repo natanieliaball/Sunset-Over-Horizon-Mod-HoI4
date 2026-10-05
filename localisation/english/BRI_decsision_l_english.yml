@@ -1,0 +1,29 @@
+﻿l_english:
+ BRI_influence_CON: "Influence Connacht"
+ BRI_influence_CON_desc: "Influence over Connacht \n\n@CON : §Y[?BRI_CON_influence|0]%§!"
+ BRI_finance_local_militia_CON: "Finance local Militia"
+ BRI_Pro_Celtic_propaganda_CON: "Pro-Celtic Propaganda"
+ BRI_influence_CON_economy: "Buy shares in Connacht companies"
+ BRI_Demande_CON_submition: "Demand Connacht submition"
+
+ BRI_influence_MUN: "Influence Munster"
+ BRI_influence_MUN_desc: "Influence over Munster \n\n@MUN : §Y[?BRI_MUN_influence|0]%§!"
+ BRI_finance_local_militia_MUN: "Finance local Militia"
+ BRI_Pro_Celtic_propaganda_MUN: "Pro-Celtic Propaganda"
+ BRI_influence_MUN_economy: "Buy shares in Munster companies"
+ BRI_Demande_MUN_submition: "Demand Munster submition"
+
+ BRI_influence_ULS: "Influence Ulster"
+ BRI_influence_ULS_desc: "Influence over Ulster \n\n@ULS : §Y[?BRI_ULS_influence|0]%§!"
+ BRI_finance_local_militia_ULS: "Finance local Militia"
+ BRI_Pro_Celtic_propaganda_ULS: "Pro-Celtic Propaganda"
+ BRI_influence_ULS_economy: "Buy shares in Ulster companies"
+ BRI_Demande_ULS_submition: "Demand Ulster submition"
+
+ BRI_influence_LEI: "Influence Leinster"
+ BRI_influence_LEI_desc: "Influence over Leinster \n\n@LEI : §Y[?BRI_LEI_influence|0]%§!"
+ BRI_finance_local_militia_LEI: "Finance local Militia"
+ BRI_Pro_Celtic_propaganda_LEI: "Pro-Celtic Propaganda"
+ BRI_influence_LEI_economy: "Buy shares in Leinster companies"
+ BRI_Demande_LEI_submition: "Demand Leinster submition"
+

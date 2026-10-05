@@ -1,0 +1,351 @@
+focus_tree = {
+    id = CEC_focus_tree
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = CEC
+        }
+    }
+	continuous_focus_position = { x = 0 y = 1000}
+    default = no
+
+
+    focus = {
+        id = CEC_For_the_right_of_all_people
+        icon = GFX_SOV_the_rightful_heir_to_the_empire_ccp_2d_sov_compatibility
+        x = 17
+        y = 0
+        cost = 5
+        prerequisite = {}
+        completion_reward = {
+            add_stability = 0.1
+        }
+    }
+
+    # ========================
+    # NIVEAU 2 - 3 BRANCHES
+    # ========================
+
+    focus = {
+        id = CEC_War_plan
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 17
+        y = 1
+        cost = 5
+        prerequisite = { focus = CEC_For_the_right_of_all_people }
+        completion_reward = {
+			army_experience = 50             
+        }
+    }
+
+    focus = {
+        id = CEC_reoganise_the_army
+        icon = GFX_focus_PRC_reorganize_divisions
+        x = 19
+        y = 2
+        cost = 5
+        prerequisite = { focus = CEC_War_plan }
+        completion_reward = {
+            remove_ideas = CEC_disorganise_army
+        }
+    }
+
+    focus = {
+        id = CEC_Boost_Arms_production
+        icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+        x = 15
+        y = 2
+        cost = 5
+        prerequisite = { focus = CEC_War_plan }
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = CEC_recruit_militias
+        icon = GFX_SOV_rehabilitated_military_ccp_2d_sov_compatibility
+        x = 17
+        y = 2
+        cost = 5
+        available = {
+            NOT { has_war_with = CEC }
+        }
+        prerequisite = { focus = CEC_War_plan }
+        completion_reward = {
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    count = 2
+				}
+            }  
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    count = 2
+				}
+            }
+            random_owned_controlled_state = {
+				create_unit = {
+				    division = "division_template =\"Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    count = 1
+				}
+            }
+        }
+    }
+
+
+
+    focus = {
+        id = CEC_cooperation_with_pom
+        icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+        x = 15
+        y = 3
+        cost = 5
+        prerequisite = { focus = CEC_Boost_Arms_production}
+        completion_reward = {
+            add_political_power = 120
+        }
+    }
+
+    focus = {
+        id = CEC_Istria_for_Intervention
+        icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
+        x = 15
+        y = 4
+        cost = 5
+        mutually_exclusive = {
+            focus = CEC_fortify_key_point
+        }
+        prerequisite = { focus = CEC_cooperation_with_pom }
+        completion_reward = {
+	        POM = {
+	            country_event = { id = CEC_event.1 days = 1 }
+	        }			         
+        }
+    }
+
+
+
+
+    focus = {
+        id = CEC_fortify_key_point
+        icon = GFX_SOV_westward_bound_ccp_2d_sov_compatibility
+        x = 13
+        y = 4
+        cost = 5
+        available = {
+            controls_province = 671
+            controls_province = 6723
+            controls_province = 11651
+        }
+        mutually_exclusive = {
+            focus = CEC_Istria_for_Intervention
+        }
+        prerequisite = { focus = CEC_cooperation_with_pom }
+        completion_reward = {
+            4 = {
+				add_building_construction = { 
+					type = bunker level = 5 province = 6723 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 5 province = 11651 instant_build = yes 
+				}
+            }	
+            976 = {
+				add_building_construction = { 
+					type = bunker level = 5 province = 671 instant_build = yes 
+				}                
+            }		
+        }
+    }
+
+    focus = {
+        id = CEC_War_propaganda
+        icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+        x = 17
+        y = 3
+        cost = 5
+        prerequisite = { focus = CEC_recruit_militias }
+        prerequisite = { focus = CEC_reoganise_the_army}
+        completion_reward = {
+            add_ideas = CEC_war_propaganda_ideas
+        }
+    }
+
+
+    focus = {
+        id = CEC_DeSptartanisation
+        icon = GFX_focus_generic_communism_anti_fascism
+        x = 17
+        y = 5
+        cost = 5
+        available = {
+            NOT = {
+                has_war_with = SPT
+            }
+        }
+        prerequisite = { focus = CEC_Istria_for_Intervention focus = CEC_fortify_key_point}
+        prerequisite = { focus = CEC_War_propaganda}
+        completion_reward = {
+			add_stability = 0.1
+
+        }
+    }
+ # industry 
+
+
+    focus = {
+        id = CEC_relauch_the_industry 
+        icon = GFX_focus_generic_industry_1
+        x = 13
+        y = 6
+        cost = 10
+        prerequisite = {
+            focus = CEC_DeSptartanisation
+        }
+        completion_reward = {
+            remove_ideas = CEC_week_industry_ideas
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = CEC_improve_railway_network
+        icon = GFX_focus_generic_railroad
+        x = 11
+        y = 7
+        cost = 10
+        available = {
+            controls_state = 4
+            controls_state = 152
+            controls_state = 52
+            controls_state = 50
+            controls_state = 978
+        }
+        prerequisite = { focus = CEC_relauch_the_industry  }
+        completion_reward = {
+			4 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			152 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			52 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1062 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			50 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			978 = {		
+                add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+
+    focus = {
+        id = CEC_priorise_the_reconstruction
+        icon = GFX_SOV_infrastructure_effort_nsb_ccp_2d_sov_compatibility
+        x = 13
+        y = 7
+        cost = 10
+        prerequisite = {
+                focus = CEC_relauch_the_industry 
+        }
+        completion_reward = {
+            add_timed_idea = {
+                add_idea = CEC_Reconstruction_priority_ideas
+                days = 360
+            }
+        }
+    }
+
+    focus = {
+        id = CEC_industrial_collectivization
+        icon = GFX_focus_generic_communist_industry
+        x = 11
+        y = 8
+        cost = 5
+        prerequisite = { focus = CEC_priorise_the_reconstruction}
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+}

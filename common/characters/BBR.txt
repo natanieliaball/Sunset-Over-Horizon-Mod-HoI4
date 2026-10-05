@@ -1,0 +1,54 @@
+characters = {
+    BBR_BarbarossaC = {
+        name="Hayreddin Barbarossa"
+        portraits={
+            civilian={
+                large="GFX_BarbarossaC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    BBR_BarbarossaD = {
+        name="Milind Barbarossa"
+        portraits={
+            civilian={
+                large="GFX_BarbarossaD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+    BBR_BarbarossaF = {
+        name="Hermann Barbarossa"
+        portraits={
+            civilian={
+                large="GFX_BarbarossaF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+    BBR_BarbarossaN = {
+        name="Frideric I Barbarossa"
+        portraits={
+            civilian={
+                large="GFX_BarbarossaN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

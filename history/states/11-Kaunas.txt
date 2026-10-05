@@ -1,0 +1,28 @@
+
+state={
+	id=11
+	name="STATE_11"
+
+	history = {
+		owner = KPA
+		add_core_of = KPA
+		add_claim_by = ARO
+		victory_points = {
+			6296 5
+		}
+
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}		
+	}
+
+	provinces={
+		327 6296 9404 
+	}
+
+	local_supplies=10.0 
+	manpower=971940
+	buildings_max_level_factor=1.000
+	state_category=town
+}

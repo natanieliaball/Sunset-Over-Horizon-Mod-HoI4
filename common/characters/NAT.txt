@@ -1,0 +1,80 @@
+characters = {
+    NAT_NatanieliaD = {
+        name="Nataniel Szałowski "
+        portraits={
+            civilian={
+                large="GFX_NatanieliaD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    NAT_NatanieliaC = {
+        name="Towarzysz Natanielia"
+        portraits={
+            civilian={
+                large="GFX_NatanieliaC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    NAT_NatanieliaSSR = {
+        name="Towarzysz Natanielia"
+        portraits={
+            civilian={
+                large="GFX_NatanieliaSSR"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+       NAT_NatanieliaF = {
+        name="Scoutmaster Nate"
+        portraits={
+            civilian={
+                large="GFX_NatanieliaF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+         NAT_NatanieliaN = {
+        name="King Nathe I"
+        portraits={
+            civilian={
+                large="GFX_NatanieliaN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+        NAT_NathanNGC = {
+        name="Nathan Von Schalov"
+        portraits={
+            civilian={
+                large="GFX_NathanNGC"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

@@ -1,0 +1,54 @@
+characters = {
+    USR_UrsulaN = {
+        name="Ursula I"
+        portraits={
+            civilian={
+                large="GFX_UrsulaN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+    USR_VildmarkD = {
+        name="Yrsa Vildmark"
+        portraits={
+            civilian={
+                large="GFX_VildmarkD"
+            }
+        }
+        country_leader={
+            ideology=liberalism
+            expire=""
+			id = -1
+        }
+    }
+    USR_jarnbladC = {
+        name="Rosa Jårnblad"
+        portraits={
+            civilian={
+                large="GFX_JarnbladC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+    USR_LindstromF = {
+        name="Sandra Lindström"
+        portraits={
+            civilian={
+                large="GFX_LindstromF"
+            }
+        }
+        country_leader={
+            ideology=falangism
+            expire=""
+			id = -1
+        }
+    }
+}

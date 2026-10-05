@@ -1,0 +1,67 @@
+characters = {
+    AUR_AuriN = {
+        name="Auri I"
+        portraits={
+            civilian={
+                large="GFX_AuriN"
+            }
+        }
+        country_leader={
+            ideology=Monarchism
+            expire=""
+			id = -1
+        }
+    }
+    AUR_AuronF = {
+        name="Auron Sladijev"
+        portraits={
+            civilian={
+                large="GFX_AuronF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+    AUR_NaruanC = {
+        name="Naruan Somradi"
+        portraits={
+            civilian={
+                large="GFX_NaruanC"
+            }
+        }
+        country_leader={
+            ideology=Animalism
+            expire=""
+			id = -1
+        }
+    }
+    AUR_AurinasD = {
+        name="Aurinas Poslanic"
+        portraits={
+            civilian={
+                large="GFX_AurinasD"
+            }
+        }
+        country_leader={
+            ideology=liberalism
+            expire=""
+			id = -1
+        }
+    }
+    AUR_HalickaSSR = {
+        name="Aurelia Halicka"
+        portraits={
+            civilian={
+                large="GFX_HalickaSSR"
+            }
+        }
+        country_leader={
+            ideology=Animalism
+            expire=""
+			id = -1
+        }
+    }
+}

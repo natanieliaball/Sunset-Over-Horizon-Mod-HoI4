@@ -1,0 +1,2429 @@
+focus_tree = {
+
+	id = Detektiv
+
+	continuous_focus_position = { x = 0 y = 2500 }
+
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = DET
+		}
+	}
+# first patch
+    focus = {
+		
+		id = DET_the_Berserker_Playground
+		icon = GFX_SOV_desperate_measures_ccp_2d_sov_compatibility
+		x = 5
+		y = 0
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {}
+
+		completion_reward = {
+            add_stability = 0.05
+		}
+    }
+    focus = {
+		
+		id = DET_A_Benevolant_Dictatorship
+		icon = GFX_focus_generic_military_dictatorship
+		x = 3
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_the_Berserker_Playground}
+
+		completion_reward = {
+            add_political_power = 150
+		}
+    }
+
+    focus = {
+		
+		id = DET_Industrialization_of_the_South
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		x = 5
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_the_Berserker_Playground}
+
+		completion_reward = {
+			32 = {			
+				random_owned_controlled_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}	
+			32 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			735 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Keep_Vendee_under_our_Control
+		icon = GFX_SOV_fascist_youth_union_ccp_2d_sov_compatibility
+		x = 7
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_the_Berserker_Playground}
+
+		completion_reward = {
+			VND = {
+				add_stability = 0.05
+
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Third_Detektivite_Congres
+		icon = GFX_focus_AFG_parliamentary_democracy
+		x = 5
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_A_Benevolant_Dictatorship}
+		prerequisite = { focus = DET_Industrialization_of_the_South}
+		prerequisite = { focus = DET_Keep_Vendee_under_our_Control}
+				
+		completion_reward = {
+			country_event = { id = DET_event.1 days = 1 }
+		}
+    }
+##### kingdom
+
+    focus = {
+		
+		id = DET_The_Kingdom_Persists
+		icon = GFX_focus_RAJ_kingmaker
+		x = 5
+		y = 3
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Leftward_Turn }
+		mutually_exclusive = {focus = DET_For_Democracy }
+		prerequisite = { focus = DET_Third_Detektivite_Congres}
+				
+		completion_reward = {
+        	add_popularity = {
+            	ideology = neutrality
+            	popularity = 0.1
+        	}
+		}
+    }	
+
+    focus = {
+		
+		id = DET_Promote_Scientific_Breakthroughs
+		icon = GFX_goal_generic_scientific_exchange
+		x = 3
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_The_Kingdom_Persists}
+				
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+    }
+    focus = {
+		
+		id = DET_Military_Investments
+		icon = GFX_focus_generic_industry_investment
+		x = 3
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Promote_Scientific_Breakthroughs}
+				
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+    }
+	
+    focus = {
+		
+		id = DET_Protect_the_Nation
+		icon = GFX_SOV_improve_the_stalin_line_ccp_2d_sov_compatibility
+		x = 3
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Military_Investments}
+				
+		completion_reward = {
+			add_ideas = DET_Protect_the_Nation
+		}
+    }
+
+    focus = {
+		
+		id = DET_Mass_Industrialisation
+		icon = GFX_SOV_move_industry_to_the_urals_ccp_2d_sov_compatibility
+		x = 7
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_The_Kingdom_Persists}
+				
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Grant_Workers_Consessions
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 7
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Mass_Industrialisation}
+				
+		completion_reward = {
+			add_ideas = DET_Grant_Workers_Consessions
+		}
+    }
+
+    focus = {
+		
+		id = DET_Electrification_of_the_Countryside
+		icon = GFX_focus_generic_electrification
+		x = 7
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Grant_Workers_Consessions}
+				
+		completion_reward = {
+			add_stability = 0.02
+			26 = {			
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			33 = {	
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			25 = {			
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Maintain_the_Status_Quo
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 5
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Electrification_of_the_Countryside}
+		prerequisite = { focus = DET_Protect_the_Nation}				
+		completion_reward = {
+			add_political_power = 150
+		}
+    }
+
+    focus = {
+		
+		id = DET_The_Futurist_Light_Remains
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x = 5
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Maintain_the_Status_Quo }			
+		completion_reward = {
+			add_political_power = 150
+			swap_ideas = {
+    			remove_idea = DET_Light_of_Technocracy
+    			add_idea = DET_Light_of_Technocracy_2
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Support_from_the_Scientists
+		icon = GFX_focus_PRC_reestablish_moscow_sun_yat_sen_university
+		x = 6
+		y = 9
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_The_Futurist_Light_Remains }			
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Keep_the_Workers_Happy
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
+		x = 6
+		y = 10
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Support_from_the_Scientists }			
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -200
+		}
+    }
+
+    focus = {
+		
+		id = DET_Kickstart_Industrial_Investments
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		x = 6
+		y = 11
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Keep_the_Workers_Happy}			
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+    }
+
+    focus = {
+		
+		id = DET_Promote_Class_Collaboration
+		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
+		x = 6
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Kickstart_Industrial_Investments}			
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		add_stability = 0.025
+		}
+    }
+
+    focus = {
+		
+		id = DET_Destroy_Elitism
+		icon = GFX_focus_CHI_connections_with_shanghai_elites
+		x = 4
+		y = 13
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Promote_Class_Collaboration}			
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_Light_of_Technocracy_2
+    			add_idea = DET_Light_of_Technocracy_3
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Begin_Military_Build_up
+		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		x = 6
+		y = 14
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Destroy_Elitism}			
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	
+    focus = {
+		
+		id = DET_Reform_the_Constitution
+		icon = GFX_focus_PER_constitutional_monarchy
+		x = 3
+		y = 9
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_The_Futurist_Light_Remains }			
+		completion_reward = {
+			add_political_power = 50
+		}
+    }
+
+    focus = {
+		
+		id = DET_Establish_Party_Democracy
+		icon = GFX_SOV_return_democracy_to_the_party_ccp_2d_sov_compatibility
+		x = 2
+		y = 10
+		cost = 5
+
+		mutually_exclusive = { focus = DET_A_Controlled_Opposition }
+		prerequisite = { focus = DET_Reform_the_Constitution }			
+		completion_reward = {
+		set_politics = {
+   	 			ruling_party = neutrality
+    			elections_allowed = yes
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Worker_Orientated_Economy
+		icon = GFX_SOV_the_workers_dictatorship_ccp_2d_sov_compatibility
+		x = 2
+		y = 11
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Maintain_Technonomics}
+		prerequisite = { focus = DET_Establish_Party_Democracy focus = DET_A_Controlled_Opposition }			
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_Grant_Workers_Consessions
+    			add_idea = DET_Grant_Workers_Consessions_2 
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Improve_Research
+		icon = GFX_focus_NORDIC_com_research
+		x = 2
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Worker_Orientated_Economy focus =  DET_Maintain_Technonomics}			
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = electronics
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_A_Controlled_Opposition
+		icon = GFX_focus_ARG_keep_it_in_the_party
+		x = 4
+		y = 10
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Establish_Party_Democracy}
+		prerequisite = { focus = DET_Reform_the_Constitution }			
+		completion_reward = {
+        	add_popularity = {
+            	ideology = communism
+            	popularity = -0.05
+        	}
+        	add_popularity = {
+            	ideology = fascism
+            	popularity = -0.05
+        	}
+        	add_popularity = {
+            	ideology = democratic
+            	popularity = -0.05
+        	}
+			stability_factor = -0.5
+		}
+    }	
+
+    focus = {
+		
+		id = DET_Maintain_Technonomics
+		icon = GFX_focus_ARG_fascist_researchers
+		x = 4
+		y = 11
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Worker_Orientated_Economy}
+		prerequisite = { focus = DET_Establish_Party_Democracy focus = DET_A_Controlled_Opposition  }			
+		completion_reward = {
+			add_ideas = DET_Maintain_Technonomics
+		}
+    }
+    focus = {
+		
+		id = DET_Open_up_the_Stockpiles
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 4
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Worker_Orientated_Economy focus =  DET_Maintain_Technonomics}			
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = 2000
+		    	producer = DET
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Lower_Taxes
+		icon = GFX_focus_RAJ_war_taxes
+		x = 3
+		y = 14
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Open_up_the_Stockpiles focus = DET_Improve_Research }
+		prerequisite = { focus = DET_Destroy_Elitism }			
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_Light_of_Technocracy_3
+    			add_idea = DET_Light_of_Technocracy_4
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Better_Industrial_Capacities
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 14
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Open_up_the_Stockpiles focus = DET_Improve_Research }
+		prerequisite = {  }			
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Improve_the_University_of_Lyon
+		icon = GFX_focus_generic_university_1
+		x = 2
+		y = 15
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Lower_Taxes }
+		prerequisite = { focus = DET_Better_Industrial_Capacities }			
+		completion_reward = {
+			add_research_slot = 1
+		}
+    }
+
+    focus = {
+		
+		id = DET_A_Truly_United_Country
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+		x = 4
+		y = 15
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Lower_Taxes }
+		prerequisite = { focus = DET_Better_Industrial_Capacities }		
+		prerequisite = { focus = DET_Destroy_Elitism }	
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 250
+		}
+    }
+    focus = {
+		
+		id = DET_Monarcho_Futurism_for_another_1000_Years
+		icon = GFX_focus_GER_monarchy_compromise
+		x = 3
+		y = 16
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = { focus = DET_Improve_the_University_of_Lyon }
+		prerequisite = { focus = DET_A_Truly_United_Country }			
+		completion_reward = {
+			add_ideas = DET_Monarcho_Futurism_for_another_1000_years
+			add_political_power = 100
+		}
+    }
+
+##### Industry 
+    focus = {
+		
+		id = DET_Fix_the_Economy
+		icon = GFX_focus_AFG_a_modern_economy
+		x = 16
+		y = 0
+		cost = 10
+
+		mutually_exclusive = {}
+		prerequisite = {}
+				
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_A_Dysfunctional_Economy
+    			add_idea = DET_A_Dysfunctional_Economy_2
+			} 
+		}
+    }
+
+    focus = {
+		
+		id = DET_Four_Year_Plan
+		icon = GFX_SOV_third_five_year_plan_ccp_2d_sov_compatibility
+		x = 16
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Fix_the_Economy}
+				
+		completion_reward = {
+			add_timed_idea = {
+    			idea = DET_Four_Year_Plan
+    		month = 48
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Rhone_Valley_Industrialisation
+		icon = GFX_SOV_steel_casting_industry_ccp_2d_sov_compatibility
+		x = 14
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Four_Year_Plan}
+				
+		completion_reward = {
+			20 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Reinforce_the_North
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = 16
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Four_Year_Plan}
+				
+		completion_reward = {
+            27 = { 
+				add_building_construction = { 
+					type = bunker level = 2 province = 817 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 2 province = 3652 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 2 province = 680 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 2 province = 3669 instant_build = yes 
+				} 
+				add_building_construction = { 
+					type = bunker level = 2 province = 3506 instant_build = yes 
+				}
+			}
+            24 = { 
+				add_building_construction = { 
+					type = bunker level = 2 province = 6518 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 2 province = 512 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 2 province = 6533 instant_build = yes 
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Upgrade_The_Marseille_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 18
+		y = 2
+		cost = 5
+		available = {
+			controls_state = 21
+		}
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Four_Year_Plan}
+				
+		completion_reward = {
+            21 = { 
+				add_building_construction = { 
+					type = dockyard 
+					level = 1
+					instant_build = yes 
+				}	
+				add_building_construction = { 
+					type = naval_base 
+					level = 2 
+					province = 11834
+					instant_build = yes 
+				}
+			}		
+		}
+    }
+
+    focus = {
+		
+		id = DET_Improve_Toulon_Port
+		icon = GFX_SOV_naval_infantry_ccp_2d_sov_compatibility
+		x = 19
+		y = 3
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Upgrade_The_Marseille_Port}
+				
+		completion_reward = {
+			851 = {
+				add_building_construction = { 
+					type = naval_base
+					level = 5 
+					province = 911
+					instant_build = yes 
+				}
+			}
+		}
+    }
+    focus = {
+		
+		id = DET_reincorporated_the_Provencal_territories
+		icon = GFX_goal_generic_improve_relations
+		x = 19
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Improve_Toulon_Port}
+		available = {
+			21 = {compliance > 25}
+			851 = {compliance > 25}
+			1060 = {compliance > 25}
+		}	
+		completion_reward = {
+			21 = { add_core_of = DET }
+			851 = { add_core_of = DET }
+			1060 = { add_core_of = DET }
+		}
+    }	
+    focus = {
+		
+		id = DET_Connect_the_Lands
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+		x = 13
+		y = 3
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Rhone_Valley_Industrialisation}
+				
+		completion_reward = {
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+						add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Research_Investments
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		x = 13
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Connect_the_Lands}
+				
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Invest_in_Production_Tech
+		icon = GFX_focus_generic_industry_investment
+		x = 13
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Research_Investments}
+				
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Connect_Toulon_and_La_Rochelle
+		icon = GFX_focus_generic_railroad
+		x = 11
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Connect_the_Lands}
+		available = {
+			controls_state = 21
+			controls_state = 22
+			controls_state = 851
+		}
+		completion_reward = {
+			build_railway = {		
+				path = { 911 11834 958 11713 762}
+				level = 4
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Research_Subsidies
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 11
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Research_Investments}
+				
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Lyon_University
+		icon = GFX_focus_PRC_reestablish_moscow_sun_yat_sen_university
+		x = 11
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Research_Subsidies}
+				
+		completion_reward = {
+			add_research_slot = 1
+		}
+    }
+
+    focus = {
+		
+		id = DET_Savoy_Military_Complex
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		x = 15
+		y = 3
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Rhone_Valley_Industrialisation focus = DET_Reinforce_the_North}
+		available = {
+			controls_state = 735
+		}		
+		completion_reward = {
+			735 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Civillian_Investments
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		x = 15
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Savoy_Military_Complex}
+				
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+    }
+
+    focus = {
+		
+		id = DET_Support_Small_Businesses
+		icon = GFX_SOV_call_for_aid_ccp_2d_sov_compatibility
+		x = 15
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Civillian_Investments}
+				
+		completion_reward = {
+			add_stability = 0.05
+			add_offsite_building = { type = industrial_complex level = 2 }
+
+		}
+    }
+
+    focus = {
+		
+		id = DET_East_West_Railway
+		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
+		x = 17
+		y = 3
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Rhone_Valley_Industrialisation focus = DET_Reinforce_the_North}
+		available = {
+			controls_state = 735
+			controls_state = 32
+			controls_state = 20
+			controls_state = 26
+			controls_state = 33
+			controls_state = 24
+		}		
+		completion_reward = {
+			build_railway = {		
+				path = { 778 735 6784 3589 6613 11593 2594 9607 6644 6651 651 669 3671}
+				level = 1
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Support_the_Farmers
+		icon = GFX_focus_DEN_schleswigian_farmers
+		x = 17
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_East_West_Railway}
+				
+		completion_reward = {
+			add_stability = 0.025
+
+		}
+    }
+
+    focus = {
+		
+		id = DET_Jobs_for_All
+		icon = GFX_focus_generic_industrial_experts
+		x = 17
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Support_the_Farmers}
+				
+		completion_reward = {
+			add_ideas = DET_No_unemployment
+		}
+    }
+
+    focus = {
+		
+		id = DET_New_Detektivite_Economy
+		icon = GFX_focus_generic_economic_recovery
+		x = 16
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Support_Small_Businesses}
+		prerequisite = {focus = DET_Jobs_for_All}
+
+		completion_reward = {
+			remove_ideas = DET_A_Dysfunctional_Economy_2
+		}
+    }
+
+    focus = {
+		
+		id = DET_Expand_Occitan_Mines
+		icon = GFX_focus_generic_mineral_prospecting
+		x = 18
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_New_Detektivite_Economy}
+		available = {
+			controls_state = 1050
+		}
+		completion_reward = {
+			1050 = {
+				add_resource = {
+    			type = steel
+    			amount = 20
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Expand_Provencal_Mines
+		icon = GFX_focus_generic_coal_mining
+		x = 18
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Expand_Occitan_Mines}
+		available = {
+			controls_state = 1060
+			controls_state = 21
+		}
+		completion_reward = {
+			1060 = {
+				add_resource = {
+    			type = steel
+    			amount = 15
+				}
+			}
+			21= {
+				add_resource = {
+    			type = coal
+    			amount = 5
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Invest_in_Occitan_Winery
+		icon = GFX_focus_generic_farmland
+		x = 16
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_New_Detektivite_Economy}
+		available = {
+			controls_state = 19
+		}	
+		completion_reward = {
+			19 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+
+		}
+    }
+
+    focus = {
+		
+		id = DET_Breton_Wool_Industry
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
+		x = 16
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Invest_in_Occitan_Winery}
+		available = {
+			controls_state = 14
+		}				
+		completion_reward = {
+			14 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Promote_Autarky
+		icon = GFX_focus_GER_autarky_ambitions
+		x = 15
+		y = 9
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Free_Market_Economy}
+		prerequisite = {focus = DET_Breton_Wool_Industry}
+				
+		completion_reward = {
+			add_ideas = autarkic_economy
+		}
+    }
+
+    focus = {
+		
+		id = DET_Free_Market_Economy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 17
+		y = 9
+		cost = 5
+
+		mutually_exclusive = { focus = DET_Promote_Autarky}
+		prerequisite = {focus = DET_Breton_Wool_Industry}
+				
+		completion_reward = {
+			add_ideas = free_trade 
+		}
+    }
+
+    focus = {
+		
+		id = DET_Defense_of_Nice
+		icon = GFX_focus_PRC_anti_air_effort
+		x = 14
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_New_Detektivite_Economy}
+				
+		completion_reward = {
+			1060 = {
+				add_building_construction = { 
+					type = bunker level = 5 province = 9909 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 4 province = 3959 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 4 province = 6975 instant_build = yes
+				}
+				add_building_construction = { 
+					type = bunker level = 1 province = 3764 instant_build = yes }
+				add_building_construction = { 
+					type = anti_air_building level = 3 instant_build = yes
+				}				
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Alpine_Fortress
+		icon = GFX_SOV_improve_the_stalin_line_ccp_2d_sov_compatibility
+		x = 14
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Defense_of_Nice}
+				
+		completion_reward = {
+			735 = {
+				add_building_construction = { 
+					type = bunker level = 5 province = 9603 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 5 province = 778 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 5 province = 9745 instant_build = yes 
+				}
+				add_building_construction = { 
+					type = bunker level = 5 province = 764 instant_build = yes 
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Vendee_Fishing_Business
+		icon = GFX_focus_PHI_rally_the_fisherfolk
+		x = 12
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_New_Detektivite_Economy}
+		available = {
+
+			or = {
+				VND = {
+					controls_state = 23
+				}
+				DET = {
+					controls_state = 23
+				}
+				
+
+			}
+		}
+		completion_reward = {
+			23 = {
+				add_building_construction = { 
+					type = naval_base
+					level = 3 
+					province = 6657
+					instant_build = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_New_Toulon
+		icon = GFX_focus_JAP_the_five_great_cities
+		x = 12
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Vendee_Fishing_Business}
+		available = {
+			controls_state = 851
+		}
+		completion_reward = {
+			851 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}				
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Repurpose_Abandonned_Buildings
+		icon = GFX_SOV_committee_in_exile_ccp_2d_sov_compatibility
+		x = 10
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Vendee_Fishing_Business}
+				
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+    }
+### Army
+    focus = {
+		
+		id = DET_Reform_the_Military
+		icon = GFX_focus_CZE_army_reform
+		x = 25
+		y = 0
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {}
+				
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_Annoying_Old_Guard
+    			add_idea = DET_Annoying_Old_Guard_2
+			} 
+		}
+    }
+
+    focus = {
+		
+		id = DET_Open_New_Stockpiles
+		icon = GFX_focus_generic_stockpile_fuel
+		x = 25
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military}
+				
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = 2500
+		    	producer = DET
+			}
+		}
+    }
+
+    focus = {
+		
+		id = DET_Form_new_Brigades
+		icon = GFX_focus_NORDIC_dem_army
+		x = 23
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military}
+				
+		completion_reward = {
+            20 = {
+				create_unit = {
+				    division = "division_template =\"Infantry Division\" start_experience_factor = 0.2 start_equipment_factor = 0.9"
+				    owner = ROOT
+				    count = 5
+				}
+            } 
+		}
+    }
+
+    focus = {
+		
+		id = DET_Study_Foreign_Technology
+		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
+		x = 27
+		y = 1
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military}
+				
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Kickstart_Remilitarisation 
+		icon = GFX_focus_PRC_arms_recovery_efforts
+		x = 25
+		y = 2
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Open_New_Stockpiles  }
+		prerequisite = {focus = DET_Form_new_Brigades}	
+		prerequisite = {focus =DET_Study_Foreign_Technology}	
+		completion_reward = {
+			add_timed_idea = {
+				idea = DET_Start_of_the_remilitarisation
+				day = 365
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Land_Force_Reforms
+		icon = GFX_focus_PRC_arms_recovery_efforts
+		x = 25
+		y = 4
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Kickstart_Remilitarisation   }	
+		completion_reward = {
+			army_experience = 25			
+		}
+    }
+    focus = {
+		
+		id = DET_Reform_the_Military_Corps
+		icon = GFX_focus_CZE_army_reform
+		x = 25
+		y = 5
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Land_Force_Reforms   }	
+		completion_reward = {
+			remove_ideas = DET_Annoying_Old_Guard_2 			
+		}
+    }
+
+	focus = {
+		
+		id = DET_Increase_Spy_Research
+		icon = GFX_focus_generic_secret_service_agency
+		x = 28
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military_Corps }	
+		completion_reward = {
+			add_ideas = Det_spy_agency 
+		}
+    }
+	focus = {
+		
+		id = DET_Moutaineer_Corps
+		icon = GFX_focus_generic_mountain_troops
+		x = 30
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military_Corps }	
+		completion_reward = {
+			add_tech_bonus = {
+				name = mountaineers_bonus
+				bonus = 2
+				uses = 2
+				category = mountaineers_tech
+			}
+		}
+    }
+
+	focus = {
+		
+		id = DET_Support_Equipment_Research
+		icon = GFX_focus_PRC_equipment_from_copper_coins
+		x = 29
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Increase_Spy_Research }
+		prerequisite = {focus = DET_Moutaineer_Corps }
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = 	infantry_tech
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_Field_Hospitals
+		icon = GFX_focus_NORDIC_com_materiel
+		x = 28
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Support_Equipment_Research }
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 0.5
+				uses = 3
+				category = support_tech
+			}
+		}
+    }	
+
+	focus = {
+		
+		id = DET_Savoyard_Redoubt
+		icon = GFX_SOV_industrial_modernization_ccp_2d_sov_compatibility
+		x = 30
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Support_Equipment_Research }
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}			
+		}
+    }
+
+	focus = {
+		
+		id = DET_Artillery_Improvements
+		icon = GFX_SOV_soviet_artillery_ccp_2d_sov_compatibility
+		x = 29
+		y = 9
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Field_Hospitals }
+		prerequisite = {focus = DET_Savoyard_Redoubt }
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}			
+		}
+    }
+
+    focus = {
+		
+		id = DET_Traditional_Fighting
+		icon = GFX_focus_FIN_parmis_devils
+		x = 24
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {focus = DET_New_Methods}
+		prerequisite = {focus = DET_Reform_the_Military_Corps   }	
+		completion_reward = {
+			add_ideas = DET_Traditional_Fighting_idea
+		}
+    }
+
+    focus = {
+		
+		id = DET_Infantry_Investments
+		icon = GFX_focus_CZE_build_infantry
+		x = 24
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Traditional_Fighting }	
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.2
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+    }
+
+	    focus = {
+		
+		id = DET_National_Infantry_Program
+		icon = GFX_SOV_intensify_pilot_training_program_ccp_2d_sov_compatibility
+		x = 24
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Infantry_Investments }	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = 3500
+		    	producer = DET
+			}
+		}
+    }
+    focus = {
+		
+		id = DET_New_Methods
+		icon = GFX_SOV_an_adaptable_army_ccp_2d_sov_compatibility
+		x = 26
+		y = 6
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Traditional_Fighting}
+		prerequisite = {focus = DET_Reform_the_Military_Corps   }	
+		completion_reward = {
+			add_ideas = DET_New_Methods_idea
+		}
+    }
+    focus = {
+		
+		id = DET_Invest_in_Tanks
+		icon = GFX_goal_generic_army_tanks
+		x = 26
+		y = 7
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_New_Methods   }	
+		completion_reward = {
+			add_tech_bonus = {
+				name = Tank_Bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_medium_armor
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_Motorize_the_Army
+		icon = GFX_focus_generic_heavy_tank
+		x = 26
+		y = 8
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Invest_in_Tanks }	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = medium_tank_equipment_1
+			    amount = 100
+		    	producer = DET
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_A_Modern_Military
+		icon = GFX_focus_PRC_army_command
+		x = 25
+		y = 9
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Motorize_the_Army focus = DET_National_Infantry_Program }	
+		completion_reward = {
+			add_ideas = DET_Modern_Military_idea
+		}
+    }
+
+	focus = {
+		
+		id = DET_Military_Investment_I
+		icon = GFX_focus_generic_modernize_industry
+		x = 21
+		y = 6
+		cost = 2.5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Reform_the_Military_Corps }	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_Military_Investment_II
+		icon = GFX_focus_generic_reorient_production
+		x = 21
+		y = 7
+		cost = 2.5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Military_Investment_I }	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_Military_Investment_III
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 21
+		y = 8
+		cost = 2.5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Military_Investment_II }	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	focus = {
+		
+		id = DET_Military_Investment_IV
+		icon = GFX_focus_generic_military_industry
+		x = 21
+		y = 9
+		cost = 2.5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Military_Investment_III }	
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+#### Expension
+	focus = {
+		
+		id = DET_reunite_Gaul
+		icon = GFX_focus_focus_fra_border
+		x = 12
+		y = 10
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {}	
+		available = {
+			date > 1937.12.30
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_state_claim = 1053
+			add_state_claim = 1053
+			add_state_claim = 22
+			add_state_claim = 31
+			add_state_claim = 1049
+			add_state_claim = 1052
+			add_state_claim = 1051
+			add_state_claim = 31
+			add_state_claim = 1050
+			add_state_claim = 86
+			add_state_claim = 19
+			add_state_claim = 23
+			add_state_claim = 30
+			add_state_claim = 14
+			add_state_claim = 16
+			add_state_claim = 15
+			add_state_claim = 1054
+			add_state_claim = 785
+			add_state_claim = 29
+			add_state_claim = 6
+			add_state_claim = 34
+			add_state_claim = 51
+			add_state_claim = 35
+			add_state_claim = 977
+		}
+    }
+	focus = {
+		
+		id = DET_Focus_on_the_South
+		icon = GFX_SOV_experts_in_camouflage_ccp_2d_sov_compatibility
+		x = 12
+		y = 11
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_reunite_Gaul}	
+		available = {}
+		completion_reward = {
+			add_political_power = 150
+		}
+    }
+	focus = {
+		id = DET_Fully_Integrate_the_Vendee_Protectorate
+		icon = GFX_focus_generic_subjugation
+		x = 9
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Focus_on_the_South }	
+		available = {}
+		will_lead_to_war_with = VND
+		completion_reward = {
+			23 = { add_state_core = DET }
+			annex_country = {
+    			target = VND
+   				transfer_troops = yes
+			}
+		}
+    }
+	focus = {
+		id = DET_Subjugate_the_Occitan_Nation
+		icon = GFX_SOV_lessons_of_war_ccp_2d_sov_compatibility
+		x = 11
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Focus_on_the_South }	
+		available = {}
+		will_lead_to_war_with = MPL
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = MPL
+			}	
+		}
+    }
+	focus = {
+		id = DET_Deal_with_Aquitaine
+		icon = GFX_SOV_war_measures_in_the_east_ccp_2d_sov_compatibility
+		x = 13
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Focus_on_the_South }	
+		available = {}
+		will_lead_to_war_with = AQU
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = AQU
+			}	
+		}
+    }
+	focus = {
+		id =  DET_Buy_Septimania
+		icon = GFX_focus_generic_monetary_union
+		x = 15
+		y = 12
+		cost = 5
+
+		mutually_exclusive = {}
+		prerequisite = {focus = DET_Focus_on_the_South }	
+		available = {}
+		
+		completion_reward = {
+			1049 = { add_core_of = DET }
+            every_country = {
+                limit = {
+                    controls_state = 1049
+                }
+                country_event = { id = DET_event.2 days = 3 }
+            }
+		}
+    }
+	focus = {
+		id = DET_Deal_with_the_Bretons
+		icon = GFX_SOV_the_last_break_southward_ccp_2d_sov_compatibility
+		x = 11
+		y = 13
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Offer_Autonomy}
+		prerequisite = {focus = DET_Fully_Integrate_the_Vendee_Protectorate }	
+		prerequisite = {focus = DET_Subjugate_the_Occitan_Nation }	
+		prerequisite = {focus = DET_Deal_with_Aquitaine }	
+		prerequisite = {focus = DET_Buy_Septimania }	
+		available = {}
+		will_lead_to_war_with = BRI
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = BRI
+			}	
+		}
+    }
+	focus = {
+		id = DET_Offer_Autonomy
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+		x = 13
+		y = 13
+		cost = 5
+
+		mutually_exclusive = {focus = DET_Deal_with_the_Bretons}
+		prerequisite = {focus = DET_Fully_Integrate_the_Vendee_Protectorate }	
+		prerequisite = {focus = DET_Subjugate_the_Occitan_Nation }	
+		prerequisite = {focus = DET_Deal_with_Aquitaine }	
+		prerequisite = {focus = DET_Buy_Septimania }	
+		available = {}
+		will_lead_to_war_with = BRI
+		completion_reward = {
+            BRI = {
+                country_event = { id = DET_event.3 days = 3 }
+            }
+		}
+    }
+	focus = {
+		id = DET_To_The_Seine
+		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+		x = 12
+		y = 14
+		cost = 5
+
+		prerequisite = {focus = DET_Deal_with_the_Bretons focus = DET_Offer_Autonomy}	
+
+		available = {}
+		will_lead_to_war_with = ATL
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ATL
+			}
+		}
+    }
+	focus = {
+		id = DET_Gaul_Reunite
+		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility
+		x = 12
+		y = 15
+		cost = 5
+		available = {
+			controls_state = 735
+			controls_state = 1060
+			controls_state = 851
+			controls_state = 21
+			controls_state = 32
+			controls_state = 1053
+			controls_state = 1049
+			controls_state = 22
+			controls_state = 31
+			controls_state = 1052
+			controls_state = 1051
+			controls_state = 1050
+			controls_state = 19
+			controls_state = 806
+			controls_state = 23
+			controls_state = 30
+			controls_state = 14
+			controls_state = 1054
+			controls_state = 15
+			controls_state = 16
+			controls_state = 785
+			
+		}
+		prerequisite = {focus = DET_To_The_Seine }	
+
+		available = {}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 120
+		}
+    }
+	focus = {
+		id = DET_RECLAIM_OUR_HOMELAND
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
+		x = 12
+		y = 16
+		cost = 5
+
+		prerequisite = {focus = DET_Gaul_Reunite }	
+		will_lead_to_war_with = LOR
+		available = {}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = LOR
+			}
+		}
+    }
+
+	focus = {
+		id = DET_The_Francian_Revival_Idea
+		icon = GFX_focus_focus_fra_national_resistance_council
+		x = 12
+		y = 17
+		cost = 5
+
+		prerequisite = {focus = DET_RECLAIM_OUR_HOMELAND }	
+		available = {}
+		completion_reward = {
+			add_state_claim = 42
+			add_state_claim = 8
+			add_state_claim = 980
+			add_state_claim = 29
+			add_state_claim = 6
+			add_state_claim = 34
+			add_state_claim = 977
+			add_state_claim = 35
+			add_state_claim = 51
+			add_state_claim = 1056
+			add_state_claim = 7 
+			add_state_claim = 36
+			add_state_claim = 57
+			add_state_claim = 56
+
+		}
+    }
+	focus = {
+		id = DET_Batavian_Reunion
+		icon = GFX_SOV_war_measures_in_the_east_ccp_2d_sov_compatibility
+		x = 12
+		y = 18
+		cost = 5
+
+		prerequisite = {focus = DET_The_Francian_Revival_Idea }	
+		will_lead_to_war_with = ABT
+		available = {}
+		completion_reward = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ABT
+			}
+		}
+    }
+	focus = {
+		id = DET_Francian_Core_Restored
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 10
+		y = 19
+		cost = 5
+
+		prerequisite = {focus = DET_Batavian_Reunion }	
+		available = {
+			controls_state = 977
+			controls_state = 35
+			controls_state = 7
+			controls_state = 26
+			controls_state = 51
+			controls_state = 1056
+			controls_state = 57
+			controls_state = 56
+		}
+		completion_reward = {
+			swap_ideas = {
+    			remove_idea = DET_Legacy_of_Frankism
+    			add_idea = DET_Frankism_Vision_Achieved
+			}
+			add_state_core = 977
+			add_state_core = 35
+			add_state_core = 7
+			add_state_core = 26
+			add_state_core = 51
+			add_state_core = 1056
+			add_state_core = 57
+			add_state_core = 56
+			add_state_core = 55
+		}
+    }
+
+	focus = {
+		id = DET_Move_our_Capital
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 20
+		cost = 5
+
+		prerequisite = {focus = DET_Francian_Core_Restored }	
+		available = {
+			controls_state = 28
+		}
+		completion_reward = {
+			set_capital = {
+  				state = 28
+  				remember_old_capital = no
+			}
+		}
+    }
+
+	focus = {
+		id = DET_Promise_Peace
+		icon = GFX_SOV_autonomous_soviet_republics_ccp_2d_sov_compatibility
+		x = 8
+		y = 21
+		cost = 5
+
+		prerequisite = {focus = DET_Move_our_Capital }	
+		available = {
+			DET = {
+				has_war = no
+			}
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+    }
+
+	focus = {
+		id = DET_Reject_Overextension
+		icon = GFX_focus_SOV_the_true_tsars
+		x = 10
+		y = 21
+		cost = 5
+
+		prerequisite = {focus = DET_Move_our_Capital }	
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DET_A_Perfect_Empire
+		}
+    }
+	focus = {
+		id = DET_Found_the_Detektivite_Accords 
+		icon = GFX_SOV_call_for_aid_ccp_2d_sov_compatibility
+		x = 9
+		y = 22
+		cost = 5
+
+		prerequisite = {focus = DET_Promise_Peace focus = DET_Reject_Overextension}	
+		available = {
+		}
+		completion_reward = {
+			set_rule = {
+    			can_create_factions = yes
+			}
+			create_faction = "The Detektivite Accords"
+		}
+    }
+
+	focus = {
+		id = DET_Rebuild_Destroyed_Industries
+		icon = GFX_SOV_rebuild_the_nation_ccp_2d_sov_compatibility
+		x = 12
+		y = 19
+		cost = 5
+
+		prerequisite = {focus = DET_Batavian_Reunion}	
+		available = {
+		}
+		completion_reward = {
+			29 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			35 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			980 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			17 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			7 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+    }
+	focus = {
+		id = DET_Feed_the_Poor
+		icon = GFX_focus_generic_welfare
+		x = 12
+		y = 20
+		cost = 5
+
+		prerequisite = {focus = DET_Rebuild_Destroyed_Industries}	
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+    }
+	focus = {
+		id = DET_The_Frank_Detektivite_Synthesis
+		icon = GFX_focus_generic_industrial_experts
+		x = 12
+		y = 21
+		cost = 5
+
+		prerequisite = {focus = DET_Feed_the_Poor}	
+		available = {
+		}
+		completion_reward = {
+			add_ideas = DET_The_Frank_Detektivite_Synthesis
+		}
+    }
+	focus = {
+		id = DET_A_Stable_Pure_Empire
+		icon = GFX_focus_SWI_establish_pro_helvetia
+		x = 14
+		y = 19
+		cost = 5
+
+		prerequisite = {focus = DET_Batavian_Reunion}	
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+    }
+	focus = {
+		id = DET_Reclaim_the_Marches
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
+		x = 15
+		y = 20
+		cost = 5
+
+		prerequisite = {focus = DET_A_Stable_Pure_Empire}	
+		available = {
+		}
+		completion_reward = {
+
+			add_state_claim = 165
+			add_state_claim = 166
+			add_state_claim = 172
+			add_state_claim = 792
+			add_state_claim = 55
+		}
+    }
+	focus = {
+		id = DET_Catalonian_Ultimatum
+		icon = GFX_focus_PER_modern_cataphract
+		x = 14
+		y = 21
+		cost = 5
+
+		prerequisite = {focus = DET_Reclaim_the_Marches}	
+		available = {
+		}
+		completion_reward = {
+            every_country = {
+                limit = {
+                    controls_state = 165
+                }
+                country_event = { id = DET_event.5 days = 3 }
+            }
+		}
+    }
+	focus = {
+		id = DET_Demand_Basque
+		icon = GFX_SOV_expand_the_red_fleet_ccp_2d_sov_compatibility
+		x = 16
+		y = 21
+		cost = 5
+
+		prerequisite = {focus = DET_Reclaim_the_Marches}	
+		available = {
+		}
+		completion_reward = {
+            every_country = {
+                limit = {
+                    controls_state = 792
+                }
+                country_event = { id = DET_event.4 days = 3 }
+            }
+		}
+    }
+}

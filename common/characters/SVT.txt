@@ -1,0 +1,54 @@
+characters = {
+    SVT_IsbergD = {
+        name="Sorley Isberg "
+        portraits={
+            civilian={
+                large="GFX_IsbergD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    SVT_SnedriftN = {
+        name="Leif Snedrift"
+        portraits={
+            civilian={
+                large="GFX_SnedriftN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+       SVT_VinterbakkeC = {
+        name="Callum Vinterbakke"
+        portraits={
+            civilian={
+                large="GFX_VinterbakkeC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+			id = -1
+        }
+    }
+    SVT_FrostvedtF = {
+        name="Lachlan Frostvedt"
+        portraits={
+            civilian={
+                large="GFX_FrostvedtF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+}

@@ -1,0 +1,11 @@
+state={
+	id=1075
+	name="Niger Route"
+	provinces={
+		13391 13393 13395 13398 
+	}
+	manpower=4600
+	buildings_max_level_factor=1
+	local_supplies=0
+	state_category = wasteland
+}

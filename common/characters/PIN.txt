@@ -1,0 +1,54 @@
+characters = {
+    PIN_ViragN = {
+        name="Boglárka Virág"
+        portraits={
+            civilian={
+                large="GFX_ViragN"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+	    	id = -1
+        }
+    }
+    PIN_TolgyF = {
+        name="Tölgy Erdős"
+        portraits={
+            civilian={
+                large="GFX_TolgyF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+	    	id = -1
+        }
+    }
+    PIN_ErdosC = {
+        name="Sólyom Erdős"
+        portraits={
+            civilian={
+                large="GFX_ErdosC"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+	    	id = -1
+        }
+    }
+    PIN_FenyoD = {
+        name="Zöld Fenyő"
+        portraits={
+            civilian={
+                large="GFX_FenyoD"
+            }
+        }
+        country_leader={
+            ideology=marxism
+            expire=""
+	    	id = -1
+        }
+    }
+}

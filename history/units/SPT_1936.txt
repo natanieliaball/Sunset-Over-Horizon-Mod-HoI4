@@ -1,0 +1,281 @@
+﻿division_template = {
+    name = "Imperial Guard"
+    division_names_group = SPT_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+        infantry = { x = 2 y = 1 }
+        infantry = { x = 2 y = 2 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+        recon = { x = 0 y = 2 }
+    }
+}
+
+division_template = {
+    name = "Infantry Division"
+    division_names_group = SPT_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+    }
+    support = {
+        engineer = { x = 0 y = 0 }
+        recon = { x = 0 y = 1 }
+    }
+}
+
+division_template = {
+    name = "Militia"
+    division_names_group = SPT_INF_01
+
+    regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+    }
+}
+
+division_template = {
+    name = "Cavalry Brigade"
+    division_names_group = SPT_CAV_01
+
+    regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+    }
+    support = {
+        recon = { x = 0 y = 0 }
+    }
+}
+
+units = {
+
+    # === PROVINCE 692 - Capitale ===
+    division = {
+        name = "1st Imperial Guard"
+        location = 692
+        division_template = "Imperial Guard"
+        start_experience_factor = 0.9
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "2nd Imperial Guard"
+        location = 692
+        division_template = "Imperial Guard"
+        start_experience_factor = 0.9
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "3rd Imperial Guard"
+        location = 692
+        division_template = "Imperial Guard"
+        start_experience_factor = 0.9
+        start_equipment_factor = 1.0
+    }
+
+    # === 11544 - Prague ===
+    division = {
+        name = "1st Infantry Division"
+        location = 11544
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "1st Cavalry Brigade"
+        location = 11544
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "1st Militia"
+        location = 11544
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 11542 - Nuremberg ===
+    division = {
+        name = "2nd Infantry Division"
+        location = 11542
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "2nd Cavalry Brigade"
+        location = 11542
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "2nd Militia"
+        location = 11542
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 11666 - Vienne ===
+    division = {
+        name = "3rd Infantry Division"
+        location = 11666
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "3rd Cavalry Brigade"
+        location = 11666
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "3rd Militia"
+        location = 11666
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 6626 - Trieste (côtière, cavalerie logique) ===
+    division = {
+        name = "4th Cavalry Brigade"
+        location = 6626
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "4th Militia"
+        location = 6626
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 688 - Salzbourg ===
+    division = {
+        name = "4th Infantry Division"
+        location = 688
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "5th Militia"
+        location = 688
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 9517 - Stuttgart ===
+    division = {
+        name = "5th Infantry Division"
+        location = 9517
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "5th Cavalry Brigade"
+        location = 9517
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+
+    # === 9503 - Strasbourg (frontière, infantry logique) ===
+    division = {
+        name = "6th Infantry Division"
+        location = 9503
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "6th Militia"
+        location = 9503
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 11516 - Nancy (frontière ouest) ===
+    division = {
+        name = "7th Infantry Division"
+        location = 11516
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "6th Cavalry Brigade"
+        location = 11516
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+
+    # === 13011 - Reims (frontière ouest avancée) ===
+    division = {
+        name = "7th Militia"
+        location = 13011
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+    division = {
+        name = "8th Militia"
+        location = 13011
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    # === 6488 - Frankfurt ===
+    division = {
+        name = "8th Infantry Division"
+        location = 6488
+        division_template = "Infantry Division"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "7th Cavalry Brigade"
+        location = 6488
+        division_template = "Cavalry Brigade"
+        start_experience_factor = 0.5
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "9th Militia"
+        location = 6488
+        division_template = "Militia"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+}

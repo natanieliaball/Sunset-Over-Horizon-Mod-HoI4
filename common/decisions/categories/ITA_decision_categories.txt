@@ -1,0 +1,13 @@
+ITE_Risorgimento = {
+	icon = GFX_decision_category_ITA_colonial_management
+	allowed = {
+        OR = {
+            tag = VNC
+            tag = NIT
+            tag = SIT
+            tag = PIS
+            tag = PAP
+            tag = SCL
+        }
+	}
+}

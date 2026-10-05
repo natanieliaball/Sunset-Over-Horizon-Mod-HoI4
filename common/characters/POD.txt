@@ -1,0 +1,28 @@
+characters = {
+    POD_AleksanderNAT = {
+        name="Aleksander Podlaski"
+        portraits={
+            civilian={
+                large="GFX_AleksanderPOD"
+            }
+        }
+        country_leader={
+            ideology=socialism
+            expire=""
+			id = -1
+        }
+    }
+    POD_KananowiczC = {
+        name="Ksawery Kananowicz"
+        portraits={
+            civilian={
+                large="GFX_KananowiczC"
+            }
+        }
+        country_leader={
+            ideology=anti_revisionism
+            expire=""
+			id = -1
+        }
+    }
+}

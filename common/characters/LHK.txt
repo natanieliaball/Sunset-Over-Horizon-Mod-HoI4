@@ -1,0 +1,15 @@
+characters = {
+    LHK_MikhailN = {
+        name="Mikhail Sokolov"
+        portraits={
+            civilian={
+                large="GFX_MikhailNLHK"
+            }
+        }
+        country_leader={
+            ideology=centrism
+            expire=""
+			id = -1
+        }
+    }
+}

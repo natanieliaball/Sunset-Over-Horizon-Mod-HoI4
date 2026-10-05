@@ -1,0 +1,24 @@
+state={
+	id=31
+	name="STATE_31"
+	provinces={
+		943 3948 6766 6915 6917 6931 11702 
+	}
+	history={
+		owner = MPL
+		add_core_of = MPL
+		victory_points = {
+			6766 5 
+		}		
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+			industrial_complex = 3
+			arms_factory = 2			
+		}
+	}
+	manpower=1028700
+	buildings_max_level_factor=1
+	state_category=city
+	local_supplies=0 
+}

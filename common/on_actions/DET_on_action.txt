@@ -1,0 +1,16 @@
+on_actions = {
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = DET
+                    NOT = { has_war_with = PRO }
+                    NOT = { has_country_flag = DET_end_provence_war }
+                }
+                set_country_flag = DET_end_provence_war
+                remove_ideas = DET_Provence_war
+            }
+        }
+    }
+}
+

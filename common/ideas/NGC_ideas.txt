@@ -1,0 +1,190 @@
+ideas = {
+	country = {
+        NGC_unified_command_idea = {
+            picture = PER_unification_initiative_idea
+            removal_cost = -1
+            modifier = {
+                army_org_factor = 0.08
+                planning_speed = 0.10
+                max_planning = 0.10
+            }
+        }
+
+        NGC_central_administration_idea = {
+            picture = generic_army_war_college
+            removal_cost = -1
+            modifier = {
+                political_power_gain = 0.15
+                political_advisor_cost_factor = -0.10
+            }
+        }
+
+        NGC_central_war_ministry_idea = {
+            picture = chi_wargaming_division
+            removal_cost = -1
+            modifier = {
+                production_speed_arms_factory_factor = 0.10
+                army_org_factor = 0.05
+                training_time_factor = -0.10
+            }
+        }
+
+        NGC_nationalise_states_idea = {
+            picture = FRA_scw_intervention_nationalists_focus
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.08
+                consumer_goods_factor = -0.03
+            }
+        }
+
+        NGC_central_economy_idea = {
+            picture = tur_balkan_central_bank_wealthy_greece
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.08
+                consumer_goods_factor = -0.05
+            }
+        }
+
+        NGC_unified_reich_idea = {
+            picture = GER_the_shield_of_democracy
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.10
+                political_power_gain = 0.15
+                conscription = 0.03
+            }
+        }
+
+        NGC_military_buildup_idea = {
+            picture = SOV_rebuild_the_savior_cathedral_ccp_sov_compatibility
+            removal_cost = -1
+            modifier = {
+                offence = 0.08
+                defence = 0.08
+                army_org_factor = 0.10
+                production_speed_arms_factory_factor = 0.10
+            }
+        }
+
+        NGC_centralisation_industry_idea = {
+            picture = generic_central_management
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.12
+                production_speed_industrial_complex_factor = 0.10
+                production_speed_arms_factory_factor = 0.08
+            }
+        }
+
+        NGC_greater_germany_idea = {
+            picture = ger_revive_the_kaiserreich
+            removal_cost = -1
+            modifier = {
+                army_attack_factor = 0.08
+                army_defence_factor = 0.08
+                political_power_gain = 0.10
+            }
+        }
+
+        NGC_dominate_europe_idea = {
+            picture = generic_war_preparation
+            removal_cost = -1
+            modifier = {
+                offence = 0.10
+                defence = 0.10
+                justify_war_goal_time = -0.30
+            }
+        }
+
+        NGC_final_industry_idea = {
+            picture = generic_improved_industries
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.15
+                production_speed_arms_factory_factor = 0.15
+                production_speed_industrial_complex_factor = 0.12
+            }
+        }
+        NGC_economic_powerhouse = {
+            picture = man_five_year_plan_industry
+            removal_cost = -1
+            modifier = {
+                production_speed_buildings_factor = 0.2 
+                consumer_goods_factor = -0.1
+            }
+        }
+        NGC_republic_stability_idea = {
+            picture = some_icon
+            removal_cost = -1
+            modifier = {
+            stability_factor = 0.05
+            political_power_gain = 0.08
+            consumer_goods_factor = -0.03
+        }
+        }
+
+NGC_republic_diplomacy_idea = {
+    picture = some_icon
+    removal_cost = -1
+    modifier = {
+        political_power_gain = 0.10
+        guarantee_tension = -0.15
+        send_volunteers_tension = -0.20
+    }
+}
+
+NGC_republic_army_reform_idea = {
+    picture = some_icon
+    removal_cost = -1
+    modifier = {
+        army_org_factor = 0.08
+        training_time_factor = -0.08
+        defence = 0.05
+    }
+}
+
+NGC_republic_industry_idea = {
+    picture = some_icon
+    removal_cost = -1
+    modifier = {
+        industrial_capacity_factory = 0.08
+        production_speed_buildings_factor = 0.06
+        consumer_goods_factor = -0.04
+    }
+}
+
+NGC_republic_golden_age_idea = {
+    picture = some_icon
+    removal_cost = -1
+    modifier = {
+        stability_factor = 0.05
+        political_power_gain = 0.10
+        army_org_factor = 0.05
+        industrial_capacity_factory = 0.05
+        democratic_drift = 0.03
+            }
+        }
+
+        NGC_Power_to_the_army = {
+            picture = generic_women_in_the_army
+            removal_cost = -1
+            modifier = {
+                offence = 0.05
+                defence = 0.05
+                justify_war_goal_time = -0.20
+                war_support_factor = 0.2
+            }
+        }
+
+        NGC_Communist_resistance = {
+            picture = generic_communism_drift_bonus
+            removal_cost = -1
+            modifier = {
+                communism_drift = 0.03
+            }
+        }
+    }
+}

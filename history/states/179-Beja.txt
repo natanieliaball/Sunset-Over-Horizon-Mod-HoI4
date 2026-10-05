@@ -1,0 +1,40 @@
+state={
+	id=179
+	name="STATE_179"
+
+	history = {
+		owner = ALS
+		add_core_of = ALS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory =1
+			dockyard = 2
+			3790 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			3790 1
+		}
+		victory_points = {
+			6880 1
+		}
+		victory_points = {
+			6933 1
+		}
+		victory_points = {
+			970 1
+		}
+	}
+
+	provinces={
+		970 980 3790 3866 6880 6884 6933 9765 9819 
+	}
+	manpower=777895
+	buildings_max_level_factor=1.000
+	state_category=large_town
+
+
+	local_supplies=0.0 
+}

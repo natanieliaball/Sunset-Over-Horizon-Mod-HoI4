@@ -1,0 +1,93 @@
+characters = {
+    JAK_FalipiakD = {
+        name="Jakub Falipiak"
+        portraits={
+            civilian={
+                large="GFX_FalipiakD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+    JAK_KaskN = {
+        name="Kristjan Kask"
+        portraits={
+            civilian={
+                large="GFX_KaskN"
+            }
+        }
+        country_leader={
+            ideology=Officer_Rule
+            expire=""
+			id = -1
+        }
+    }
+    JAK_SirkF = {
+        name="Andres Sirk"
+        portraits={
+            civilian={
+                large="GFX_SirkF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+    JAK_RodzaevskyKPA = {
+        name="Gustav Rodzaevsky" 
+        portraits={
+            civilian={
+                large="GFX_RodzaevskyKPA"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+    JAK_ValjasC = {
+        name="Nikolai Väljas"
+        portraits={
+            civilian={
+                large="GFX_ValjasC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+    JAK_ValjasSSR = {
+        name="Nikolai Väljas"
+        portraits={
+            civilian={
+                large="GFX_ValjasSSR"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+    JAK_JAKAssemblyC = {
+        name="Jakubian-Arsorinian Workers Assembly"
+        portraits={
+            civilian={
+                large="GFX_JAKAssemblyC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+}

@@ -1,0 +1,23 @@
+state={
+	id=1052
+	name="Cantal"
+	state_category = city
+	provinces={
+		769 3754 6773 6789 
+	}
+	history = {
+
+		owner = MPL
+		add_core_of = MPL	
+		victory_points = {
+			6789  2
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	manpower=190800
+	buildings_max_level_factor=1
+	local_supplies=0
+}

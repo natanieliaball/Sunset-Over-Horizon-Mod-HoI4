@@ -1,0 +1,57 @@
+characters = {
+    BRI_QuintinD = {
+        name="Balae Quintin"
+        portraits={
+            civilian={
+                large="GFX_QuintinD"
+            }
+        }
+        country_leader={
+            ideology=conservatism
+            expire=""
+			id = -1
+        }
+    }
+
+    BRI_KerbratF = {
+        name="Eler Kerbrat"
+        portraits={
+            civilian={
+                large="GFX_KerbratF"
+            }
+        }
+        country_leader={
+            ideology=fascism_ideology
+            expire=""
+			id = -1
+        }
+    }
+
+    BRI_MordeletN = {
+        name="Fanch Mordelet"
+        portraits={
+            civilian={
+                large="GFX_MordeletN"
+            }
+        }
+        country_leader={
+            ideology=moderatism
+            expire=""
+			id = -1
+        }
+    }
+
+    BRI_CadiouC = {
+        name="Trestanig Cadiou"
+        portraits={
+            civilian={
+                large="GFX_CadiouC"
+            }
+        }
+        country_leader={
+            ideology=leninism
+            expire=""
+			id = -1
+        }
+    }
+}

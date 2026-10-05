@@ -1,0 +1,30 @@
+state={
+	id=676
+	name="STATE_676"
+	manpower = 1182741
+	
+	state_category = town
+	
+	resources={
+		oil = 8 # was: 10
+	}
+
+	history = {
+		owner = PRL
+		add_core_of = PRL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			10106 5 
+		}
+
+	}
+	
+	provinces={
+		1600 1938 10106 10804 12372 
+	}
+
+	local_supplies=0.0 
+}

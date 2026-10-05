@@ -1,0 +1,77 @@
+ideas = {
+    country = {
+        POM_Naval_Training_ideas = {
+            picture = generic_navy_bonus
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                naval_invasion_capacity = 5
+                naval_damage_factor = 0.1
+            }
+        }
+
+        POM_Naval_Training_ideas_2 = {
+            picture = generic_navy_bonus
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                naval_invasion_capacity = 5
+                naval_damage_factor = 0.1
+                naval_invasion_planning_bonus_speed = 0.2
+            }
+        }	
+
+        POM_Reformed_Cabinet_idea = {
+            picture = generic_political_support
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.15
+            }
+        }
+        POM_Indoctrined_Schools = {
+            picture = AFG_communist_graduates
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                conscription = 0.05
+            }
+        }
+        POM_Indoctrined_Schools_2 = {
+            picture = AFG_communist_graduates
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                conscription = 0.1
+            }
+        }
+        POM_Socialist_Schools_Act = {
+            picture = FIN_socialist_welfare
+             removal_cost = -1
+            allowed_civil_war = {
+                always = yes
+            }           
+            removal_cost = -1
+            modifier = {
+                stability_factor = 0.05
+                training_time_factor = -0.2
+                industrial_capacity_factory = 0.05
+            }
+        }
+    }
+}

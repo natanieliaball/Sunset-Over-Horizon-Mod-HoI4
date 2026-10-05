@@ -1,0 +1,606 @@
+
+BRI_influence_CON = {
+    BRI_finance_local_militia_CON = {
+        icon = GFX_decision_generic_military
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            CON = { country_exist = yes }
+        }
+        available = {
+            has_equipment = {
+                infantry_equipment_1 > 999
+            }
+        }
+        modifier = { 	
+            CON = { fascism_drift = 0.05 }
+        }
+        days_remove = 30
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_CON_influence value = 20}
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+			}
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_Pro_Celtic_propaganda_CON = {
+        icon = GFX_decision_ger_mefo_bills
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            CON = { country_exist = yes }
+        }
+        available = {
+            has_political_power > 24
+
+        }
+
+        modifier = { 	
+            CON = { fascism_drift = 0.05 }
+        }
+        days_remove = 15 
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_CON_influence value = 10}
+        }
+        complete_effect = {
+			add_political_power = -25
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_influence_CON_economy = {
+        icon = GFX_decision_generic_factory
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            CON = { country_exist = yes }
+        }
+        available = {
+        }
+        days_remove = 70
+        fire_only_once = no
+        modifier = {
+            consumer_goods_factor = 0.20
+        }
+        remove_effect = {
+            add_to_variable = { var = BRI_CON_influence value = 25}
+        }
+        complete_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+    BRI_Demande_CON_submition = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            CON = { country_exist = yes }
+            NOT = { CON = { is_puppet_of = BRI } }
+        }
+        available = {
+            check_variable = {
+                BRI_CON_influence > 99
+            }
+        }
+
+        complete_effect = {
+            set_variable = {
+                var = BRI_CON_influence
+                value = 0
+            }
+            clr_country_flag = BRI_Influences_CON_Island_game
+            CON = {
+                country_event = { id = BRI.5 days = 3 }
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BRI_influence_MUN = {
+    BRI_finance_local_militia_MUN = {
+        icon = GFX_decision_generic_military
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            MUN = { country_exist = yes }
+        }
+        available = {
+            has_equipment = {
+                infantry_equipment_1 > 999
+            }
+        }
+        modifier = { 	
+            MUN = { fascism_drift = 0.05 }
+        }
+        days_remove = 30
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_MUN_influence value = 20}
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+			}
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_Pro_Celtic_propaganda_MUN = {
+        icon = GFX_decision_ger_mefo_bills
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            MUN = { country_exist = yes }
+        }
+        available = {
+            has_political_power > 24
+
+        }
+        modifier = { 	
+            MUN = { fascism_drift = 0.05 }
+        }
+        days_remove = 15
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_MUN_influence value = 10}
+        }
+        complete_effect = {
+			add_political_power = -25
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_influence_MUN_economy = {
+        icon = GFX_decision_generic_factory
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            MUN = { country_exist = yes }
+        }
+        available = {
+        }
+        days_remove = 70
+        fire_only_once = no
+        modifier = {
+            consumer_goods_factor = 0.20
+        }
+        remove_effect = {
+            add_to_variable = { var = BRI_MUN_influence value = 25}
+        }
+        complete_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+    BRI_Demande_MUN_submition = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            MUN = { country_exist = yes }
+            NOT = { MUN = { is_puppet_of = BRI } }
+        }
+        available = {
+            check_variable = {
+                BRI_MUN_influence > 99
+            }
+        }
+
+        complete_effect = {
+            set_variable = {
+                var = BRI_MUN_influence
+                value = 0
+            }
+            clr_country_flag = BRI_Influences_MUN_Island_game
+            MUN = {
+                country_event = { id = BRI.5 days = 3 }
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BRI_influence_ULS = {
+    BRI_finance_local_militia_ULS = {
+        icon = GFX_decision_generic_military
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            ULS = { country_exist = yes }
+        }
+        available = {
+            has_equipment = {
+                infantry_equipment_1 > 999
+            }
+        }
+        modifier = { 	
+            ULS = { fascism_drift = 0.05 }
+        }
+        days_remove = 30
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_ULS_influence value = 20}
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+			}
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_Pro_Celtic_propaganda_ULS = {
+        icon = GFX_decision_ger_mefo_bills
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            ULS = { country_exist = yes }
+        }
+        available = {
+            has_political_power > 24
+
+        }
+        modifier = { 	
+            ULS = { fascism_drift = 0.05 }
+        }
+        days_remove = 15
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_ULS_influence value = 10}
+        }
+        complete_effect = {
+			add_political_power = -25
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_influence_ULS_economy = {
+        icon = GFX_decision_generic_factory
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            ULS = { country_exist = yes }
+        }
+        available = {
+        }
+        days_remove = 70
+        fire_only_once = no
+        modifier = {
+            consumer_goods_factor = 0.20
+        }
+        remove_effect = {
+            add_to_variable = { var = BRI_ULS_influence value = 25}
+        }
+        complete_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+    BRI_Demande_ULS_submition = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            ULS = { country_exist = yes }
+            NOT = { ULS = { is_puppet_of = BRI } }
+        }
+        available = {
+            check_variable = {
+                BRI_ULS_influence > 99
+            }
+        }
+
+        complete_effect = {
+            set_variable = {
+                var = BRI_ULS_influence
+                value = 0
+            }
+            clr_country_flag = BRI_Influences_ULS_Island_game
+            ULS = {
+                country_event = { id = BRI.5 days = 3 }
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
+
+
+
+
+
+BRI_influence_LEI = {
+    BRI_finance_local_militia_LEI = {
+        icon = GFX_decision_generic_military
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            LEI = { country_exist = yes }
+        }
+        available = {
+            has_equipment = {
+                infantry_equipment_1 > 999
+            }
+        }
+        modifier = { 	
+            LEI = { fascism_drift = 0.05 }
+        }
+        days_remove = 30
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_LEI_influence value = 20}
+        }
+        complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = 	infantry_equipment
+			    amount = -1000
+			}
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_Pro_Celtic_propaganda_LEI = {
+        icon = GFX_decision_ger_mefo_bills
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            LEI = { country_exist = yes }
+        }
+        available = {
+            has_political_power > 24
+
+        }
+        modifier = { 	
+            LEI = { fascism_drift = 0.05 }
+        }
+        days_remove = 15
+        fire_only_once = no
+        remove_effect = {
+            add_to_variable = { var = BRI_LEI_influence value = 10}
+        }
+        complete_effect = {
+			add_political_power = -25
+            
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+    BRI_influence_LEI_economy = {
+        icon = GFX_decision_generic_factory
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            LEI = { country_exist = yes }
+        }
+        available = {
+        }
+        days_remove = 70
+        fire_only_once = no
+        modifier = {
+            consumer_goods_factor = 0.20
+        }
+        remove_effect = {
+            add_to_variable = { var = BRI_LEI_influence value = 25}
+        }
+        complete_effect = {
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+
+
+
+
+
+    BRI_Demande_LEI_submition = {
+        icon = GFX_decision_eng_trade_unions_support
+        allowed = { always = yes }
+
+        visible = {
+            tag = BRI
+            LEI = { country_exist = yes }
+            NOT = { LEI = { is_puppet_of = BRI } }
+        }
+        available = {
+            check_variable = {
+                BRI_LEI_influence > 99
+            }
+        }
+
+        complete_effect = {
+            set_variable = {
+                var = BRI_LEI_influence
+                value = 0
+            }
+            clr_country_flag = BRI_Influences_LEI_Island_game
+            LEI = {
+                country_event = { id = BRI.5 days = 3 }
+            }
+
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
